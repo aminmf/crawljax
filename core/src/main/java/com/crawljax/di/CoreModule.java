@@ -16,7 +16,9 @@ import com.crawljax.core.CandidateElementManager;
 import com.crawljax.core.CrawlSession;
 import com.crawljax.core.ExitNotifier;
 import com.crawljax.core.ExtractorManager;
+import com.crawljax.core.FireEventTask;
 import com.crawljax.core.configuration.CrawljaxConfiguration;
+import com.crawljax.core.state.Eventable;
 import com.crawljax.core.state.InMemoryStateFlowGraph;
 import com.crawljax.core.state.StateFlowGraph;
 import com.crawljax.forms.FormHandler;
@@ -52,6 +54,7 @@ public class CoreModule extends AbstractModule {
 
 		install(new FactoryModuleBuilder().build(FormHandlerFactory.class));
 		install(new FactoryModuleBuilder().build(CandidateElementExtractorFactory.class));
+		install(new FactoryModuleBuilder().build(FireEventTaskFactory.class));
 
 	}
 
@@ -61,11 +64,15 @@ public class CoreModule extends AbstractModule {
 		        .getCrawlConditions());
 	}
 
-	public interface FormHandlerFactory {
+	public static interface FormHandlerFactory {
 		FormHandler newFormHandler(EmbeddedBrowser browser);
 	}
 
-	public interface CandidateElementExtractorFactory {
+	public static interface CandidateElementExtractorFactory {
 		CandidateElementExtractor newExtractor(EmbeddedBrowser browser);
+	}
+
+	public static interface FireEventTaskFactory {
+		FireEventTask newEvent(Eventable clickable, EmbeddedBrowser browser);
 	}
 }

@@ -32,12 +32,13 @@ public class CrawljaxConfiguration {
 
 		private final ImmutableList.Builder<Plugin> pluginBuilder = ImmutableList.builder();
 		private final CrawljaxConfiguration config;
-		private final CrawlRulesBuilder crawlRules = CrawlRules.builder();
+		private final CrawlRulesBuilder crawlRules;
 
 		private CrawljaxConfigurationBuilder(URL url) {
 			Preconditions.checkNotNull(url);
 			config = new CrawljaxConfiguration();
 			config.url = url;
+			crawlRules = CrawlRules.builder(this);
 		}
 
 		/**

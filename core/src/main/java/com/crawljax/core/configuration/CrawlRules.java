@@ -9,6 +9,7 @@ import com.crawljax.condition.browserwaiter.WaitCondition;
 import com.crawljax.condition.crawlcondition.CrawlCondition;
 import com.crawljax.condition.invariant.Invariant;
 import com.crawljax.core.configuration.CrawlActionsBuilder.ExcludeByParentBuilder;
+import com.crawljax.core.configuration.CrawljaxConfiguration.CrawljaxConfigurationBuilder;
 import com.crawljax.core.configuration.PreCrawlConfiguration.PreCrawlConfigurationBuilder;
 import com.crawljax.core.state.Eventable.EventType;
 import com.crawljax.oraclecomparator.OracleComparator;
@@ -33,11 +34,30 @@ public class CrawlRules {
 		private final PreCrawlConfigurationBuilder preCrawlConfig;
 		private final ImmutableSortedSet.Builder<String> ignoredFrameIdentifiers =
 		        ImmutableSortedSet.naturalOrder();
+		private CrawljaxConfigurationBuilder outerBuilder;
 
-		private CrawlRulesBuilder() {
+		private CrawlRulesBuilder(CrawljaxConfigurationBuilder outerBuilder) {
+			this.outerBuilder = outerBuilder;
 			crawlRules = new CrawlRules();
 			crawlActionsBuilder = new CrawlActionsBuilder();
 			preCrawlConfig = PreCrawlConfiguration.builder();
+		}
+
+		/**
+		 * For easy method chaining. This way you can do
+		 * 
+		 * <pre>
+		 * CrawljaxConfiguration.builderFor(site)
+		 *         .crawlRules().click(bla).done()
+		 *         .build();
+		 * </pre>
+		 * 
+		 * So you don't have to declare a separate value for the {@link CrawlRulesBuilder}.
+		 * 
+		 * @return the {@link CrawljaxConfigurationBuilder}.
+		 */
+		public CrawljaxConfigurationBuilder done() {
+			return outerBuilder;
 		}
 
 		public CrawlRulesBuilder insertRandomDataInInputForms(boolean insertRandomData) {
@@ -182,6 +202,20 @@ public class CrawlRules {
 		}
 
 		/**
+		 * @param eventTimeOut
+		 *            The maximum time Crawljax will wait for an event to complete. This prevents
+		 *            unresponsive sites from blocking the crawl. Default is
+		 *            {@link CrawlRules#DEFAULT_EVENT_TIME_OUT}
+		 * @param unit
+		 *            The {@link TimeUnit} you for the eventTimeOut
+		 */
+		public CrawlRulesBuilder setEventTimeOut(long eventTimeOut, TimeUnit unit) {
+			checkArgument(eventTimeOut > 0, "Timeout event has to be positive");
+			crawlRules.eventTimeOut = unit.toMillis(eventTimeOut);
+			return this;
+		}
+
+		/**
 		 * Set Crawljax to click hidden anchors or not. Default is <code>false</code>.
 		 * <dl>
 		 * <dd>Pro:</dd>
@@ -274,8 +308,15 @@ public class CrawlRules {
 	 */
 	public static final long DEFAULT_WAIT_AFTER_EVENT = 500;
 
-	public static CrawlRulesBuilder builder() {
-		return new CrawlRulesBuilder();
+	/**
+	 * Default event timeout of 1 minute.
+	 * 
+	 * @see CrawlRulesBuilder#setEventTimeOut(long, TimeUnit)
+	 */
+	public static final long DEFAULT_EVENT_TIME_OUT = TimeUnit.MINUTES.toMillis(1);
+
+	public static CrawlRulesBuilder builder(CrawljaxConfigurationBuilder outerBuilder) {
+		return new CrawlRulesBuilder(outerBuilder);
 	}
 
 	private ImmutableSortedSet<EventType> crawlEvents;
@@ -294,6 +335,7 @@ public class CrawlRules {
 	private boolean crawlHiddenAnchors = false;
 	private long waitAfterReloadUrl = DEFAULT_WAIT_AFTER_RELOAD;
 	private long waitAfterEvent = DEFAULT_WAIT_AFTER_EVENT;
+	private long eventTimeOut = DEFAULT_EVENT_TIME_OUT;
 
 	private CrawlRules() {
 	}
@@ -341,6 +383,13 @@ public class CrawlRules {
 	/**
 	 * @return in milliseconds
 	 */
+	public long getEventTimeOut() {
+		return eventTimeOut;
+	}
+
+	/**
+	 * @return in milliseconds
+	 */
 	public long getWaitAfterReloadUrl() {
 		return waitAfterReloadUrl;
 	}
@@ -374,7 +423,7 @@ public class CrawlRules {
 		return Objects.hashCode(crawlEvents, invariants, oracleComparators,
 		        ignoredFrameIdentifiers, preCrawlConfig, randomInputInForms, inputSpecification,
 		        testInvariantsWhileCrawling, clickOnce, crawlFrames, crawlHiddenAnchors,
-		        waitAfterReloadUrl, waitAfterEvent);
+		        waitAfterReloadUrl, waitAfterEvent, eventTimeOut);
 	}
 
 	@Override
@@ -394,7 +443,8 @@ public class CrawlRules {
 			        && Objects.equal(this.crawlFrames, that.crawlFrames)
 			        && Objects.equal(this.crawlHiddenAnchors, that.crawlHiddenAnchors)
 			        && Objects.equal(this.waitAfterReloadUrl, that.waitAfterReloadUrl)
-			        && Objects.equal(this.waitAfterEvent, that.waitAfterEvent);
+			        && Objects.equal(this.waitAfterEvent, that.waitAfterEvent)
+			        && Objects.equal(this.eventTimeOut, that.eventTimeOut);
 		}
 		return false;
 	}
@@ -417,6 +467,7 @@ public class CrawlRules {
 		        .add("crawlHiddenAnchors", crawlHiddenAnchors)
 		        .add("waitAfterReloadUrl", waitAfterReloadUrl)
 		        .add("waitAfterEvent", waitAfterEvent)
+		        .add("eventTimeout", eventTimeOut)
 		        .toString();
 	}
 

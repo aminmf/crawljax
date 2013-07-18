@@ -32,6 +32,7 @@ import com.crawljax.core.state.Identification.How;
 import com.crawljax.core.state.InMemoryStateFlowGraph;
 import com.crawljax.core.state.StateVertex;
 import com.crawljax.di.CoreModule.CandidateElementExtractorFactory;
+import com.crawljax.di.CoreModule.FireEventTaskFactory;
 import com.crawljax.di.CoreModule.FormHandlerFactory;
 import com.crawljax.forms.FormHandler;
 import com.crawljax.forms.FormInput;
@@ -98,6 +99,9 @@ public class CrawlerTest {
 	@Mock
 	private ExitNotifier exitNotifier;
 
+	@Mock
+	private FireEventTaskFactory eventTaskFactory;
+
 	private CrawlerContext context;
 
 	@Before
@@ -118,12 +122,14 @@ public class CrawlerTest {
 		when(extractor.extract(target)).thenReturn(ImmutableList.of(action));
 		when(graphProvider.get()).thenReturn(graph);
 
+		when(eventTaskFactory.newEvent(eventToTransferToTarget, browser))
+		        .thenReturn(
+		                new FireEventTask(config, waitConditionChecker, eventToTransferToTarget,
+		                        browser));
+
 		context = new CrawlerContext(browser, config, sessionProvider, exitNotifier);
-		crawler =
-		        new Crawler(context, config,
-		                stateComparator,
-		                candidateActionCache, formHandlerFactory, waitConditionChecker,
-		                elementExtractor, graphProvider);
+		crawler = new Crawler(context, stateComparator, candidateActionCache, formHandlerFactory,
+		        waitConditionChecker, elementExtractor, graphProvider, eventTaskFactory);
 
 		setupStateFlowGraph();
 	}

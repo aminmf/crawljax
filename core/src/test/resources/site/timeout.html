@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="lib/jquery-2.0.3.min.js"></script>
+<script type="text/javascript">
+	function block() {
+		var start = new Date().getTime();
+		while ((new Date().getTime() - start) < (15 * 1000)) {
+			console.log("Blocking");
+		}
+		$('#container').html("<p>Unblocked</p>");
+	}
+</script>
+</head>
+<body>
+	<h1>Click the button. Blocks for 60 seconds and then unblocks.</h1>
+	<div id='container'>
+		<a href="javascript:block()">Block it!</a>
+		<a href="simple.html">Go to simple page</a>
+	</div>
+</body>
+</html>
