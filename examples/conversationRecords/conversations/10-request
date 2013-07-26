@@ -1,0 +1,9 @@
+GET http://spci.st.ewi.tudelft.nl:80/crawljax/ HTTP/1.1
+Host: spci.st.ewi.tudelft.nl
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:22.0) Gecko/20100101 Firefox/22.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://demo.crawljax.com/
+Connection: keep-alive
+

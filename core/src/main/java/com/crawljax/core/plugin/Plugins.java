@@ -44,7 +44,7 @@ public class Plugins {
 	@SuppressWarnings("unchecked")
 	static final ImmutableSet<Class<? extends Plugin>> KNOWN_PLUGINS = ImmutableSet
 	        .of(DomChangeNotifierPlugin.class, OnBrowserCreatedPlugin.class,
-	                OnFireEventFailedPlugin.class,
+	                OnFireEventFailedPlugin.class, OnFireEventSucceededPlugin.class,
 	                OnInvariantViolationPlugin.class, OnNewStatePlugin.class,
 	                OnRevisitStatePlugin.class, OnUrlLoadPlugin.class,
 	                PostCrawlingPlugin.class, PreStateCrawlingPlugin.class,
@@ -436,4 +436,25 @@ public class Plugins {
 		return names.build();
 	}
 
+	/**
+	 * Amin: Load and run the OnFireEventSucceededPlugins, this call has been made from the fireEvent when
+	 * the event is fireable.
+	 * 
+	 * @param eventable
+	 *            the eventable not able to fire.
+	 */
+	public void OnFireEventSucceededPlugins(CrawlerContext context, StateVertex stateBefore, Eventable eventable, StateVertex stateAfter) {
+		LOGGER.debug("Running OnFireEventPlugins...");
+		for (Plugin plugin : plugins.get(OnFireEventSucceededPlugin.class)) {
+			if (plugin instanceof OnFireEventSucceededPlugin) {
+				LOGGER.debug("Calling plugin {}", plugin);
+				try {
+					((OnFireEventSucceededPlugin) plugin).onFireEvent(context, stateBefore, eventable, stateAfter);
+				} catch (RuntimeException e) {
+					reportFailingPlugin(plugin, e);
+				}
+			}
+		}
+	}
+	
 }

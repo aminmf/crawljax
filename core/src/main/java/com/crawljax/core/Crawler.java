@@ -348,6 +348,12 @@ public class Crawler {
 			goBackOneState();
 		} else {
 			StateVertex newState = stateMachine.newStateFor(browser);
+			
+			/*
+			 * Amin: Execute the OnFireEventSucceededPlugins
+			 */
+			plugins.OnFireEventSucceededPlugins(context, stateMachine.getCurrentState(), event, newState);
+
 			if (domChanged(event, newState)) {
 				inspectNewDom(event, newState);
 			} else {

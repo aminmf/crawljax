@@ -10,7 +10,7 @@ import com.google.common.annotations.VisibleForTesting;
 
 @Singleton
 @ThreadSafe
-public class ExitNotifier {
+public class ExitNotifier{
 
 	/**
 	 * Represents the reason Crawljax stopped.

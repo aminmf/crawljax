@@ -1,0 +1,57 @@
+general_js_executed_functions[0] = "GlobalScope";
+$(document).ready(function() {
+  general_js_executed_functions[1] = "anonymous0";
+  openPage("home.html");
+  setEventHandlers();
+});
+function setEventHandlers() {
+  general_js_executed_functions[2] = "setEventHandlers";
+  $('#info').click(function() {
+  general_js_executed_functions[3] = "anonymous8";
+  openPage("info.html");
+});
+  $('#papers').click(function() {
+  general_js_executed_functions[4] = "anonymous9";
+  openPage("papers.html");
+});
+  $('#home').click(function() {
+  general_js_executed_functions[5] = "anonymous10";
+  openPage("home.html");
+});
+  $('#ignore').click(function() {
+  general_js_executed_functions[6] = "anonymous11";
+  addError("Crawljax should ignore me");
+});
+}
+function openPage(page) {
+  general_js_executed_functions[7] = "openPage";
+  $('#content').load(page);
+}
+function addError(msg) {
+  general_js_executed_functions[8] = "addError";
+  $('#errors').show();
+  $('#errors').html($('#errors').html() + "<p>ERROR: " + msg + "</p>");
+}
+function saveContact(msg) {
+  general_js_executed_functions[9] = "saveContact";
+  var content = "<h1>" + msg + "</h1>";
+  var gender = (document.getElementById("male").checked ? "male" : "female");
+  content += "<h2>Gender: " + gender + "<br />";
+  content += "Name: " + $('#name').val() + "<br />";
+  content += "Phone: " + $('#phone').val() + "<br />";
+  content += "Mobile: " + $('#mobile').val() + "<br />";
+  content += "Type: " + document.getElementById("type").options[document.getElementById("type").selectedIndex].value + "<br />";
+  content += "Active: " + document.getElementById("active").checked;
+  content += "</h2>";
+  $('#content').html(content);
+}
+function afterRandomInput() {
+  general_js_executed_functions[10] = "afterRandomInput";
+  var content = "<h2>filled in random values</h2><h3>";
+  content += "text: " + document.getElementById("text").value + "<br />";
+  content += "checkbox: " + document.getElementById("checkbox").checked + "<br />";
+  content += "radio: " + document.getElementById("radio").checked + "<br />";
+  content += "Select: " + document.getElementById("select").value;
+  content += "</h3>";
+  $('#content').html(content);
+}

@@ -52,7 +52,7 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 	private final AtomicInteger stateCounter = new AtomicInteger();
 	private final AtomicInteger nextStateNameCounter = new AtomicInteger();
 	private final ConcurrentMap<Integer, StateVertex> stateById;
-	private final ExitNotifier exitNotifier;
+	private transient final ExitNotifier exitNotifier;
 
 	/**
 	 * The constructor.
