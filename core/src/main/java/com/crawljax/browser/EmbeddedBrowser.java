@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.URL;
 
 import org.openqa.selenium.ElementNotVisibleException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.crawljax.core.CrawljaxException;
@@ -161,5 +162,9 @@ public interface EmbeddedBrowser {
 	 *             if saving screenshots is not supported by the implementing class.
 	 */
 	byte[] getScreenShot() throws CrawljaxException;
-
+	
+	/**
+	 * @return the WebDriver used as an EmbeddedBrowser.
+	 */
+	WebDriver getBrowser();
 }

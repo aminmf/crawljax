@@ -89,4 +89,13 @@ public class CrawlTaskConsumer implements Callable<Void> {
 		return crawler.getContext();
 	}
 
+	
+	/**
+	 * This method is for initial crawling paths fed from the test suite. It should be called once in order to setup the crawl.
+	 * 
+	 * @return The initial state.
+	 */
+	public void crawlInitialPaths() {
+		crawler.initilizeWithTestCases();
+	}
 }

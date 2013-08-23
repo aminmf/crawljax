@@ -1,7 +1,10 @@
 package com.crawljax.core;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
@@ -12,13 +15,17 @@ import java.util.regex.Pattern;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.*;
 
 import com.crawljax.browser.EmbeddedBrowser;
 import com.crawljax.condition.browserwaiter.WaitConditionChecker;
+import com.crawljax.condition.eventablecondition.EventableCondition;
+import com.crawljax.core.configuration.CrawlElement;
 import com.crawljax.core.configuration.CrawlRules;
 import com.crawljax.core.configuration.CrawljaxConfiguration;
 import com.crawljax.core.plugin.Plugins;
@@ -36,10 +43,13 @@ import com.crawljax.di.CoreModule.FormHandlerFactory;
 import com.crawljax.forms.FormHandler;
 import com.crawljax.forms.FormInput;
 import com.crawljax.oraclecomparator.StateComparator;
+import com.crawljax.util.DomUtils;
 import com.crawljax.util.ElementResolver;
 import com.crawljax.util.UrlUtils;
+import com.crawljax.util.XPathHelper;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableList.Builder;
 
 public class Crawler {
 
@@ -468,5 +478,82 @@ public class Crawler {
 
 	public CrawlerContext getContext() {
 		return context;
+	}
+	
+	
+	
+	
+	/**
+	 * Amin: This method adds initial crawling paths fed from the test suite. It should be called once per crawl in order to setup the crawl.
+	 * 
+	 * @return The initial state.
+	 */
+	public void initilizeWithTestCases() {
+		
+		LOG.debug("Setting up initial crawl paths from test cases");
+		// This comes from Selenium test cases
+
+
+		//
+
+
+		//private void evaluateElement(Builder<CandidateElement> results, String relatedFrame, CrawlElement crawl, Element sourceElement) 
+		Document dom;
+		try {
+			dom = DomUtils.asDocument(browser.getStrippedDomWithoutIframeContent());
+
+			NodeList nodeList = dom.getElementsByTagName("BUTTON");
+
+			org.w3c.dom.Element sourceElement = null;
+
+			for (int k = 0; k < nodeList.getLength(); k++)
+				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
+
+			EventableCondition eventableCondition = null;
+
+			String xpath = XPathHelper.getXPathExpression(sourceElement);
+			// get multiple candidate elements when there are input fields connected to this element
+
+			List<CandidateElement> candidateElements = new ArrayList<CandidateElement>();
+			if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
+					&& eventableCondition.getLinkedInputFields().size() > 0) {
+				// add multiple candidate elements, for every input value combination
+				candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
+			} else {
+				// just add default element
+				candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+			}
+
+			for (CandidateElement candidateElement : candidateElements) {
+				LOG.debug("Found new candidate element: {} with eventableCondition {}",
+						candidateElement.getUniqueString(), eventableCondition);
+				candidateElement.setEventableCondition(eventableCondition);
+				//results.add(candidateElement);
+
+				Eventable event = new Eventable(candidateElement, EventType.click);
+				handleInputElements(event);
+				waitForRefreshTagIfAny(event);
+
+				boolean fired = fireEvent(event);
+				if (fired) {
+					inspectNewState(event);
+				}
+			}
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		browser.getBrowser().findElement(By.id("login")).clear();
+		browser.getBrowser().findElement(By.id("login")).sendKeys("nainy");
+		browser.getBrowser().findElement(By.id("password")).clear();
+		browser.getBrowser().findElement(By.id("password")).sendKeys("nainy");
+		browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]")).click();
+
+		//browser.getBrowser().findElement(By.linkText("Logout")).click();
+	
+	
+
 	}
 }
