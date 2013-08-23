@@ -506,50 +506,53 @@ public class Crawler {
 
 			org.w3c.dom.Element sourceElement = null;
 
-			for (int k = 0; k < nodeList.getLength(); k++)
-				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
-
+			List<CandidateElement> candidateElements = new ArrayList<CandidateElement>();
 			EventableCondition eventableCondition = null;
 
-			String xpath = XPathHelper.getXPathExpression(sourceElement);
-			// get multiple candidate elements when there are input fields connected to this element
+			for (int k = 0; k < nodeList.getLength(); k++){
+				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
 
-			List<CandidateElement> candidateElements = new ArrayList<CandidateElement>();
-			if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
-					&& eventableCondition.getLinkedInputFields().size() > 0) {
-				// add multiple candidate elements, for every input value combination
-				candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
-			} else {
-				// just add default element
-				candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+
+				String xpath = XPathHelper.getXPathExpression(sourceElement);
+				// get multiple candidate elements when there are input fields connected to this element
+
+				if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
+						&& eventableCondition.getLinkedInputFields().size() > 0) {
+					// add multiple candidate elements, for every input value combination
+					candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
+				} else {
+					// just add default element
+					candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+				}
+
 			}
 
 			for (CandidateElement candidateElement : candidateElements) {
 				LOG.debug("Found new candidate element: {} with eventableCondition {}",
 						candidateElement.getUniqueString(), eventableCondition);
 				candidateElement.setEventableCondition(eventableCondition);
-				//results.add(candidateElement);
 
-				Eventable event = new Eventable(candidateElement, EventType.click);
-				handleInputElements(event);
-				waitForRefreshTagIfAny(event);
-
-				boolean fired = fireEvent(event);
-				if (fired) {
-					inspectNewState(event);
-				}
+			Eventable event = new Eventable(candidateElement, EventType.click);
+			
+			//handleInputElements(event);
+			browser.getBrowser().findElement(By.id("login")).clear();
+			browser.getBrowser().findElement(By.id("login")).sendKeys("nainy");
+			browser.getBrowser().findElement(By.id("password")).clear();
+			browser.getBrowser().findElement(By.id("password")).sendKeys("nainy");
+			
+			//boolean fired = fireEvent(event);
+			browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//if (fired) {
+				inspectNewState(event);
+			//}
 			}
-
+			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
 
-		browser.getBrowser().findElement(By.id("login")).clear();
-		browser.getBrowser().findElement(By.id("login")).sendKeys("nainy");
-		browser.getBrowser().findElement(By.id("password")).clear();
-		browser.getBrowser().findElement(By.id("password")).sendKeys("nainy");
-		browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]")).click();
 
 		//browser.getBrowser().findElement(By.linkText("Logout")).click();
 	
