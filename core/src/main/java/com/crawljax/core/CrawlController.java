@@ -66,10 +66,11 @@ public class CrawlController implements Callable<CrawlSession> {
 		StateVertex firstState = firstConsumer.crawlIndex();
 		crawlSessionProvider.setup(firstState);
 		
+		plugins.runOnNewStatePlugins(firstConsumer.getContext(), firstState);
+		
 		// Amin
 		firstConsumer.crawlInitialPaths();
 		
-		plugins.runOnNewStatePlugins(firstConsumer.getContext(), firstState);
 		executeConsumers(firstConsumer);
 		return crawlSessionProvider.get();
 	}

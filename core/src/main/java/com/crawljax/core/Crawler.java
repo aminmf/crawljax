@@ -494,9 +494,6 @@ public class Crawler {
 		// This comes from Selenium test cases
 
 
-		//
-
-
 		//private void evaluateElement(Builder<CandidateElement> results, String relatedFrame, CrawlElement crawl, Element sourceElement) 
 		Document dom;
 		try {
@@ -515,14 +512,24 @@ public class Crawler {
 
 				String xpath = XPathHelper.getXPathExpression(sourceElement);
 				// get multiple candidate elements when there are input fields connected to this element
+				
+				System.out.println("xpath : " + xpath);
 
+				candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
+
+				
 				if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
 						&& eventableCondition.getLinkedInputFields().size() > 0) {
 					// add multiple candidate elements, for every input value combination
 					candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
 				} else {
 					// just add default element
-					candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+					
+					candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
+
+					//candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+					System.out.println(candidateElements);
+
 				}
 
 			}
