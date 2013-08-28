@@ -507,20 +507,33 @@ public class Crawler {
 		webElement.sendKeys("nainy");
 		webElement = browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]"));
 
-		//find the corresponding org.w3c.dom.Element
-		CandidateElement candidateElement = getCorrespondingCandidateElement(webElement);
-		Eventable event = new Eventable(candidateElement, EventType.click);
-		System.out.println(event);
+		// generate corresponding Eventable for webElement
+		Eventable event = getCorrespondingEventable(webElement, EventType.click);
 
-		// firing the event on webElement
+		// This comes from Selenium test cases
 		webElement.click();
 
 		// inspecting DOM changes and adding to SFG
 		inspectNewState(event);
 
+		// This comes from Selenium test cases
 		webElement = browser.getBrowser().findElement(By.linkText("Logout"));
+
+		// generate corresponding Eventable for webElement
+		event = getCorrespondingEventable(webElement, EventType.click);
+
 		webElement.click();
 
+		inspectNewState(event);
+
+	}
+
+	//Amin
+	private Eventable getCorrespondingEventable(WebElement webElement, EventType eventType) {
+		CandidateElement candidateElement = getCorrespondingCandidateElement(webElement);
+		Eventable event = new Eventable(candidateElement, eventType);
+		System.out.println(event);
+		return event;
 	}
 
 	//Amin
@@ -529,22 +542,25 @@ public class Crawler {
 		try {
 			dom = DomUtils.asDocument(browser.getStrippedDomWithoutIframeContent());
 
-			NodeList nodeList = dom.getElementsByTagName("BUTTON");
+			for (CrawlElement crawlTag : crawlRules.getAllCrawlElements()) {
+				// checking all tags defined in the crawlRules
+				NodeList nodeList = dom.getElementsByTagName(crawlTag.getTagName());
 
-			String xpath1 = getXPath(webElement);
-			String xpath2 = null;
-			org.w3c.dom.Element sourceElement = null;
+				String xpath1 = getXPath(webElement);
+				String xpath2 = null;
+				org.w3c.dom.Element sourceElement = null;
 
-			for (int k = 0; k < nodeList.getLength(); k++){
-				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
-				// check if sourceElement is webElement
-				if (checkEqulity(webElement, sourceElement)){
-					xpath2 = XPathHelper.getXPathExpression(sourceElement);
-					// System.out.println("xpath : " + xpath2);
-					CandidateElement candidateElement = new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath2), "");
-					LOG.debug("Found new candidate element: {} with eventableCondition {}",	candidateElement.getUniqueString(), null);
-					candidateElement.setEventableCondition(null);
-					return candidateElement;
+				for (int k = 0; k < nodeList.getLength(); k++){
+					sourceElement = (org.w3c.dom.Element) nodeList.item(k);
+					// check if sourceElement is webElement
+					if (checkEqulity(webElement, sourceElement)){
+						xpath2 = XPathHelper.getXPathExpression(sourceElement);
+						// System.out.println("xpath : " + xpath2);
+						CandidateElement candidateElement = new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath2), "");
+						LOG.debug("Found new candidate element: {} with eventableCondition {}",	candidateElement.getUniqueString(), null);
+						candidateElement.setEventableCondition(null);
+						return candidateElement;
+					}
 				}
 			}
 		} catch (IOException e) {
