@@ -18,6 +18,7 @@ import javax.inject.Provider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.*;
@@ -500,70 +501,121 @@ public class Crawler {
 			dom = DomUtils.asDocument(browser.getStrippedDomWithoutIframeContent());
 
 			NodeList nodeList = dom.getElementsByTagName("BUTTON");
-
+			String xpath = null;
 			org.w3c.dom.Element sourceElement = null;
 
 			List<CandidateElement> candidateElements = new ArrayList<CandidateElement>();
 			EventableCondition eventableCondition = null;
 
-			for (int k = 0; k < nodeList.getLength(); k++){
-				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
-
-
-				String xpath = XPathHelper.getXPathExpression(sourceElement);
-				// get multiple candidate elements when there are input fields connected to this element
-				
-				System.out.println("xpath : " + xpath);
-
-				candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
-
-				
-				if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
-						&& eventableCondition.getLinkedInputFields().size() > 0) {
-					// add multiple candidate elements, for every input value combination
-					candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
-				} else {
-					// just add default element
-					
-					candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
-
-					//candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
-					System.out.println(candidateElements);
-
-				}
-
-			}
-
-			for (CandidateElement candidateElement : candidateElements) {
-				LOG.debug("Found new candidate element: {} with eventableCondition {}",
-						candidateElement.getUniqueString(), eventableCondition);
-				candidateElement.setEventableCondition(eventableCondition);
-
-			Eventable event = new Eventable(candidateElement, EventType.click);
+			//sourceElement = (org.w3c.dom.Element) nodeList.item(0);
+			//String xpath = XPathHelper.getXPathExpression(sourceElement);
+			//System.out.println("sourceElement " + sourceElement);
+			//System.out.println(" has xpath : " + xpath);
 			
-			//handleInputElements(event);
+			
+		
 			browser.getBrowser().findElement(By.id("login")).clear();
 			browser.getBrowser().findElement(By.id("login")).sendKeys("nainy");
 			browser.getBrowser().findElement(By.id("password")).clear();
 			browser.getBrowser().findElement(By.id("password")).sendKeys("nainy");
-			
-			//boolean fired = fireEvent(event);
-			browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//if (fired) {
-				inspectNewState(event);
-			//}
+
+			WebElement e = browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]"));
+
+			//get xpath of the WebElement
+			String xpath2 = getXPath(e);
+
+			System.out.println("WebElement" + e);
+			System.out.println(" has xpath : " + xpath2);
+
+			//find the coresponding org.w3c.dom.Element
+
+			for (int k = 0; k < nodeList.getLength(); k++){
+				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
+				// check is xpaths are the same
+
+				xpath = XPathHelper.getXPathExpression(sourceElement);
+				if (xpath.equals(xpath2)){
+					System.out.println("xpath : " + xpath);
+
+					// get multiple candidate elements when there are input fields connected to this element
+					if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
+							&& eventableCondition.getLinkedInputFields().size() > 0) {
+						// add multiple candidate elements, for every input value combination
+						candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
+					} else {
+						// just add default element
+						candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
+
+						//candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+						System.out.println(candidateElements);
+					}
+
+					for (CandidateElement candidateElement : candidateElements) {
+						LOG.debug("Found new candidate element: {} with eventableCondition {}",
+								candidateElement.getUniqueString(), eventableCondition);
+						candidateElement.setEventableCondition(eventableCondition);
+
+						Eventable event = new Eventable(candidateElement, EventType.click);
+
+						//handleInputElements(event);
+					}
+				}
+				break;
 			}
-			
+
+			if (xpath.equals(xpath2))
+				System.out.println("could not match xpaths!");
+
+
+			e.click();
+
+			//boolean fired = fireEvent(event);
+
+
+			//if (fired) {
+			//inspectNewState(event);
+			//}
+			//}
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-
 
 		//browser.getBrowser().findElement(By.linkText("Logout")).click();
-	
-	
-
 	}
+
+
+	//Amin
+	public String getXPath(WebElement element) {
+
+		String jscript = "function getElementXPath(elt) " +   
+				"{" + 
+				"var path = \"\";" +
+				"for (; elt && elt.nodeType == 1; elt = elt.parentNode)" + 
+				"{" +        
+				"idx = getElementIdx(elt);" + 
+				"xname = elt.tagName;" +
+				"if (idx > 1) xname += \"[\" + idx + \"]\";" + 
+				"path = \"/\" + xname + path;" + 
+				"}" +  
+				"return path;" + 
+				"} " + 
+				"function getElementIdx(elt) "+ 
+				"{"  + 
+				"var count = 1;" + 
+				"for (var sib = elt.previousSibling; sib ; sib = sib.previousSibling) " + 
+				"{" + 
+				"if(sib.nodeType == 1 && sib.tagName == elt.tagName) count++; " + 
+				"} " +     
+				"return count;" + 
+				"} " +
+				"return getElementXPath(arguments[0]);";
+
+		String xpath = (String) browser.executeJavaScriptWithParam(jscript, element);
+		return xpath;
+	} 
+
+
+
 }

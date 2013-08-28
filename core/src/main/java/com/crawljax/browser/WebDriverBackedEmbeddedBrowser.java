@@ -507,6 +507,27 @@ public final class WebDriverBackedEmbeddedBrowser implements EmbeddedBrowser {
 		}
 	}
 
+	
+	/**
+	 * Amin: Execute JavaScript in the browser with parameter.
+	 * 
+	 * @param code
+	 *            The code to execute.
+	 * @return The return value of the JavaScript.
+	 * @throws CrawljaxException
+	 *             when javascript execution failed.
+	 */
+	@Override
+	public Object executeJavaScriptWithParam(String code, WebElement element) throws CrawljaxException {
+		try {
+			JavascriptExecutor js = (JavascriptExecutor) browser;
+			return js.executeScript(code, element);
+		} catch (WebDriverException e) {
+			throwIfConnectionException(e);
+			throw new CrawljaxException(e);
+		}
+	}
+	
 	/**
 	 * Determines whether the corresponding element is visible.
 	 * 

@@ -167,4 +167,16 @@ public interface EmbeddedBrowser {
 	 * @return the WebDriver used as an EmbeddedBrowser.
 	 */
 	WebDriver getBrowser();
+
+	/**
+	 * Amin: Execute JavaScript in the browser with parameter.
+	 * 
+	 * @param script
+	 *            The script to execute.
+	 * @return The JavaScript return object.
+	 * @throws CrawljaxException
+	 *             On error.
+	 */
+	Object executeJavaScriptWithParam(String script, WebElement element) throws CrawljaxException;
+	
 }
