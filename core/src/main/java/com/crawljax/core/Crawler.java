@@ -501,17 +501,11 @@ public class Crawler {
 			dom = DomUtils.asDocument(browser.getStrippedDomWithoutIframeContent());
 
 			NodeList nodeList = dom.getElementsByTagName("BUTTON");
-			String xpath = null;
+			String xpath1, xpath2 = null;
 			org.w3c.dom.Element sourceElement = null;
 
 			List<CandidateElement> candidateElements = new ArrayList<CandidateElement>();
 			EventableCondition eventableCondition = null;
-
-			//sourceElement = (org.w3c.dom.Element) nodeList.item(0);
-			//String xpath = XPathHelper.getXPathExpression(sourceElement);
-			//System.out.println("sourceElement " + sourceElement);
-			//System.out.println(" has xpath : " + xpath);
-			
 			
 		
 			browser.getBrowser().findElement(By.id("login")).clear();
@@ -519,23 +513,20 @@ public class Crawler {
 			browser.getBrowser().findElement(By.id("password")).clear();
 			browser.getBrowser().findElement(By.id("password")).sendKeys("nainy");
 
-			WebElement e = browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]"));
+			WebElement webElement = browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]"));
 
-			//get xpath of the WebElement
-			String xpath2 = getXPath(e);
+			xpath1 = getXPath(webElement);
 
-			System.out.println("WebElement" + e);
-			System.out.println(" has xpath : " + xpath2);
-
-			//find the coresponding org.w3c.dom.Element
-
+			//find the corresponding org.w3c.dom.Element
 			for (int k = 0; k < nodeList.getLength(); k++){
 				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
-				// check is xpaths are the same
+				
+				// check if sourceElement is webElement
+				if (checkEqulity(webElement, sourceElement)){
+					
+					xpath2 = XPathHelper.getXPathExpression(sourceElement);
 
-				xpath = XPathHelper.getXPathExpression(sourceElement);
-				if (xpath.equals(xpath2)){
-					System.out.println("xpath : " + xpath);
+					System.out.println("xpath : " + xpath2);
 
 					// get multiple candidate elements when there are input fields connected to this element
 					if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
@@ -544,9 +535,7 @@ public class Crawler {
 						candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
 					} else {
 						// just add default element
-						candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
-
-						//candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath), ""));
+						candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath2), ""));
 						System.out.println(candidateElements);
 					}
 
@@ -556,26 +545,28 @@ public class Crawler {
 						candidateElement.setEventableCondition(eventableCondition);
 
 						Eventable event = new Eventable(candidateElement, EventType.click);
+						
+						System.out.println(event);
+						
+						// firing the event on webElement
+						webElement.click();
 
+						// inspecting DOM changes and adding to SFG
+						reset();
+						inspectNewState(event);
+						
 						//handleInputElements(event);
 					}
 				}
 				break;
 			}
 
-			if (xpath.equals(xpath2))
-				System.out.println("could not match xpaths!");
+			// what if could not find any corresponding elements!
+			//if (!xpath.equals(xpath2))
+			//	System.out.println("could not match xpaths!");
 
 
-			e.click();
 
-			//boolean fired = fireEvent(event);
-
-
-			//if (fired) {
-			//inspectNewState(event);
-			//}
-			//}
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -585,6 +576,31 @@ public class Crawler {
 		//browser.getBrowser().findElement(By.linkText("Logout")).click();
 	}
 
+	//Amin
+	private boolean checkEqulity(WebElement webElement,	org.w3c.dom.Element sourceElement) {
+		
+		//get xpath of the WebElement
+		String xpath1 = getXPath(webElement);
+
+		System.out.println("WebElement: " + webElement);
+		System.out.println("has xpath : " + xpath1);
+
+		// check if xpaths are the same
+		String xpath2 = XPathHelper.getXPathExpression(sourceElement);
+		System.out.println("sourceElement: " + sourceElement);
+		System.out.println("has xpath : " + xpath2);
+
+		// removing "[1]" from xpath2 for consistency with the xpath1 format 
+		xpath2 = xpath2.replace("[1]","");  
+
+		if (xpath2.equals(xpath1)){
+			System.out.println("xpaths are equal");
+			return true;
+		}
+		
+		System.out.println("xpaths are not equal");
+		return false;
+	}
 
 	//Amin
 	public String getXPath(WebElement element) {
