@@ -490,90 +490,69 @@ public class Crawler {
 	 * @return The initial state.
 	 */
 	public void initilizeWithTestCases() {
-		
+		WebElement webElement = null;
 		LOG.debug("Setting up initial crawl paths from test cases");
+		
+		// reseting before each test case
+		reset();
+
 		// This comes from Selenium test cases
+		webElement = browser.getBrowser().findElement(By.id("login"));
+		webElement.clear();
+		webElement = browser.getBrowser().findElement(By.id("login"));
+		webElement.sendKeys("nainy");
+		webElement = browser.getBrowser().findElement(By.id("password"));
+		webElement.clear();
+		webElement = browser.getBrowser().findElement(By.id("password"));
+		webElement.sendKeys("nainy");
+		webElement = browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]"));
 
+		//find the corresponding org.w3c.dom.Element
+		CandidateElement candidateElement = getCorrespondingCandidateElement(webElement);
+		Eventable event = new Eventable(candidateElement, EventType.click);
+		System.out.println(event);
 
-		//private void evaluateElement(Builder<CandidateElement> results, String relatedFrame, CrawlElement crawl, Element sourceElement) 
+		// firing the event on webElement
+		webElement.click();
+
+		// inspecting DOM changes and adding to SFG
+		inspectNewState(event);
+
+		webElement = browser.getBrowser().findElement(By.linkText("Logout"));
+		webElement.click();
+
+	}
+
+	//Amin
+	private CandidateElement getCorrespondingCandidateElement(WebElement webElement) {
 		Document dom;
 		try {
 			dom = DomUtils.asDocument(browser.getStrippedDomWithoutIframeContent());
 
 			NodeList nodeList = dom.getElementsByTagName("BUTTON");
-			String xpath1, xpath2 = null;
+
+			String xpath1 = getXPath(webElement);
+			String xpath2 = null;
 			org.w3c.dom.Element sourceElement = null;
 
-			List<CandidateElement> candidateElements = new ArrayList<CandidateElement>();
-			EventableCondition eventableCondition = null;
-			
-		
-			browser.getBrowser().findElement(By.id("login")).clear();
-			browser.getBrowser().findElement(By.id("login")).sendKeys("nainy");
-			browser.getBrowser().findElement(By.id("password")).clear();
-			browser.getBrowser().findElement(By.id("password")).sendKeys("nainy");
-
-			WebElement webElement = browser.getBrowser().findElement(By.cssSelector("button[type=\"submit\"]"));
-
-			xpath1 = getXPath(webElement);
-
-			//find the corresponding org.w3c.dom.Element
 			for (int k = 0; k < nodeList.getLength(); k++){
 				sourceElement = (org.w3c.dom.Element) nodeList.item(k);
-				
 				// check if sourceElement is webElement
 				if (checkEqulity(webElement, sourceElement)){
-					
 					xpath2 = XPathHelper.getXPathExpression(sourceElement);
-
-					System.out.println("xpath : " + xpath2);
-
-					// get multiple candidate elements when there are input fields connected to this element
-					if (eventableCondition != null && eventableCondition.getLinkedInputFields() != null
-							&& eventableCondition.getLinkedInputFields().size() > 0) {
-						// add multiple candidate elements, for every input value combination
-						candidateElements =	formHandler.getCandidateElementsForInputs(sourceElement, eventableCondition);
-					} else {
-						// just add default element
-						candidateElements.add(new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath2), ""));
-						System.out.println(candidateElements);
-					}
-
-					for (CandidateElement candidateElement : candidateElements) {
-						LOG.debug("Found new candidate element: {} with eventableCondition {}",
-								candidateElement.getUniqueString(), eventableCondition);
-						candidateElement.setEventableCondition(eventableCondition);
-
-						Eventable event = new Eventable(candidateElement, EventType.click);
-						
-						System.out.println(event);
-						
-						// firing the event on webElement
-						webElement.click();
-
-						// inspecting DOM changes and adding to SFG
-						reset();
-						inspectNewState(event);
-						
-						//handleInputElements(event);
-					}
+					// System.out.println("xpath : " + xpath2);
+					CandidateElement candidateElement = new CandidateElement(sourceElement, new Identification(Identification.How.xpath, xpath2), "");
+					LOG.debug("Found new candidate element: {} with eventableCondition {}",	candidateElement.getUniqueString(), null);
+					candidateElement.setEventableCondition(null);
+					return candidateElement;
 				}
-				break;
 			}
-
-			// what if could not find any corresponding elements!
-			//if (!xpath.equals(xpath2))
-			//	System.out.println("could not match xpaths!");
-
-
-
-
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-		//browser.getBrowser().findElement(By.linkText("Logout")).click();
+		System.out.println("could not find the corresponding CandidateElement");
+		return null;
 	}
 
 	//Amin

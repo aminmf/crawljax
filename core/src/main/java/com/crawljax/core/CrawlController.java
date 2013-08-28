@@ -119,6 +119,13 @@ public class CrawlController implements Callable<CrawlSession> {
 		for (int i = 1; i < config.getBrowserConfig().getNumberOfBrowsers(); i++) {
 			executor.submit(consumerFactory.get());
 		}
+		
+		shutDown();
+		plugins.runPostCrawlingPlugins(crawlSessionProvider.get(), exitReason);
+		LOG.info("Shutdown process complete");
+		if (1==1)
+			return;
+		
 		try {
 			exitReason = exitNotifier.awaitTermination();
 		} catch (InterruptedException e) {
