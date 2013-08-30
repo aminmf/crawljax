@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 
 import com.crawljax.browser.EmbeddedBrowser.BrowserType;
 import com.crawljax.condition.NotXPathCondition;
@@ -24,7 +25,9 @@ public final class AdvancedExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 200;
 	private static final long WAIT_TIME_AFTER_RELOAD = 20;
-	private static final String URL = "http://demo.crawljax.com";
+	
+	private static final String URL = "http://watersmc.ece.ubc.ca:8888/claroline-1.11.7/";
+	//private static final String URL = "http://demo.crawljax.com/";
 
 	/**
 	 * Run this method to start the crawl.
@@ -35,6 +38,8 @@ public final class AdvancedExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
+		builder.setMaximumRunTime(100, TimeUnit.SECONDS);
+
 
 		// click these elements
 		builder.crawlRules().clickDefaultElements();
@@ -64,7 +69,7 @@ public final class AdvancedExample {
 		builder.addPlugin(new CrawlOverview());
 
 		// We want to use two browsers simultaneously.
-		builder.setBrowserConfig(new BrowserConfiguration(BrowserType.FIREFOX, 2));
+		builder.setBrowserConfig(new BrowserConfiguration(BrowserType.FIREFOX, 1));
 
 		CrawljaxRunner crawljax = new CrawljaxRunner(builder.build());
 		crawljax.call();
@@ -82,6 +87,12 @@ public final class AdvancedExample {
 		contactForm.field("type").setValues("Student", "Teacher");
 		contactForm.field("active").setValues(true);
 		input.setValuesInForm(contactForm).beforeClickElement("button").withText("Save");
+		
+		//Form form=new Form();
+		//form.field("login").setValue("nainy");
+		//form.field("password").setValue("nainy");
+		//input.setValuesInForm(form).beforeClickElement("input").withAttribute("type", "submit");
+		
 		return input;
 	}
 
