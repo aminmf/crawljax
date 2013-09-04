@@ -26,9 +26,9 @@ import com.crawljax.plugins.proxy.WebScarabProxyPlugin;
  */
 public final class DiffCrawlerExample {
 
-	private static final long WAIT_TIME_AFTER_EVENT = 200;
-	private static final long WAIT_TIME_AFTER_RELOAD = 20;
-	private static final String URL = "http://demo.crawljax.com";
+	private static final long WAIT_TIME_AFTER_EVENT = 300;
+	private static final long WAIT_TIME_AFTER_RELOAD = 50;
+	private static final String URL = "http://localhost:8888/jquery.mb.gallery/demo.html";
 
 	/**
 	 * Run this method to start the crawl.
@@ -39,15 +39,15 @@ public final class DiffCrawlerExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(100, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(300, TimeUnit.SECONDS);
 
 		// click these elements
 		builder.crawlRules().clickDefaultElements();
 		builder.crawlRules().click("div").withAttribute("class", "clickable");
 
 		// but don't click these
-		builder.crawlRules().dontClick("a").withAttribute("class", "ignore");
-		builder.crawlRules().dontClick("a").underXPath("//DIV[@id='footer']");
+		//builder.crawlRules().dontClick("a").withAttribute("class", "ignore");
+		//builder.crawlRules().dontClick("a").underXPath("//DIV[@id='footer']");
 
 		// Set timeouts
 		builder.crawlRules().waitAfterReloadUrl(WAIT_TIME_AFTER_RELOAD, TimeUnit.MILLISECONDS);

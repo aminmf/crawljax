@@ -353,7 +353,8 @@ public class Crawler {
 		}
 	}
 
-	private void inspectNewState(Eventable event) {
+	// Amin: changed this from private to public
+	public void inspectNewState(Eventable event) {
 		if (crawlerLeftDomain()) {
 			LOG.debug("The browser left the domain. Going back one state...");
 			goBackOneState();

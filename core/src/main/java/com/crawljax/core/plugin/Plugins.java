@@ -17,6 +17,7 @@ import com.crawljax.browser.EmbeddedBrowser;
 import com.crawljax.condition.invariant.Invariant;
 import com.crawljax.core.CandidateElement;
 import com.crawljax.core.CrawlSession;
+import com.crawljax.core.CrawlTaskConsumer;
 import com.crawljax.core.CrawlerContext;
 import com.crawljax.core.ExitNotifier.ExitStatus;
 import com.crawljax.core.configuration.CrawljaxConfiguration;
@@ -441,7 +442,7 @@ public class Plugins {
 	 * the event is fireable.
 	 * 
 	 * @param eventable
-	 *            the eventable not able to fire.
+	 *            the fired eventable.
 	 */
 	public void OnFireEventSucceededPlugins(CrawlerContext context, StateVertex stateBefore, Eventable eventable, StateVertex stateAfter) {
 		LOGGER.debug("Running OnFireEventPlugins...");
@@ -450,6 +451,29 @@ public class Plugins {
 				LOGGER.debug("Calling plugin {}", plugin);
 				try {
 					((OnFireEventSucceededPlugin) plugin).onFireEvent(context, stateBefore, eventable, stateAfter);
+				} catch (RuntimeException e) {
+					reportFailingPlugin(plugin, e);
+				}
+			}
+		}
+	}
+
+	
+	/**
+	 * Amin: Load and run the runInitialPathExecutionPlugins. These plugins are ran after the index state was added.
+	 * It helps executing Selenium test cases as initial paths to the SFG.
+	 * @param config 
+	 * 
+	 * @param firstConsumer
+	 *            the CrawlTaskConsumer of the CrawlController.
+	 */
+	public void executeInitialPathsPlugins(CrawljaxConfiguration config, CrawlTaskConsumer firstConsumer) {
+		LOGGER.debug("Running executeInitialPathsPlugins...");
+		for (Plugin plugin : plugins.get(ExecuteInitialPathsPlugin.class)) {
+			if (plugin instanceof ExecuteInitialPathsPlugin) {
+				LOGGER.debug("Calling plugin {}", plugin);
+				try {
+					((ExecuteInitialPathsPlugin) plugin).initialPathExecution(config, firstConsumer);
 				} catch (RuntimeException e) {
 					reportFailingPlugin(plugin, e);
 				}

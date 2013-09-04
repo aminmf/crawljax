@@ -65,11 +65,11 @@ public class CrawlController implements Callable<CrawlSession> {
 		CrawlTaskConsumer firstConsumer = consumerFactory.get();
 		StateVertex firstState = firstConsumer.crawlIndex();
 		crawlSessionProvider.setup(firstState);
-		
 		plugins.runOnNewStatePlugins(firstConsumer.getContext(), firstState);
 		
 		// Amin
-		firstConsumer.crawlInitialPaths();
+		plugins.executeInitialPathsPlugins(config, firstConsumer);
+		//firstConsumer.crawlInitialPaths();
 		
 		executeConsumers(firstConsumer);
 		return crawlSessionProvider.get();
@@ -120,6 +120,7 @@ public class CrawlController implements Callable<CrawlSession> {
 			executor.submit(consumerFactory.get());
 		}
 		
+		// Amin
 		shutDown();
 		plugins.runPostCrawlingPlugins(crawlSessionProvider.get(), exitReason);
 		LOG.info("Shutdown process complete");
