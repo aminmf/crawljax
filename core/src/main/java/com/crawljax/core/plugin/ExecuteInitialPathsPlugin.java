@@ -3,7 +3,6 @@ package com.crawljax.core.plugin;
 import com.crawljax.core.CrawlTaskConsumer;
 import com.crawljax.core.CrawlerContext;
 import com.crawljax.core.configuration.CrawljaxConfiguration;
-import com.crawljax.core.state.StateVertex;
 
 /**
  * Plugin type that is called every time a new state is found by Crawljax. This also happens for the

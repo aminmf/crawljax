@@ -69,7 +69,6 @@ public class CrawlController implements Callable<CrawlSession> {
 		
 		// Amin
 		plugins.executeInitialPathsPlugins(config, firstConsumer);
-		//firstConsumer.crawlInitialPaths();
 		
 		executeConsumers(firstConsumer);
 		return crawlSessionProvider.get();
