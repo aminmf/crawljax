@@ -15,6 +15,7 @@ import com.crawljax.core.configuration.ProxyConfiguration;
 import com.crawljax.core.configuration.CrawljaxConfiguration.CrawljaxConfigurationBuilder;
 import com.crawljax.core.configuration.Form;
 import com.crawljax.core.configuration.InputSpecification;
+import com.crawljax.plugins.crawloverview.CrawlOverview;
 import com.crawljax.plugins.testsuiteextension.TestSuiteExtension;
 
 /**
@@ -61,6 +62,7 @@ public final class TestSuiteExtensionExample {
 		if (outFolder.exists()) {
 			FileUtils.deleteDirectory(outFolder);
 		}
+		builder.addPlugin(new CrawlOverview());
 		builder.addPlugin(new TestSuiteExtension(outFolder));
 		
 		// For this version we use only one browser.
