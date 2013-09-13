@@ -171,4 +171,29 @@ public class UnfiredCandidateActions {
 			crawlerLostCount.inc();
 		}
 	}
+	
+			
+	/**
+	 * Amin: Used for FeedEx
+	 * @param stateId
+	 *            The id of a selected state to be chosen as the next crawl task.
+	 * @return A new crawl task as soon as one is ready. Until then, it blocks.
+	 * @throws InterruptedException
+	 *             when taking from the queue is interrupted.
+	 */
+	public StateVertex awaitSelectedNewTask(int stateId) throws InterruptedException {
+		while (statesWithCandidates.remove(stateId)) {
+			LOG.trace("Removed id {} from the queue", stateId);
+		}
+		// Put it back the end of the queue. It will be removed later.
+		statesWithCandidates.add(stateId);
+		LOG.debug("New selected task polled for state {}", stateId);
+		LOG.info("There are {} states with unfired actions", statesWithCandidates.size());
+		return sfg.get().getById(stateId);
+	}
+	
+	public int getNumberOfStatesWithCandidates(){
+		return statesWithCandidates.size();
+	}
+	
 }

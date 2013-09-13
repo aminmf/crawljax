@@ -1,5 +1,6 @@
 package com.crawljax.core;
 
+import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -61,13 +62,37 @@ public class CrawlTaskConsumer implements Callable<Void> {
 	private void pollAndHandleCrawlTasks() throws InterruptedException {
 		try {
 			LOG.debug("Awaiting task");
-			StateVertex crawlTask = candidates.awaitNewTask();
+			//StateVertex crawlTask = candidates.awaitNewTask();
+			
+			// Amin: selecting the next state to be expanded
+			int stateId = getNextStateIdToCrawl();
+			StateVertex crawlTask = candidates.awaitSelectedNewTask(stateId);
+			
 			int activeConsumers = runningConsumers.incrementAndGet();
 			LOG.debug("There are {} active consumers", activeConsumers);
 			handleTask(crawlTask);
 		} catch (RuntimeException e) {
 			LOG.error("Cound not complete state crawl: " + e.getMessage(), e);
 		}
+	}
+
+	// Amin
+	private int getNextStateIdToCrawl() {
+		int numberOfStatesWithCandidates = candidates.getNumberOfStatesWithCandidates();
+		LOG.info("There are {} states with unfired actions", numberOfStatesWithCandidates);
+		boolean randomStrategy = true;
+		int stateId = 0;
+		
+		Random randomGenerator = new Random();
+		
+		if (randomStrategy){
+			stateId = randomGenerator.nextInt(numberOfStatesWithCandidates);
+		}
+		
+		
+		LOG.info("Satet with id " + stateId + " was selected as the nextStateToCrawl");
+
+		return stateId;
 	}
 
 	private void handleTask(StateVertex state) {
