@@ -57,13 +57,8 @@ public final class TestSuiteExtensionExample {
 		// Set some input for fields
 		builder.crawlRules().setInputSpec(getInputSpecification());
 
-		// This will generate a nice output in the output directory.
-		File outFolder = new File("output");
-		if (outFolder.exists()) {
-			FileUtils.deleteDirectory(outFolder);
-		}
 		builder.addPlugin(new CrawlOverview());
-		builder.addPlugin(new TestSuiteExtension(outFolder));
+		builder.addPlugin(new TestSuiteExtension());
 		
 		// For this version we use only one browser.
 		builder.setBrowserConfig(new BrowserConfiguration(BrowserType.FIREFOX, 1));
