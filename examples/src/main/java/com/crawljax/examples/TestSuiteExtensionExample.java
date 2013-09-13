@@ -57,7 +57,7 @@ public final class TestSuiteExtensionExample {
 		// Set some input for fields
 		builder.crawlRules().setInputSpec(getInputSpecification());
 
-		builder.addPlugin(new CrawlOverview());
+		//builder.addPlugin(new CrawlOverview());
 		builder.addPlugin(new TestSuiteExtension());
 		
 		// For this version we use only one browser.
