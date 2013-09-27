@@ -134,10 +134,15 @@ public class FormHandler {
 	private void handleText(Node element, FormInput input) {
 		String text = input.getInputValues().iterator().next().getValue();
 		if ("".equals(text)) {
+			System.out.println("equals!!!!!!!!");
+			
 			return;
 		}
 		String js = DomUtils.getJSGetElement(XPathHelper.getXPathExpression(element));
 		js += "try{ATUSA_element.value='" + text + "';}catch(e){}";
+		
+		System.out.println(js);
+		
 		browser.executeJavaScript(js);
 	}
 

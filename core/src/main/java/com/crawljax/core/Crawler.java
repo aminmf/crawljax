@@ -210,10 +210,9 @@ public class Crawler {
 	// Amin changed from private to public
 	public void handleInputElements(Eventable eventable) {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
-		
-		System.out.println("formInputs: " + formInputs);
-		
 
+		System.out.println("handleInputElements!");
+		
 		for (FormInput formInput : formHandler.getFormInputs()) {
 			if (!formInputs.contains(formInput)) {
 				formInputs.add(formInput);
@@ -325,6 +324,9 @@ public class Crawler {
 			CandidateElement element = action.getCandidateElement();
 			if (element.allConditionsSatisfied(browser)) {
 				Eventable event = new Eventable(element, action.getEventType());
+				
+				System.out.println("event: " + event);
+				
 				handleInputElements(event);
 				waitForRefreshTagIfAny(event);
 
