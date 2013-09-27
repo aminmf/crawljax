@@ -74,10 +74,10 @@ public final class TestSuiteExtensionExample {
 		contactForm.field("female").setValues(false, true);
 		contactForm.field("name").setValues("Bob", "Alice", "John");
 		contactForm.field("phone").setValues("1234567890", "1234888888", "");
-		contactForm.field("mobile").setValues("123", "3214321421");
-		contactForm.field("type").setValues("Student", "Teacher");
+		contactForm.field("login").setValues("nainy", "3214321421");
+		contactForm.field("password").setValues("nainy", "Teacher");
 		contactForm.field("active").setValues(true);
-		input.setValuesInForm(contactForm).beforeClickElement("button").withText("Save");
+		input.setValuesInForm(contactForm).beforeClickElement("button");//. .withText("Save");
 		return input;
 	}
 

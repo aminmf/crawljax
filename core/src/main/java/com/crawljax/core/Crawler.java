@@ -207,8 +207,12 @@ public class Crawler {
 	 * @param eventable
 	 *            the eventable element.
 	 */
-	private void handleInputElements(Eventable eventable) {
+	// Amin changed from private to public
+	public void handleInputElements(Eventable eventable) {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
+		
+		System.out.println("formInputs: " + formInputs);
+		
 
 		for (FormInput formInput : formHandler.getFormInputs()) {
 			if (!formInputs.contains(formInput)) {
@@ -225,7 +229,8 @@ public class Crawler {
 	 *            the eventable to fire
 	 * @return true iff the event is fired
 	 */
-	private boolean fireEvent(Eventable eventable) {
+	//Amin changed from private to public
+	public boolean fireEvent(Eventable eventable) {
 		Eventable eventToFire = eventable;
 		if (eventable.getIdentification().getHow().toString().equals("xpath")
 		        && eventable.getRelatedFrame().equals("")) {
@@ -409,7 +414,8 @@ public class Crawler {
 		candidateActionCache.addActions(extract, currentState);
 	}
 
-	private void waitForRefreshTagIfAny(final Eventable eventable) {
+	// Amin changed from private to public
+	public void waitForRefreshTagIfAny(final Eventable eventable) {
 		if ("meta".equalsIgnoreCase(eventable.getElement().getTag())) {
 			Pattern p = Pattern.compile("(\\d+);\\s+URL=(.*)");
 			for (Entry<String, String> e : eventable.getElement().getAttributes().entrySet()) {
