@@ -132,7 +132,7 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	//Amin: adding assertion on DOM state
-	public void addAssertion(String assertion) {
+	public void addAssertedElementPattern(String assertion) {
 		if(!assertions.contains(assertion))
 			assertions.add(assertion);
 	}

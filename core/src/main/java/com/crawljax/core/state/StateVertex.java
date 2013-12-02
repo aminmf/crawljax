@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import org.w3c.dom.Document;
 
+import com.crawljax.util.AssertedElementPattern;
 import com.google.common.collect.ImmutableList;
 
 /**
@@ -57,6 +58,6 @@ public interface StateVertex extends Serializable {
 	ImmutableList<Eventable> getUsedEventables();
 	
 	//Amin: Adding assertion on DOM state
-	void addAssertion(String assertion);
+	void addAssertedElementPattern(AssertedElementPattern aep);
 	ArrayList<String> getAssertions();
 }
