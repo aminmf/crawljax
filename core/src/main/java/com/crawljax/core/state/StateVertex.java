@@ -2,6 +2,7 @@ package com.crawljax.core.state;
 
 import java.io.IOException;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 import org.w3c.dom.Document;
 
@@ -54,5 +55,8 @@ public interface StateVertex extends Serializable {
 	Document getDocument() throws IOException;
 
 	ImmutableList<Eventable> getUsedEventables();
-
+	
+	//Amin: Adding assertion on DOM state
+	void addAssertion(String assertion);
+	ArrayList<String> getAssertions();
 }
