@@ -686,3 +686,106 @@ click
 [[FirefoxDriver: firefox on XP (5408df31-16a4-4ff4-9ffa-7ef7658b8664)] -> link text: Logout]
 click 
 TestSuiteEnd
+TestSuiteBegin
+NewTestCase
+clear
+clear
+click
+click
+click
+click
+clear
+clear
+click
+click
+click
+click
+NewTestCase
+NewTestCase
+NewTestCase
+clear
+clear
+click
+click
+click
+click
+clear
+click
+click
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+TestSuiteEnd
+TestSuiteBegin
+NewTestCase
+By.id: login
+By.id: login
+sendKeys: nainy
+By.id: password
+By.id: password
+sendKeys: nainy
+By.selector: button[type="submit"]
+By.linkText: Platform administration
+By.linkText: Manage course categories
+By.linkText: Create a category
+By.id: category_name
+By.id: category_name
+sendKeys: Software Eng
+By.id: category_code
+By.id: category_code
+sendKeys: SE112[C@1d54b17
+By.id: hidden
+By.id: visible
+By.selector: input[type="submit"]
+By.selector: BODY
+By.linkText: Logout
+NewTestCase
+NewTestCase
+NewTestCase
+clear
+clear
+click
+click
+click
+click
+clear
+click
+click
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+NewTestCase
+TestSuiteEnd
