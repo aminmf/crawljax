@@ -6,6 +6,7 @@ import java.util.Collection;
 
 import org.w3c.dom.Document;
 
+import com.crawljax.util.AssertedElementPattern;
 import com.crawljax.util.DomUtils;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Objects;
@@ -29,7 +30,7 @@ class StateVertexImpl implements StateVertex {
 	private String name;
 	
 	//Amin: Assertions on DOM state
-	private ArrayList<String> assertions = new ArrayList<String>();
+	private ArrayList<AssertedElementPattern> assertedElementPatters = new ArrayList<AssertedElementPattern>();
 
 	/**
 	 * Creates a current state without an url and the stripped dom equals the dom.
@@ -132,14 +133,17 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	//Amin: adding assertion on DOM state
-	public void addAssertedElementPattern(String assertion) {
-		if(!assertions.contains(assertion))
-			assertions.add(assertion);
+	public void addAssertedElementPattern(AssertedElementPattern aep) {
+		if(!assertedElementPatters.contains(aep))
+			assertedElementPatters.add(aep);
 	}
 
 	@Override
 	//Amin
-	public ArrayList<String> getAssertions() {
+	public ArrayList<String> getAssertion() {
+		ArrayList<String> assertions = new ArrayList<String>();
+		for (AssertedElementPattern aep: assertedElementPatters)
+			assertions.add(aep.getAssertion());
 		return assertions;
 	}
 }

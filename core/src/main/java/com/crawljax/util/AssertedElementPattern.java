@@ -12,7 +12,7 @@ import com.crawljax.util.XPathHelper;
 
 /**
  * AssertedElementPattern is used to store informations about a DOM element accessed pattern in a Selenium assertion.
- * This pattern contains: The asserted element node, its parent node, its children nodes, its count of occurrence in test suite, and its associated assertion(s)
+ * This pattern contains: The asserted element node, its parent node, its children nodes, its count of occurrence in test suite, and its associated assertion
  * 
  * @author Amin Milani Fard
  */
@@ -33,8 +33,8 @@ public class AssertedElementPattern {
 	private ArrayList<ArrayList<String>> childrenAttributes = new ArrayList<ArrayList<String>>();
 	// count of occurrence in test suite
 	private int count = 0;	
-	// assertion(s) associated to this element
-	private ArrayList<String> assertions = new ArrayList<String>();
+	// assertion associated to this element
+	private String assertion = "";
 	
 	
 	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion){
@@ -64,7 +64,8 @@ public class AssertedElementPattern {
 			childAttributes.clear();
 		}
 		
-		this.assertions.add(assertion);
+		// assertion info
+		this.assertion = assertion;
 	}
 	
 	public void increaseCount(){
@@ -75,14 +76,13 @@ public class AssertedElementPattern {
 		return count;
 	}
 
-	public void addAssertion(String assertion){
-		assertions.add(assertion);
-	}
+	/*public void addAssertion(String assertion){
+		this.assertion = assertion;
+	}*/
 	
-	public ArrayList<String> getAssertion(){
-		return assertions;
+	public String getAssertion(){
+		return assertion;
 	}
-	
 	
 	
 	@Override
@@ -112,7 +112,7 @@ public class AssertedElementPattern {
 				+ ", parentAttributes=" + parentAttributes
 				+ ", childrenTagName=" + childrenTagName
 				+ ", childrenTextContent=" + childrenTextContent
-				+ ", childrenAttributes=" + childrenAttributes + ", count=" + count + ", assertions=" + assertions + "]";
+				+ ", childrenAttributes=" + childrenAttributes + ", count=" + count + ", assertion=" + assertion + "]";
 	}
 	
 	public boolean findAssertedElementPattern(Document dom, CrawljaxConfiguration config){
