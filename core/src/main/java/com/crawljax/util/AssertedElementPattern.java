@@ -35,6 +35,7 @@ public class AssertedElementPattern {
 	private int count = 0;	
 	// assertion associated to this element
 	private String assertion = "";
+	private String assertionType = "";
 	
 	
 	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion){
@@ -66,8 +67,19 @@ public class AssertedElementPattern {
 		
 		// assertion info
 		this.assertion = assertion;
+		// assertion type
+		this.assertionType  = getAssertionType(assertion);
 	}
 	
+	private String getAssertionType(String assertion) {
+		String type = null;
+
+		if (assertion.contains(".getText()"))
+			type = "getText";
+		
+		return type;
+	}
+
 	public void increaseCount(){
 		count++;
 	}

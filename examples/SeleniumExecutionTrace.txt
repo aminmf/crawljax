@@ -1,55 +1,1245 @@
 TestSuiteBegin
 NewTestCase
 By.id: login
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: login]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: login]
 clear 
 By.id: login
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: login]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: login]
 sendKeys nainy
 By.id: password
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: password]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: password]
 clear 
 By.id: password
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: password]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: password]
 sendKeys nainy
 By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> css selector: button[type="submit"]]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> css selector: button[type="submit"]]
 click 
 By.linkText: Platform administration
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> link text: Platform administration]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> link text: Platform administration]
 click 
 By.linkText: Manage course categories
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> link text: Manage course categories]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> link text: Manage course categories]
 click 
 By.linkText: Create a category
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> link text: Create a category]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> link text: Create a category]
 click 
 By.id: category_name
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: category_name]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: category_name]
 clear 
 By.id: category_name
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: category_name]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: category_name]
 sendKeys Software Eng
 By.id: category_code
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: category_code]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: category_code]
 clear 
 By.id: category_code
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: category_code]
-sendKeys SE112[C@cee99e
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: category_code]
+sendKeys SE112[C@167d998
 By.id: hidden
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: hidden]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: hidden]
 click 
 By.id: visible
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> id: visible]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> id: visible]
 click 
 By.selector: input[type="submit"]
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> css selector: input[type="submit"]]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> css selector: input[type="submit"]]
 click 
 assertionModeOn
 By.selector: BODY
 assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
 assertionModeOff
 By.linkText: Logout
-[[FirefoxDriver: firefox on XP (134b3b88-e38c-481d-b228-67f0d5edd821)] -> link text: Logout]
+[[FirefoxDriver: firefox on XP (b91ead2b-f495-4248-ac43-8c7c7c630be1)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> link text: Platform administration]
+click 
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> link text: Manage course categories]
+click 
+By.linkText: Create a category
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> link text: Create a category]
+click 
+By.id: category_name
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: category_name]
+clear 
+By.id: category_name
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: category_name]
+sendKeys Software Testing
+sendKeys: Software Testing
+By.id: category_code
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: category_code]
+clear 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> id: category_code]
+sendKeys SWT22
+sendKeys: SWT22
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (8164a4f4-ea58-4e7d-a6d1-657b38b084af)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> link text: Platform administration]
+click 
+By.linkText: Claroline.net news
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> link text: Claroline.net news]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Claroline\\.net news\n[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Manage my account
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> link text: Manage my account]
+click 
+By.id: phone
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: phone]
+clear 
+By.id: phone
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: phone]
+sendKeys 7788814476
+sendKeys: 7788814476
+By.id: applyChange
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> id: applyChange]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (78f29bad-dc71-4f73-868d-ba7065c6086b)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> link text: Platform administration]
+click 
+By.linkText: Manage classes
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> link text: Manage classes]
+click 
+By.linkText: Create a new class
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> link text: Create a new class]
+click 
+By.name: class_name
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> name: class_name]
+clear 
+By.name: class_name
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> name: class_name]
+sendKeys EG
+sendKeys: EG
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (00bbb50b-ec52-4f19-a691-91c4c6181ee1)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Create a course site
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> link text: Create a course site]
+click 
+By.id: course_title
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: course_title]
+clear 
+By.id: course_title
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: course_title]
+sendKeys Computer Science
+sendKeys: Computer Science
+By.id: course_officialCode
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: course_officialCode]
+clear 
+By.id: course_officialCode
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: course_officialCode]
+sendKeys A7
+sendKeys: A7
+By.linkText: Advanced options
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> link text: Advanced options]
+click 
+By.id: course_status_date
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> id: course_status_date]
+click 
+By.name: changeProperties
+[[FirefoxDriver: firefox on XP (285823f5-6230-4e43-b842-4591435fd21f)] -> name: changeProperties]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> link text: Platform administration]
+click 
+By.linkText: Create user
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> link text: Create user]
+click 
+By.id: lastname
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: lastname]
+clear 
+By.id: lastname
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: lastname]
+sendKeys Naman
+sendKeys: Naman
+By.id: firstname
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: firstname]
+clear 
+By.id: firstname
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: firstname]
+sendKeys Agr
+sendKeys: Agr
+By.id: officialCode
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: officialCode]
+clear 
+By.id: officialCode
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: officialCode]
+sendKeys a7
+sendKeys: a7
+By.id: username
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: username]
+clear 
+By.id: username
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: username]
+clear 
+By.id: username
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: username]
+sendKeys nam
+sendKeys: nam
+By.id: username
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: username]
+clear 
+By.id: username
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: username]
+clear 
+By.id: username
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: username]
+sendKeys naman
+sendKeys: naman
+By.id: password
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password]
+sendKeys 123456
+sendKeys: 123456
+By.id: password_conf
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password_conf]
+clear 
+By.id: password_conf
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: password_conf]
+sendKeys 123456
+sendKeys: 123456
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: student]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*\\(student\\)[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.id: applyChange
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> id: applyChange]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (5c6231cc-da16-439c-8399-7d281dd85ba9)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> link text: Platform administration]
+click 
+By.linkText: Configuration
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> link text: Configuration]
+click 
+By.linkText: Announcement
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> link text: Announcement]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Use 0 to display all[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.id: label_announcementPortletMaxItems
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> id: label_announcementPortletMaxItems]
+clear 
+By.id: label_announcementPortletMaxItems
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> id: label_announcementPortletMaxItems]
+sendKeys 0
+sendKeys: 0
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Announcement, \\(CLANN\\) are now effective on server[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> css selector: input[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (8d0cbd8a-9070-4db9-b392-d45988c46edd)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: Platform administration]
+click 
+By.linkText: Configuration
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: Configuration]
+click 
+By.linkText: Assignments
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: Assignments]
+click 
+By.id: label_confval_def_sub_vis_change_only_new_FALSE
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_confval_def_sub_vis_change_only_new_FALSE]
+click 
+By.id: label_confval_def_sub_vis_change_only_new_TRUE
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_confval_def_sub_vis_change_only_new_TRUE]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*ets how the assignment property \"default works visibility\" acts\\. It will change the visibility of all the new submissions or it will change the visibility of all submissions already done in the assignment and the new one\\.[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*For assignments list[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*/<COURSEID>/work/[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Quota
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: Quota]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Submissions
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: Submissions]
+click 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_clwrk_endDateDelay]
+clear 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_clwrk_endDateDelay]
+clear 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_clwrk_endDateDelay]
+sendKeys 364
+sendKeys: 364
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_clwrk_endDateDelay]
+clear 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_clwrk_endDateDelay]
+clear 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> id: label_clwrk_endDateDelay]
+sendKeys 365
+sendKeys: 365
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> css selector: input[type="submit"]]
+click 
+By.linkText: View all
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: View all]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (d7698196-0e71-4566-ae28-d0a4682c894d)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> link text: Platform administration]
+click 
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> link text: Manage course categories]
+click 
+By.selector: img[alt="Edit category"]
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> css selector: img[alt="Edit category"]]
+click 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> id: category_code]
+clear 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> id: category_code]
+sendKeys Sci
+sendKeys: Sci
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.selector: img[alt="Move down category"]
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> css selector: img[alt="Move down category"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (1f5b7c6d-03eb-41e9-ace1-cebed1b6e199)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Create a course site
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> link text: Create a course site]
+click 
+By.id: course_title
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_title]
+clear 
+By.id: course_title
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_title]
+sendKeys Engineering Graphics
+sendKeys: Engineering Graphics
+By.id: course_officialCode
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_officialCode]
+clear 
+By.id: course_officialCode
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_officialCode]
+sendKeys AAOC112
+sendKeys: AAOC112
+By.id: access_public
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: access_public]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]* Access allowed to anybody[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.id: registration_validation
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: registration_validation]
+click 
+By.id: registration_validation
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: registration_validation]
+click 
+By.id: registration_validation
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: registration_validation]
+click 
+By.id: registration_validation
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: registration_validation]
+click 
+By.linkText: Optionnal settings
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> link text: Optionnal settings]
+click 
+By.id: course_departmentName
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_departmentName]
+clear 
+By.id: course_departmentName
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_departmentName]
+sendKeys ECE
+sendKeys: ECE
+By.linkText: Advanced options
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> link text: Advanced options]
+click 
+By.id: course_userLimit
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_userLimit]
+clear 
+By.id: course_userLimit
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> id: course_userLimit]
+sendKeys 60
+sendKeys: 60
+By.name: changeProperties
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> name: changeProperties]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*You have just created the course website[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (395bbd7f-14cd-4fcd-9c94-28b2ee2f8f09)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> link text: Platform administration]
+click 
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> link text: Manage course categories]
+click 
+By.xpath: (//img[@alt='Delete category'])[5]
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> xpath: (//img[@alt='Delete category'])[5]]
+click 
+assertionModeOn
+assertion assertTrue(closeAlertAndGetItsText().matches("^Are you sure to delete Software Eng [\\s\\S]$"))
+assertionModeOff
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category deleted\\.[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (bcf851f0-4778-4140-9e7d-d545d98b7212)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> link text: Platform administration]
+click 
+By.linkText: Edit text zones
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> link text: Edit text zones]
+click 
+By.selector: img[alt="Preview"]
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> css selector: img[alt="Preview"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.xpath: (//img[@alt='Preview'])[5]
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> xpath: (//img[@alt='Preview'])[5]]
+click 
+By.selector: img[alt="Edit"]
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> css selector: img[alt="Edit"]]
+click 
+By.selector: input.claroButton
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> css selector: input.claroButton]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hello !! Welcome to Clatoline\\.\\. :\\)[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (c276202c-f49d-4c82-9100-7a2807d37aab)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> link text: Platform administration]
+click 
+By.linkText: Configuration
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> link text: Configuration]
+click 
+By.linkText: Exercises
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> link text: Exercises]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Exercises, \\(CLQWZ\\) are now effective on server\\.[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Automatically insert an event in the calendar at the end date[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.id: label_exercisesPerPage
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> id: label_exercisesPerPage]
+clear 
+By.id: label_exercisesPerPage
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> id: label_exercisesPerPage]
+sendKeys 20
+sendKeys: 20
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Powered by Claroline [\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (98d92990-fe47-483b-8efa-9ac2779befd4)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (4cfa8f1f-4fa4-4726-aabb-09bf71ac9a5e)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (4cfa8f1f-4fa4-4726-aabb-09bf71ac9a5e)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (4cfa8f1f-4fa4-4726-aabb-09bf71ac9a5e)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (4cfa8f1f-4fa4-4726-aabb-09bf71ac9a5e)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (4cfa8f1f-4fa4-4726-aabb-09bf71ac9a5e)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (4cfa8f1f-4fa4-4726-aabb-09bf71ac9a5e)] -> link text: Logout]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> link text: Platform administration]
+click 
+By.linkText: Manage administrator email notifications
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> link text: Manage administrator email notifications]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> css selector: input[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (521979a1-9af4-4a47-a081-a75f18c25955)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> link text: Platform administration]
+click 
+By.linkText: Modules
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> link text: Modules]
+click 
+By.selector: img[alt="Properties"]
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> css selector: img[alt="Properties"]]
+click 
+By.linkText: Visible
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> link text: Visible]
+click 
+assertionModeOn
+assertion assertTrue(closeAlertAndGetItsText().matches("^ Are you sure you want to make this module visible in all courses [\\s\\S]$"))
+assertionModeOff
+By.linkText: Local settings
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> link text: Local settings]
+click 
+By.linkText: About
+[[FirefoxDriver: firefox on XP (395a3ac6-b5b2-4e46-8281-b1eb8dfa9dbe)] -> link text: About]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Course description[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Activated
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> link text: Platform administration]
+click 
+By.linkText: Manage user desktop
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> link text: Manage user desktop]
+click 
+By.selector: img[alt="visible"]
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> css selector: img[alt="visible"]]
+click 
+By.selector: img[alt="invisible"]
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> css selector: img[alt="invisible"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*My course list[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]* Claroline[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (e8f242af-bc13-42c4-9dd8-ec7f1c11f31c)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> link text: Platform administration]
+click 
+By.linkText: Send a message to all users
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> link text: Send a message to all users]
+click 
+By.id: message_subject
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: message_subject]
+clear 
+By.id: message_subject
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: message_subject]
+sendKeys Hello
+sendKeys: Hello
+By.id: message_fontselect_open
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> id: message_fontselect_open]
+click 
+By.selector: #mce_18_aria > span.mceText
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> css selector: #mce_18_aria > span.mceText]
+click 
+By.selector: span.mceIcon.mce_bold
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> css selector: span.mceIcon.mce_bold]
+click 
+By.selector: span.mceIcon.mce_italic
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> css selector: span.mceIcon.mce_italic]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.name: send
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> name: send]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (8a13164c-66f1-4a41-80cc-3528c8b08b6e)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> link text: Platform administration]
+click 
+By.linkText: Support forum
+[[FirefoxDriver: firefox on XP (dd652406-d6d2-4aee-adb2-96d625505ba6)] -> link text: Support forum]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Show/Hide
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> link text: Show/Hide]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*textzone_top\\.authenticated\\.inc\\.html[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: View all my messages
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> link text: View all my messages]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (54b20be2-9c25-4591-8926-655c9f22b096)] -> link text: Logout]
+click 
+NewTestCase
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> link text: Platform administration]
+click 
+By.linkText: User list
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> link text: User list]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Nainy[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (b548582b-188a-4679-b051-f1670decd5aa)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> link text: Platform administration]
+click 
+By.linkText: Right profile list
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> link text: Right profile list]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Course member \\(the user is actually enrolled in the course\\)[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.xpath: (//img[@alt='Edit'])[6]
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> xpath: (//img[@alt='Edit'])[6]]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> css selector: a > span]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Access allowed Access allowed[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: View all right profile
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> link text: View all right profile]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Agenda 	Access allowed Access allowed 	Access allowed Access allowed 	Access allowed Access allowed 	Edition allowed Edition allowed[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (b98fbfc6-badc-4d95-b124-90edcd1c01cc)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: login]
+sendKeys nainy
+sendKeys: nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: password]
+sendKeys nainy
+sendKeys: nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> link text: Platform administration]
+click 
+By.linkText: Modules
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> link text: Modules]
+click 
+By.xpath: (//img[@alt='Properties'])[11]
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> xpath: (//img[@alt='Properties'])[11]]
+click 
+By.linkText: Local settings
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> link text: Local settings]
+click 
+By.id: label_showWikiEditorToolbar_FALSE
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: label_showWikiEditorToolbar_FALSE]
+click 
+By.id: label_forcePreviewBeforeSaving_TRUE
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: label_forcePreviewBeforeSaving_TRUE]
+click 
+By.id: label_forcePreviewBeforeSaving_FALSE
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: label_forcePreviewBeforeSaving_FALSE]
+click 
+By.id: label_showWikiEditorToolbar_TRUE
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> id: label_showWikiEditorToolbar_TRUE]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Wiki, \\(CLWIKI\\) are now effective on server\\.[\\s\\S]*$"))
+By.selector: BODY
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> css selector: input[type="submit"]]
+click 
+By.linkText: About
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> link text: About]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (14cb7acb-1944-4da1-a29a-4ff8ad7cf964)] -> link text: Logout]
 click 
 TestSuiteEnd
