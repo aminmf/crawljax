@@ -39,7 +39,14 @@ public class AssertedElementPattern {
 	
 	
 	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion){
+		// assertion info
+		this.assertion = assertion;
+		this.assertionType  = getAssertionType(assertion);
+		
 		this.sourceElement = sourceElement;
+		if (sourceElement==null)
+			return;
+		
 		// node info
 		tagName = sourceElement.getTagName();
 		textContent = sourceElement.getTextContent();
@@ -65,10 +72,6 @@ public class AssertedElementPattern {
 			childAttributes.clear();
 		}
 		
-		// assertion info
-		this.assertion = assertion;
-		// assertion type
-		this.assertionType  = getAssertionType(assertion);
 	}
 	
 	private String getAssertionType(String assertion) {
@@ -76,7 +79,9 @@ public class AssertedElementPattern {
 
 		if (assertion.contains(".getText()"))
 			type = "getText";
-		
+		else if (assertion.contains(".getTitle()"))
+			type = "getTitle";
+			
 		return type;
 	}
 
@@ -103,8 +108,9 @@ public class AssertedElementPattern {
         if (!(o instanceof AssertedElementPattern)) return false;
 
         AssertedElementPattern aep = (AssertedElementPattern) o;
-        // considering only the structure (tag names of node, parent, and children) not the context
-        if (!aep.tagName.equals(this.tagName) || !aep.parentTagName.equals(this.parentTagName) || !aep.childrenTagName.equals(this.childrenTagName)) {  
+
+        if (!aep.tagName.equals(this.tagName) || !aep.parentTagName.equals(this.parentTagName) || !aep.childrenTagName.equals(this.childrenTagName)
+        		|| !aep.assertion.equals(this.assertion)) {  
             return false;
         } 
         

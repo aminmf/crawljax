@@ -225,6 +225,9 @@ click
 By.name: changeProperties
 [[FirefoxDriver: firefox on XP (2ab8ab8d-6a54-42fa-8d53-4867c9f0fbce)] -> name: changeProperties]
 click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (4ad5a60e-d1fe-40ab-bbb3-e833983c8703)] -> link text: Logout]
+click 
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (4ad5a60e-d1fe-40ab-bbb3-e833983c8703)] -> id: login]
@@ -864,6 +867,9 @@ By.selector: BODY
 assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Course description[\\s\\S]*$"))
 assertionModeOff
 By.linkText: Activated
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (7a637aaa-3af9-499f-8575-dc85566fb96c)] -> link text: Logout]
+click 
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (b21f2b05-938f-4069-bd70-d7644b584704)] -> id: login]
@@ -1012,7 +1018,6 @@ assertionModeOff
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (0324f6ba-e212-40de-ae92-c957da90b53d)] -> link text: Logout]
 click 
-NewTestCase
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (f718862e-1216-4e70-ab0f-85e3ded90304)] -> id: login]

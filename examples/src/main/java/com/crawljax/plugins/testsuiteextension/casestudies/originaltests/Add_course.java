@@ -39,6 +39,7 @@ public class Add_course {
     driver.findElement(By.linkText("Advanced options")).click();
     driver.findElement(By.id("course_status_date")).click();
     driver.findElement(By.name("changeProperties")).click();
+    driver.findElement(By.linkText("Logout")).click();
   }
 
   @After

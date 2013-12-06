@@ -211,7 +211,7 @@ public class Crawler {
 	public void handleInputElements(Eventable eventable) {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
 
-		System.out.println("handleInputElements!");
+		//System.out.println("handleInputElements!");
 		
 		for (FormInput formInput : formHandler.getFormInputs()) {
 			if (!formInputs.contains(formInput)) {
