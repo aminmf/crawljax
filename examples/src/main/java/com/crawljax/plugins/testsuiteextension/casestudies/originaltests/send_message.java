@@ -38,13 +38,8 @@ public class send_message {
     driver.findElement(By.cssSelector("#mce_18_aria > span.mceText")).click();
     driver.findElement(By.cssSelector("span.mceIcon.mce_bold")).click();
     driver.findElement(By.cssSelector("span.mceIcon.mce_italic")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
     driver.findElement(By.name("send")).click();
+    assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxInfo")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$"));
     driver.findElement(By.linkText("Logout")).click();
   }
 

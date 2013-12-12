@@ -32,19 +32,13 @@ public class Support {
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Support forum")).click();
-   
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.id("page-body")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
-//    // Warning: verifyTextPresent may require manual changes
-//    try {
-//      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Who is online[\\s\\S]*$"));
-//    } catch (Error e) {
-//      verificationErrors.append(e.toString());
-//    }
   }
 
   @After
