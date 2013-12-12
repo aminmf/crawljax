@@ -37,7 +37,8 @@ public class course_category_edit {
     driver.findElement(By.id("category_code")).sendKeys("Sci");
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
@@ -45,7 +46,8 @@ public class course_category_edit {
     driver.findElement(By.cssSelector("img[alt=\"Move down category\"]")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

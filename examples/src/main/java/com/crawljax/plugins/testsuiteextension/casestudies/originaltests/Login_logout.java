@@ -33,7 +33,8 @@ public class Login_logout {
     driver.findElement(By.linkText("Logout")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

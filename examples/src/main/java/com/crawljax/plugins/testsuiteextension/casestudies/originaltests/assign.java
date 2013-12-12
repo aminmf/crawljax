@@ -37,33 +37,38 @@ public class assign {
     driver.findElement(By.id("label_confval_def_sub_vis_change_only_new_TRUE")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*ets how the assignment property \"default works visibility\" acts\\. It will change the visibility of all the new submissions or it will change the visibility of all submissions already done in the assignment and the new one\\.[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*ets how the assignment property \"default works visibility\" acts\\. It will change the visibility of all the new submissions or it will change the visibility of all submissions already done in the assignment and the new one\\.[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*ets how the assignment property \"default works visibility\" acts\\. It will change the visibility of all the new submissions or it will change the visibility of all submissions already done in the assignment and the new one\\.[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*For assignments list[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*For assignments list[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*For assignments list[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*/<COURSEID>/work/[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*/<COURSEID>/work/[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*/<COURSEID>/work/[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     driver.findElement(By.linkText("Quota")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

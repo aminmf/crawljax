@@ -36,25 +36,21 @@ public class Exercise {
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Exercises, \\(CLQWZ\\) are now effective on server\\.[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Properties for Exercises, \\(CLQWZ\\) are now effective on server\\.[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Exercises, \\(CLQWZ\\) are now effective on server\\.[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Automatically insert an event in the calendar at the end date[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Automatically insert an event in the calendar at the end date[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*Automatically insert an event in the calendar at the end date[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     driver.findElement(By.id("label_exercisesPerPage")).clear();
     driver.findElement(By.id("label_exercisesPerPage")).sendKeys("20");
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Powered by Claroline [\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
     driver.findElement(By.linkText("Logout")).click();
   }
 

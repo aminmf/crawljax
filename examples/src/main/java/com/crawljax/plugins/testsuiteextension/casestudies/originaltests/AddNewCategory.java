@@ -43,6 +43,7 @@ public class AddNewCategory {
     // Warning: verifyTextPresent may require manual changes
     try {
       assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

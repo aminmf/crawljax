@@ -46,7 +46,8 @@ public class AddCategory_pass {
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-        assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

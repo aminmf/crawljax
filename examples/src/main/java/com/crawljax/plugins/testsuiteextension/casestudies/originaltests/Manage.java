@@ -34,7 +34,8 @@ public class Manage {
     driver.findElement(By.linkText("Manage administrator email notifications")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

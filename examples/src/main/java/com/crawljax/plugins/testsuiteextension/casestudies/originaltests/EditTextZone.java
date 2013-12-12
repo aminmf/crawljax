@@ -35,7 +35,8 @@ public class EditTextZone {
     driver.findElement(By.cssSelector("img[alt=\"Preview\"]")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
@@ -44,7 +45,7 @@ public class EditTextZone {
     driver.findElement(By.cssSelector("input.claroButton")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Hello !! Welcome to Clatoline\\.\\. :\\)[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Hello !! Welcome to Clatoline\\.\\. :\\)[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

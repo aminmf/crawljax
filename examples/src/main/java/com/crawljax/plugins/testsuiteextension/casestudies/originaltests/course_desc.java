@@ -39,7 +39,8 @@ public class course_desc {
     driver.findElement(By.id("access_public")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]* Access allowed to anybody[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]* Access allowed to anybody[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.id("courseSettings")).getText().matches("^[\\s\\S]* Access allowed to anybody[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
@@ -54,7 +55,8 @@ public class course_desc {
     driver.findElement(By.name("changeProperties")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*You have just created the course website[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*You have just created the course website[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*You have just created the course website[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

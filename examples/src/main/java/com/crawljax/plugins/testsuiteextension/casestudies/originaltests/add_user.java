@@ -49,14 +49,8 @@ public class add_user {
     driver.findElement(By.id("student")).click();
     driver.findElement(By.id("student")).click();
     driver.findElement(By.id("student")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*\\(student\\)[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
     driver.findElement(By.id("applyChange")).click();
-   assertEquals("Create a new user - Claroline", driver.getTitle());
+    assertEquals("Create a new user - Claroline", driver.getTitle());
     driver.findElement(By.linkText("Logout")).click();
   }
 

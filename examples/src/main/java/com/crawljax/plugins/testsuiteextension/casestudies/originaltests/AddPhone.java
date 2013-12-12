@@ -34,7 +34,7 @@ public class AddPhone {
     driver.findElement(By.linkText("Claroline.net news")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Claroline\\.net news\n[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
@@ -44,7 +44,8 @@ public class AddPhone {
     driver.findElement(By.id("applyChange")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"));
+      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"));
+      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }

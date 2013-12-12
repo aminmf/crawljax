@@ -37,7 +37,8 @@ public class add_class {
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     // Warning: verifyTextPresent may require manual changes
     try {
-      assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
