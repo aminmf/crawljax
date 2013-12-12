@@ -30,7 +30,7 @@ class StateVertexImpl implements StateVertex {
 	private String name;
 	
 	//Amin: Assertions on DOM state
-	private ArrayList<AssertedElementPattern> assertedElementPatters = new ArrayList<AssertedElementPattern>();
+	private ArrayList<AssertedElementPattern> assertedElementPatterns = new ArrayList<AssertedElementPattern>();
 
 	/**
 	 * Creates a current state without an url and the stripped dom equals the dom.
@@ -134,18 +134,23 @@ class StateVertexImpl implements StateVertex {
 	@Override
 	//Amin: adding assertion on DOM state
 	public void addAssertedElementPattern(AssertedElementPattern aep) {
-		if(!assertedElementPatters.contains(aep)){
+		if(!assertedElementPatterns.contains(aep)){
 			System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
-			assertedElementPatters.add(aep);
+			assertedElementPatterns.add(aep);
 		}else
 			System.out.println("Assertion already exists in state " + this.name);
 	}
 
 	@Override
+	public ArrayList<AssertedElementPattern> getAssertedElementPatters() {
+		return assertedElementPatterns;
+	}
+	
+	@Override
 	//Amin
 	public ArrayList<String> getAssertion() {
 		ArrayList<String> assertions = new ArrayList<String>();
-		for (AssertedElementPattern aep: assertedElementPatters)
+		for (AssertedElementPattern aep: assertedElementPatterns)
 			assertions.add(aep.getAssertion());
 		return assertions;
 	}

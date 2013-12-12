@@ -57,7 +57,8 @@ public interface StateVertex extends Serializable {
 
 	ImmutableList<Eventable> getUsedEventables();
 	
-	//Amin: Adding assertion on DOM state
+	//Amin: Assertions on DOM state
 	void addAssertedElementPattern(AssertedElementPattern aep);
 	ArrayList<String> getAssertion();
+	ArrayList<AssertedElementPattern> getAssertedElementPatters();
 }
