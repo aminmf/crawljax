@@ -186,7 +186,9 @@ public final class FormInputValueHelper {
 				xpath =
 				        "//" + element + "[@name='" + input.getIdentification().getValue()
 				                + "' or @id='" + input.getIdentification().getValue() + "']";
+				System.out.println("xpath = " + xpath);
 				result = DomUtils.getElementByXpath(dom, xpath);
+				System.out.println("node = " + result);
 				break;
 
 			default:

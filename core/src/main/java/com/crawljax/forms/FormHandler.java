@@ -58,7 +58,10 @@ public class FormHandler {
 	private void setInputElementValue(Node element, FormInput input) {
 
 		LOGGER.debug("INPUTFIELD: {} ({})", input.getIdentification(), input.getType());
+		
+		
 		if (element == null || input.getInputValues().isEmpty()) {
+			System.out.println("OOPS!!!!! element is " + element + " and input.getInputValues() is " + input.getInputValues() );
 			return;
 		}
 		try {
