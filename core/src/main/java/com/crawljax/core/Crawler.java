@@ -377,8 +377,7 @@ public class Crawler {
 		}
 	}
 
-	// Amin: changed this from private to public so that it can be called from plugins
-	public void inspectNewState(Eventable event) {
+	private void inspectNewState(Eventable event) {
 		if (crawlerLeftDomain()) {
 			LOG.debug("The browser left the domain. Going back one state...");
 			goBackOneState();
@@ -399,6 +398,22 @@ public class Crawler {
 		}
 	}
 
+	// Amin: This should be a public so that it can be called from plugins
+	public void inspectNewStateForInitailPaths(Eventable event) {
+		StateVertex newState = stateMachine.newStateFor(browser);
+		/*
+		 * Amin: Execute the OnFireEventSucceededPlugins. This can be used to get code coverage after each event execution
+		 *       Code coverage was previously calculated using onNewState plugin but shoudld be done after successful event execution.
+		 */
+		plugins.OnFireEventSucceededPlugins(context, stateMachine.getCurrentState(), event, newState);
+
+		if (domChanged(event, newState)) {
+			inspectNewDom(event, newState);
+		} else {
+			LOG.debug("Dom unchanged");
+		}
+	}
+	
 	private boolean domChanged(final Eventable eventable, StateVertex newState) {
 		return plugins.runDomChangeNotifierPlugins(context, stateMachine.getCurrentState(),
 		        eventable, newState);

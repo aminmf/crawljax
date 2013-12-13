@@ -67,11 +67,10 @@ public class CrawlController implements Callable<CrawlSession> {
 		crawlSessionProvider.setup(firstState);
 		plugins.runOnNewStatePlugins(firstConsumer.getContext(), firstState);
 		
-		// Amin
+		// Amin: added for the TestEx plugin
 		plugins.executeInitialPathsPlugins(config, firstConsumer);
 		
-		
-		//executeConsumers(firstConsumer);
+		executeConsumers(firstConsumer);
 		return crawlSessionProvider.get();
 	}
 

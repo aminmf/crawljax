@@ -35,7 +35,7 @@ By.id: category_code
 clear 
 By.id: category_code
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
-sendKeys SE112[C@0221
+sendKeys SE112[C@4862
 By.id: hidden
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
 click 
@@ -1001,6 +1001,10 @@ assertionModeOn
 By.id: page-body
 assertion assertTrue(driver.findElement(By.id("page-body")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"))
 assertionModeOff
+reset
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> link text: Logout]
+click
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> id: login]

@@ -1,5 +1,6 @@
 package com.crawljax.util;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import org.w3c.dom.Document;
@@ -16,7 +17,9 @@ import com.crawljax.util.XPathHelper;
  * 
  * @author Amin Milani Fard
  */
-public class AssertedElementPattern {
+public class AssertedElementPattern implements Serializable{
+	
+	private static final long serialVersionUID = -6419315357887813412L;
 	
 	org.w3c.dom.Element sourceElement = null;
 	// node info
@@ -49,13 +52,13 @@ public class AssertedElementPattern {
 		
 		// node info
 		tagName = sourceElement.getTagName();
-		textContent = sourceElement.getTextContent();
+		textContent = sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
 		for (int i=0; i<sourceElement.getAttributes().getLength();i++)
 			attributes.add(sourceElement.getAttributes().item(i).toString());
 		
 		// parent node info
 		parentTagName = sourceElement.getParentNode().getNodeName();
-		parentTextContent = sourceElement.getParentNode().getTextContent();
+		parentTextContent = sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
 		for (int i=0; i<sourceElement.getParentNode().getAttributes().getLength();i++)
 			parentAttributes.add(sourceElement.getParentNode().getAttributes().item(i).toString());
 
@@ -63,7 +66,7 @@ public class AssertedElementPattern {
 		ArrayList<String> childAttributes = new ArrayList<String>();
 		for (int i=0; i<sourceElement.getChildNodes().getLength();i++){
 			childrenTagName.add(sourceElement.getChildNodes().item(i).getNodeName());
-			childrenTextContent.add(sourceElement.getChildNodes().item(i).getTextContent());
+			childrenTextContent.add(sourceElement.getChildNodes().item(i).getTextContent().replace("\n", "").replace("\r", "").replace(" ", ""));
 			if (sourceElement.getChildNodes().item(i).getAttributes()!=null){
 				for (int j=0; j<sourceElement.getChildNodes().item(i).getAttributes().getLength();j++)
 					childAttributes.add(sourceElement.getChildNodes().item(i).getAttributes().item(j).toString());
@@ -113,7 +116,7 @@ public class AssertedElementPattern {
         		|| !aep.assertion.equals(this.assertion)) {  
             return false;
         } 
-        
+            
         return true;
     }
 
@@ -124,12 +127,12 @@ public class AssertedElementPattern {
 
 	@Override
 	public String toString() {
-		return "AssertedElementPattern [tagName=" + tagName + ", textContent=" + textContent
+		return "AssertedElementPattern [tagName=" + tagName //+ ", textContent=" + textContent
 				+ ", attributes=" + attributes + ", parentTagName="
-				+ parentTagName + ", parentTextContent=" + parentTextContent
+				+ parentTagName //+ ", parentTextContent=" + parentTextContent
 				+ ", parentAttributes=" + parentAttributes
 				+ ", childrenTagName=" + childrenTagName
-				+ ", childrenTextContent=" + childrenTextContent
+				//+ ", childrenTextContent=" + childrenTextContent
 				+ ", childrenAttributes=" + childrenAttributes + ", count=" + count + ", assertion=" + assertion + "]";
 	}
 	
@@ -153,12 +156,23 @@ public class AssertedElementPattern {
 		return false;
 	}
 	
-	public boolean matchPatternStructure(AssertedElementPattern aep){
-        if (!aep.tagName.equals(this.tagName) || !aep.parentTagName.equals(this.parentTagName) || !aep.childrenTagName.equals(this.childrenTagName)) {  
-            return false;
+
+	public String getHowPatternMatch(AssertedElementPattern aep){
+        if (aep.tagName.equals(this.tagName) && aep.parentTagName.equals(this.parentTagName) && aep.childrenTagName.equals(this.childrenTagName)) {  
+            if (aep.attributes.equals(this.attributes) && aep.parentAttributes.equals(this.parentAttributes) && aep.childrenAttributes.equals(this.childrenAttributes))
+            	return "PatternFullMatch";
+        	return "PatternTagMatch";
         }
-        return true;
+        if (aep.tagName.equals(this.tagName)){
+        	if (aep.attributes.equals(this.attributes))
+        		return "ElementFullMatch";
+    		return "ElementTagMatch";
+        }
+        return "NoMatch";
 	}
-	
-	
+
+	public String getTagName() {
+		return tagName;
+	}
+
 }

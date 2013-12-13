@@ -36,7 +36,8 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(300, TimeUnit.SECONDS);
+		//builder.setMaximumRunTime(300, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(30, TimeUnit.SECONDS);
 
 		// click these elements
 		builder.crawlRules().clickDefaultElements();
