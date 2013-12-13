@@ -211,13 +211,30 @@ public class Crawler {
 	public void handleInputElements(Eventable eventable) {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
 
-		//System.out.println("handleInputElements!");
-		
-		for (FormInput formInput : formHandler.getFormInputs()) {
+		// Amin: changed this part to fill the "formInput" values based on values in "formInputs" that came from test suites
+		// Old version
+		/*for (FormInput formInput : formHandler.getFormInputs()) {
 			if (!formInputs.contains(formInput)) {
 				formInputs.add(formInput);
 			}
+		}*/
+
+		// New version
+		System.out.println("formInputs Before: " + formInputs);
+		for (FormInput formInput : formHandler.getFormInputs()) {
+			for (FormInput formInputFromTestSuite : formInputs) {
+				//System.out.println("formInput is: " + formInput);
+				if (formInputFromTestSuite.getIdentification().equals(formInput.getIdentification())){
+					//&&	formInputFromTestSuite.getType().equals(formInput.getType())) {
+					formInput.setInputValues(formInputFromTestSuite.getInputValues());
+					// check duplicates
+					if (!formInputs.contains(formInput))
+						formInputs.add(formInput);
+				}
+			}
 		}
+		System.out.println("formInputs After: " + formInputs);
+		
 		formHandler.handleFormElements(formInputs);
 	}
 

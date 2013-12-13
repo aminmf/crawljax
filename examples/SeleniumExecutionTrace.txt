@@ -35,7 +35,7 @@ By.id: category_code
 clear 
 By.id: category_code
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
-sendKeys SE112[C@333
+sendKeys SE112[C@0221
 By.id: hidden
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
 click 
@@ -134,6 +134,12 @@ clear
 By.id: phone
 [[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: phone]
 sendKeys 7788814476
+By.id: old_password
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: old_password]
+sendKeys nainy
+By.id: password_conf
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password_conf]
+sendKeys nainy
 By.id: applyChange
 [[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: applyChange]
 click 

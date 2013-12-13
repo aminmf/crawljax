@@ -86,9 +86,9 @@ public class DeletingCategory {
             Alert alert = driver.switchTo().alert();
             String alertText = alert.getText();
             if (acceptNextAlert) {
-                alert.accept();
+            	com.crawljax.plugins.testsuiteextension.instrumentor.SeleniumInstrumentor.getAlert(alert, "accept").accept();
             } else {
-                alert.dismiss();
+            	com.crawljax.plugins.testsuiteextension.instrumentor.SeleniumInstrumentor.getAlert(alert, "dismiss").dismiss();
             }
             return alertText;
         } finally {

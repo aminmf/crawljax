@@ -565,6 +565,9 @@ public final class WebDriverBackedEmbeddedBrowser implements EmbeddedBrowser {
 	@Override
 	public void closeOtherWindows() {
 		try {
+			
+			handlePopups();
+			
 			String current = browser.getWindowHandle();
 			for (String handle : browser.getWindowHandles()) {
 				if (!handle.equals(browser.getWindowHandle())) {
