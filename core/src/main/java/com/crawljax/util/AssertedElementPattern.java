@@ -158,14 +158,20 @@ public class AssertedElementPattern implements Serializable{
 	
 
 	public String getHowPatternMatch(AssertedElementPattern aep){
-        if (aep.tagName.equals(this.tagName) && aep.parentTagName.equals(this.parentTagName) && aep.childrenTagName.equals(this.childrenTagName)) {  
-            if (aep.attributes.equals(this.attributes) && aep.parentAttributes.equals(this.parentAttributes) && aep.childrenAttributes.equals(this.childrenAttributes))
-            	return "PatternFullMatch";
-        	return "PatternTagMatch";
-        }
-        if (aep.tagName.equals(this.tagName)){
+		if (aep.tagName.equals(this.tagName) && aep.parentTagName.equals(this.parentTagName) && aep.childrenTagName.equals(this.childrenTagName)) {  
+			if (aep.attributes.equals(this.attributes) && aep.parentAttributes.equals(this.parentAttributes) && aep.childrenAttributes.equals(this.childrenAttributes))
+				if (aep.textContent.equals(this.textContent) && aep.parentTextContent.equals(this.parentTextContent) && aep.childrenTextContent.equals(this.childrenTextContent))
+					return "PatternFullTextMatch";
+				else
+					return "PatternFullMatch";
+			return "PatternTagMatch";
+		}
+		if (aep.tagName.equals(this.tagName)){
         	if (aep.attributes.equals(this.attributes))
-        		return "ElementFullMatch";
+				if (aep.textContent.equals(this.textContent))
+	        		return "ElementFullTextMatch";
+				else
+					return "ElementFullMatch";
     		return "ElementTagMatch";
         }
         return "NoMatch";
