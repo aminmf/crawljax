@@ -101,12 +101,12 @@ public class CrawlControllerTest {
 	private void setupGraphAndStates() {
 		when(graphProvider.get()).thenReturn(graph);
 
-		when(index.getId()).thenReturn(1);
+		when(index.getId()).thenReturn((long) 1);
 		when(graph.getById(1)).thenReturn(index);
 		when(crawler.crawlIndex()).thenReturn(index);
 
-		when(state2.getId()).thenReturn(2);
-		when(state3.getId()).thenReturn(3);
+		when(state2.getId()).thenReturn((long) 2);
+		when(state3.getId()).thenReturn((long) 3);
 		when(graph.getById(2)).thenReturn(state2);
 		when(graph.getById(3)).thenReturn(state3);
 		setNames(index, state2, state3);

@@ -27,6 +27,7 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.io.FileUtils;
 import org.custommonkey.xmlunit.DetailedDiff;
 import org.custommonkey.xmlunit.Diff;
 import org.custommonkey.xmlunit.Difference;
@@ -534,6 +535,41 @@ public final class DomUtils {
 	}
 
 	private DomUtils() {
+	}
+	
+	
+	//Amin: Added this from the old Helper.java class
+	/**
+	 * Checks the existence of the directory. If it does not exist, the method creates it.
+	 * 
+	 * @param dir
+	 *            the directory to check.
+	 * @throws IOException
+	 *             if fails.
+	 */
+	public static void directoryCheck(String dir) throws IOException {
+		final File file = new File(dir);
+
+		if (!file.exists()) {
+			FileUtils.forceMkdir(file);
+		}
+	}
+
+	//Amin: Added this from the old Helper.java class
+	/**
+	 * Checks whether the folder exists for fname, and creates it if neccessary.
+	 * 
+	 * @param fname
+	 *            folder name.
+	 * @throws IOException
+	 *             an IO exception.
+	 */
+	public static void checkFolderForFile(String fname) throws IOException {
+
+		if (fname.lastIndexOf(File.separator) > 0) {
+			String folder = fname.substring(0, fname.lastIndexOf(File.separator));
+			DomUtils.directoryCheck(folder);
+		}
 	}
 
 }

@@ -407,6 +407,7 @@ public class Crawler {
 		 */
 		plugins.OnFireEventSucceededPlugins(context, stateMachine.getCurrentState(), event, newState);
 
+	
 		if (domChanged(event, newState)) {
 			inspectNewDom(event, newState);
 		} else {

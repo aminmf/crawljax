@@ -48,6 +48,10 @@ public class StateMachine {
 		this.plugins = plugins;
 		this.stateComparator = stateComparator;
 		currentState = initialState;
+		
+		System.out.println("currentState at StateMachine() is " + currentState);
+
+		
 		invariantChecker = new ConditionTypeChecker<>(invariantList);
 	}
 
@@ -80,6 +84,9 @@ public class StateMachine {
 			        currentState.getName());
 
 			currentState = nextState;
+			
+			System.out.println("currentState at changeState() is " + currentState);
+
 
 			return true;
 		} else {
@@ -99,6 +106,9 @@ public class StateMachine {
 	 * @return the clone state iff newState is a clone, else returns null
 	 */
 	private StateVertex addStateToCurrentState(StateVertex newState, Eventable eventable) {
+
+		System.out.println("currentState:" + currentState);
+
 		LOGGER.debug("addStateToCurrentState currentState: {} newstate {}",
 		        currentState.getName(), newState.getName());
 
@@ -137,6 +147,9 @@ public class StateMachine {
 	 */
 	public void rewind() {
 		this.currentState = this.initialState;
+		
+		System.out.println("currentState at rewind() is " + currentState);
+
 	}
 
 	/**

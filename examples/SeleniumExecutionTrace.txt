@@ -35,7 +35,7 @@ By.id: category_code
 clear 
 By.id: category_code
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
-sendKeys SE112[C@48612
+sendKeys SE112[C@152
 By.id: hidden
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
 click 

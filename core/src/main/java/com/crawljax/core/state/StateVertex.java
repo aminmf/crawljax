@@ -17,7 +17,7 @@ public interface StateVertex extends Serializable {
 	/**
 	 * The {@link #getId()} of the Index state.
 	 */
-	public static final int INDEX_ID = 0;
+	public static final Long INDEX_ID = (long) 0;
 
 	/**
 	 * Retrieve the name of the StateVertex.
@@ -46,7 +46,7 @@ public interface StateVertex extends Serializable {
 	/**
 	 * @return the id. This is guaranteed to be unique per state.
 	 */
-	int getId();
+	long getId();
 
 	/**
 	 * @return a Document instance of the dom string.
@@ -61,4 +61,6 @@ public interface StateVertex extends Serializable {
 	void addAssertedElementPattern(AssertedElementPattern aep);
 	ArrayList<String> getAssertions();
 	ArrayList<AssertedElementPattern> getAssertedElementPatters();
+	
+	void setId(long id);
 }

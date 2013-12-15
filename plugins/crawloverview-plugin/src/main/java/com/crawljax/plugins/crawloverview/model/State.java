@@ -18,7 +18,7 @@ public class State {
 	private final ImmutableList<CandidateElementPosition> candidateElements;
 	private final int fanIn;
 	private final int fanOut;
-	private final int id;
+	private final long id;
 	private final ImmutableList<String> failedEvents;
 
 	public State(StateVertex state, int fanIn, int fanOut,
@@ -71,7 +71,7 @@ public class State {
 		return fanOut;
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

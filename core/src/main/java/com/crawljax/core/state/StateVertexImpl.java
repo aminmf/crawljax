@@ -23,7 +23,7 @@ class StateVertexImpl implements StateVertex {
 	private static final long serialVersionUID = 123400017983488L;
 
 	private final Collection<Eventable> foundEventables;
-	private final int id;
+	private long id;
 	private final String dom;
 	private final String strippedDom;
 	private final String url;
@@ -41,7 +41,7 @@ class StateVertexImpl implements StateVertex {
 	 *            the current DOM tree of the browser
 	 */
 	@VisibleForTesting
-	StateVertexImpl(int id, String name, String dom) {
+	StateVertexImpl(Long id, String name, String dom) {
 		this(id, null, name, dom, dom);
 	}
 
@@ -57,8 +57,8 @@ class StateVertexImpl implements StateVertex {
 	 * @param strippedDom
 	 *            the stripped dom by the OracleComparators
 	 */
-	public StateVertexImpl(int id, String url, String name, String dom, String strippedDom) {
-		this.id = id;
+	public StateVertexImpl(Long indexId, String url, String name, String dom, String strippedDom) {
+		this.id = indexId;
 		this.url = url;
 		this.name = name;
 		this.dom = dom;
@@ -109,7 +109,7 @@ class StateVertexImpl implements StateVertex {
 	}
 
 	@Override
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -153,5 +153,10 @@ class StateVertexImpl implements StateVertex {
 		for (AssertedElementPattern aep: assertedElementPatterns)
 			assertions.add(aep.getAssertion());
 		return assertions;
+	}
+	
+	@Override
+	public void setId(long id) {
+		this.id = id;
 	}
 }

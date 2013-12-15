@@ -64,6 +64,9 @@ public class CrawlController implements Callable<CrawlSession> {
 		plugins.runPreCrawlingPlugins(config);
 		CrawlTaskConsumer firstConsumer = consumerFactory.get();
 		StateVertex firstState = firstConsumer.crawlIndex();
+		
+		System.out.println("firstState is " + firstState);
+		
 		crawlSessionProvider.setup(firstState);
 		plugins.runOnNewStatePlugins(firstConsumer.getContext(), firstState);
 		

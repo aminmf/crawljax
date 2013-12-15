@@ -19,7 +19,7 @@ public interface StateFlowGraph {
 	 *            The ID of the state
 	 * @return The state if found or <code>null</code>.
 	 */
-	StateVertex getById(int id);
+	StateVertex getById(long id);
 
 	/**
 	 * @return The index state.

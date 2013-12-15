@@ -62,9 +62,10 @@ public class CrawlTaskConsumer implements Callable<Void> {
 	private void pollAndHandleCrawlTasks() throws InterruptedException {
 		try {
 			LOG.debug("Awaiting task");
-			//StateVertex crawlTask = candidates.awaitNewTask();
-			
+		
 			// Amin: selecting the next state to be expanded
+			//original version
+			//StateVertex crawlTask = candidates.awaitNewTask();
 			int stateId = getNextStateIdToCrawl();
 			StateVertex crawlTask = candidates.awaitSelectedNewTask(stateId);
 			
