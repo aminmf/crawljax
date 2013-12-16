@@ -133,9 +133,9 @@ public class CrawlerTest {
 	}
 
 	private void setupStateFlowGraph() {
-		when(index.getId()).thenReturn((long) 1);
+		when(index.getId()).thenReturn(1);
 		when(index.getName()).thenReturn("Index");
-		when(target.getId()).thenReturn((long) 2);
+		when(target.getId()).thenReturn(2);
 		when(target.getName()).thenReturn("State 2");
 
 		when(eventToTransferToTarget.getIdentification()).thenReturn(

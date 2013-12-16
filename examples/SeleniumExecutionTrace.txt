@@ -35,7 +35,7 @@ By.id: category_code
 clear 
 By.id: category_code
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
-sendKeys SE112[C@152
+sendKeys SE112[C@15325
 By.id: hidden
 [[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
 click 
@@ -137,6 +137,9 @@ sendKeys 7788814476
 By.id: old_password
 [[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: old_password]
 sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password]
+sendKeys nainy
 By.id: password_conf
 [[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password_conf]
 sendKeys nainy
@@ -234,6 +237,9 @@ click
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Logout]
 click 
+TestSuiteEnd
+
+
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: login]

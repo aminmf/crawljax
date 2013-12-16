@@ -35,8 +35,8 @@ public class UnfiredCandidateActions {
 
 	private static final Logger LOG = LoggerFactory.getLogger(UnfiredCandidateActions.class);
 
-	private final Map<Long, Queue<CandidateCrawlAction>> cache;
-	private final BlockingQueue<Long> statesWithCandidates;
+	private final Map<Integer, Queue<CandidateCrawlAction>> cache;
+	private final BlockingQueue<Integer> statesWithCandidates;
 	private final Striped<Lock> locks;
 	private final Provider<StateFlowGraph> sfg;
 	private final Counter crawlerLostCount;
@@ -148,7 +148,7 @@ public class UnfiredCandidateActions {
 	 *             when taking from the queue is interrupted.
 	 */
 	public StateVertex awaitNewTask() throws InterruptedException {
-		long id = statesWithCandidates.take();
+		int id = statesWithCandidates.take();
 		// Put it back the end of the queue. It will be removed later.
 		statesWithCandidates.add(id);
 		LOG.debug("New task polled for state {}", id);
@@ -181,7 +181,7 @@ public class UnfiredCandidateActions {
 	 * @throws InterruptedException
 	 *             when taking from the queue is interrupted.
 	 */
-	public StateVertex awaitSelectedNewTask(long stateId) throws InterruptedException {
+	public StateVertex awaitSelectedNewTask(int stateId) throws InterruptedException {
 		while (statesWithCandidates.remove(stateId)) {
 			LOG.trace("Removed id {} from the queue", stateId);
 		}

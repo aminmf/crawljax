@@ -220,7 +220,7 @@ public class Crawler {
 		}*/
 
 		// New version
-		System.out.println("formInputs Before: " + formInputs);
+		//System.out.println("formInputs Before: " + formInputs);
 		for (FormInput formInput : formHandler.getFormInputs()) {
 			for (FormInput formInputFromTestSuite : formInputs) {
 				//System.out.println("formInput is: " + formInput);
@@ -233,7 +233,7 @@ public class Crawler {
 				}
 			}
 		}
-		System.out.println("formInputs After: " + formInputs);
+		//System.out.println("formInputs After: " + formInputs);
 		
 		formHandler.handleFormElements(formInputs);
 	}

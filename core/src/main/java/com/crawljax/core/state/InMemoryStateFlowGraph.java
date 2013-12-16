@@ -51,7 +51,7 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 	 */
 	private final AtomicInteger stateCounter = new AtomicInteger();
 	private final AtomicInteger nextStateNameCounter = new AtomicInteger();
-	private final ConcurrentMap<Long, StateVertex> stateById;
+	private final ConcurrentMap<Integer, StateVertex> stateById;
 	private transient final ExitNotifier exitNotifier;
 
 	/**
@@ -277,7 +277,7 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 
 	StateVertex newStateFor(String url, String dom, String strippedDom) {
 		int id = nextStateNameCounter.incrementAndGet();
-		return new StateVertexImpl((long) id, url, getNewStateName(id), dom, strippedDom);
+		return new StateVertexImpl(id, url, getNewStateName(id), dom, strippedDom);
 	}
 
 	private String getNewStateName(int id) {
