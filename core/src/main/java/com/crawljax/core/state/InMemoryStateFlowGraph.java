@@ -130,7 +130,7 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 	}
 
 	@Override
-	public StateVertex getById(long id) {
+	public StateVertex getById(int id) {
 		return stateById.get(id);
 	}
 

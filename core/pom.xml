@@ -69,7 +69,8 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-firefox-driver</artifactId>
-			<version>${selenium.version}</version>
+			<!-- <version>${selenium.version}</version> -->
+			<version>2.39.0</version>
 		</dependency>
 
 		<dependency>

@@ -153,7 +153,7 @@ public class UnfiredCandidateActions {
 		statesWithCandidates.add(id);
 		LOG.debug("New task polled for state {}", id);
 		LOG.info("There are {} states with unfired actions", statesWithCandidates.size());
-		return sfg.get().getById(id);
+		return sfg.get().getById(id); 
 	}
 
 	public void purgeActionsForState(StateVertex crawlTask) {

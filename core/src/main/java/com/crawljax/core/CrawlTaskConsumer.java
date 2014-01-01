@@ -63,11 +63,19 @@ public class CrawlTaskConsumer implements Callable<Void> {
 		try {
 			LOG.debug("Awaiting task");
 		
+			StateVertex crawlTask = null;
+			
+			boolean useTestExt = true;
 			// Amin: selecting the next state to be expanded
-			//original version
-			//StateVertex crawlTask = candidates.awaitNewTask();
-			int stateId = getNextStateIdToCrawl();
-			StateVertex crawlTask = candidates.awaitSelectedNewTask(stateId);
+			if (!useTestExt )
+				//original version
+				crawlTask = candidates.awaitNewTask();
+			else {
+				int stateId = getNextStateIdToCrawl();
+				crawlTask = candidates.awaitSelectedNewTask(stateId);
+			}
+			
+			System.out.println("crawlTask: " + crawlTask);
 			
 			int activeConsumers = runningConsumers.incrementAndGet();
 			LOG.debug("There are {} active consumers", activeConsumers);
