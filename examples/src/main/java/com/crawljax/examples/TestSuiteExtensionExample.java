@@ -16,7 +16,12 @@ import com.crawljax.core.configuration.CrawljaxConfiguration.CrawljaxConfigurati
 import com.crawljax.core.configuration.Form;
 import com.crawljax.core.configuration.InputSpecification;
 import com.crawljax.plugins.crawloverview.CrawlOverview;
+import com.crawljax.plugins.proxy.JSInjectorProxyAddon;
+import com.crawljax.plugins.proxy.WebScarabProxyPlugin;
 import com.crawljax.plugins.testsuiteextension.TestSuiteExtension;
+
+import com.crawljax.plugins.testsuiteextension.jsinstrumentor.JSModifyProxyPlugin;
+import com.crawljax.plugins.testsuiteextension.jsinstrumentor.AstInstrumenter;
 
 /**
  * Example of running Crawljax with the TestSuiteExtension plugin on a single-page web app.
@@ -61,9 +66,22 @@ public final class TestSuiteExtensionExample {
 		//builder.addPlugin(new CrawlOverview());
 		builder.addPlugin(new TestSuiteExtension());
 		
+		
+		// Create a Proxy for the purpose of code instrumentation
+		WebScarabProxyPlugin proxyPlugin = new WebScarabProxyPlugin();
+		JSModifyProxyPlugin jsModifier = new JSModifyProxyPlugin(new AstInstrumenter());
+		jsModifier.excludeDefaults();
+		proxyPlugin.addPlugin(jsModifier);
+		//proxyPlugin.addPlugin(new JSInjectorProxyAddon(new File("foo.js")));
+		builder.addPlugin(proxyPlugin);
+		// Configure the proxy to use the port 8084 (you can change this of course)
+		builder.setProxyConfig(ProxyConfiguration.manualProxyOn("127.0.0.1", 8084));
+
+		
 		// For this version we use only one browser.
 		builder.setBrowserConfig(new BrowserConfiguration(BrowserType.FIREFOX, 1));
 
+		
 		CrawljaxRunner crawljax = new CrawljaxRunner(builder.build());
 		crawljax.call();
 	}
