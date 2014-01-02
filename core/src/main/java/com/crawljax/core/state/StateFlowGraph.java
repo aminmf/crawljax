@@ -109,4 +109,8 @@ public interface StateFlowGraph {
 	 */
 	 ImmutableSet<StateVertex> getOutgoingStates(StateVertex stateVertix);
 
+	 // Amin: For Feedex
+	 void setLatestCoverage(double coverage);
+	 void setInitialCoverage(StateVertex vertex, double cov);
+	 double getCoverageIncrease(StateVertex stateVertix);
 }

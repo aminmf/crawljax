@@ -191,9 +191,14 @@ public class UnfiredCandidateActions {
 		LOG.info("There are {} states with unfired actions", statesWithCandidates.size());
 		return sfg.get().getById(stateId);
 	}
-	
+	//	Amin
+	public ArrayList<Integer> getStatesWithCandidates(){
+		ArrayList<Integer> stateIDs = new ArrayList<Integer>(statesWithCandidates);
+		return stateIDs;
+	}
+
 	public int getNumberOfStatesWithCandidates(){
 		return statesWithCandidates.size();
 	}
-	
+
 }

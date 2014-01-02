@@ -3,7 +3,9 @@ package com.crawljax.core.state;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -54,6 +56,23 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 	private final ConcurrentMap<Integer, StateVertex> stateById;
 	private transient final ExitNotifier exitNotifier;
 
+	// Amin: For Feedex
+	private Map<String,Double> statesCoverageIncrease = new Hashtable<String,Double>();
+	private double latestCoverage = 0.0;
+	private double latestCoverageIncrease = 0.0;
+	public void setLatestCoverage(double newCoverage){
+		latestCoverageIncrease = newCoverage-latestCoverage;
+		if (latestCoverageIncrease<0)
+			latestCoverageIncrease=0; // sometimes in the beginning there is a high coverage, later new scripts are modified and thus coverage decreases
+		latestCoverage = newCoverage;
+	}	
+	public void setInitialCoverage(StateVertex initState, double newCoverage){
+		latestCoverageIncrease = newCoverage-latestCoverage;
+		latestCoverage = newCoverage;
+		setCoverageIncrease(initState);
+	}	
+
+	
 	/**
 	 * The constructor.
 	 * 
@@ -118,6 +137,7 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 				int count = stateCounter.incrementAndGet();
 				exitNotifier.incrementNumberOfStates();
 				LOG.debug("Number of states is now {}", count);
+				setCoverageIncrease(stateVertix);
 				return null;
 			} else {
 				// Graph already contained the vertex
@@ -356,4 +376,29 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 		return ImmutableSet.copyOf(result);
 	}
 
+	
+	/**
+	 * @author Amin
+	 * Setting coverage increase for a state using the latestCoverageIncrease
+	 */
+	private void setCoverageIncrease(StateVertex stateVertix) {
+		writeLock.lock();
+		LOG.info("CoverageIncrease for states " + stateVertix.getName() + " is " + latestCoverageIncrease);
+		statesCoverageIncrease.put(stateVertix.toString(), latestCoverageIncrease);
+		writeLock.unlock();
+
+	}
+
+	public double getCoverageIncrease(StateVertex stateVertix) {
+		double cov = 0.0;
+		readLock.lock();
+		try{
+			cov = statesCoverageIncrease.get(stateVertix.toString());	
+			LOG.info("**** CoverageIncrease for states " + stateVertix.getName() + " is " + cov);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		readLock.unlock();
+		return cov;
+	}
 }

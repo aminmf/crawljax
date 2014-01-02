@@ -1,5 +1,6 @@
 package com.crawljax.core;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -7,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.crawljax.core.state.StateFlowGraph;
 import com.crawljax.core.state.StateVertex;
 import com.google.inject.Inject;
 
@@ -85,20 +87,38 @@ public class CrawlTaskConsumer implements Callable<Void> {
 		}
 	}
 
-	// Amin
+	// Amin: Implementing Feedex
 	private int getNextStateIdToCrawl() {
 		int numberOfStatesWithCandidates = candidates.getNumberOfStatesWithCandidates();
 		LOG.info("There are {} states with unfired actions", numberOfStatesWithCandidates);
-		boolean randomStrategy = true;
 		int stateId = 0;
-		
-		Random randomGenerator = new Random();
+
+		boolean randomStrategy = true;
 		
 		if (randomStrategy){
+			Random randomGenerator = new Random();
 			stateId = randomGenerator.nextInt(numberOfStatesWithCandidates);
+		}else{
+			// using js statement coverage impact to choose next to explore
+			StateFlowGraph sfg = crawler.getContext().getSession().getStateFlowGraph();
+
+			if (numberOfStatesWithCandidates==0)
+				return -1;
+
+			double coverageIncrease, winnerCoverageIncrease = 0.0;
+
+			for (int i=0; i < numberOfStatesWithCandidates; i++){
+				coverageIncrease = sfg.getCoverageIncrease(sfg.getById(candidates.getStatesWithCandidates().get(i)));
+
+				if (coverageIncrease >= winnerCoverageIncrease){
+					winnerCoverageIncrease = coverageIncrease;
+					stateId = candidates.getStatesWithCandidates().get(i);
+				}
+			}
+			LOG.info("The winner state is state " +  stateId + " with coverageIncrease "  + winnerCoverageIncrease);
 		}
-		
-		
+
+
 		LOG.info("Satet with id " + stateId + " was selected as the nextStateToCrawl");
 
 		return stateId;
