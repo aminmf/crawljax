@@ -248,7 +248,7 @@ public class Crawler {
 	 *            the eventable to fire
 	 * @return true iff the event is fired
 	 */
-	//Amin changed from private to public
+	// Amin changed from private to public
 	public boolean fireEvent(Eventable eventable) {
 		Eventable eventToFire = eventable;
 		if (eventable.getIdentification().getHow().toString().equals("xpath")

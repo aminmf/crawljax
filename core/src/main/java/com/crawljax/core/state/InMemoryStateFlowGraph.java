@@ -71,7 +71,28 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 		latestCoverage = newCoverage;
 		setCoverageIncrease(initState);
 	}	
+	// Amin: Setting coverage increase for a state using the latestCoverageIncrease
+	private void setCoverageIncrease(StateVertex stateVertix) {
+		writeLock.lock();
+		LOG.info("CoverageIncrease for states " + stateVertix.getName() + " is " + latestCoverageIncrease);
+		statesCoverageIncrease.put(stateVertix.toString(), latestCoverageIncrease);
+		writeLock.unlock();
 
+	}
+	public double getCoverageIncrease(StateVertex stateVertix) {
+		double cov = 0.0;
+		readLock.lock();
+		try{
+			cov = statesCoverageIncrease.get(stateVertix.toString());	
+			LOG.info("**** CoverageIncrease for states " + stateVertix.getName() + " is " + cov);
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		readLock.unlock();
+		return cov;
+	}
+	
+	
 	
 	/**
 	 * The constructor.
@@ -376,29 +397,4 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 		return ImmutableSet.copyOf(result);
 	}
 
-	
-	/**
-	 * @author Amin
-	 * Setting coverage increase for a state using the latestCoverageIncrease
-	 */
-	private void setCoverageIncrease(StateVertex stateVertix) {
-		writeLock.lock();
-		LOG.info("CoverageIncrease for states " + stateVertix.getName() + " is " + latestCoverageIncrease);
-		statesCoverageIncrease.put(stateVertix.toString(), latestCoverageIncrease);
-		writeLock.unlock();
-
-	}
-
-	public double getCoverageIncrease(StateVertex stateVertix) {
-		double cov = 0.0;
-		readLock.lock();
-		try{
-			cov = statesCoverageIncrease.get(stateVertix.toString());	
-			LOG.info("**** CoverageIncrease for states " + stateVertix.getName() + " is " + cov);
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		readLock.unlock();
-		return cov;
-	}
 }
