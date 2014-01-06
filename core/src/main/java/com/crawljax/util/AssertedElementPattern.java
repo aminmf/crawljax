@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.crawljax.core.configuration.CrawlElement;
@@ -39,12 +40,21 @@ public class AssertedElementPattern implements Serializable{
 	// assertion associated to this element
 	private String assertion = "";
 	private String assertionType = "";
+	private String assertedElementLocator = "";
 	
 	
-	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion){
+	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion, String assertedElementLocator){
 		// assertion info
+		this.assertedElementLocator = assertedElementLocator;
 		this.assertion = assertion;
-		this.assertionType  = getAssertionType(assertion);
+		this.assertionType  = null;
+
+		if (assertion.contains(".getText()"))
+			this.assertionType = "getText";
+		else if (assertion.contains(".getTitle()"))
+			this.assertionType = "getTitle";
+		else 
+			this.assertionType = "others";
 		
 		this.sourceElement = sourceElement;
 		if (sourceElement==null)
@@ -77,15 +87,18 @@ public class AssertedElementPattern implements Serializable{
 		
 	}
 	
-	private String getAssertionType(String assertion) {
-		String type = null;
 
-		if (assertion.contains(".getText()"))
-			type = "getText";
-		else if (assertion.contains(".getTitle()"))
-			type = "getTitle";
-			
-		return type;
+	public String getAssertedElementLocator() {
+		return assertedElementLocator;
+	}
+
+
+	public org.w3c.dom.Element getSourceElement() {
+		return sourceElement;
+	}
+
+	public String getAssertionType() {
+		return this.assertionType;
 	}
 
 	public void increaseCount(){
@@ -101,9 +114,12 @@ public class AssertedElementPattern implements Serializable{
 	}*/
 	
 	public String getAssertion(){
-		return assertion;
+		return this.assertion;
 	}
 	
+	public void setAssertion(String assertion){
+		this.assertion = assertion;
+	}
 	
 	@Override
     public boolean equals(Object o) {
@@ -136,6 +152,8 @@ public class AssertedElementPattern implements Serializable{
 				+ ", childrenAttributes=" + childrenAttributes + ", count=" + count + ", assertion=" + assertion + "]";
 	}
 	
+	
+	/*
 	public boolean findAssertedElementPattern(Document dom, CrawljaxConfiguration config){
 		// finding the pattern of this object in the DOM using Crawljax configuration  
 		for (CrawlElement crawlTag : config.getCrawlRules().getAllCrawlElements()) {
@@ -155,6 +173,7 @@ public class AssertedElementPattern implements Serializable{
 		}
 		return false;
 	}
+	*/
 	
 
 	public String getHowPatternMatch(AssertedElementPattern aep){

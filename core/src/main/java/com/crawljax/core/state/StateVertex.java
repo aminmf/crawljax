@@ -61,6 +61,5 @@ public interface StateVertex extends Serializable {
 	void addAssertedElementPattern(AssertedElementPattern aep);
 	ArrayList<String> getAssertions();
 	ArrayList<AssertedElementPattern> getAssertedElementPatters();
-	
-	//void setId(int id);
+
 }

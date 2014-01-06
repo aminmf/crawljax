@@ -1,59 +1,6 @@
 TestSuiteBegin
 NewTestCase
 By.id: login
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Platform administration
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Platform administration]
-click 
-By.linkText: Manage course categories
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Manage course categories]
-click 
-By.linkText: Create a category
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Create a category]
-click 
-By.id: category_name
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_name]
-clear 
-By.id: category_name
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_name]
-sendKeys Software Eng
-By.id: category_code
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
-clear 
-By.id: category_code
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
-sendKeys SE112[C@15325
-By.id: hidden
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
-click 
-By.id: visible
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: visible]
-click 
-By.selector: input[type="submit"]
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input[type="submit"]]
-click 
-assertionModeOn
-By.selector: div.claroDialogBox.boxSuccess
-assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
-assertionModeOff
-By.linkText: Logout
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Logout]
-click 
-NewTestCase
-By.id: login
 [[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: login]
 clear 
 By.id: login
@@ -237,9 +184,6 @@ click
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Logout]
 click 
-TestSuiteEnd
-
-
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: login]
@@ -351,7 +295,11 @@ assertion assertEquals("Create a new user - Claroline", driver.getTitle())
 assertionModeOff
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> link text: Logout]
-click 
+click
+TestSuiteEnd
+
+
+ 
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: login]
@@ -1212,4 +1160,57 @@ click
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Logout]
 click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Platform administration]
+click 
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Manage course categories]
+click 
+By.linkText: Create a category
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Create a category]
+click 
+By.id: category_name
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_name]
+clear 
+By.id: category_name
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_name]
+sendKeys Software Eng
+By.id: category_code
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
+clear 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
+sendKeys SE112[C@16761
+By.id: hidden
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
+click 
+By.id: visible
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: visible]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Logout]
+click
 TestSuiteEnd
