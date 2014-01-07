@@ -1,10 +1,17 @@
 package generated;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+
+import com.crawljax.util.DomUtils;
 
 /*
  * Generated @ ${date}
@@ -68,6 +75,32 @@ public class ${classname} {
       return false;
     }
   }
+
+	private boolean isElementPatternPresent(String parentTag, String elementTag, ArrayList<String> childrenTags) {
+		try {
+			String source = driver.getPageSource();
+			Document dom = DomUtils.asDocument(source);
+
+			NodeList nodeList = dom.getElementsByTagName(elementTag);
+
+			org.w3c.dom.Element sourceElement = null;
+			for (int i = 0; i < nodeList.getLength(); i++){
+				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
+
+				String parentTagName = sourceElement.getParentNode().getNodeName();
+
+				ArrayList<String> childrenTagName = new ArrayList<String>();				
+				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
+					childrenTagName.add(sourceElement.getChildNodes().item(j).getNodeName());
+
+				if (parentTagName.equals(parentTag) && childrenTagName.equals(childrenTags))
+					return true;
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
 
   private boolean isAlertPresent() {
     try {

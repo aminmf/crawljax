@@ -29,10 +29,18 @@ public class AssertedElementPattern implements Serializable{
 	private ArrayList<String> attributes = new ArrayList<String>();
 	// parent node info
 	private String parentTagName = "";
+	public String getParentTagName() {
+		return parentTagName;
+	}
+
 	private String parentTextContent = "";
 	private ArrayList<String> parentAttributes = new ArrayList<String>();
 	// children nodes info
 	private ArrayList<String> childrenTagName = new ArrayList<String>();
+	public ArrayList<String> getChildrenTagName() {
+		return childrenTagName;
+	}
+
 	private ArrayList<String> childrenTextContent = new ArrayList<String>();
 	private ArrayList<ArrayList<String>> childrenAttributes = new ArrayList<ArrayList<String>>();
 	// count of occurrence in test suite
