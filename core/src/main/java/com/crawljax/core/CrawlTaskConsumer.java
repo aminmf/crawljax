@@ -93,7 +93,7 @@ public class CrawlTaskConsumer implements Callable<Void> {
 		LOG.info("There are {} states with unfired actions", numberOfStatesWithCandidates);
 		int stateId = 0;
 
-		boolean randomStrategy = false;
+		boolean randomStrategy = true;
 		
 		if (randomStrategy){
 			Random randomGenerator = new Random();

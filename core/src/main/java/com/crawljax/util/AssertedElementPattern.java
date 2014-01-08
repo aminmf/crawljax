@@ -50,7 +50,18 @@ public class AssertedElementPattern implements Serializable{
 	private String assertionType = "";
 	private String assertedElementLocator = "";
 	
+	private String assertionOrigin = "";
 	
+	public String getAssertionOrigin() {
+		return assertionOrigin;
+	}
+
+
+	public void setAssertionOrigin(String assertionOrigin) {
+		this.assertionOrigin = assertionOrigin;
+	}
+
+
 	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion, String assertedElementLocator){
 		// assertion info
 		this.assertedElementLocator = assertedElementLocator;

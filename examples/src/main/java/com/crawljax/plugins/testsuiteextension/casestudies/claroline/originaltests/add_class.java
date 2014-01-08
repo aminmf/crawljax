@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.Select;
 
 public class add_class {
@@ -14,13 +15,30 @@ public class add_class {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
+  JavascriptExecutor js;
+  
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+    //driver = new FirefoxDriver();
+    driver = new FirefoxDriver(getProfile());
     baseUrl = "http://watersmc.ece.ubc.ca:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    
+    js = (JavascriptExecutor) driver;    
   }
 
+  public static FirefoxProfile getProfile() {
+      FirefoxProfile profile = new FirefoxProfile();
+
+      profile.setPreference("network.proxy.http", "localhost");
+      profile.setPreference("network.proxy.http_port", 3128);
+      profile.setPreference("network.proxy.type", 1);
+      /* use proxy for everything, including localhost */
+      profile.setPreference("network.proxy.no_proxies_on", "");
+
+      return profile;
+}
+  
   @Test
   public void testAddClass() throws Exception {
     driver.get(baseUrl + "/claroline-1.11.7/index.php");
@@ -29,6 +47,10 @@ public class add_class {
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys("nainy");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+
+    //String jsCode = "var myNode = document.getElementById(\"userProfileBox\"); while (myNode.firstChild) { myNode.removeChild(myNode.firstChild); }";
+    //js.executeScript(jsCode);
+    
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Manage classes")).click();
     driver.findElement(By.linkText("Create a new class")).click();
@@ -47,11 +69,13 @@ public class add_class {
 
   @After
   public void tearDown() throws Exception {
-    driver.quit();
-    String verificationErrorString = verificationErrors.toString();
-    if (!"".equals(verificationErrorString)) {
-      fail(verificationErrorString);
-    }
+	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
+
+	  driver.quit();
+	  String verificationErrorString = verificationErrors.toString();
+	  if (!"".equals(verificationErrorString)) {
+		  fail(verificationErrorString);
+	  }
   }
 
   private boolean isElementPresent(By by) {
