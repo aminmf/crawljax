@@ -1166,8 +1166,6 @@ click
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Logout]
 click
-TestSuiteEnd
-
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: login]

@@ -1,4 +1,4 @@
-package com.crawljax.plugins.testsuiteextension.casestudies.photogallery.originaltests;
+package com.crawljax.plugins.testsuiteextension.casestudies.photogallery.originaltests.getcoverage;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -10,24 +10,41 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class CategoryDeleteTest {
 	private WebDriver driver;
 	private String baseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
+	
+	JavascriptExecutor js;
 
 	@Before
 	public void setUp() throws Exception {
-		driver = new FirefoxDriver();
+	    driver = new FirefoxDriver(getProfile());
 		baseUrl = "http://localhost:8888";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    js = (JavascriptExecutor) driver;    
 	}
 
+	  public static FirefoxProfile getProfile() {
+	      FirefoxProfile profile = new FirefoxProfile();
+
+	      profile.setPreference("network.proxy.http", "localhost");
+	      profile.setPreference("network.proxy.http_port", 3128);
+	      profile.setPreference("network.proxy.type", 1);
+	      /* use proxy for everything, including localhost */
+	      profile.setPreference("network.proxy.no_proxies_on", "");
+
+	      return profile;
+	}
+	  
 	@Test
 	public void testAddCategory() throws Exception {
 		driver.get(baseUrl + "/phormer331/");
@@ -54,6 +71,8 @@ public class CategoryDeleteTest {
 
 	@After
 	public void tearDown() throws Exception {
+		((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
+
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {

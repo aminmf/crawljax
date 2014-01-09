@@ -1,4 +1,4 @@
-package com.crawljax.plugins.testsuiteextension.casestudies.photogallery.originaltests;
+package com.crawljax.plugins.testsuiteextension.casestudies.photogallery.originaltests.getcoverage;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -10,50 +10,64 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
-public class CategoryDeleteTest {
+public class add_story {
 	private WebDriver driver;
 	private String baseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
+	
+	JavascriptExecutor js;
 
 	@Before
 	public void setUp() throws Exception {
-		driver = new FirefoxDriver();
+	    driver = new FirefoxDriver(getProfile());
 		baseUrl = "http://localhost:8888";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	    js = (JavascriptExecutor) driver;    
 	}
 
+	  public static FirefoxProfile getProfile() {
+	      FirefoxProfile profile = new FirefoxProfile();
+
+	      profile.setPreference("network.proxy.http", "localhost");
+	      profile.setPreference("network.proxy.http_port", 3128);
+	      profile.setPreference("network.proxy.type", 1);
+	      /* use proxy for everything, including localhost */
+	      profile.setPreference("network.proxy.no_proxies_on", "");
+
+	      return profile;
+	}
+	
+	
 	@Test
-	public void testAddCategory() throws Exception {
+	public void testAddStoryAssert() throws Exception {
 		driver.get(baseUrl + "/phormer331/");
 		driver.findElement(By.linkText("Admin Page")).click();
 		driver.findElement(By.id("loginAdminPass")).clear();
 		driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
 		driver.findElement(By.cssSelector("input.submit")).click();
-		driver.findElement(By.linkText("Manage Categories")).click();
+		driver.findElement(By.linkText("Manage Stories")).click();
 		driver.findElement(By.id("name")).clear();
-		driver.findElement(By.id("name")).sendKeys("flowers");
+		driver.findElement(By.id("name")).sendKeys("Photos");
 		driver.findElement(By.name("desc")).clear();
-		driver.findElement(By.name("desc")).sendKeys("contains photos of all the flowers !");
-		driver.findElement(By.id("listRadioNo")).click();
-		driver.findElement(By.id("listRadioYe")).click();
+		driver.findElement(By.name("desc")).sendKeys("Greenery !!");
+		assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Get Comments[\\s\\S]*$"));
+
 		driver.findElement(By.cssSelector("input.submit")).click();
-		assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$"));
-		driver.findElement(By.xpath("(//a[contains(text(),'Delete / Clear')])[2]")).click();
-		assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Clears Category flowers of all its own \\(direct\\) photos, nothing will be removed[\\s\\S]*$"));
-		driver.findElement(By.xpath("(//input[@name='howto'])[4]")).click();
-		driver.findElement(By.cssSelector("input.submit")).click();
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to delete [\\s\\S]*$"));
-		// driver.findElement(By.cssSelector("a[title=\"Log Out\"] > img.logo")).click();
+		driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
+
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {

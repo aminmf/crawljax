@@ -24,13 +24,13 @@ public class add_story {
 	@Before
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
-		baseUrl = "http://watersmc.ece.ubc.ca:8888";
+		baseUrl = "http://localhost:8888";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
 	@Test
 	public void testAddStoryAssert() throws Exception {
-		driver.get(baseUrl + "/phormer-photoGallery331/");
+		driver.get(baseUrl + "/phormer331/");
 		driver.findElement(By.linkText("Admin Page")).click();
 		driver.findElement(By.id("loginAdminPass")).clear();
 		driver.findElement(By.id("loginAdminPass")).sendKeys("editor");

@@ -1,15 +1,17 @@
-package com.crawljax.plugins.testsuiteextension.casestudies.claroline.originaltests;
+package com.crawljax.plugins.testsuiteextension.casestudies.claroline.originaltests.getcoverage;
 
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.support.ui.Select;
 
-public class Add_course {
+public class Support {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -17,34 +19,47 @@ public class Add_course {
 
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
-    baseUrl = "http://localhost:8888";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  //driver = new FirefoxDriver();
+	  driver = new FirefoxDriver(getProfile());
+	  baseUrl = "http://localhost:8888/";
+	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  public static FirefoxProfile getProfile() {
+	  FirefoxProfile profile = new FirefoxProfile();
+
+	  profile.setPreference("network.proxy.http", "localhost");
+	  profile.setPreference("network.proxy.http_port", 3128);
+	  profile.setPreference("network.proxy.type", 1);
+	  /* use proxy for everything, including localhost */
+	  profile.setPreference("network.proxy.no_proxies_on", "");
+
+	  return profile;
   }
 
   @Test
-  public void testAddCourse() throws Exception {
-    driver.get(baseUrl + "/claroline-1.11.7/index.php");
+  public void testSupport() throws Exception {
+    driver.get(baseUrl + "/claroline-1.11.7/");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("nainy");
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys("nainy");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-    driver.findElement(By.linkText("Create a course site")).click();
-    driver.findElement(By.id("course_title")).clear();
-    driver.findElement(By.id("course_title")).sendKeys("Computer Science");
-    driver.findElement(By.id("course_officialCode")).clear();
-    driver.findElement(By.id("course_officialCode")).sendKeys("A7");
-    // ERROR: Caught exception [ERROR: Unsupported command [addSelection | id=mslist2 | label=Sciences]]
-    driver.findElement(By.linkText("Advanced options")).click();
-    driver.findElement(By.id("course_status_date")).click();
-    driver.findElement(By.name("changeProperties")).click();
-    driver.findElement(By.linkText("Logout")).click();
+    driver.findElement(By.linkText("Platform administration")).click();
+    driver.findElement(By.linkText("Support forum")).click();
+    // Warning: verifyTextPresent may require manual changes
+    try {
+        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"));
+        assertTrue(driver.findElement(By.id("page-body")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"));
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
   }
 
   @After
   public void tearDown() throws Exception {
-    driver.quit();
+	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
+   driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
       fail(verificationErrorString);

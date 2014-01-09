@@ -30,7 +30,10 @@ public final class TestSuiteExtensionExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
-	private static final String URL = "http://watersmc.ece.ubc.ca:8888/claroline-1.11.7/index.php";
+	private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php";
+	//private static final String URL = "http://localhost:8888/phormer331/";
+	
+	
 
 	/**
 	 * Run this method to start the crawl.
