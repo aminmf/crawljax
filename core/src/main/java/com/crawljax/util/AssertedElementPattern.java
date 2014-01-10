@@ -14,7 +14,7 @@ import com.crawljax.util.XPathHelper;
 
 /**
  * AssertedElementPattern is used to store informations about a DOM element accessed pattern in a Selenium assertion.
- * This pattern contains: The asserted element node, its parent node, its children nodes, its count of occurrence in test suite, and its associated assertion
+ * This pattern contains: The asserted element node, its parent node, its children nodes, its previous state id, and its associated assertion
  * 
  * @author Amin Milani Fard
  */
@@ -43,8 +43,7 @@ public class AssertedElementPattern implements Serializable{
 
 	private ArrayList<String> childrenTextContent = new ArrayList<String>();
 	private ArrayList<ArrayList<String>> childrenAttributes = new ArrayList<ArrayList<String>>();
-	// count of occurrence in test suite
-	private int count = 0;	
+
 	// assertion associated to this element
 	private String assertion = "";
 	private String assertionType = "";
@@ -120,14 +119,6 @@ public class AssertedElementPattern implements Serializable{
 		return this.assertionType;
 	}
 
-	public void increaseCount(){
-		count++;
-	}
-	
-	public int getCount(){
-		return count;
-	}
-
 	/*public void addAssertion(String assertion){
 		this.assertion = assertion;
 	}*/
@@ -168,7 +159,7 @@ public class AssertedElementPattern implements Serializable{
 				+ ", parentAttributes=" + parentAttributes
 				+ ", childrenTagName=" + childrenTagName
 				//+ ", childrenTextContent=" + childrenTextContent
-				+ ", childrenAttributes=" + childrenAttributes + ", count=" + count + ", assertion=" + assertion + "]";
+				+ ", childrenAttributes=" + childrenAttributes + ", assertion=" + assertion + "]";
 	}
 	
 	
