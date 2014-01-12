@@ -24,7 +24,8 @@ public class MainViewTest {
 
 	@Test
 	public void testMainView() throws Exception {
-		driver.get("http://localhost:8888/phormer331/?p=1");
+		driver.get("http://localhost:8888/phormer331/");
+		driver.findElement(By.linkText("Default Category")).click();
 		assertTrue(isElementPresent(By.cssSelector("div#theImage")));
 		driver.findElement(By.linkText("Hide  info")).click();
 		assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false);

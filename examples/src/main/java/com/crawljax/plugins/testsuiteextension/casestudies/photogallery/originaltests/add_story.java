@@ -40,9 +40,8 @@ public class add_story {
 		driver.findElement(By.id("name")).sendKeys("Photos");
 		driver.findElement(By.name("desc")).clear();
 		driver.findElement(By.name("desc")).sendKeys("Greenery !!");
-		assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Get Comments[\\s\\S]*$"));
-
 		driver.findElement(By.cssSelector("input.submit")).click();
+		assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"));
 		driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 	}
 

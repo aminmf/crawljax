@@ -24,7 +24,8 @@ public class SlideShowTest {
 
 	@Test
 	public void testSlideShow() throws Exception {
-		driver.get("http://localhost:8888/phormer331/?feat=slideshow");
+		driver.get("http://localhost:8888/phormer331/");
+		driver.findElement(By.linkText("SlideShow")).click();
 		assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$"));
 		driver.findElement(By.id("ss_playpause_link")).click();
 		assertTrue(isElementPresent(By.cssSelector("img#ss_photo")));
