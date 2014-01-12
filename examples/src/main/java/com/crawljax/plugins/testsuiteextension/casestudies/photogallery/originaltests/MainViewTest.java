@@ -25,12 +25,13 @@ public class MainViewTest {
 	@Test
 	public void testMainView() throws Exception {
 		driver.get("http://localhost:8888/phormer331/");
-		driver.findElement(By.linkText("Default Category")).click();
-		assertTrue(isElementPresent(By.cssSelector("div#theImage")));
-		driver.findElement(By.linkText("Hide  info")).click();
-		assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false);
-		driver.findElement(By.linkText("Show info")).click();
-		assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed());
+		driver.findElement(By.partialLinkText("Default Category")).click();
+		assertTrue(driver.findElement(By.cssSelector("a.theTitleA")).getText().matches("^[\\s\\S]*Default Category[\\s\\S]*$"));
+		driver.findElement(By.cssSelector("div.aThumb:nth-child(1) > center:nth-child(1) > a:nth-child(1)")).click();
+		driver.findElement(By.cssSelector("div.bcell:nth-child(7) > form:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(7) > td:nth-child(1) > input:nth-child(2)")).click();
+		//assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false);
+		//driver.findElement(By.linkText("Show info")).click();
+		//assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed());
 		WebElement select = driver.findElement(By.id("rateSelect"));
 		int rating = Integer.parseInt(select.getAttribute("value"));
 		int nextRating = rating % 5 + 1;

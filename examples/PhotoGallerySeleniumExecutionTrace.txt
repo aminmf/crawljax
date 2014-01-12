@@ -1,0 +1,245 @@
+TestSuiteBegin
+NewTestCase add_story.java
+By.linkText: Admin Page
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> link text: Admin Page]
+click 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> id: loginAdminPass]
+clear 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> id: loginAdminPass]
+sendKeys editor
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> css selector: input.submit]
+click 
+By.linkText: Manage Stories
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> link text: Manage Stories]
+click 
+By.id: name
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> id: name]
+clear 
+By.id: name
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> id: name]
+sendKeys Photos
+By.name: desc
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> name: desc]
+clear 
+By.name: desc
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> name: desc]
+sendKeys Greenery !!
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> css selector: input.submit]
+click 
+assertionModeOn
+By.selector: div.method
+assertion assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"))
+assertionModeOff
+By.selector: a[title="Log Out"]
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> css selector: a[title="Log Out"]]
+click 
+NewTestCase CategoryAddTest.java
+By.linkText: Admin Page
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> link text: Admin Page]
+click 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> id: loginAdminPass]
+clear 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> id: loginAdminPass]
+sendKeys editor
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> css selector: input.submit]
+click 
+By.linkText: Manage Categories
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> link text: Manage Categories]
+click 
+By.id: name
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> id: name]
+clear 
+By.id: name
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> id: name]
+sendKeys flowers
+By.name: desc
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> name: desc]
+clear 
+By.name: desc
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> name: desc]
+sendKeys contains photos of all the flowers !
+By.id: listRadioNo
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> id: listRadioNo]
+click 
+By.id: listRadioYe
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> id: listRadioYe]
+click 
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> css selector: input.submit]
+click 
+assertionModeOn
+By.selector: div.method
+assertion assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$"))
+assertionModeOff
+By.selector: a[title="Log Out"]
+[[FirefoxDriver: firefox on MAC (9b1cd631-80a2-754c-a6f2-f5cc7670b60b)] -> css selector: a[title="Log Out"]]
+click 
+NewTestCase CategoryDeleteTest.java
+By.linkText: Admin Page
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> link text: Admin Page]
+click 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> id: loginAdminPass]
+clear 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> id: loginAdminPass]
+sendKeys editor
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> css selector: input.submit]
+click 
+By.linkText: Manage Categories
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> link text: Manage Categories]
+click 
+By.id: name
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> id: name]
+clear 
+By.id: name
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> id: name]
+sendKeys flowers
+By.name: desc
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> name: desc]
+clear 
+By.name: desc
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> name: desc]
+sendKeys contains photos of all the flowers !
+By.id: listRadioNo
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> id: listRadioNo]
+click 
+By.id: listRadioYe
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> id: listRadioYe]
+click 
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> css selector: input.submit]
+click 
+assertionModeOn
+By.selector: BODY
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$"))
+assertionModeOff
+By.xpath: (//a[contains(text(),'Delete / Clear')])[2]
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> xpath: (//a[contains(text(),'Delete / Clear')])[2]]
+click 
+assertionModeOn
+By.selector: BODY
+assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Clears Category flowers of all its own \\(direct\\) photos, nothing will be removed[\\s\\S]*$"))
+assertionModeOff
+By.xpath: (//input[@name='howto'])[4]
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> xpath: (//input[@name='howto'])[4]]
+click 
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (5a249377-3f8e-4a45-94f2-cb2c85dd5661)] -> css selector: input.submit]
+click 
+assertionModeOn
+assertion assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to delete [\\s\\S]*$"))
+assertionModeOff
+By.selector: a[title="Log Out"]
+[[FirefoxDriver: firefox on MAC (00c9b2d3-54a8-624d-8a75-eaeabb07d6cc)] -> css selector: a[title="Log Out"]]
+click
+NewTestCase HomePageTest.java
+assertionModeOn
+assertion assertTrue(isElementPresent(By.cssSelector("div#Granny")))
+assertionModeOff
+By.linkText: Stories
+[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> link text: Stories]
+click 
+assertionModeOn
+assertion assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$"))
+assertionModeOff
+By.partialLinkText: Default Category
+[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> partial link text: Default Category]
+click 
+assertionModeOn
+By.selector: div.midInfo
+assertion assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$"))
+assertionModeOff
+By.partialLinkText: Default Story
+[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> partial link text: Default Story]
+click 
+assertionModeOn
+By.selector: div.midInfo
+assertion assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$"))
+assertionModeOff
+By.linkText: SlideShow
+[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> link text: SlideShow]
+click 
+assertionModeOn
+assertion assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$"))
+assertionModeOff
+NewTestCase login_logout.java
+By.linkText: Admin Page
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> link text: Admin Page]
+click 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> id: loginAdminPass]
+clear 
+By.id: loginAdminPass
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> id: loginAdminPass]
+sendKeys editor
+By.selector: input.submit
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> css selector: input.submit]
+click 
+By.linkText: Manage Categories
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> link text: Manage Categories]
+click 
+By.linkText: << Admin Page
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> link text: << Admin Page]
+click 
+By.linkText: Log Out
+[[FirefoxDriver: firefox on MAC (5b258fe8-c754-294c-bb1a-14e11a929896)] -> link text: Log Out]
+click
+NewTestCase SlideShowTest.java
+By.linkText: SlideShow
+[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: SlideShow]
+click 
+assertionModeOn
+assertion assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$"))
+assertionModeOff
+By.id: ss_playpause_link
+[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> id: ss_playpause_link]
+click 
+assertionModeOn
+assertion assertTrue(isElementPresent(By.cssSelector("img#ss_photo")))
+assertionModeOff
+assertionModeOn
+By.selector: span#ss_n
+By.selector: span#ss_n
+assertion assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText())
+assertionModeOff
+assertionModeOn
+By.selector: span#ss_n
+By.selector: span#ss_n
+assertion assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText())
+assertionModeOff
+By.linkText: Next
+[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: Next]
+click 
+assertionModeOn
+By.selector: span#ss_n
+assertion assertEquals("2", driver.findElement(By.cssSelector("span#ss_n")).getText())
+assertionModeOff
+By.linkText: Previous
+[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: Previous]
+click 
+assertionModeOn
+By.selector: span#ss_n
+By.selector: span#ss_n
+assertion assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText())
+assertionModeOff
+assertionModeOn
+By.selector: span#ss_n
+By.selector: span#ss_n
+assertion assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText())
+assertionModeOff
+By.linkText: Smaller Size
+[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: Smaller Size]
+click 
+assertionModeOn
+assertion assertEquals("SlideShow :: My PhotoGallery", driver.getTitle())
+assertionModeOff
+TestSuiteEnd

@@ -44,6 +44,7 @@ public class CategoryAddTest {
 		driver.findElement(By.id("listRadioYe")).click();
 		driver.findElement(By.cssSelector("input.submit")).click();
 		assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$"));
+		driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 	}
 
 	@After
