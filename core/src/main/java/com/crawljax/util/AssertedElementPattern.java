@@ -26,7 +26,15 @@ public class AssertedElementPattern implements Serializable{
 	// node info
 	private String tagName = "";
 	private String textContent = "";
+	public String getTextContent() {
+		return textContent;
+	}
+
 	private ArrayList<String> attributes = new ArrayList<String>();
+	public ArrayList<String> getAttributes() {
+		return attributes;
+	}
+
 	// parent node info
 	private String parentTagName = "";
 	public String getParentTagName() {
@@ -34,7 +42,15 @@ public class AssertedElementPattern implements Serializable{
 	}
 
 	private String parentTextContent = "";
+	public String getParentTextContent() {
+		return parentTextContent;
+	}
+
 	private ArrayList<String> parentAttributes = new ArrayList<String>();
+	public ArrayList<String> getParentAttributes() {
+		return parentAttributes;
+	}
+
 	// children nodes info
 	private ArrayList<String> childrenTagName = new ArrayList<String>();
 	public ArrayList<String> getChildrenTagName() {
@@ -42,7 +58,15 @@ public class AssertedElementPattern implements Serializable{
 	}
 
 	private ArrayList<String> childrenTextContent = new ArrayList<String>();
+	public ArrayList<String> getChildrenTextContent() {
+		return childrenTextContent;
+	}
+
 	private ArrayList<ArrayList<String>> childrenAttributes = new ArrayList<ArrayList<String>>();
+
+	public ArrayList<ArrayList<String>> getChildrenAttributes() {
+		return childrenAttributes;
+	}
 
 	// assertion associated to this element
 	private String assertion = "";
@@ -195,6 +219,10 @@ public class AssertedElementPattern implements Serializable{
 					return "PatternFullMatch";
 			return "PatternTagMatch";
 		}
+        return "NoMatch";
+	}
+
+	public String getHowElementMatch(AssertedElementPattern aep){
 		if (aep.tagName.equals(this.tagName)){
         	if (aep.attributes.equals(this.attributes))
 				if (aep.textContent.equals(this.textContent))
@@ -205,7 +233,7 @@ public class AssertedElementPattern implements Serializable{
         }
         return "NoMatch";
 	}
-
+	
 	public String getTagName() {
 		return tagName;
 	}

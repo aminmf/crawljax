@@ -1209,3 +1209,4 @@ click
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Logout]
 click 
+TestSuiteEnd

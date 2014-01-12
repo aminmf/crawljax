@@ -24,6 +24,10 @@ public class ${classname} {
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
 
+	private DOMElement element;
+	private DOMElement parentElement;
+	private ArrayList<DOMElement> childrenElements = new ArrayList<DOMElement>();
+
 	@Before
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
@@ -50,7 +54,6 @@ public class ${classname} {
 	public void ${method.methodName}(){
 		try {
 			driver.get(url);
-
 #foreach( $statement in $method.statements )
 			$statement
 #end
@@ -62,28 +65,32 @@ public class ${classname} {
 #end
 
 
-
 	/*
 	 * Auxiliary methods 
 	 */
-	 
-  private boolean isElementPresent(By by) {
-    try {
-      driver.findElement(by);
-      return true;
-    } catch (NoSuchElementException e) {
-      return false;
-    }
-  }
 
-	private boolean isElementPatternPresent(String parentTag, String elementTag, ArrayList<String> childrenTags) {
+	private boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+
+
+	private boolean isElementPatternPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
 		try {
 			String source = driver.getPageSource();
 			Document dom = DomUtils.asDocument(source);
 
-			NodeList nodeList = dom.getElementsByTagName(elementTag);
+			NodeList nodeList = dom.getElementsByTagName(element.getTagName());
 
 			org.w3c.dom.Element sourceElement = null;
+
+			boolean parentTagMatched = false;
+			boolean childrenTagMatched = false;
+
 			for (int i = 0; i < nodeList.getLength(); i++){
 				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
 
@@ -93,8 +100,18 @@ public class ${classname} {
 				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
 					childrenTagName.add(sourceElement.getChildNodes().item(j).getNodeName());
 
-				if (parentTagName.equals(parentTag) && childrenTagName.equals(childrenTags))
-					return true;
+				if (parentTagName.equals(parent.getTagName()))
+					parentTagMatched = true;
+
+				childrenTagMatched = true;
+				for (int k=0; k<children.size();k++)
+					if (!childrenTagName.get(k).equals(children.get(k).getTagName())){
+						childrenTagMatched = false;
+						break;
+					}
+
+				if (parentTagMatched && childrenTagMatched)
+					return true;		
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -102,28 +119,59 @@ public class ${classname} {
 		return false;
 	}
 
-  private boolean isAlertPresent() {
-    try {
-      driver.switchTo().alert();
-      return true;
-    } catch (NoAlertPresentException e) {
-      return false;
-    }
-  }
 
-  private String closeAlertAndGetItsText() {
-    try {
-      Alert alert = driver.switchTo().alert();
-      String alertText = alert.getText();
-      if (acceptNextAlert) {
-        alert.accept();
-      } else {
-        alert.dismiss();
-      }
-      return alertText;
-    } finally {
-      acceptNextAlert = true;
-    }
-  }
 
-}	 
+	private boolean isAlertPresent() {
+		try {
+			driver.switchTo().alert();
+			return true;
+		} catch (NoAlertPresentException e) {
+			return false;
+		}
+	}
+
+	private String closeAlertAndGetItsText() {
+		try {
+			Alert alert = driver.switchTo().alert();
+			String alertText = alert.getText();
+			if (acceptNextAlert) {
+				alert.accept();
+			} else {
+				alert.dismiss();
+			}
+			return alertText;
+		} finally {
+			acceptNextAlert = true;
+		}
+	}
+
+
+	void mutateDOMTree(){
+	}
+
+	public class DOMElement {
+		private String tagName;
+		private String textContent;
+		private ArrayList<String> attributes = new ArrayList<String>();
+
+		public DOMElement(String tagName, String textContent, ArrayList<String> attributes){
+			this.tagName = tagName;
+			this.textContent = textContent;
+			for (int i=0; i<attributes.size();i++)
+				this.attributes.add(attributes.get(i));
+		}
+
+		public String getTagName() {
+			return tagName;
+		}
+
+		public String getTextContent() {
+			return textContent;
+		}
+
+		public ArrayList<String> getAttributes() {
+			return attributes;
+		}
+	}	 
+
+}
