@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Jan 12 15:53:22 PST 2014
+ * Generated @ Sun Jan 12 20:43:14 PST 2014
  */
 
 public class GeneratedTestCase0 {
@@ -53,23 +53,22 @@ public class GeneratedTestCase0 {
 	public void method0(){
 		try {
 			driver.get(url);
-			//From state 0 to state 27
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/DIV[5]/DIV[2]/DIV[3]/A, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=27, name=state27}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/DIV[5]/DIV[2]/DIV[3]/A")).click();
-			//From state 27 to state 28
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/FORM/CENTER/INPUT[2], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=27, name=state27}, target=StateVertexImpl{id=28, name=state28}}
-			driver.findElement(By.id("loginAdminPass")).clear();
-			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/FORM/CENTER/INPUT[2]")).click();
-			//From state 28 to state 29
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD/DIV/A[3], element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=28, name=state28}, target=StateVertexImpl{id=29, name=state29}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD/DIV/A[3]")).click();
-			//From state 29 to state 30
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[2]/A, element=Element{node=[A: null], tag=A, text=<< Admin Page, attributes={href=?}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=30, name=state30}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[2]/A")).click();
-			//From state 30 to state 31
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD[2]/DIV/A[4], element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD[2]/DIV/A[4]")).click();
+			//From state 0 to state 32
+			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=32, name=state32}}
+			driver.findElement(By.linkText("SlideShow")).click();
+			mutateDOMTree();
+			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
+			//From state 32 to state 33
+			//Eventable{eventType=click, identification=id ss_playpause_link, element=Element{node=[A: null], tag=A, text=Pause it, attributes={class=q, id=ss_playpause_link, onclick=javascript:ss_playpause();}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=33, name=state33}}
+			driver.findElement(By.id("ss_playpause_link")).click();
+			mutateDOMTree();
+			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // original assertion
+			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
+			//From state 33 to state 36
+			//Eventable{eventType=click, identification=text Smaller Size, element=Element{node=[A: null], tag=A, text=Smaller Size, attributes={class=q, id=ss_smaller_link, onclick=javascript:ss_toggleSmaller();}}, source=StateVertexImpl{id=33, name=state33}, target=StateVertexImpl{id=36, name=state36}}
+			driver.findElement(By.linkText("Smaller Size")).click();
+			mutateDOMTree();
+			assertEquals("SlideShow :: My PhotoGallery", driver.getTitle()); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

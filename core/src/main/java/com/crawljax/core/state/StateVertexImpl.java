@@ -88,14 +88,18 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	public int hashCode() {
-		return Objects.hashCode(strippedDom);
+		//return Objects.hashCode(strippedDom);
+		// Amin: For Testex
+		return Objects.hashCode(dom);
 	}
 
 	@Override
 	public boolean equals(Object object) {
 		if (object instanceof StateVertex) {
 			StateVertex that = (StateVertex) object;
-			return Objects.equal(this.strippedDom, that.getStrippedDom());
+			// Amin: For Testex
+			//return Objects.equal(this.strippedDom, that.getStrippedDom());
+			return Objects.equal(this.dom, that.getDom());
 		}
 		return false;
 	}

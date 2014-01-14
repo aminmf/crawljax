@@ -11,10 +11,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sat Jan 11 23:08:10 PST 2014
+ * Generated @ Mon Jan 13 00:25:00 PST 2014
  */
 
 public class GeneratedTestCase2 {
@@ -54,27 +55,47 @@ public class GeneratedTestCase2 {
 		try {
 			driver.get(url);
 			//From state 0 to state 144
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/FIELDSET/BUTTON, element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=144, name=state144}}
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=144, name=state144}}
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/FIELDSET/BUTTON")).click();
-			//From state 144 to state 149
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[3]/DIV/H1/A, element=Element{node=[A: null], tag=A, text=Show/Hide, attributes={class=doCollapse, href=#}}, source=StateVertexImpl{id=144, name=state144}, target=StateVertexImpl{id=149, name=state149}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[3]/DIV/H1/A")).click();
+			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 144 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=144, name=state144}, target=StateVertexImpl{id=2, name=state2}}
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 17
+			//Eventable{eventType=click, identification=text Claroline.net news, element=Element{node=[A: null], tag=A, text=Claroline.net news, attributes={href=clarolinenews.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=17, name=state17}}
+			driver.findElement(By.linkText("Claroline.net news")).click();
 			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.content.collapsible-wrapper")).getText().matches("^[\\s\\S]*textzone_top\\.authenticated\\.inc\\.html[\\s\\S]*$")); // original assertion
-			//From state 149 to state 150
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/A, element=Element{node=[A: null], tag=A, text=View all my messages, attributes={href=/claroline-1.11.7/claroline/messaging/index.php}}, source=StateVertexImpl{id=149, name=state149}, target=StateVertexImpl{id=150, name=state150}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/A")).click();
+			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$")); // original assertion
+			//From state 17 to state 18
+			//Eventable{eventType=click, identification=text Manage my account, element=Element{node=[A: null], tag=A, text=Manage my account, attributes={href=/claroline-1.11.7/claroline/auth/profile.php, target=_top}}, source=StateVertexImpl{id=17, name=state17}, target=StateVertexImpl{id=18, name=state18}}
+			driver.findElement(By.linkText("Manage my account")).click();
+			//From state 18 to state 19
+			//Eventable{eventType=click, identification=id applyChange, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={id=applyChange, name=applyChange, type=submit, value=Ok}}, source=StateVertexImpl{id=18, name=state18}, target=StateVertexImpl{id=19, name=state19}}
+			driver.findElement(By.id("old_password")).clear();
+			driver.findElement(By.id("old_password")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.id("password_conf")).clear();
+			driver.findElement(By.id("password_conf")).sendKeys("nainy");
+			driver.findElement(By.id("phone")).clear();
+			driver.findElement(By.id("phone")).sendKeys("7788814476");
+			driver.findElement(By.id("applyChange")).click();
 			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // original assertion
-			//From state 150 to state 98
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV/DIV[2]/DIV[2]/UL/LI[3]/SPAN/A, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=150, name=state150}, target=StateVertexImpl{id=98, name=state98}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV/DIV[2]/DIV[2]/UL/LI[3]/SPAN/A")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$")); // original assertion
+			//From state 19 to state 20
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=20, name=state20}}
+			driver.findElement(By.id("old_password")).clear();
+			driver.findElement(By.id("old_password")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.id("password_conf")).clear();
+			driver.findElement(By.id("password_conf")).sendKeys("nainy");
+			driver.findElement(By.id("phone")).clear();
+			driver.findElement(By.id("phone")).sendKeys("7788814476");
+			driver.findElement(By.linkText("Logout")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

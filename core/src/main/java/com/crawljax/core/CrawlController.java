@@ -122,13 +122,15 @@ public class CrawlController implements Callable<CrawlSession> {
 		}
 		
 		
-		// Amin: Stop crawling for now. This is to test TesEx
-		//shutDown();
-		//plugins.runPostCrawlingPlugins(crawlSessionProvider.get(), exitReason);
-		//LOG.info("Shutdown process complete");
-		//if (1==1)
-		//	return;
-		
+		// Amin: Stop crawling for testing TesExt on creating happy paths
+		boolean byPassCrawling = true;
+		if (byPassCrawling){
+			shutDown();
+			plugins.runPostCrawlingPlugins(crawlSessionProvider.get(), exitReason);
+			LOG.info("Shutdown process complete");
+			return;
+		}
+
 		
 		try {
 			exitReason = exitNotifier.awaitTermination();

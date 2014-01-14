@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Jan 12 15:53:22 PST 2014
+ * Generated @ Sun Jan 12 20:43:15 PST 2014
  */
 
 public class GeneratedTestCase2 {
@@ -53,25 +53,23 @@ public class GeneratedTestCase2 {
 	public void method2(){
 		try {
 			driver.get(url);
-			//From state 0 to state 6
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/DIV[5]/DIV[2]/DIV[3]/A, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=6, name=state6}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/DIV[5]/DIV[2]/DIV[3]/A")).click();
-			//From state 6 to state 7
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/FORM/CENTER/INPUT[2], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=6, name=state6}, target=StateVertexImpl{id=7, name=state7}}
+			//From state 0 to state 27
+			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=27, name=state27}}
+			driver.findElement(By.linkText("Admin Page")).click();
+			//From state 27 to state 28
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=27, name=state27}, target=StateVertexImpl{id=28, name=state28}}
 			driver.findElement(By.id("loginAdminPass")).clear();
 			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/FORM/CENTER/INPUT[2]")).click();
-			//From state 7 to state 8
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD/DIV/A[3], element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=7, name=state7}, target=StateVertexImpl{id=8, name=state8}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD/DIV/A[3]")).click();
-			//From state 8 to state 11
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[3]/CENTER/FORM/TABLE/TBODY/TR[8]/TD/INPUT, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Category   }}, source=StateVertexImpl{id=8, name=state8}, target=StateVertexImpl{id=11, name=state11}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[3]/CENTER/FORM/TABLE/TBODY/TR[8]/TD/INPUT")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$")); // original assertion
-			//From state 11 to state 12
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[2]/A[9], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=logout, title=Log Out}}, source=StateVertexImpl{id=11, name=state11}, target=StateVertexImpl{id=12, name=state12}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[2]/A[9]")).click();
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 28 to state 29
+			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=28, name=state28}, target=StateVertexImpl{id=29, name=state29}}
+			driver.findElement(By.linkText("Manage Categories")).click();
+			//From state 29 to state 30
+			//Eventable{eventType=click, identification=text << Admin Page, element=Element{node=[A: null], tag=A, text=<< Admin Page, attributes={href=?}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=30, name=state30}}
+			driver.findElement(By.linkText("<< Admin Page")).click();
+			//From state 30 to state 31
+			//Eventable{eventType=click, identification=text Log Out, element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
+			driver.findElement(By.linkText("Log Out")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

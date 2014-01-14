@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Jan 12 15:53:22 PST 2014
+ * Generated @ Sun Jan 12 20:43:15 PST 2014
  */
 
 public class GeneratedTestCase5 {
@@ -53,22 +53,29 @@ public class GeneratedTestCase5 {
 	public void method5(){
 		try {
 			driver.get(url);
-			//From state 0 to state 32
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV[2]/DIV/DIV/DIV/SPAN/A, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=32, name=state32}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV[2]/DIV/DIV/DIV/SPAN/A")).click();
+			//From state 0 to state 1
+			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+			driver.findElement(By.linkText("Admin Page")).click();
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			driver.findElement(By.id("loginAdminPass")).clear();
+			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 2 to state 3
+			//Eventable{eventType=click, identification=text Manage Stories, element=Element{node=[A: null], tag=A, text=Manage Stories, attributes={href=?page=stories}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=3, name=state3}}
+			driver.findElement(By.linkText("Manage Stories")).click();
+			//From state 3 to state 4
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Story   }}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=4, name=state4}}
+			driver.findElement(By.name("desc")).clear();
+			driver.findElement(By.name("desc")).sendKeys("Greenery !!");
+			driver.findElement(By.id("name")).clear();
+			driver.findElement(By.id("name")).sendKeys("Photos");
+			driver.findElement(By.cssSelector("input.submit")).click();
 			mutateDOMTree();
-			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
-			//From state 32 to state 33
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV[2]/TABLE/TBODY/TR/TD[2]/A, element=Element{node=[A: null], tag=A, text=Pause it, attributes={class=q, id=ss_playpause_link, onclick=javascript:ss_playpause();}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=33, name=state33}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV[2]/TABLE/TBODY/TR/TD[2]/A")).click();
-			mutateDOMTree();
-			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // original assertion
-			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
-			//From state 33 to state 36
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/SPAN[2]/A, element=Element{node=[A: null], tag=A, text=Smaller Size, attributes={class=q, id=ss_smaller_link, onclick=javascript:ss_toggleSmaller();}}, source=StateVertexImpl{id=33, name=state33}, target=StateVertexImpl{id=36, name=state36}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/SPAN[2]/A")).click();
-			mutateDOMTree();
-			assertEquals("SlideShow :: My PhotoGallery", driver.getTitle()); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$")); // original assertion
+			//From state 4 to state 5
+			//Eventable{eventType=click, identification=cssSelector a[title="Log Out"], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=logout, title=Log Out}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=5, name=state5}}
+			driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

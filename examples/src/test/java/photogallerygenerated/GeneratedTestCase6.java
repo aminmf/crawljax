@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Jan 12 15:53:22 PST 2014
+ * Generated @ Sun Jan 12 20:43:15 PST 2014
  */
 
 public class GeneratedTestCase6 {
@@ -53,29 +53,26 @@ public class GeneratedTestCase6 {
 	public void method6(){
 		try {
 			driver.get(url);
-			//From state 0 to state 1
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/DIV[5]/DIV[2]/DIV[3]/A, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/DIV[5]/DIV[2]/DIV[3]/A")).click();
-			//From state 1 to state 2
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/FORM/CENTER/INPUT[2], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
-			driver.findElement(By.id("loginAdminPass")).clear();
-			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[2]/DIV[3]/DIV[2]/DIV/FORM/CENTER/INPUT[2]")).click();
-			//From state 2 to state 3
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD/DIV/A[4], element=Element{node=[A: null], tag=A, text=Manage Stories, attributes={href=?page=stories}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=3, name=state3}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD/DIV/A[4]")).click();
-			//From state 3 to state 4
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[3]/CENTER/FORM/TABLE/TBODY/TR[10]/TD/INPUT, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Story   }}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=4, name=state4}}
-			driver.findElement(By.name("desc")).clear();
-			driver.findElement(By.name("desc")).sendKeys("Greenery !!");
-			driver.findElement(By.id("name")).clear();
-			driver.findElement(By.id("name")).sendKeys("Photos");
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[3]/CENTER/FORM/TABLE/TBODY/TR[10]/TD/INPUT")).click();
+			//From state 0 to state 23
+			//Eventable{eventType=click, identification=text Stories, element=Element{node=[A: null], tag=A, text=Stories, attributes={href=.?mode=stories}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=23, name=state23}}
+			driver.findElement(By.linkText("Stories")).click();
 			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$")); // original assertion
-			//From state 4 to state 5
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV[2]/DIV[2]/A[9], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=logout, title=Log Out}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=5, name=state5}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[2]/A[9]")).click();
+			assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$")); // original assertion
+			//From state 23 to state 24
+			//Eventable{eventType=click, identification=partialText Default Category, element=Element{node=[A: null], tag=A, text=•Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}
+			driver.findElement(By.partialLinkText("Default Category")).click();
+			mutateDOMTree();
+			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
+			//From state 24 to state 25
+			//Eventable{eventType=click, identification=partialText Default Story, element=Element{node=[A: null], tag=A, text=•Default Story[6], attributes={href=.?s=1, title=The default story [2006/04/01]}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=25, name=state25}}
+			driver.findElement(By.partialLinkText("Default Story")).click();
+			mutateDOMTree();
+			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$")); // original assertion
+			//From state 25 to state 26
+			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow&s=1&n=30}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=26, name=state26}}
+			driver.findElement(By.linkText("SlideShow")).click();
+			mutateDOMTree();
+			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

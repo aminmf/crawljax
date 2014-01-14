@@ -11,10 +11,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sat Jan 11 23:08:10 PST 2014
+ * Generated @ Mon Jan 13 00:25:00 PST 2014
  */
 
 public class GeneratedTestCase113 {
@@ -53,35 +54,51 @@ public class GeneratedTestCase113 {
 	public void method113(){
 		try {
 			driver.get(url);
-			//From state 0 to state 135
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/FIELDSET/BUTTON, element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=135, name=state135}}
+			//From state 0 to state 1
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/FIELDSET/BUTTON")).click();
-			//From state 135 to state 2
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV/DIV[2]/DIV/UL/LI[3]/SPAN/A, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=135, name=state135}, target=StateVertexImpl{id=2, name=state2}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV/DIV[2]/DIV/UL/LI[3]/SPAN/A")).click();
-			//From state 2 to state 118
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/UL/LI[3]/UL/LI[3]/A, element=Element{node=[A: null], tag=A, text=Modules, attributes={href=module/module_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=118, name=state118}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/UL/LI[3]/UL/LI[3]/A")).click();
-			//From state 118 to state 119
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/TABLE/TBODY/TR/TD[6]/A/IMG, element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Properties, src=/claroline-1.11.7/web/img/settings.png?1232379976}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=119, name=state119}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/TABLE/TBODY/TR/TD[6]/A/IMG")).click();
-			//From state 119 to state 120
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DL/DD[4]/SMALL/A, element=Element{node=[A: null], tag=A, text=Visible, attributes={href=/claroline-1.11.7/claroline/admin/module/module.php?module_id=1&cmd=makeVisible&item=GLOBAL, onclick=return confirmMakeVisible();, title=Make module visible in all courses}}, source=StateVertexImpl{id=119, name=state119}, target=StateVertexImpl{id=120, name=state120}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DL/DD[4]/SMALL/A")).click();
+			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 29
+			//Eventable{eventType=click, identification=text Create user, element=Element{node=[A: null], tag=A, text=Create user, attributes={href=adminaddnewuser.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=29, name=state29}}
+			driver.findElement(By.linkText("Create user")).click();
+			//From state 29 to state 39
+			//Eventable{eventType=click, identification=id applyChange, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={id=applyChange, name=applyChange, type=submit, value=Ok}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=39, name=state39}}
+			driver.findElement(By.id("lastname")).clear();
+			driver.findElement(By.id("lastname")).sendKeys("Naman");
+			driver.findElement(By.id("firstname")).clear();
+			driver.findElement(By.id("firstname")).sendKeys("Agr");
+			driver.findElement(By.id("officialCode")).clear();
+			driver.findElement(By.id("officialCode")).sendKeys("a7");
+			driver.findElement(By.id("username")).clear();
+			driver.findElement(By.id("username")).sendKeys("naman");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("123456");
+			driver.findElement(By.id("password_conf")).clear();
+			driver.findElement(By.id("password_conf")).sendKeys("123456");
+			driver.findElement(By.id("applyChange")).click();
 			mutateDOMTree();
-			assertTrue(closeAlertAndGetItsText().matches("^ Are you sure you want to make this module visible in all courses [\\s\\S]$")); // original assertion
-			//From state 120 to state 121
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV[3]/UL/LI[2]/A, element=Element{node=[A: null], tag=A, text=Local settings, attributes={href=module.php?module_id=1&item=LOCAL}}, source=StateVertexImpl{id=120, name=state120}, target=StateVertexImpl{id=121, name=state121}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[3]/UL/LI[2]/A")).click();
-			//From state 121 to state 122
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV[2]/UL/LI[3]/A, element=Element{node=[A: null], tag=A, text=About, attributes={href=module.php?module_id=1&item=About}}, source=StateVertexImpl{id=121, name=state121}, target=StateVertexImpl{id=122, name=state122}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/UL/LI[3]/A")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Course description[\\s\\S]*$")); // original assertion
+			assertEquals("Create a new user - Claroline", driver.getTitle()); // original assertion
+			//From state 39 to state 40
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=39, name=state39}, target=StateVertexImpl{id=40, name=state40}}
+			driver.findElement(By.id("lastname")).clear();
+			driver.findElement(By.id("lastname")).sendKeys("Naman");
+			driver.findElement(By.id("firstname")).clear();
+			driver.findElement(By.id("firstname")).sendKeys("Agr");
+			driver.findElement(By.id("officialCode")).clear();
+			driver.findElement(By.id("officialCode")).sendKeys("a7");
+			driver.findElement(By.id("username")).clear();
+			driver.findElement(By.id("username")).sendKeys("naman");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("123456");
+			driver.findElement(By.id("password_conf")).clear();
+			driver.findElement(By.id("password_conf")).sendKeys("123456");
+			driver.findElement(By.linkText("Logout")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

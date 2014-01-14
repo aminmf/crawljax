@@ -11,10 +11,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sat Jan 11 23:08:10 PST 2014
+ * Generated @ Mon Jan 13 00:25:00 PST 2014
  */
 
 public class GeneratedTestCase117 {
@@ -53,38 +54,22 @@ public class GeneratedTestCase117 {
 	public void method117(){
 		try {
 			driver.get(url);
-			//From state 0 to state 135
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/FIELDSET/BUTTON, element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=135, name=state135}}
+			//From state 0 to state 1
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV/DIV/FORM/FIELDSET/BUTTON")).click();
-			//From state 135 to state 2
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV/DIV[2]/DIV/UL/LI[3]/SPAN/A, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=135, name=state135}, target=StateVertexImpl{id=2, name=state2}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV/DIV[2]/DIV/UL/LI[3]/SPAN/A")).click();
-			//From state 2 to state 118
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/UL/LI[3]/UL/LI[3]/A, element=Element{node=[A: null], tag=A, text=Modules, attributes={href=module/module_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=118, name=state118}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/UL/LI[3]/UL/LI[3]/A")).click();
-			//From state 118 to state 119
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/TABLE/TBODY/TR/TD[6]/A/IMG, element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Properties, src=/claroline-1.11.7/web/img/settings.png?1232379976}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=119, name=state119}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/TABLE/TBODY/TR/TD[6]/A/IMG")).click();
-			//From state 119 to state 124
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DL/DD/A, element=Element{node=[A: null], tag=A, text=Activated, attributes={href=/claroline-1.11.7/claroline/admin/module/module.php?cmd=deactiv&module_id=1&item=GLOBAL, title=Activated - Click to deactivate}}, source=StateVertexImpl{id=119, name=state119}, target=StateVertexImpl{id=124, name=state124}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DL/DD/A")).click();
-			//From state 124 to state 125
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DL/DD/A, element=Element{node=[A: null], tag=A, text=Deactivated, attributes={href=/claroline-1.11.7/claroline/admin/module/module.php?cmd=activ&module_id=1&item=GLOBAL, title=Deactivated - Click to activate}}, source=StateVertexImpl{id=124, name=state124}, target=StateVertexImpl{id=125, name=state125}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DL/DD/A")).click();
+			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 154
+			//Eventable{eventType=click, identification=text User list, element=Element{node=[A: null], tag=A, text=User list, attributes={href=admin_users.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=154, name=state154}}
+			driver.findElement(By.linkText("User list")).click();
 			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Module activation succeeded[\\s\\S]*$")); // original assertion
-			//From state 125 to state 126
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DL/DD[2]/A, element=Element{node=[A: null], tag=A, text=Automatic, attributes={href=/claroline-1.11.7/claroline/admin/module/module.php?cmd=coursedeactiv&module_id=1&item=GLOBAL, title=Automatic}}, source=StateVertexImpl{id=125, name=state125}, target=StateVertexImpl{id=126, name=state126}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DL/DD[2]/A")).click();
-			//From state 126 to state 127
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/DIV/DIV[2]/DL/DD[2]/A, element=Element{node=[A: null], tag=A, text=Manual, attributes={href=/claroline-1.11.7/claroline/admin/module/module.php?cmd=courseactiv&module_id=1&item=GLOBAL, title=Manual}}, source=StateVertexImpl{id=126, name=state126}, target=StateVertexImpl{id=127, name=state127}}
-			driver.findElement(By.xpath("/HTML/BODY/DIV/DIV[2]/DL/DD[2]/A")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Module activation at course creation set to AUTOMATIC[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*nainy[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

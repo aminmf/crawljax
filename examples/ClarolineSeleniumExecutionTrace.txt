@@ -1106,68 +1106,6 @@ By.linkText: Logout
 click 
 NewTestCase
 By.id: login
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Platform administration
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Platform administration]
-click 
-By.linkText: Modules
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Modules]
-click 
-By.xpath: (//img[@alt='Properties'])[11]
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> xpath: (//img[@alt='Properties'])[11]]
-click 
-By.linkText: Local settings
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Local settings]
-click 
-By.id: label_showWikiEditorToolbar_FALSE
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_showWikiEditorToolbar_FALSE]
-click 
-By.id: label_forcePreviewBeforeSaving_TRUE
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_forcePreviewBeforeSaving_TRUE]
-click 
-By.id: label_forcePreviewBeforeSaving_FALSE
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_forcePreviewBeforeSaving_FALSE]
-click 
-By.id: label_showWikiEditorToolbar_TRUE
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_showWikiEditorToolbar_TRUE]
-click 
-By.selector: input[type="submit"]
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
-click 
-By.selector: input[type="submit"]
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
-click 
-assertionModeOn
-By.selector: div.claroDialogBox.boxSuccess
-assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Wiki, \\(CLWIKI\\) are now effective on server\\.[\\s\\S]*$"))
-assertionModeOff
-By.selector: input[type="submit"]
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
-click 
-By.selector: input[type="submit"]
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
-click 
-By.linkText: About
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: About]
-click 
-By.linkText: Logout
-[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Logout]
-click
-NewTestCase
-By.id: login
 [[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: login]
 clear 
 By.id: login
@@ -1209,4 +1147,66 @@ click
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Logout]
 click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Platform administration]
+click 
+By.linkText: Modules
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Modules]
+click 
+By.selector: .claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1)
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: .claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1)]
+click 
+By.linkText: Local settings
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Local settings]
+click 
+By.id: label_showWikiEditorToolbar_FALSE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_showWikiEditorToolbar_FALSE]
+click 
+By.id: label_forcePreviewBeforeSaving_TRUE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_forcePreviewBeforeSaving_TRUE]
+click 
+By.id: label_forcePreviewBeforeSaving_FALSE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_forcePreviewBeforeSaving_FALSE]
+click 
+By.id: label_showWikiEditorToolbar_TRUE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_showWikiEditorToolbar_TRUE]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Wiki, \\(CLWIKI\\) are now effective on server\\.[\\s\\S]*$"))
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+By.linkText: About
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: About]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Logout]
+click
 TestSuiteEnd

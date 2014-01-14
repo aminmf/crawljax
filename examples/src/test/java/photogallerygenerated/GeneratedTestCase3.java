@@ -14,7 +14,7 @@ import org.w3c.dom.NodeList;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Jan 12 15:53:22 PST 2014
+ * Generated @ Sun Jan 12 20:43:15 PST 2014
  */
 
 public class GeneratedTestCase3 {
@@ -53,26 +53,29 @@ public class GeneratedTestCase3 {
 	public void method3(){
 		try {
 			driver.get(url);
-			//From state 0 to state 23
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/DIV[2]/DIV/A, element=Element{node=[A: null], tag=A, text=Stories, attributes={href=.?mode=stories}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=23, name=state23}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/DIV[2]/DIV/A")).click();
+			//From state 0 to state 6
+			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=6, name=state6}}
+			driver.findElement(By.linkText("Admin Page")).click();
+			//From state 6 to state 7
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=6, name=state6}, target=StateVertexImpl{id=7, name=state7}}
+			driver.findElement(By.id("loginAdminPass")).clear();
+			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 7 to state 8
+			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=7, name=state7}, target=StateVertexImpl{id=8, name=state8}}
+			driver.findElement(By.linkText("Manage Categories")).click();
+			//From state 8 to state 11
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Category   }}, source=StateVertexImpl{id=8, name=state8}, target=StateVertexImpl{id=11, name=state11}}
+			driver.findElement(By.name("desc")).clear();
+			driver.findElement(By.name("desc")).sendKeys("contains photos of all the flowers !");
+			driver.findElement(By.id("name")).clear();
+			driver.findElement(By.id("name")).sendKeys("flowers");
+			driver.findElement(By.cssSelector("input.submit")).click();
 			mutateDOMTree();
-			assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$")); // original assertion
-			//From state 23 to state 24
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/DIV/DIV[2]/DIV/SPAN/A, element=Element{node=[A: null], tag=A, text=•Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/DIV/DIV[2]/DIV/SPAN/A")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
-			//From state 24 to state 25
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV/DIV/DIV[2]/DIV[2]/DIV[23]/SPAN/A, element=Element{node=[A: null], tag=A, text=•Default Story[6], attributes={href=.?s=1, title=The default story [2006/04/01]}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=25, name=state25}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV/DIV/DIV[2]/DIV[2]/DIV[23]/SPAN/A")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$")); // original assertion
-			//From state 25 to state 26
-			//Eventable{eventType=click, identification=xpath /HTML/BODY/CENTER/DIV/DIV[2]/DIV/DIV/DIV/SPAN/A, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow&s=1&n=30}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=26, name=state26}}
-			driver.findElement(By.xpath("/HTML/BODY/CENTER/DIV/DIV[2]/DIV/DIV/DIV/SPAN/A")).click();
-			mutateDOMTree();
-			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$")); // original assertion
+			//From state 11 to state 12
+			//Eventable{eventType=click, identification=cssSelector a[title="Log Out"], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=logout, title=Log Out}}, source=StateVertexImpl{id=11, name=state11}, target=StateVertexImpl{id=12, name=state12}}
+			driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

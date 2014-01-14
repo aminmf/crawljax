@@ -18,7 +18,7 @@ public class wiki {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -32,7 +32,9 @@ public class wiki {
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Modules")).click();
-    driver.findElement(By.xpath("(//img[@alt='Properties'])[11]")).click();
+    //driver.findElement(By.xpath("(//img[@alt='Properties'])[11]")).click();
+    driver.findElement(By.cssSelector(".claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1)")).click();
+    
     driver.findElement(By.linkText("Local settings")).click();
     driver.findElement(By.id("label_showWikiEditorToolbar_FALSE")).click();
     driver.findElement(By.id("label_forcePreviewBeforeSaving_TRUE")).click();
