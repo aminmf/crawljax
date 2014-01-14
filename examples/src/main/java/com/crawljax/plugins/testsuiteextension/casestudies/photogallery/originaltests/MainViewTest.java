@@ -25,29 +25,24 @@ public class MainViewTest {
 	@Test
 	public void testMainView() throws Exception {
 		driver.get("http://localhost:8888/phormer331/");
-		driver.findElement(By.partialLinkText("Default Category")).click();
-		assertTrue(driver.findElement(By.cssSelector("a.theTitleA")).getText().matches("^[\\s\\S]*Default Category[\\s\\S]*$"));
-		driver.findElement(By.cssSelector("div.aThumb:nth-child(1) > center:nth-child(1) > a:nth-child(1)")).click();
-		driver.findElement(By.cssSelector("div.bcell:nth-child(7) > form:nth-child(1) > table:nth-child(1) > tbody:nth-child(1) > tr:nth-child(7) > td:nth-child(1) > input:nth-child(2)")).click();
+		driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
+		driver.findElement(By.partialLinkText("Hide")).click();
 		assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false);
-		driver.findElement(By.linkText("Show info")).click();
+		driver.findElement(By.partialLinkText("Show")).click();
 		assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed());
 		WebElement select = driver.findElement(By.id("rateSelect"));
 		int rating = Integer.parseInt(select.getAttribute("value"));
-		int nextRating = rating % 5 + 1;
+		int nextRating = rating % 5 + 2;
 		System.out.println(nextRating);
-		List<WebElement> allOptions = select.findElements(By.tagName("option"));
-		for (WebElement option : allOptions) {
-			if (Integer.parseInt(option.getAttribute("value")) == nextRating) {
-				option.click();
-				break;
-			}
-		}
+		String cssSelector = "#rateSelect > option:nth-child(" + Integer.toString(nextRating) + ")";
+		driver.findElement(By.cssSelector(cssSelector)).click();
+		//assertEquals("Saving your rate", driver.findElement(By.cssSelector("#rateStatus")).getText());
 		Thread.sleep(3000);
 		assertEquals("Your rating saved!", driver.findElement(By.cssSelector("span#rateStatus")).getText());
 		driver.findElement(By.xpath("//div[@id='Granny']/div[5]/div[2]/center/a/img")).click();
 		assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*p=2$"));
 	}
+
 
 	@After
 	public void tearDown() throws Exception {

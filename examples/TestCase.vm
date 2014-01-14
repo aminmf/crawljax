@@ -10,6 +10,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
@@ -32,15 +33,32 @@ public class ${classname} {
 	private DOMElement parentElement;
 	private ArrayList<DOMElement> childrenElements = new ArrayList<DOMElement>();
 
+	boolean getCoverageReport = false;
+
 	@Before
 	public void setUp() throws Exception {
-		driver = new FirefoxDriver();
+	    if (getCoverageReport)
+	    	driver = new FirefoxDriver(getProfile());
+	    else
+			driver = new FirefoxDriver();
 		url = "${url}";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
+	
+	public static FirefoxProfile getProfile() {
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setPreference("network.proxy.http", "localhost");
+		profile.setPreference("network.proxy.http_port", 3128);
+		profile.setPreference("network.proxy.type", 1);
+		/* use proxy for everything, including localhost */
+		profile.setPreference("network.proxy.no_proxies_on", "");
+		return profile;
+	}	
 
 	@After
 	public void tearDown() throws Exception {
+	    if (getCoverageReport)
+	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('testReport');}");
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
@@ -89,33 +107,27 @@ public class ${classname} {
 			Document dom = DomUtils.asDocument(source);
 
 			NodeList nodeList = dom.getElementsByTagName(element.getTagName());
-
 			org.w3c.dom.Element sourceElement = null;
-
-			boolean parentTagMatched = false;
-			boolean childrenTagMatched = false;
 
 			for (int i = 0; i < nodeList.getLength(); i++){
 				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
 
+				// check parent node's tag and attributes
 				String parentTagName = sourceElement.getParentNode().getNodeName();
-
-				ArrayList<String> childrenTagName = new ArrayList<String>();				
+				if (!parentTagName.equals(parent.getTagName()))
+					continue;
+		
+				// check children nodes' tags
+				HashSet<String> childrenTagNameFromDOM = new HashSet<String>();				
 				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
-					childrenTagName.add(sourceElement.getChildNodes().item(j).getNodeName());
-
-				if (parentTagName.equals(parent.getTagName()))
-					parentTagMatched = true;
-
-				childrenTagMatched = true;
+					childrenTagNameFromDOM.add(sourceElement.getChildNodes().item(j).getNodeName());
+				HashSet<String> childrenTagNameToTest = new HashSet<String>();				
 				for (int k=0; k<children.size();k++)
-					if (!childrenTagName.get(k).equals(children.get(k).getTagName())){
-						childrenTagMatched = false;
-						break;
-					}
+					childrenTagNameToTest.add(children.get(k).getTagName());
+				if (!childrenTagNameToTest.equals(childrenTagNameFromDOM))
+					continue;
 
-				if (parentTagMatched && childrenTagMatched)
-					return true;		
+				return true;		
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -130,7 +142,6 @@ public class ${classname} {
 			Document dom = DomUtils.asDocument(source);
 
 			NodeList nodeList = dom.getElementsByTagName(element.getTagName());
-
 			org.w3c.dom.Element sourceElement = null;
 
 			for (int i = 0; i < nodeList.getLength(); i++){

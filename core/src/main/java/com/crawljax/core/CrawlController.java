@@ -24,6 +24,10 @@ import com.crawljax.di.CrawlSessionProvider;
 @Singleton
 public class CrawlController implements Callable<CrawlSession> {
 
+	// Setting for experiments on bypassing crawling for testing TesExt on creating happy paths (default should be false)
+	boolean bypassCrawling = true;
+
+	
 	private static final Logger LOG = LoggerFactory.getLogger(CrawlController.class);
 
 	private final Provider<CrawlTaskConsumer> consumerFactory;
@@ -121,16 +125,13 @@ public class CrawlController implements Callable<CrawlSession> {
 			executor.submit(consumerFactory.get());
 		}
 		
-		
-		// Amin: Stop crawling for testing TesExt on creating happy paths
-		boolean byPassCrawling = true;
-		if (byPassCrawling){
+		if (bypassCrawling){
+			// Amin: Stop crawling for testing TesExt on creating happy paths
 			shutDown();
 			plugins.runPostCrawlingPlugins(crawlSessionProvider.get(), exitReason);
 			LOG.info("Shutdown process complete");
 			return;
 		}
-
 		
 		try {
 			exitReason = exitNotifier.awaitTermination();

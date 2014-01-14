@@ -22,27 +22,26 @@ public class add_story {
 	private String baseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
-	
-	JavascriptExecutor js;
+	boolean getCoverageReport = true;
 
 	@Before
 	public void setUp() throws Exception {
-	    driver = new FirefoxDriver(getProfile());
+	    if (getCoverageReport)
+	    	driver = new FirefoxDriver(getProfile());
+	    else
+			driver = new FirefoxDriver();
 		baseUrl = "http://localhost:8888";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    js = (JavascriptExecutor) driver;    
 	}
 
-	  public static FirefoxProfile getProfile() {
-	      FirefoxProfile profile = new FirefoxProfile();
-
-	      profile.setPreference("network.proxy.http", "localhost");
-	      profile.setPreference("network.proxy.http_port", 3128);
-	      profile.setPreference("network.proxy.type", 1);
-	      /* use proxy for everything, including localhost */
-	      profile.setPreference("network.proxy.no_proxies_on", "");
-
-	      return profile;
+	public static FirefoxProfile getProfile() {
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setPreference("network.proxy.http", "localhost");
+		profile.setPreference("network.proxy.http_port", 3128);
+		profile.setPreference("network.proxy.type", 1);
+		/* use proxy for everything, including localhost */
+		profile.setPreference("network.proxy.no_proxies_on", "");
+		return profile;
 	}
 	
 	
@@ -66,7 +65,8 @@ public class add_story {
 
 	@After
 	public void tearDown() throws Exception {
-		((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
+	    if (getCoverageReport)
+	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('testReport');}");
 
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();

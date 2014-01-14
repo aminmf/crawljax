@@ -177,7 +177,7 @@ public class AssertedElementPattern implements Serializable{
 
 	@Override
 	public String toString() {
-		return "AssertedElementPattern [tagName=" + tagName //+ ", textContent=" + textContent
+		return "AssertedElementPattern [tagName=" + tagName + ", textContent=" + textContent
 				+ ", attributes=" + attributes + ", parentTagName="
 				+ parentTagName //+ ", parentTextContent=" + parentTextContent
 				+ ", parentAttributes=" + parentAttributes
@@ -226,9 +226,9 @@ public class AssertedElementPattern implements Serializable{
 		if (aep.tagName.equals(this.tagName)){
         	if (aep.attributes.equals(this.attributes))
 				if (aep.textContent.equals(this.textContent))
-	        		return "ElementFullTextMatch";
+	        		return "ElementFullMatch";
 				else
-					return "ElementFullMatch";
+					return "ElementTagAttMatch";
     		return "ElementTagMatch";
         }
         return "NoMatch";
