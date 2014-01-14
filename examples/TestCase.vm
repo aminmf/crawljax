@@ -37,6 +37,8 @@ public class ${classname} {
 
 	@Before
 	public void setUp() throws Exception {
+		// Setting the JavaScript code coverage switch
+		getCoverageReport = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.getCoverageReport();
 	    if (getCoverageReport)
 	    	driver = new FirefoxDriver(getProfile());
 	    else
@@ -58,7 +60,7 @@ public class ${classname} {
 	@After
 	public void tearDown() throws Exception {
 	    if (getCoverageReport)
-	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('testReport');}");
+	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('CodeCoverageReport');}");
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
@@ -205,6 +207,10 @@ public class ${classname} {
 		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
 		if (code!= null)
 			((JavascriptExecutor)driver).executeScript(code);
+	}
+
+	private boolean shouldConsiderAddedAssertion(){
+		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldConsiderAddedAssertion();
 	}
 
 	private boolean isAlertPresent() {
