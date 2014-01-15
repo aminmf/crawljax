@@ -103,26 +103,26 @@ public class AssertedElementPattern implements Serializable{
 			return;
 		
 		// node info
-		tagName = sourceElement.getTagName();
-		textContent = sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
+		this.tagName = sourceElement.getTagName();
+		this.textContent = sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
 		for (int i=0; i<sourceElement.getAttributes().getLength();i++)
-			attributes.add(sourceElement.getAttributes().item(i).toString());
+			this.attributes.add(sourceElement.getAttributes().item(i).toString());
 		
 		// parent node info
-		parentTagName = sourceElement.getParentNode().getNodeName();
-		parentTextContent = sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
+		this.parentTagName = sourceElement.getParentNode().getNodeName();
+		this.parentTextContent = sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
 		for (int i=0; i<sourceElement.getParentNode().getAttributes().getLength();i++)
-			parentAttributes.add(sourceElement.getParentNode().getAttributes().item(i).toString());
+			this.parentAttributes.add(sourceElement.getParentNode().getAttributes().item(i).toString());
 
 		// children nodes info
 		ArrayList<String> childAttributes = new ArrayList<String>();
 		for (int i=0; i<sourceElement.getChildNodes().getLength();i++){
-			childrenTagName.add(sourceElement.getChildNodes().item(i).getNodeName());
-			childrenTextContent.add(sourceElement.getChildNodes().item(i).getTextContent().replace("\n", "").replace("\r", "").replace(" ", ""));
+			this.childrenTagName.add(sourceElement.getChildNodes().item(i).getNodeName());
+			this.childrenTextContent.add(sourceElement.getChildNodes().item(i).getTextContent().replace("\n", "").replace("\r", "").replace(" ", ""));
 			if (sourceElement.getChildNodes().item(i).getAttributes()!=null){
 				for (int j=0; j<sourceElement.getChildNodes().item(i).getAttributes().getLength();j++)
 					childAttributes.add(sourceElement.getChildNodes().item(i).getAttributes().item(j).toString());
-				childrenAttributes.add(childAttributes);
+				this.childrenAttributes.add(new ArrayList<String>(childAttributes));
 			}
 			childAttributes.clear();
 		}
