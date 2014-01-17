@@ -3,6 +3,8 @@ package com.crawljax.plugins.testsuiteextension.casestudies.photogallery.origina
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.io.IOException;
+import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.After;
@@ -16,11 +18,13 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 public class add_story {
 	private WebDriver driver;
 	private String baseUrl;
 	private boolean acceptNextAlert = true;
 	private StringBuffer verificationErrors = new StringBuffer();
+	private String DOM = null;
 
 	@Before
 	public void setUp() throws Exception {
@@ -44,9 +48,11 @@ public class add_story {
 		driver.findElement(By.cssSelector("input.submit")).click();
 		mutateDOMTree();
 		assertTrue(driver.findElement(By.cssSelector("div")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"));
+		restoreDOMTree();
 		driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 		assertTrue(driver.findElement(By.cssSelector("div")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"));
 	}
+
 
 	@After
 	public void tearDown() throws Exception {
@@ -89,11 +95,33 @@ public class add_story {
 			acceptNextAlert = true;
 		}
 	}
-	
+
 	private void mutateDOMTree(){
 		// execute JavaScript code to mutate DOM
 		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
-		if (code!= null)
+		if (code!= null){
+			// saving the DOM before mutation
+			DOM = driver.getPageSource();
 			((JavascriptExecutor)driver).executeScript(code);
+		}
 	}
+
+	private void restoreDOMTree() {
+		// restoring the DOM after mutation in document.body.innerHTML
+		if (DOM!= null){
+			int start = DOM.indexOf("<body");
+			int end = DOM.indexOf("</body");
+			DOM = DOM.substring(start, end);
+			start = DOM.indexOf(">") + 1;
+			DOM = DOM.substring(start);
+			DOM = DOM.replace("/", "\\/");
+			DOM = DOM.replace("\n", "");
+			DOM = DOM.replace("\r", "");
+			DOM = DOM.replace("\"", "\\\"");
+			DOM = DOM.replace("'", "\'");
+			String code = "document.body.innerHTML=\"" + DOM + "\";";
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+
 }
