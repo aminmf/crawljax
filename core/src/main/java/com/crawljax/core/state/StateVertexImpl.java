@@ -143,7 +143,7 @@ class StateVertexImpl implements StateVertex {
 			return;
 		}
 		if(!getAssertions().contains(aep.getAssertion())){
-			System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
+			//System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
 			assertedElementPatterns.add(aep);
 		}//else
 			//System.out.println("Assertion already exists in state " + this.name);

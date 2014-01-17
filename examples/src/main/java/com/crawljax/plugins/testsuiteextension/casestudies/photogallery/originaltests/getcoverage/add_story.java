@@ -66,7 +66,7 @@ public class add_story {
 	@After
 	public void tearDown() throws Exception {
 	    if (getCoverageReport)
-	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('testReport');}");
+	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('PhormerOrigTestReport');}");
 
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();

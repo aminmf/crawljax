@@ -43,10 +43,6 @@ public class add_class {
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys("nainy");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-
-    //String jsCode = "var myNode = document.getElementById(\"userProfileBox\"); while (myNode.firstChild) { myNode.removeChild(myNode.firstChild); }";
-    //js.executeScript(jsCode);
-    
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Manage classes")).click();
     driver.findElement(By.linkText("Create a new class")).click();
@@ -65,7 +61,7 @@ public class add_class {
 
   @After
   public void tearDown() throws Exception {
-	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('1');}");
+	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('ClarolineOrig');}");
 
 	  driver.quit();
 	  String verificationErrorString = verificationErrors.toString();

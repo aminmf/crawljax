@@ -37,14 +37,8 @@ public class Manage {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.linkText("Platform administration"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.linkText("Manage administrator email notifications"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        // Warning: verifyTextPresent may require manual changes  
-        try {
-            //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));  
-            assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.cssSelector("div.toolTitleBlock"))).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
-        } catch (Error e) {
-            verificationErrors.append(e.toString());
-        }
-        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.cssSelector(\"div.toolTitleBlock\")).getText().matches(\"^[\\\\s\\\\S]*System mail : recipients list[\\\\s\\\\S]*$\"))");
+		assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine")));
+        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(isElementPresent(By.cssSelector(\"TABLE.claroTable.emphaseLine\")))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.cssSelector("input[type=\"submit\"]"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.cssSelector("input[type=\"submit\"]"))), "click", "").click();
@@ -62,7 +56,7 @@ public class Manage {
 
     private boolean isElementPresent(By by) {
         try {
-            driver.findElement(by);
+            driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(by));
             return true;
         } catch (NoSuchElementException e) {
             return false;

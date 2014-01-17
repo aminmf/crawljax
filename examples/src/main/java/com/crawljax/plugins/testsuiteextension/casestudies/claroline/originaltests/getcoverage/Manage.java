@@ -50,19 +50,18 @@ public class Manage {
     // Warning: verifyTextPresent may require manual changes
     try {
         //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
-        assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*System mail : recipients list[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    //driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     driver.findElement(By.linkText("Logout")).click();
  
   }
 
   @After
   public void tearDown() throws Exception {
-	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
+	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('ClarolineOrig');}");
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {

@@ -61,7 +61,7 @@ public class HomePageTest {
 
     private boolean isElementPresent(By by) {
         try {
-            driver.findElement(by);
+            driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(by));
             return true;
         } catch (NoSuchElementException e) {
             return false;

@@ -18,7 +18,7 @@ public class EditTextZone {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -40,7 +40,7 @@ public class EditTextZone {
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
-    driver.findElement(By.xpath("(//img[@alt='Preview'])[5]")).click();
+    //driver.findElement(By.xpath("(//img[@alt='Preview'])[5]")).click();
     driver.findElement(By.cssSelector("img[alt=\"Edit\"]")).click();
     driver.findElement(By.cssSelector("input.claroButton")).click();
     // Warning: verifyTextPresent may require manual changes

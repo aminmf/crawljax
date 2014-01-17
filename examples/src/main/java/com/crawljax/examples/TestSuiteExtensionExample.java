@@ -43,7 +43,7 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(120, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(300, TimeUnit.SECONDS);
 		builder.setMaximumDepth(0);
 
 		// click these elements
@@ -51,7 +51,18 @@ public final class TestSuiteExtensionExample {
 		builder.crawlRules().click("div").withAttribute("class", "clickable");
 
 		// but don't click these
-		//builder.crawlRules().dontClick("a").withAttribute("class", "ignore");
+		builder.crawlRules().dontClick("a").withText("%delete%");		
+		builder.crawlRules().dontClick("a").withText("%Delete%");
+		builder.crawlRules().dontClick("a").withText("%Del%");
+		builder.crawlRules().dontClick("option").withAttribute("value", "del");
+		builder.crawlRules().dontClick("option").withText("%Del%");
+		builder.crawlRules().dontClick("option").withText("%del%");
+		builder.crawlRules().dontClick("input").withAttribute("value", "   Delete it!   ");
+		builder.crawlRules().dontClick("INPUT").withAttribute("value", "   Delete it!   ");
+		builder.crawlRules().dontClick("INPUT").withText("   Delete it!   ");
+		builder.crawlRules().dontClick("INPUT").withText("%Del%");
+		builder.crawlRules().dontClick("INPUT").withText("%del%");
+		
 		//builder.crawlRules().dontClick("a").underXPath("//DIV[@id='footer']");
 
 		// Set timeouts

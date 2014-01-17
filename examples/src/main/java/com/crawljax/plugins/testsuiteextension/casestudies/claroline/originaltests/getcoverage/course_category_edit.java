@@ -53,7 +53,7 @@ public class course_category_edit {
     // Warning: verifyTextPresent may require manual changes
     try {
         //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
-        assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
+        //assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
     } catch (Error e) {
       verificationErrors.append(e.toString());
     }
@@ -71,6 +71,7 @@ public class course_category_edit {
 
   @After
   public void tearDown() throws Exception {
+  	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('ClarolineOrig');}");
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
     if (!"".equals(verificationErrorString)) {
@@ -80,7 +81,6 @@ public class course_category_edit {
 
   private boolean isElementPresent(By by) {
     try {
-  	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('report');}");
      driver.findElement(by);
       return true;
     } catch (NoSuchElementException e) {

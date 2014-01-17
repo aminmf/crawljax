@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Jan 14 18:32:42 PST 2014
+ * Generated @ Wed Jan 15 10:23:07 PST 2014
  */
 
 public class GeneratedTestCase9 {
@@ -77,60 +77,38 @@ public class GeneratedTestCase9 {
 	public void method9(){
 		try {
 			driver.get(url);
-			//From state 0 to state 6
-			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=6, name=state6}}
-			driver.findElement(By.linkText("Admin Page")).click();
+			//From state 0 to state 37
+			//Eventable{eventType=click, identification=cssSelector div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=100_0758November 9th o 12, attributes={href=.?p=1, title=100_0758: 25 KB, 3855 hits and rated 1.07 by 86 person}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=37, name=state37}}
+			driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
 			mutateDOMTree();
+			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed()); // original assertion
 			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("SPAN"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("A"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 6 to state 14
-			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=6, name=state6}, target=StateVertexImpl{id=14, name=state14}}
-			driver.findElement(By.id("loginAdminPass")).clear();
-			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
-			driver.findElement(By.cssSelector("input.submit")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.method"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("SPAN"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"ss_n\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"titlepart\"","style=\"letter-spacing: 2px; padding-bottom: 1em; margin-bottom: 0px;\"")));
+			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"photoBoxes\"","style=\"display: block;\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"wholePhoto\"")));
 			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\"","style=\"line-height: 150%\""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("A"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"rateStatus\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("")));
-			childrenElements.clear();
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
 			}
-			//From state 14 to state 15
-			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=14, name=state14}, target=StateVertexImpl{id=15, name=state15}}
-			driver.findElement(By.linkText("Manage Categories")).click();
-			mutateDOMTree();
 			if(shouldConsiderAddedAssertion()){
 			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.method"))); // generated assertion in case of ElementTagAttMatch
+			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if(shouldConsiderAddedAssertion()){
+			assertTrue(isElementPresent(By.tagName("IMG"))); // generated assertion in case of ElementTagMatch
+			}
+			if(shouldConsiderAddedAssertion()){
+			element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("id=\"ss_photo\"","onload=\"javscript:ss_loaddone();\"","src=\"images/000006_rryky_0.jpg\"")));
+			parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=6\"","id=\"ss_link2\"","style=\"display:inline;\"")));
+			childrenElements.clear();
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
 			assertTrue(isElementPresent(By.tagName("SPAN"))); // generated assertion in case of ElementTagMatch
@@ -146,29 +124,62 @@ public class GeneratedTestCase9 {
 			assertTrue(isElementPresent(By.tagName("A"))); // generated assertion in case of ElementTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
+			//assertTrue(isElementPresent(By.cssSelector("span#ss_n"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if(shouldConsiderAddedAssertion()){
+			element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"javascript:toggleInfo();\"","target=\"_top\"","title=\"Show/Hide additional info and de/centralize the photo\"")));
+			parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"pvTitleInfo\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"hin\""))));
+			childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			if(shouldConsiderAddedAssertion()){
 			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"rateStatus\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("")));
 			childrenElements.clear();
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 			}
-			//From state 15 to state 18
-			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Category   }}, source=StateVertexImpl{id=15, name=state15}, target=StateVertexImpl{id=18, name=state18}}
-			driver.findElement(By.name("desc")).clear();
-			driver.findElement(By.name("desc")).sendKeys("contains photos of all the flowers !");
-			driver.findElement(By.id("name")).clear();
-			driver.findElement(By.id("name")).sendKeys("flowers");
-			driver.findElement(By.cssSelector("input.submit")).click();
+			if(shouldConsiderAddedAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("span#rateStatus"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if(shouldConsiderAddedAssertion()){
+			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"rateStatus\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			//From state 37 to state 38
+			//Eventable{eventType=click, identification=partialText Hide, element=Element{node=[A: null], tag=A, text=Hide  info, attributes={href=javascript:toggleInfo();, target=_top, title=Show/Hide additional info and de/centralize the photo}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=38, name=state38}}
+			driver.findElement(By.partialLinkText("Hide")).click();
 			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false); // original assertion
+			if(shouldConsiderAddedAssertion()){
+			element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"javascript:toggleInfo();\"","target=\"_top\"","title=\"Show/Hide additional info and de/centralize the photo\"")));
+			parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"pvTitleInfo\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"hin\""))));
+			childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
+			}
 			if(shouldConsiderAddedAssertion()){
 			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.method"))); // generated assertion in case of ElementTagAttMatch
+			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // generated assertion in case of ElementTagAttMatch
 			}
 			if(shouldConsiderAddedAssertion()){
-			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Category \"flowers\" added succesfully![\\s\\S]*$")); // reused assertion in case of ElementFullMatch
+			assertTrue(isElementPresent(By.tagName("IMG"))); // generated assertion in case of ElementTagMatch
+			}
+			if(shouldConsiderAddedAssertion()){
+			element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("id=\"ss_photo\"","onload=\"javscript:ss_loaddone();\"","src=\"images/000006_rryky_0.jpg\"")));
+			parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=6\"","id=\"ss_link2\"","style=\"display:inline;\"")));
+			childrenElements.clear();
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
 			assertTrue(isElementPresent(By.tagName("SPAN"))); // generated assertion in case of ElementTagMatch
@@ -181,7 +192,17 @@ public class GeneratedTestCase9 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("A"))); // generated assertion in case of ElementTagMatch
+			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"photoBoxes\"","style=\"display: block;\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"wholePhoto\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\"","style=\"line-height: 150%\""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 			}
 			if(shouldConsiderAddedAssertion()){
 			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"rateStatus\"")));
@@ -190,67 +211,15 @@ public class GeneratedTestCase9 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 			}
-			//From state 18 to state 19
-			//Eventable{eventType=click, identification=xpath (//a[contains(text(),'Delete / Clear')])[2], element=Element{node=[A: null], tag=A, text=Delete / Clear, attributes={href=?page=categories&cmd=doDel&cid=12}}, source=StateVertexImpl{id=18, name=state18}, target=StateVertexImpl{id=19, name=state19}}
-			driver.findElement(By.xpath("(//a[contains(text(),'Delete / Clear')])[2]")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Clears Category flowers of all its own \\(direct\\) photos, nothing will be removed[\\s\\S]*$")); // original assertion
 			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.method"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("SPAN"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"ss_n\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"titlepart\"","style=\"letter-spacing: 2px; padding-bottom: 1em; margin-bottom: 0px;\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("A"))); // generated assertion in case of ElementTagMatch
+			assertTrue(isElementPresent(By.cssSelector("span#rateStatus"))); // generated assertion in case of ElementTagAttMatch
 			}
 			if(shouldConsiderAddedAssertion()){
 			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"rateStatus\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("")));
 			childrenElements.clear();
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 19 to state 21
-			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Delete it!   }}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=21, name=state21}}
-			driver.findElement(By.cssSelector("input.submit")).click();
-			mutateDOMTree();
-			assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to delete [\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.method"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("SPAN"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"ss_n\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"titlepart\"","style=\"letter-spacing: 2px; padding-bottom: 1em; margin-bottom: 0px;\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("A"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"rateStatus\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
 			}
 		} catch (Exception e) {
 			fail(e.getMessage());

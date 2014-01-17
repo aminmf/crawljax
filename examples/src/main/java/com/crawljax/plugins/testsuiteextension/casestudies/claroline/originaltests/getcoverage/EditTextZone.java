@@ -69,7 +69,7 @@ public class EditTextZone {
 
   @After
   public void tearDown() throws Exception {
-	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('edit');}");
+	  ((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('ClarolineOrig');}");
    driver.quit();
     String verificationErrorString = verificationErrors.toString();
     }

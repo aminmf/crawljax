@@ -18,7 +18,7 @@ public class DeletingCategory {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -33,7 +33,7 @@ public class DeletingCategory {
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Manage course categories")).click();
     driver.findElement(By.xpath("(//img[@alt='Delete category'])[5]")).click();
-    assertTrue(closeAlertAndGetItsText().matches("^Are you sure to delete Software Eng [\\s\\S]$"));
+    assertTrue(closeAlertAndGetItsText().matches("^[\\s\\S]*Are you sure to delete[\\s\\S]*$"));
     // Warning: verifyTextPresent may require manual changes
     try {
       //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category deleted\\.[\\s\\S]*$"));

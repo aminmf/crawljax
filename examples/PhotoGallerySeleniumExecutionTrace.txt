@@ -143,30 +143,31 @@ By.selector: a[title="Log Out"]
 click
 NewTestCase HomePageTest.java
 assertionModeOn
+By.selector: div#Granny
 assertion assertTrue(isElementPresent(By.cssSelector("div#Granny")))
 assertionModeOff
 By.linkText: Stories
-[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> link text: Stories]
+[[FirefoxDriver: firefox on MAC (4d293d3d-3180-b046-8c31-9ebba318bf96)] -> link text: Stories]
 click 
 assertionModeOn
 assertion assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$"))
 assertionModeOff
 By.partialLinkText: Default Category
-[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> partial link text: Default Category]
+[[FirefoxDriver: firefox on MAC (4d293d3d-3180-b046-8c31-9ebba318bf96)] -> partial link text: Default Category]
 click 
 assertionModeOn
 By.selector: div.midInfo
 assertion assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$"))
 assertionModeOff
 By.partialLinkText: Default Story
-[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> partial link text: Default Story]
+[[FirefoxDriver: firefox on MAC (4d293d3d-3180-b046-8c31-9ebba318bf96)] -> partial link text: Default Story]
 click 
 assertionModeOn
 By.selector: div.midInfo
 assertion assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$"))
 assertionModeOff
 By.linkText: SlideShow
-[[FirefoxDriver: firefox on MAC (060ba3cc-69f5-5a4c-b21c-60529081d0ad)] -> link text: SlideShow]
+[[FirefoxDriver: firefox on MAC (4d293d3d-3180-b046-8c31-9ebba318bf96)] -> link text: SlideShow]
 click 
 assertionModeOn
 assertion assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$"))
@@ -195,15 +196,16 @@ By.linkText: Log Out
 click
 NewTestCase SlideShowTest.java
 By.linkText: SlideShow
-[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: SlideShow]
+[[FirefoxDriver: firefox on MAC (3453da59-4fb2-ae4f-92ba-5a74cd24e5ea)] -> link text: SlideShow]
 click 
 assertionModeOn
 assertion assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$"))
 assertionModeOff
 By.id: ss_playpause_link
-[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> id: ss_playpause_link]
+[[FirefoxDriver: firefox on MAC (3453da59-4fb2-ae4f-92ba-5a74cd24e5ea)] -> id: ss_playpause_link]
 click 
 assertionModeOn
+By.selector: img#ss_photo
 assertion assertTrue(isElementPresent(By.cssSelector("img#ss_photo")))
 assertionModeOff
 assertionModeOn
@@ -217,14 +219,14 @@ By.selector: span#ss_n
 assertion assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText())
 assertionModeOff
 By.linkText: Next
-[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: Next]
+[[FirefoxDriver: firefox on MAC (3453da59-4fb2-ae4f-92ba-5a74cd24e5ea)] -> link text: Next]
 click 
 assertionModeOn
 By.selector: span#ss_n
 assertion assertEquals("2", driver.findElement(By.cssSelector("span#ss_n")).getText())
 assertionModeOff
 By.linkText: Previous
-[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: Previous]
+[[FirefoxDriver: firefox on MAC (3453da59-4fb2-ae4f-92ba-5a74cd24e5ea)] -> link text: Previous]
 click 
 assertionModeOn
 By.selector: span#ss_n
@@ -237,9 +239,40 @@ By.selector: span#ss_n
 assertion assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText())
 assertionModeOff
 By.linkText: Smaller Size
-[[FirefoxDriver: firefox on MAC (7e6bc358-985b-1543-b812-6e96f31fedea)] -> link text: Smaller Size]
+[[FirefoxDriver: firefox on MAC (3453da59-4fb2-ae4f-92ba-5a74cd24e5ea)] -> link text: Smaller Size]
 click 
 assertionModeOn
 assertion assertEquals("SlideShow :: My PhotoGallery", driver.getTitle())
+assertionModeOff
+NewTestCase MainViewTest.java
+By.selector: div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)
+[[FirefoxDriver: firefox on MAC (c9d2822f-edf8-e34d-bf87-f72a4b383420)] -> css selector: div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)]
+click 
+By.partialLinkText: Hide
+[[FirefoxDriver: firefox on MAC (c9d2822f-edf8-e34d-bf87-f72a4b383420)] -> partial link text: Hide]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false)
+assertionModeOff
+By.partialLinkText: Show
+[[FirefoxDriver: firefox on MAC (c9d2822f-edf8-e34d-bf87-f72a4b383420)] -> partial link text: Show]
+click 
+assertionModeOn
+By.id: photoBoxes
+assertion assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed())
+assertionModeOff
+By.id: rateSelect
+By.selector: #rateSelect > option:nth-child(2)
+[[FirefoxDriver: firefox on MAC (c9d2822f-edf8-e34d-bf87-f72a4b383420)] -> css selector: #rateSelect > option:nth-child(2)]
+click 
+assertionModeOn
+By.selector: span#rateStatus
+assertion assertEquals("Your rating saved!", driver.findElement(By.cssSelector("span#rateStatus")).getText())
+assertionModeOff
+By.xpath: //div[@id='Granny']/div[5]/div[2]/center/a/img
+[[FirefoxDriver: firefox on MAC (c9d2822f-edf8-e34d-bf87-f72a4b383420)] -> xpath: //div[@id='Granny']/div[5]/div[2]/center/a/img]
+click 
+assertionModeOn
+assertion assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*p=2$"))
 assertionModeOff
 TestSuiteEnd

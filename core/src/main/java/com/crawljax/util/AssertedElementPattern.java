@@ -187,36 +187,13 @@ public class AssertedElementPattern implements Serializable{
 	}
 	
 	
-	/*
-	public boolean findAssertedElementPattern(Document dom, CrawljaxConfiguration config){
-		// finding the pattern of this object in the DOM using Crawljax configuration  
-		for (CrawlElement crawlTag : config.getCrawlRules().getAllCrawlElements()) {
-			// checking all tags defined in the crawlRules
-			NodeList nodeList = dom.getElementsByTagName(crawlTag.getTagName());
-				String xpath = null;
-				org.w3c.dom.Element sourceElement = null;
-				for (int k = 0; k < nodeList.getLength(); k++){
-					sourceElement = (org.w3c.dom.Element) nodeList.item(k);
-					AssertedElementPattern aep = new AssertedElementPattern(sourceElement, "");
-					// check if aep equals this object
-					if (this.equals(aep)){
-						System.out.println("sourceElement:" + sourceElement + " in the DOM has an AssertedElementPattern: " + this);
-						return true;
-					}
-				}
-		}
-		return false;
-	}
-	*/
-	
-
 	public String getHowPatternMatch(AssertedElementPattern aep){
 		if (aep.tagName.equals(this.tagName) && aep.parentTagName.equals(this.parentTagName) && aep.childrenTagName.equals(this.childrenTagName)) {  
 			if (aep.attributes.equals(this.attributes) && aep.parentAttributes.equals(this.parentAttributes) && aep.childrenAttributes.equals(this.childrenAttributes))
 				if (aep.textContent.equals(this.textContent) && aep.parentTextContent.equals(this.parentTextContent) && aep.childrenTextContent.equals(this.childrenTextContent))
-					return "PatternFullTextMatch";
-				else
 					return "PatternFullMatch";
+				else
+					return "PatternTagAttMatch";
 			return "PatternTagMatch";
 		}
         return "NoMatch";
