@@ -137,16 +137,18 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	//Amin: adding assertion on DOM state
-	public void addAssertedElementPattern(AssertedElementPattern aep) {
+	public boolean addAssertedElementPattern(AssertedElementPattern aep) {
 		if(aep==null){
 			//System.out.println("Assertion is not usefull to be added to state " + this.name);
-			return;
+			return false;
 		}
-		if(!getAssertions().contains(aep.getAssertion())){
-			//System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
-			assertedElementPatterns.add(aep);
-		}//else
+		if(getAssertions().contains(aep.getAssertion())){
 			//System.out.println("Assertion already exists in state " + this.name);
+			return false;
+		}
+		//System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
+		assertedElementPatterns.add(aep);
+		return true;
 	}
 
 	@Override

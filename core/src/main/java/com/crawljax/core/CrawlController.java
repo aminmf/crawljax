@@ -25,7 +25,7 @@ import com.crawljax.di.CrawlSessionProvider;
 public class CrawlController implements Callable<CrawlSession> {
 
 	// Setting for experiments on bypassing crawling for testing TesExt on creating happy paths (default should be false)
-	boolean bypassCrawling = false;
+	boolean bypassCrawling = true;
 
 	
 	private static final Logger LOG = LoggerFactory.getLogger(CrawlController.class);

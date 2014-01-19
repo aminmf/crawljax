@@ -227,7 +227,9 @@ public class ${classname} {
 		}
 	}
 	
-	
+	private boolean shouldRunAssertion(){
+		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldRunAssertionInExtendedSuite();
+	}	
 
 	private void mutateDOMTree(){
 		// execute JavaScript code to mutate DOM
@@ -280,11 +282,6 @@ public class ${classname} {
 			assertNull(o);
 	}	
 
-	
-
-	private boolean shouldConsiderAddedAssertion(){
-		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldConsiderAddedAssertion();
-	}
 
 
 	public class DOMElement {
