@@ -24,7 +24,7 @@ public class PizzaOrderSeleniumTest {
 
 	@Test
 	public void testCRUD() throws Exception {
-		
+
 		// Create
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Pizza Order")).click();
@@ -59,23 +59,19 @@ public class PizzaOrderSeleniumTest {
 		assertTrue(isElementPresent(By.id("search:pizzaOrderBeanPageItems:0:itemName")));
 		driver.findElement(By.id("search:pizzaOrderBeanPageItems:0:itemName")).click();
 
-		try {
-			WebElement nameResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderName"));
-			assertTrue(nameResult.getText().matches(name));
-			WebElement addressResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderAddress"));
-			assertTrue(addressResult.getText().matches(address));
-			WebElement totalResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderTotal"));
-			assertTrue(totalResult.getText().matches(total));
-			WebElement deliveryDateResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"));
-			assertTrue(deliveryDateResult.getText().matches(deliveryDate));
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
+		WebElement nameResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderName"));
+		assertTrue(nameResult.getText().matches(name));
+		WebElement addressResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderAddress"));
+		assertTrue(addressResult.getText().matches(address));
+		WebElement totalResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderTotal"));
+		assertTrue(totalResult.getText().matches(total));
+		WebElement deliveryDateResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"));
+		assertTrue(deliveryDateResult.getText().matches(deliveryDate));
 
 		// Edit
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Pizza Order")).click();
-		
+
 		driver.findElement(By.id("search:pizzaOrderBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
 
@@ -105,23 +101,20 @@ public class PizzaOrderSeleniumTest {
 
 		driver.findElement(By.linkText("Save")).click();
 
-		try {
-			WebElement nameResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderName"));
-			assertTrue(nameResult.getText().matches(newName));
-			WebElement addressResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderAddress"));
-			assertTrue(addressResult.getText().matches(newAddress));
-			WebElement totalResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderTotal"));
-			assertTrue(totalResult.getText().matches(newTotal));
-			WebElement deliveryDateResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"));
-			assertTrue(deliveryDateResult.getText().matches(newDeliveryDate));
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
+
+		nameResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderName"));
+		assertTrue(nameResult.getText().matches(newName));
+		addressResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderAddress"));
+		assertTrue(addressResult.getText().matches(newAddress));
+		totalResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderTotal"));
+		assertTrue(totalResult.getText().matches(newTotal));
+		deliveryDateResult = driver.findElement(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"));
+		assertTrue(deliveryDateResult.getText().matches(newDeliveryDate));
 
 		// Delete
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Pizza Order")).click();
-		
+
 		assertTrue(isElementPresent(By.id("search:pizzaOrderBeanPageItems:0:itemName")));
 		driver.findElement(By.id("search:pizzaOrderBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();

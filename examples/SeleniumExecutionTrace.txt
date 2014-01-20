@@ -1200,84 +1200,15 @@ By.linkText: Logout
 [[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> link text: Logout]
 click
 TestSuiteEnd
-By.id: login
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Show/Hide
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> link text: Show/Hide]
-click 
-assertionModeOn
-By.selector: div.content.collapsible-wrapper
-assertion assertTrue(driver.findElement(By.cssSelector("div.content.collapsible-wrapper")).getText().matches("^[\\s\\S]*textzone_top\\.authenticated\\.inc\\.html[\\s\\S]*$"))
-assertionModeOff
-By.linkText: View all my messages
-[[FirefoxDriver: firefox on MAC (232ea93f-f34c-a947-ae7d-ebe934dbca8a)] -> link text: View all my messages]
-click 
-assertionModeOn
-By.selector: div.toolTitleBlock
-By.id: login
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Show/Hide
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> link text: Show/Hide]
-click 
-assertionModeOn
-By.selector: div.content.collapsible-wrapper
-assertion assertTrue(driver.findElement(By.cssSelector("div.content.collapsible-wrapper")).getText().matches("^[\\s\\S]*textzone_top\\.authenticated\\.inc\\.html[\\s\\S]*$"))
-assertionModeOff
-By.linkText: View all my messages
-[[FirefoxDriver: firefox on MAC (49c68604-fb3b-4e44-833c-2fbf30bbb1a9)] -> link text: View all my messages]
-click 
-assertionModeOn
-By.selector: div.toolTitleBlock
-By.id: login
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Show/Hide
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> link text: Show/Hide]
-click 
-assertionModeOn
-By.selector: div.content.collapsible-wrapper
-assertion assertTrue(driver.findElement(By.cssSelector("div.content.collapsible-wrapper")).getText().matches("^[\\s\\S]*textzone_top\\.authenticated\\.inc\\.html[\\s\\S]*$"))
-assertionModeOff
-By.linkText: View all my messages
-[[FirefoxDriver: firefox on MAC (0c167c39-5bbe-2a42-a5cc-4c4a1e3dc2e9)] -> link text: View all my messages]
-click 
-assertionModeOn
-By.selector: div.toolTitleBlock
+
+
+
+
+Pizza app
+
+
+
+
+
+
+TestSuiteEnd
