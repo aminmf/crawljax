@@ -39,7 +39,7 @@ public class BaseSeleniumTest {
 		driver.findElement(By.id("search:baseBeanPageItems:0:itemName")).click();
 
 		WebElement nameResult = driver.findElement(By.id("baseBeanBaseName"));
-		assertTrue(nameResult.getText().matches(name));
+		assertTrue(driver.findElement(By.id("baseBeanBaseName")).getText().matches("TestBase"));
 
 		// Edit
 		driver.get(baseUrl + indexPage);

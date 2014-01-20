@@ -47,22 +47,18 @@ public class PizzaSeleniumTest {
 		assertTrue(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")));
 		driver.findElement(By.id("search:pizzaBeanPageItems:0:itemName")).click();
 
-		try {
-			WebElement nameResult = driver.findElement(By.id("pizzaBeanPizzaName"));
-			assertTrue(nameResult.getText().matches(name));
-			WebElement priceResult = driver.findElement(By.id("pizzaBeanPizzaPrice"));
-			assertTrue(priceResult.getText().matches(price));
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
+		WebElement nameResult = driver.findElement(By.id("pizzaBeanPizzaName"));
+		assertTrue(nameResult.getText().matches(name));
+		WebElement priceResult = driver.findElement(By.id("pizzaBeanPizzaPrice"));
+		assertTrue(priceResult.getText().matches(price));
 
 		// Edit
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Pizza")).click();
-		
+
 		driver.findElement(By.id("search:pizzaBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
-		
+
 		// name
 		nameTextBox = driver.findElement(By.id("create:pizzaBeanPizzaName"));
 		nameTextBox.clear();
@@ -77,24 +73,20 @@ public class PizzaSeleniumTest {
 
 		driver.findElement(By.linkText("Save")).click();
 
-		try {
-			WebElement nameResult = driver.findElement(By.id("pizzaBeanPizzaName"));
-			assertTrue(nameResult.getText().matches(newName));
-			WebElement priceResult = driver.findElement(By.id("pizzaBeanPizzaPrice"));
-			assertTrue(priceResult.getText().matches(newPrice));
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
+		nameResult = driver.findElement(By.id("pizzaBeanPizzaName"));
+		assertTrue(nameResult.getText().matches(newName));
+		priceResult = driver.findElement(By.id("pizzaBeanPizzaPrice"));
+		assertTrue(priceResult.getText().matches(newPrice));
 
 		// Delete
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Pizza")).click();
-		
+
 		assertTrue(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")));
 		driver.findElement(By.id("search:pizzaBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.linkText("Delete")).click();
-		
+
 		driver.findElement(By.linkText("Pizza")).click();
 		assertFalse(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")));
 	}

@@ -41,39 +41,31 @@ public class ToppingSeleniumTest {
 		assertTrue(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")));
 		driver.findElement(By.id("search:toppingBeanPageItems:0:itemName")).click();
 
-		try {
-			WebElement nameResult = driver.findElement(By.id("toppingBeanToppingName"));
-			assertTrue(nameResult.getText().matches(name));
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
+		WebElement nameResult = driver.findElement(By.id("toppingBeanToppingName"));
+		assertTrue(nameResult.getText().matches(name));
 
 		// Edit
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Topping")).click();
-		
+
 		driver.findElement(By.id("search:toppingBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
-		
+
 		// name
 		nameTextBox = driver.findElement(By.id("create:toppingBeanToppingName"));
 		nameTextBox.clear();
 		name = "TestTopping2";
 		nameTextBox.sendKeys(name);
-		
+
 		driver.findElement(By.linkText("Save")).click();
 
-		try {
-			WebElement nameResult = driver.findElement(By.id("toppingBeanToppingName"));
-			assertTrue(nameResult.getText().matches(name));
-		} catch (Error e) {
-			verificationErrors.append(e.toString());
-		}
+		nameResult = driver.findElement(By.id("toppingBeanToppingName"));
+		assertTrue(nameResult.getText().matches(name));
 
 		// Delete
 		driver.get(baseUrl + indexPage);
 		driver.findElement(By.linkText("Topping")).click();
-		
+
 		assertTrue(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")));
 		driver.findElement(By.id("search:toppingBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
