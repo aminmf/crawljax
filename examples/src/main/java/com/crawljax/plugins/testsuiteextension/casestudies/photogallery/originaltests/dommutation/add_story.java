@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 
@@ -36,21 +37,22 @@ public class add_story {
 	@Test
 	public void testAddStoryAssert() throws Exception {
 		driver.get(baseUrl + "/phormer331/");
+		mutateDOMTree();
 		driver.findElement(By.linkText("Admin Page")).click();
 		driver.findElement(By.id("loginAdminPass")).clear();
 		driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
 		driver.findElement(By.cssSelector("input.submit")).click();
+		mutateDOMTree();
 		driver.findElement(By.linkText("Manage Stories")).click();
+		mutateDOMTree();
 		driver.findElement(By.id("name")).clear();
 		driver.findElement(By.id("name")).sendKeys("Photos");
 		driver.findElement(By.name("desc")).clear();
 		driver.findElement(By.name("desc")).sendKeys("Greenery !!");
 		driver.findElement(By.cssSelector("input.submit")).click();
 		mutateDOMTree();
-		assertTrue(driver.findElement(By.cssSelector("div")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"));
-		restoreDOMTree();
+		assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"));
 		driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
-		assertTrue(driver.findElement(By.cssSelector("div")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$"));
 	}
 
 
@@ -100,27 +102,12 @@ public class add_story {
 		// execute JavaScript code to mutate DOM
 		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
 		if (code!= null){
-			// saving the DOM before mutation
-			DOM = driver.getPageSource();
-			((JavascriptExecutor)driver).executeScript(code);
-		}
-	}
-
-	private void restoreDOMTree() {
-		// restoring the DOM after mutation in document.body.innerHTML
-		if (DOM!= null){
-			int start = DOM.indexOf("<body");
-			int end = DOM.indexOf("</body");
-			DOM = DOM.substring(start, end);
-			start = DOM.indexOf(">") + 1;
-			DOM = DOM.substring(start);
-			DOM = DOM.replace("/", "\\/");
-			DOM = DOM.replace("\n", "");
-			DOM = DOM.replace("\r", "");
-			DOM = DOM.replace("\"", "\\\"");
-			DOM = DOM.replace("'", "\'");
-			String code = "document.body.innerHTML=\"" + DOM + "\";";
-			((JavascriptExecutor)driver).executeScript(code);
+			try{
+				((JavascriptExecutor)driver).executeScript(code);
+			}catch (Exception e) {
+				System.out.println("Could not execute script");
+			}
+			
 		}
 	}
 

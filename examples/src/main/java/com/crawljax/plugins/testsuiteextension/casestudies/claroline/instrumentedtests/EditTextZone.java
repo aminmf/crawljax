@@ -53,11 +53,11 @@ public class EditTextZone {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
         // Warning: verifyTextPresent may require manual changes  
         try {
-            assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("claroBody"))).getText().matches("^[\\s\\S]*Hello !! Welcome to Clatoline\\.\\. :\\)[\\s\\S]*$"));
+            assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.cssSelector("claroDialogBox"))).getText().contains("The changes have been carried out correctly"));
         } catch (Error e) {
             verificationErrors.append(e.toString());
         }
-        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.id(\"claroBody\")).getText().matches(\"^[\\\\s\\\\S]*Hello !! Welcome to Clatoline\\\\.\\\\. :\\\\)[\\\\s\\\\S]*$\"))");
+        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.cssSelector(\"claroDialogBox\")).getText().contains(\"The changes have been carried out correctly\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.linkText("Logout"))), "click", "").click();
     }

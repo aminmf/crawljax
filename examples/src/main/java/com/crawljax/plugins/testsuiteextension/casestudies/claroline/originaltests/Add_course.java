@@ -35,7 +35,6 @@ public class Add_course {
     driver.findElement(By.id("course_title")).sendKeys("Computer Science");
     driver.findElement(By.id("course_officialCode")).clear();
     driver.findElement(By.id("course_officialCode")).sendKeys("A7");
-    // ERROR: Caught exception [ERROR: Unsupported command [addSelection | id=mslist2 | label=Sciences]]
     driver.findElement(By.linkText("Advanced options")).click();
     driver.findElement(By.id("course_status_date")).click();
     driver.findElement(By.name("changeProperties")).click();

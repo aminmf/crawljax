@@ -18,7 +18,7 @@ public class course_category_edit {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -35,22 +35,9 @@ public class course_category_edit {
     driver.findElement(By.cssSelector("img[alt=\"Edit category\"]")).click();
     driver.findElement(By.id("category_code")).clear();
     driver.findElement(By.id("category_code")).sendKeys("Sci");
-    // Warning: verifyTextPresent may require manual changes
-    try {
-        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
-        assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Economics \\(ECO\\)[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
     String Categories_Claroline = driver.getTitle();
     driver.findElement(By.cssSelector("img[alt=\"Move down category\"]")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"));
-      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"));
     driver.findElement(By.linkText("Logout")).click();
   }
 

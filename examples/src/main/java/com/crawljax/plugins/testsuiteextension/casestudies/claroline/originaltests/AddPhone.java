@@ -18,7 +18,7 @@ public class AddPhone {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -32,23 +32,12 @@ public class AddPhone {
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Claroline.net news")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$"));
     driver.findElement(By.linkText("Manage my account")).click();
     driver.findElement(By.id("phone")).clear();
     driver.findElement(By.id("phone")).sendKeys("7788814476");
     driver.findElement(By.id("applyChange")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"));
-      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"));
     driver.findElement(By.linkText("Logout")).click();
   }
 

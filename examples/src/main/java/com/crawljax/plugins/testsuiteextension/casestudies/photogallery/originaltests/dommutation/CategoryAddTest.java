@@ -32,11 +32,14 @@ public class CategoryAddTest {
 	@Test
 	public void testAddCategory() throws Exception {
 		driver.get(baseUrl + "/phormer331/");
+		mutateDOMTree();
 		driver.findElement(By.linkText("Admin Page")).click();
 		driver.findElement(By.id("loginAdminPass")).clear();
 		driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
 		driver.findElement(By.cssSelector("input.submit")).click();
+		mutateDOMTree();
 		driver.findElement(By.linkText("Manage Categories")).click();
+		mutateDOMTree();
 		driver.findElement(By.id("name")).clear();
 		driver.findElement(By.id("name")).sendKeys("flowers");
 		driver.findElement(By.name("desc")).clear();

@@ -39,8 +39,6 @@ public class MainViewTest {
 		//assertEquals("Saving your rate", driver.findElement(By.cssSelector("#rateStatus")).getText());
 		Thread.sleep(3000);
 		assertEquals("Your rating saved!", driver.findElement(By.cssSelector("span#rateStatus")).getText());
-		driver.findElement(By.xpath("//div[@id='Granny']/div[5]/div[2]/center/a/img")).click();
-		assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*p=2$"));
 	}
 
 

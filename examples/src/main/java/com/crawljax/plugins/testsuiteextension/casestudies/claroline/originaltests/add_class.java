@@ -18,7 +18,7 @@ public class add_class {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -30,23 +30,14 @@ public class add_class {
     driver.findElement(By.id("password")).clear();
     driver.findElement(By.id("password")).sendKeys("nainy");
     driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-
-    //String jsCode = "var myNode = document.getElementById(\"userProfileBox\"); while (myNode.firstChild) { myNode.removeChild(myNode.firstChild); }";
-    //js.executeScript(jsCode);
-    
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Manage classes")).click();
     driver.findElement(By.linkText("Create a new class")).click();
     driver.findElement(By.name("class_name")).clear();
     driver.findElement(By.name("class_name")).sendKeys("EG");
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-        //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
-        assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    //assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
+    assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"));
     driver.findElement(By.linkText("Logout")).click();
   }
 

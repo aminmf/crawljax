@@ -19,14 +19,13 @@ public class AddCategory_pass {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void testAddCategory() throws Exception {
-	
-	  char[] s= Character.toChars(in);
+	char[] s= Character.toChars(in);
     driver.get(baseUrl + "/claroline-1.11.7/");
     driver.findElement(By.id("login")).clear();
     driver.findElement(By.id("login")).sendKeys("nainy");

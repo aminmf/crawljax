@@ -661,8 +661,8 @@ By.selector: input.claroButton
 [[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> css selector: input.claroButton]
 click 
 assertionModeOn
-By.id: claroBody
-assertion assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Hello !! Welcome to Clatoline\\.\\. :\\)[\\s\\S]*$"))
+By.selector: .claroDialogBox
+assertion assertTrue(driver.findElement(By.cssSelector(".claroDialogBox")).getText().contains("The changes have been carried out correctly"))
 assertionModeOff
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> link text: Logout]

@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Wed Jan 15 14:18:36 PST 2014
+ * Generated @ Sat Jan 18 21:11:05 PST 2014
  */
 
 public class GeneratedTestCase39 {
@@ -32,6 +32,7 @@ public class GeneratedTestCase39 {
 	private DOMElement element;
 	private DOMElement parentElement;
 	private ArrayList<DOMElement> childrenElements = new ArrayList<DOMElement>();
+	private String DOM = null;
 
 	boolean getCoverageReport = false;
 
@@ -77,488 +78,22 @@ public class GeneratedTestCase39 {
 	public void method39(){
 		try {
 			driver.get(url);
-			//From state 0 to state 138
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=138, name=state138}}
-			driver.findElement(By.id("login")).clear();
-			driver.findElement(By.id("login")).sendKeys("nainy");
-			driver.findElement(By.id("password")).clear();
-			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 0 to state 86
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=86, name=state86}}
 			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("button[type=\"submit\"]"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 138 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=138, name=state138}, target=StateVertexImpl{id=2, name=state2}}
-			driver.findElement(By.linkText("Platform administration")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 2 to state 43
-			//Eventable{eventType=click, identification=text Configuration, element=Element{node=[A: null], tag=A, text=Configuration, attributes={href=tool/config_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=43, name=state43}}
-			driver.findElement(By.linkText("Configuration")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 43 to state 53
-			//Eventable{eventType=click, identification=text Assignments, element=Element{node=[A: null], tag=A, text=Assignments, attributes={href=config_edit.php?config_code=CLWRK}}, source=StateVertexImpl{id=43, name=state43}, target=StateVertexImpl{id=53, name=state53}}
-			driver.findElement(By.linkText("Assignments")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*ets how the assignment property \"default works visibility\" acts\\. It will change the visibility of all the new submissions or it will change the visibility of all submissions already done in the assignment and the new one\\.[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
-			}
-			assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*For assignments list[\\s\\S]*$")); // original assertion
-			assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*/<COURSEID>/work/[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.name("editConfClass"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"quota\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLQWZ\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLQWZ\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 53 to state 56
-			//Eventable{eventType=click, identification=text Quota, element=Element{node=[A: null], tag=A, text=Quota, attributes={href=/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK&section=quota}}, source=StateVertexImpl{id=53, name=state53}, target=StateVertexImpl{id=56, name=state56}}
-			driver.findElement(By.linkText("Quota")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"quota\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.name("editConfClass"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLQWZ\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLQWZ\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 56 to state 57
-			//Eventable{eventType=click, identification=cssSelector input[type="submit"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={type=submit, value=Ok}}, source=StateVertexImpl{id=56, name=state56}, target=StateVertexImpl{id=57, name=state57}}
-			driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogBox boxSuccess\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogMsg msgSuccess\""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.claroDialogBox.boxSuccess"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.name("editConfClass"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"quota\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLQWZ\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLQWZ\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 57 to state 60
-			//Eventable{eventType=click, identification=text Submissions, element=Element{node=[A: null], tag=A, text=Submissions, attributes={href=/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK&section=submissions}}, source=StateVertexImpl{id=57, name=state57}, target=StateVertexImpl{id=60, name=state60}}
-			driver.findElement(By.linkText("Submissions")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.name("editConfClass"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"quota\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLQWZ\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLQWZ\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 60 to state 61
-			//Eventable{eventType=click, identification=cssSelector input[type="submit"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={type=submit, value=Ok}}, source=StateVertexImpl{id=60, name=state60}, target=StateVertexImpl{id=61, name=state61}}
-			driver.findElement(By.id("label_clwrk_endDateDelay")).clear();
-			driver.findElement(By.id("label_clwrk_endDateDelay")).sendKeys("365");
-			driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.claroDialogBox.boxSuccess"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.name("editConfClass"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"quota\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLQWZ\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLQWZ\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 61 to state 67
-			//Eventable{eventType=click, identification=text View all, element=Element{node=[A: null], tag=A, text=View all, attributes={href=/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK&section=viewall}}, source=StateVertexImpl{id=61, name=state61}, target=StateVertexImpl{id=67, name=state67}}
-			driver.findElement(By.linkText("View all")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.name("editConfClass"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLWRK\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLWRK\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"quota\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/tool/config_edit.php?config_code=CLQWZ\"","method=\"post\"","name=\"editConfClass\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"config_code\"","type=\"hidden\"","value=\"CLQWZ\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"section\"","type=\"hidden\"","value=\"main\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"save\""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"5\"","width=\"100%\""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 67 to state 68
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=67, name=state67}, target=StateVertexImpl{id=68, name=state68}}
-			driver.findElement(By.linkText("Logout")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"loginBox\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"rightSidebar\"")));
 			childrenElements.clear();
@@ -573,6 +108,175 @@ public class GeneratedTestCase39 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternFullMatch
 			}
+			driver.findElement(By.id("login")).clear();
+			driver.findElement(By.id("login")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 86 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=86, name=state86}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Platform administration"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Logout"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
+			}
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 88
+			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=88, name=state88}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage course categories"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Claroline.net news"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage classes"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Create user"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Configuration"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Edit text zones"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage administrator email notifications"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Modules"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Send a message to all users"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Support forum"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("User list"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Right profile list"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage user desktop"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.linkText("Manage course categories")).click();
+			//From state 88 to state 89
+			//Eventable{eventType=click, identification=xpath (//img[@alt='Delete category'])[5], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Delete category, src=/claroline-1.11.7/web/img/delete.png?1232379976}}, source=StateVertexImpl{id=88, name=state88}, target=StateVertexImpl{id=89, name=state89}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.xpath("(//img[@alt='Delete category'])[5]"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			driver.findElement(By.xpath("(//img[@alt='Delete category'])[5]")).click();
+			//From state 89 to state 90
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=89, name=state89}, target=StateVertexImpl{id=90, name=state90}}
+			mutateDOMTree();
+			assertTrue(closeAlertAndGetItsText().matches("^[\\s\\S]*Are you sure to delete[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category deleted\\.[\\s\\S]*$")); // original assertion
+			if (shouldRunAssertion()){
+			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogBox boxSuccess\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogMsg msgSuccess\""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Logout"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.claroDialogBox.boxSuccess"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			driver.findElement(By.linkText("Logout")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
@@ -693,17 +397,6 @@ public class GeneratedTestCase39 {
 		return false;
 	}
 
-	private void mutateDOMTree(){
-		// execute JavaScript code to mutate DOM
-		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
-		if (code!= null)
-			((JavascriptExecutor)driver).executeScript(code);
-	}
-
-	private boolean shouldConsiderAddedAssertion(){
-		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldConsiderAddedAssertion();
-	}
-
 	private boolean isAlertPresent() {
 		try {
 			driver.switchTo().alert();
@@ -727,6 +420,62 @@ public class GeneratedTestCase39 {
 			acceptNextAlert = true;
 		}
 	}
+	
+	private boolean shouldRunAssertion(){
+		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldRunAssertionInExtendedSuite();
+	}	
+
+	private void mutateDOMTree(){
+		// execute JavaScript code to mutate DOM
+		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
+		if (code!= null){
+			// saving the DOM before mutation
+			DOM = driver.getPageSource();
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+	private void restoreDOMTree() {
+		// restoring the DOM after mutation in document.body.innerHTML
+		if (DOM!= null){
+			int start = DOM.indexOf("<body");
+			int end = DOM.indexOf("</body");
+			DOM = DOM.substring(start, end);
+			start = DOM.indexOf(">") + 1;
+			DOM = DOM.substring(start);
+			DOM = DOM.replace("/", "\\/");
+			DOM = DOM.replace("\n", "");
+			DOM = DOM.replace("\r", "");
+			DOM = DOM.replace("\"", "\\\"");
+			DOM = DOM.replace("'", "\'");
+			String code = "document.body.innerHTML=\"" + DOM + "\";";
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+	private void verifyTrue(String assertionType, boolean assertionCondition){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyTrue(assertionType, assertionCondition);
+		else
+			assertTrue(assertionCondition);
+	}
+	private void verifyEquals(String assertionType, String s1, String s2){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyEquals(assertionType, s1, s2);
+		else
+			assertEquals(s1, s2);
+	}	
+	private void verifyNotNull(String assertionType, Object o){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyNotNull(assertionType, o);
+		else
+			assertNotNull(o);
+	}	
+	private void verifyNull(String assertionType, Object o){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyNull(assertionType, o);
+		else
+			assertNull(o);
+	}	
+
 
 
 	public class DOMElement {

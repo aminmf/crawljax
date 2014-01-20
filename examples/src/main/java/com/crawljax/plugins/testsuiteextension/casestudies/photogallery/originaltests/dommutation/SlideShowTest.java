@@ -25,6 +25,7 @@ public class SlideShowTest {
 	@Test
 	public void testSlideShow() throws Exception {
 		driver.get("http://localhost:8888/phormer331/");
+		mutateDOMTree();
 		driver.findElement(By.linkText("SlideShow")).click();
 		mutateDOMTree();
 		assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$"));

@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Wed Jan 15 14:18:36 PST 2014
+ * Generated @ Sat Jan 18 21:11:05 PST 2014
  */
 
 public class GeneratedTestCase42 {
@@ -32,6 +32,7 @@ public class GeneratedTestCase42 {
 	private DOMElement element;
 	private DOMElement parentElement;
 	private ArrayList<DOMElement> childrenElements = new ArrayList<DOMElement>();
+	private String DOM = null;
 
 	boolean getCoverageReport = false;
 
@@ -79,169 +80,20 @@ public class GeneratedTestCase42 {
 			driver.get(url);
 			//From state 0 to state 1
 			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
-			driver.findElement(By.id("login")).clear();
-			driver.findElement(By.id("login")).sendKeys("nainy");
-			driver.findElement(By.id("password")).clear();
-			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("button[type=\"submit\"]"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 1 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
-			driver.findElement(By.linkText("Platform administration")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			//From state 2 to state 71
-			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=71, name=state71}}
-			driver.findElement(By.linkText("Manage course categories")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
-			}
-			//From state 71 to state 72
-			//Eventable{eventType=click, identification=cssSelector img[alt="Edit category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit category, src=/claroline-1.11.7/web/img/edit.png?1232379976}}, source=StateVertexImpl{id=71, name=state71}, target=StateVertexImpl{id=72, name=state72}}
-			driver.findElement(By.cssSelector("img[alt=\"Edit category\"]")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
-			}
-			//From state 72 to state 73
-			//Eventable{eventType=click, identification=cssSelector img[alt="Move down category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Move down category, src=/claroline-1.11.7/web/img/move_down.png?1232379976}}, source=StateVertexImpl{id=72, name=state72}, target=StateVertexImpl{id=73, name=state73}}
-			driver.findElement(By.id("category_code")).clear();
-			driver.findElement(By.id("category_code")).sendKeys("Sci");
-			driver.findElement(By.cssSelector("img[alt=\"Move down category\"]")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogBox boxSuccess\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogMsg msgSuccess\""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.claroDialogBox.boxSuccess"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
-			}
-			//From state 73 to state 74
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=73, name=state73}, target=StateVertexImpl{id=74, name=state74}}
-			driver.findElement(By.linkText("Logout")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"loginBox\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"rightSidebar\"")));
 			childrenElements.clear();
@@ -256,6 +108,226 @@ public class GeneratedTestCase42 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternFullMatch
 			}
+			driver.findElement(By.id("login")).clear();
+			driver.findElement(By.id("login")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Platform administration"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Create a course site"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
+			}
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 131
+			//Eventable{eventType=click, identification=text Send a message to all users, element=Element{node=[A: null], tag=A, text=Send a message to all users, attributes={href=../messaging/sendmessage.php?cmd=rqMessageToAllUsers}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=131, name=state131}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage course categories"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Claroline.net news"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage classes"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Create user"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Configuration"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Edit text zones"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage administrator email notifications"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Modules"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Send a message to all users"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Support forum"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("User list"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Right profile list"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage user desktop"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.linkText("Send a message to all users")).click();
+			//From state 131 to state 132
+			//Eventable{eventType=click, identification=id message_fontselect_open, element=Element{node=[A: null], tag=A, text=▼, attributes={class=mceOpen, href=javascript:;, id=message_fontselect_open, onclick=return false;, onmousedown=return false;, tabindex=-1}}, source=StateVertexImpl{id=131, name=state131}, target=StateVertexImpl{id=132, name=state132}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.id("message_fontselect_open"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.id("message_fontselect_open")).click();
+			//From state 132 to state 133
+			//Eventable{eventType=click, identification=cssSelector #mce_18_aria > span.mceText, element=Element{node=[SPAN: null], tag=SPAN, text=Courier New, attributes={class=mceText, style=font-family:courier new,courier, title=Courier New}}, source=StateVertexImpl{id=132, name=state132}, target=StateVertexImpl{id=133, name=state133}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("#mce_18_aria > span.mceText"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.cssSelector("#mce_18_aria > span.mceText")).click();
+			//From state 133 to state 134
+			//Eventable{eventType=click, identification=cssSelector span.mceIcon.mce_bold, element=Element{node=[SPAN: null], tag=SPAN, text=, attributes={class=mceIcon mce_bold}}, source=StateVertexImpl{id=133, name=state133}, target=StateVertexImpl{id=134, name=state134}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("span.mceIcon.mce_bold"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.cssSelector("span.mceIcon.mce_bold")).click();
+			//From state 134 to state 135
+			//Eventable{eventType=click, identification=cssSelector span.mceIcon.mce_italic, element=Element{node=[SPAN: null], tag=SPAN, text=, attributes={class=mceIcon mce_italic}}, source=StateVertexImpl{id=134, name=state134}, target=StateVertexImpl{id=135, name=state135}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("span.mceIcon.mce_italic"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.cssSelector("span.mceIcon.mce_italic")).click();
+			//From state 135 to state 136
+			//Eventable{eventType=click, identification=name send, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={name=send, type=submit, value=Send}}, source=StateVertexImpl{id=135, name=state135}, target=StateVertexImpl{id=136, name=state136}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.name("send"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.name("send")).click();
+			//From state 136 to state 137
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=136, name=state136}, target=StateVertexImpl{id=137, name=state137}}
+			mutateDOMTree();
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxInfo")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$")); // original assertion
+			if (shouldRunAssertion()){
+			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogBox boxInfo\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogMsg msgInfo\""))));
+			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Logout"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.linkText("Logout")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
@@ -376,17 +448,6 @@ public class GeneratedTestCase42 {
 		return false;
 	}
 
-	private void mutateDOMTree(){
-		// execute JavaScript code to mutate DOM
-		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
-		if (code!= null)
-			((JavascriptExecutor)driver).executeScript(code);
-	}
-
-	private boolean shouldConsiderAddedAssertion(){
-		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldConsiderAddedAssertion();
-	}
-
 	private boolean isAlertPresent() {
 		try {
 			driver.switchTo().alert();
@@ -410,6 +471,62 @@ public class GeneratedTestCase42 {
 			acceptNextAlert = true;
 		}
 	}
+	
+	private boolean shouldRunAssertion(){
+		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldRunAssertionInExtendedSuite();
+	}	
+
+	private void mutateDOMTree(){
+		// execute JavaScript code to mutate DOM
+		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
+		if (code!= null){
+			// saving the DOM before mutation
+			DOM = driver.getPageSource();
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+	private void restoreDOMTree() {
+		// restoring the DOM after mutation in document.body.innerHTML
+		if (DOM!= null){
+			int start = DOM.indexOf("<body");
+			int end = DOM.indexOf("</body");
+			DOM = DOM.substring(start, end);
+			start = DOM.indexOf(">") + 1;
+			DOM = DOM.substring(start);
+			DOM = DOM.replace("/", "\\/");
+			DOM = DOM.replace("\n", "");
+			DOM = DOM.replace("\r", "");
+			DOM = DOM.replace("\"", "\\\"");
+			DOM = DOM.replace("'", "\'");
+			String code = "document.body.innerHTML=\"" + DOM + "\";";
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+	private void verifyTrue(String assertionType, boolean assertionCondition){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyTrue(assertionType, assertionCondition);
+		else
+			assertTrue(assertionCondition);
+	}
+	private void verifyEquals(String assertionType, String s1, String s2){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyEquals(assertionType, s1, s2);
+		else
+			assertEquals(s1, s2);
+	}	
+	private void verifyNotNull(String assertionType, Object o){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyNotNull(assertionType, o);
+		else
+			assertNotNull(o);
+	}	
+	private void verifyNull(String assertionType, Object o){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyNull(assertionType, o);
+		else
+			assertNull(o);
+	}	
+
 
 
 	public class DOMElement {

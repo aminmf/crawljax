@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Wed Jan 15 14:18:36 PST 2014
+ * Generated @ Sat Jan 18 21:11:05 PST 2014
  */
 
 public class GeneratedTestCase26 {
@@ -32,6 +32,7 @@ public class GeneratedTestCase26 {
 	private DOMElement element;
 	private DOMElement parentElement;
 	private ArrayList<DOMElement> childrenElements = new ArrayList<DOMElement>();
+	private String DOM = null;
 
 	boolean getCoverageReport = false;
 
@@ -79,541 +80,20 @@ public class GeneratedTestCase26 {
 			driver.get(url);
 			//From state 0 to state 1
 			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
-			driver.findElement(By.id("login")).clear();
-			driver.findElement(By.id("login")).sendKeys("nainy");
-			driver.findElement(By.id("password")).clear();
-			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("button[type=\"submit\"]"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 1 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
-			driver.findElement(By.linkText("Platform administration")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			if (shouldRunAssertion()){
+			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 			}
-			//From state 2 to state 93
-			//Eventable{eventType=click, identification=text Edit text zones, element=Element{node=[A: null], tag=A, text=Edit text zones, attributes={href=managing/editFile.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=93, name=state93}}
-			driver.findElement(By.linkText("Edit text zones")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 93 to state 94
-			//Eventable{eventType=click, identification=cssSelector img[alt="Preview"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Preview, src=/claroline-1.11.7/web/img/preview.png?1232379976}}, source=StateVertexImpl{id=93, name=state93}, target=StateVertexImpl{id=94, name=state94}}
-			driver.findElement(By.cssSelector("img[alt=\"Preview\"]")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroPage\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"toolTitleBlock\""))));
-			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("H4", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"2\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"spacer\""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 94 to state 96
-			//Eventable{eventType=click, identification=cssSelector img[alt="Edit"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit, src=/claroline-1.11.7/web/img/edit.png?1232379976}}, source=StateVertexImpl{id=94, name=state94}, target=StateVertexImpl{id=96, name=state96}}
-			driver.findElement(By.cssSelector("img[alt=\"Edit\"]")).click();
-			mutateDOMTree();
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 96 to state 97
-			//Eventable{eventType=click, identification=cssSelector input.claroButton, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=claroButton, type=submit, value=Ok}}, source=StateVertexImpl{id=96, name=state96}, target=StateVertexImpl{id=97, name=state97}}
-			driver.findElement(By.cssSelector("input.claroButton")).click();
-			mutateDOMTree();
-			//assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Hello !! Welcome to Clatoline\\.\\. :\\)[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroPage\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"toolTitleBlock\""))));
-			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogBox \""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("H4", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"2\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"spacer\""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
-			}
-			if(shouldConsiderAddedAssertion()){
-			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
-			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
-			childrenElements.clear();
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-			}
-			//From state 97 to state 90
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=97, name=state97}, target=StateVertexImpl{id=90, name=state90}}
-			driver.findElement(By.linkText("Logout")).click();
-			mutateDOMTree();
-			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // original assertion
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"loginBox\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"rightSidebar\"")));
 			childrenElements.clear();
@@ -626,14 +106,212 @@ public class GeneratedTestCase26 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of OriginalAssertedElemet
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternFullMatch
 			}
-			if(shouldConsiderAddedAssertion()){
+			driver.findElement(By.id("login")).clear();
+			driver.findElement(By.id("login")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Platform administration"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Create a course site"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
 			}
-			if(shouldConsiderAddedAssertion()){
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
+			}
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 11
+			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=11, name=state11}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage course categories"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Claroline.net news"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage classes"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Create user"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Configuration"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Edit text zones"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage administrator email notifications"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Modules"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Send a message to all users"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Support forum"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("User list"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Right profile list"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Manage user desktop"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
 			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
 			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			driver.findElement(By.linkText("Manage course categories")).click();
+			//From state 11 to state 12
+			//Eventable{eventType=click, identification=text Create a category, element=Element{node=[A: null], tag=A, text=Create a category, attributes={href=/claroline-1.11.7/claroline/admin/admin_category.php?cmd=rqAdd, style=background-image: url(/claroline-1.11.7/web/img/category_new.png?1315407288); background-repeat: no-repeat; background-position: left center; padding-left: 20px;}}, source=StateVertexImpl{id=11, name=state11}, target=StateVertexImpl{id=12, name=state12}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Create a category"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			driver.findElement(By.linkText("Create a category")).click();
+			//From state 12 to state 13
+			//Eventable{eventType=click, identification=cssSelector input[type="submit"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={type=submit, value=Ok}}, source=StateVertexImpl{id=12, name=state12}, target=StateVertexImpl{id=13, name=state13}}
+			mutateDOMTree();
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("input[type=\"submit\"]"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("FORM"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			driver.findElement(By.id("category_name")).clear();
+			driver.findElement(By.id("category_name")).sendKeys("Software Testing");
+			driver.findElement(By.id("category_code")).clear();
+			String RandValue = "RND-" + new RandomInputValueGenerator().getRandomString(4);
+			driver.findElement(By.id("category_code")).sendKeys(RandValue);
+			driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
+			//From state 13 to state 14
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=14, name=state14}}
+			mutateDOMTree();
+			assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$")); // original assertion
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.linkText("Logout"))); // generated assertion in case of actionable element
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("DIV"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.toolTitleBlock"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("div.claroDialogBox.boxSuccess"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.tagName("TABLE"))); // generated assertion in case of ElementTagMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			assertTrue(isElementPresent(By.cssSelector("table.claroTable.emphaseLine"))); // generated assertion in case of ElementTagAttMatch
+			}
+			if (shouldRunAssertion()){
+			element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellspacing=\"2\"","class=\"claroTable emphaseLine\"","width=\"100%\"")));
+			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+			childrenElements.clear();
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagAttMatch
+			}
+			driver.findElement(By.linkText("Logout")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
@@ -754,17 +432,6 @@ public class GeneratedTestCase26 {
 		return false;
 	}
 
-	private void mutateDOMTree(){
-		// execute JavaScript code to mutate DOM
-		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
-		if (code!= null)
-			((JavascriptExecutor)driver).executeScript(code);
-	}
-
-	private boolean shouldConsiderAddedAssertion(){
-		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldConsiderAddedAssertion();
-	}
-
 	private boolean isAlertPresent() {
 		try {
 			driver.switchTo().alert();
@@ -788,6 +455,62 @@ public class GeneratedTestCase26 {
 			acceptNextAlert = true;
 		}
 	}
+	
+	private boolean shouldRunAssertion(){
+		return com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldRunAssertionInExtendedSuite();
+	}	
+
+	private void mutateDOMTree(){
+		// execute JavaScript code to mutate DOM
+		String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode();
+		if (code!= null){
+			// saving the DOM before mutation
+			DOM = driver.getPageSource();
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+	private void restoreDOMTree() {
+		// restoring the DOM after mutation in document.body.innerHTML
+		if (DOM!= null){
+			int start = DOM.indexOf("<body");
+			int end = DOM.indexOf("</body");
+			DOM = DOM.substring(start, end);
+			start = DOM.indexOf(">") + 1;
+			DOM = DOM.substring(start);
+			DOM = DOM.replace("/", "\\/");
+			DOM = DOM.replace("\n", "");
+			DOM = DOM.replace("\r", "");
+			DOM = DOM.replace("\"", "\\\"");
+			DOM = DOM.replace("'", "\'");
+			String code = "document.body.innerHTML=\"" + DOM + "\";";
+			((JavascriptExecutor)driver).executeScript(code);
+		}
+	}
+	private void verifyTrue(String assertionType, boolean assertionCondition){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyTrue(assertionType, assertionCondition);
+		else
+			assertTrue(assertionCondition);
+	}
+	private void verifyEquals(String assertionType, String s1, String s2){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyEquals(assertionType, s1, s2);
+		else
+			assertEquals(s1, s2);
+	}	
+	private void verifyNotNull(String assertionType, Object o){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyNotNull(assertionType, o);
+		else
+			assertNotNull(o);
+	}	
+	private void verifyNull(String assertionType, Object o){
+		if (com.crawljax.plugins.testsuiteextension.TestSuiteExtension.shouldIgnoreAssertionFailure())
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.verifyNull(assertionType, o);
+		else
+			assertNull(o);
+	}	
+
 
 
 	public class DOMElement {

@@ -9,6 +9,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import com.crawljax.forms.RandomInputValueGenerator;
+
 public class AddNewCategory {
   private WebDriver driver;
   private String baseUrl;
@@ -18,7 +20,7 @@ public class AddNewCategory {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -38,15 +40,14 @@ public class AddNewCategory {
     driver.findElement(By.id("category_name")).clear();
     driver.findElement(By.id("category_name")).sendKeys("Software Testing");
     driver.findElement(By.id("category_code")).clear();
-    driver.findElement(By.id("category_code")).sendKeys("SWT22");
+    
+	String RandValue = "RND-" + new RandomInputValueGenerator().getRandomString(4);
+	driver.findElement(By.id("category_code")).sendKeys(RandValue);
+
+    //driver.findElement(By.id("category_code")).sendKeys("SWT222");
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
       assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
       //assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
     driver.findElement(By.linkText("Logout")).click();
   }
 

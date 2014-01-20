@@ -18,7 +18,7 @@ public class announcement {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://watersmc.ece.ubc.ca:8888/";
+    baseUrl = "http://localhost:8888/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -33,21 +33,11 @@ public class announcement {
     driver.findElement(By.linkText("Platform administration")).click();
     driver.findElement(By.linkText("Configuration")).click();
     driver.findElement(By.linkText("Announcement")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Use 0 to display all[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Use 0 to display all[\\s\\S]*$"));
     driver.findElement(By.id("label_announcementPortletMaxItems")).clear();
     driver.findElement(By.id("label_announcementPortletMaxItems")).sendKeys("0");
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-    // Warning: verifyTextPresent may require manual changes
-    try {
-      assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Announcement, \\(CLANN\\) are now effective on server[\\s\\S]*$"));
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Announcement, \\(CLANN\\) are now effective on server[\\s\\S]*$"));
     driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
     driver.findElement(By.linkText("Logout")).click();
     }

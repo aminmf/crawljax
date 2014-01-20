@@ -36,7 +36,6 @@ public class MainViewTest {
 	      profile.setPreference("network.proxy.type", 1);
 	      /* use proxy for everything, including localhost */
 	      profile.setPreference("network.proxy.no_proxies_on", "");
-
 	      return profile;
 	}
 	  
@@ -62,8 +61,6 @@ public class MainViewTest {
 		}
 		Thread.sleep(3000);
 		assertEquals("Your rating saved!", driver.findElement(By.cssSelector("span#rateStatus")).getText());
-		driver.findElement(By.xpath("//div[@id='Granny']/div[5]/div[2]/center/a/img")).click();
-		assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*p=2$"));
 	}
 
 	@After

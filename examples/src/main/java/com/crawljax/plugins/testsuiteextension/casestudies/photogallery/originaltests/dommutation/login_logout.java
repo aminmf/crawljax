@@ -25,12 +25,17 @@ public class login_logout {
   @Test
   public void testLoginLogOut() throws Exception {
     driver.get(baseUrl + "/phormer331/");
+	mutateDOMTree();
     driver.findElement(By.linkText("Admin Page")).click();
+	mutateDOMTree();
     driver.findElement(By.id("loginAdminPass")).clear();
     driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
     driver.findElement(By.cssSelector("input.submit")).click();
+	mutateDOMTree();
     driver.findElement(By.linkText("Manage Categories")).click();
+	mutateDOMTree();
     driver.findElement(By.linkText("<< Admin Page")).click();
+	mutateDOMTree();
     driver.findElement(By.linkText("Log Out")).click();
   }
 
