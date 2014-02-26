@@ -1,16 +1,18 @@
-package com.crawljax.plugins.testsuiteextension.casestudies.pizza.originaltests;
+package com.crawljax.plugins.testsuiteextension.casestudies.pizza.originaltests.old;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
+
 import static org.junit.Assert.*;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BaseSeleniumTest {
+public class ToppingSeleniumTest {
 	private WebDriver driver;
 	private String baseUrl;
-	private StringBuffer verificationErrors = new StringBuffer();
 	private String indexPage;
+	private StringBuffer verificationErrors = new StringBuffer();
 
 	@Before
 	public void setUp() throws Exception {
@@ -22,65 +24,65 @@ public class BaseSeleniumTest {
 
 	@Test
 	public void testCRUD() throws Exception {
+
 		// Create
-		driver.get(baseUrl + indexPage);
-		driver.findElement(By.linkText("Base")).click();
+		driver.get(baseUrl + "/pizza_forge/faces/index.xhtml");
+		driver.findElement(By.linkText("Topping")).click();
 		driver.findElement(By.linkText("Create New")).click();
 
 		// name
-		WebElement nameTextBox = driver.findElement(By.id("create:baseBeanBaseName"));
+		WebElement nameTextBox = driver.findElement(By.id("create:toppingBeanToppingName"));
 		nameTextBox.clear();
-		String name = "TestBase";
+		String name = "TestTopping";
 		nameTextBox.sendKeys(name);
 
 		driver.findElement(By.linkText("Save")).click();
 
-		assertTrue(isElementPresent(By.id("search:baseBeanPageItems:0:itemName"))); 
-		driver.findElement(By.id("search:baseBeanPageItems:0:itemName")).click();
+		assertTrue(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")));
+		driver.findElement(By.id("search:toppingBeanPageItems:0:itemName")).click();
 
-		WebElement nameResult = driver.findElement(By.id("baseBeanBaseName"));
-		assertTrue(driver.findElement(By.id("baseBeanBaseName")).getText().matches("TestBase"));
+		WebElement nameResult = driver.findElement(By.id("toppingBeanToppingName"));
+		assertTrue(nameResult.getText().matches(name));
 
 		// Edit
 		driver.get(baseUrl + indexPage);
-		driver.findElement(By.linkText("Base")).click();
+		driver.findElement(By.linkText("Topping")).click();
 
-		driver.findElement(By.id("search:baseBeanPageItems:0:itemName")).click();
+		driver.findElement(By.id("search:toppingBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
 
 		// name
-		nameTextBox = driver.findElement(By.id("create:baseBeanBaseName"));
+		nameTextBox = driver.findElement(By.id("create:toppingBeanToppingName"));
 		nameTextBox.clear();
-		name = "TestBase2";
+		name = "TestTopping2";
 		nameTextBox.sendKeys(name);
 
 		driver.findElement(By.linkText("Save")).click();
 
-		nameResult = driver.findElement(By.id("baseBeanBaseName"));
+		nameResult = driver.findElement(By.id("toppingBeanToppingName"));
 		assertTrue(nameResult.getText().matches(name));
 
 		// Delete
 		driver.get(baseUrl + indexPage);
-		driver.findElement(By.linkText("Base")).click();
+		driver.findElement(By.linkText("Topping")).click();
 
-		assertTrue(isElementPresent(By.id("search:baseBeanPageItems:0:itemName")));
-		driver.findElement(By.id("search:baseBeanPageItems:0:itemName")).click();
+		assertTrue(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")));
+		driver.findElement(By.id("search:toppingBeanPageItems:0:itemName")).click();
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.linkText("Delete")).click();
 
-		driver.findElement(By.linkText("Base")).click(); 
-		//assertFalse(isElementPresent(By.id("search:baseBeanPageItems:0:itemName")));
+		driver.findElement(By.linkText("Topping")).click();
+		assertFalse(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")));
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		driver.quit();    
+		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
 			fail(verificationErrorString);
 		}
 	}
-
 
 	private boolean isElementPresent(By by) {
 		try {

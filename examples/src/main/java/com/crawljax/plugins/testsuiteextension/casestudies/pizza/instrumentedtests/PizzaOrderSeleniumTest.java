@@ -48,7 +48,7 @@ public class PizzaOrderSeleniumTest {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(totalTextBox, "sendKeys", total).sendKeys(total);
 		// delivery date
 		WebElement deliveryDateTextBox = driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("create:pizzaOrderBeanPizzaOrderDeliveryDate")));
-        String deliveryDate = "21.5.2013 19:00:00";
+        String deliveryDate = "Jan 20, 2014 8:33:36 PM";
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(deliveryDateTextBox, "clear", "").clear();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(deliveryDateTextBox, "sendKeys", deliveryDate).sendKeys(deliveryDate);
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.linkText("Save"))), "click", "").click();
@@ -70,8 +70,8 @@ public class PizzaOrderSeleniumTest {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.id(\"pizzaOrderBeanPizzaOrderTotal\")).getText().matches(\"1.0\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"))).getText().matches("21.5.2013 19:00:00"));
-        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.id(\"pizzaOrderBeanPizzaOrderDeliveryDate\")).getText().matches(\"21.5.2013 19:00:00\"))");
+        assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"))).getText().matches("Jan 20, 2014 8:33:36 PM"));
+        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.id(\"pizzaOrderBeanPizzaOrderDeliveryDate\")).getText().matches(\"Jan 20, 2014 8:33:36 PM\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         // Edit  
         driver.get(baseUrl + indexPage);
@@ -83,9 +83,10 @@ public class PizzaOrderSeleniumTest {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(nameTextBox, "clear", "").clear();
         String newName = "TestPizzaOrder2";
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(nameTextBox, "sendKeys", newName).sendKeys(newName);
-        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(addressTextBox, "clear", "").clear();
+        
 		// address
 		addressTextBox = driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("create:pizzaOrderBeanPizzaOrderAddress")));
+        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(addressTextBox, "clear", "").clear();
 		String newAddress = "TestAddress2";
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(addressTextBox, "sendKeys", newAddress).sendKeys(newAddress);
 		// total
@@ -96,7 +97,7 @@ public class PizzaOrderSeleniumTest {
 		// delivery date
 		deliveryDateTextBox = driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("create:pizzaOrderBeanPizzaOrderDeliveryDate")));
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(deliveryDateTextBox, "clear", "").clear();
-        String newDeliveryDate = "22.5.2013 18:30:00";
+        String newDeliveryDate = "Jan 20, 2014 8:33:36 PM";
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(deliveryDateTextBox, "sendKeys", newDeliveryDate).sendKeys(newDeliveryDate);
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.linkText("Save"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
@@ -117,8 +118,8 @@ public class PizzaOrderSeleniumTest {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
 
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"))).getText().matches("22.5.2013 18:30:00"));
-        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.id(\"pizzaOrderBeanPizzaOrderDeliveryDate\")).getText().matches(\"22.5.2013 18:30:00\"))");
+        assertTrue(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("pizzaOrderBeanPizzaOrderDeliveryDate"))).getText().matches("Jan 20, 2014 8:33:36 PM"));
+        com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.id(\"pizzaOrderBeanPizzaOrderDeliveryDate\")).getText().matches(\"Jan 20, 2014 8:33:36 PM\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
 
         // Delete  

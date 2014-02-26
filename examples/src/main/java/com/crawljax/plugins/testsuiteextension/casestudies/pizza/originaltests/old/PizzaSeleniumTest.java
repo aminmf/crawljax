@@ -1,4 +1,4 @@
-package com.crawljax.plugins.testsuiteextension.casestudies.pizza.originaltests;
+package com.crawljax.plugins.testsuiteextension.casestudies.pizza.originaltests.old;
 
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -88,7 +88,7 @@ public class PizzaSeleniumTest {
 		driver.findElement(By.linkText("Delete")).click();
 
 		driver.findElement(By.linkText("Pizza")).click();
-		//assertFalse(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")));
+		assertFalse(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")));
 	}
 
 	@After

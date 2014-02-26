@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import org.w3c.dom.Document;
 
 import com.crawljax.util.AssertedElementPattern;
+import com.crawljax.util.ElementFeatures;
 import com.google.common.collect.ImmutableList;
 
 /**
@@ -59,7 +60,9 @@ public interface StateVertex extends Serializable {
 	
 	//Amin: Assertions on DOM state
 	boolean addAssertedElementPattern(AssertedElementPattern aep);
+	void addElementFeatures(ElementFeatures ef);
 	ArrayList<String> getAssertions();
 	ArrayList<AssertedElementPattern> getAssertedElementPatters();
+	ArrayList<ElementFeatures> getElementFeatures();
 
 }

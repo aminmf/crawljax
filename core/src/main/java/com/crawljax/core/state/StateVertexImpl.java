@@ -8,6 +8,7 @@ import org.w3c.dom.Document;
 
 import com.crawljax.util.AssertedElementPattern;
 import com.crawljax.util.DomUtils;
+import com.crawljax.util.ElementFeatures;
 import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Objects;
 import com.google.common.collect.ImmutableList;
@@ -31,6 +32,8 @@ class StateVertexImpl implements StateVertex {
 	
 	//Amin: Assertions on DOM state
 	private ArrayList<AssertedElementPattern> assertedElementPatterns = new ArrayList<AssertedElementPattern>();
+	private ArrayList<ElementFeatures> elementFeatures = new ArrayList<ElementFeatures>();
+	
 
 	/**
 	 * Creates a current state without an url and the stripped dom equals the dom.
@@ -164,5 +167,20 @@ class StateVertexImpl implements StateVertex {
 			assertions.add(aep.getAssertion());
 		return assertions;
 	}
+
+	@Override
+	//Amin
+	public void addElementFeatures(ElementFeatures ef) {
+		if(ef==null){
+			System.out.println("ElementFeatures is null!!");
+			return;
+		}
+		elementFeatures.add(ef);
+	}
 	
+	@Override
+	//Amin
+	public ArrayList<ElementFeatures> getElementFeatures() {
+		return elementFeatures;
+	}
 }

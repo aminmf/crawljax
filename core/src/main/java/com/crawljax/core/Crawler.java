@@ -15,10 +15,8 @@ import java.util.regex.Pattern;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.*;
@@ -47,7 +45,6 @@ import com.crawljax.oraclecomparator.StateComparator;
 import com.crawljax.util.DomUtils;
 import com.crawljax.util.ElementResolver;
 import com.crawljax.util.UrlUtils;
-import com.crawljax.util.XPathHelper;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
@@ -401,9 +398,13 @@ public class Crawler {
 		}
 	}
 
+
+
+
 	// Amin: This should be a public so that it can be called from plugins
 	public void inspectNewStateForInitailPaths(Eventable event) {
 		StateVertex newState = stateMachine.newStateFor(browser);
+
 		/*
 		 * Amin: Execute the OnFireEventSucceededPlugins. This can be used to get code coverage after each event execution
 		 *       Code coverage was previously calculated using onNewState plugin but shoudld be done after successful event execution.

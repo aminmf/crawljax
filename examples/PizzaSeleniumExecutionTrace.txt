@@ -1,0 +1,351 @@
+TestSuiteBegin
+NewTestCase BaseSeleniumTest.java
+By.linkText: Base
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Base]
+click 
+By.linkText: Create New
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Create New]
+click 
+By.id: create:baseBeanBaseName
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: create:baseBeanBaseName]
+clear 
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: create:baseBeanBaseName]
+sendKeys TestBase
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Save]
+click 
+assertionModeOn
+By.id: search:baseBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:baseBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:baseBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: search:baseBeanPageItems:0:itemName]
+click 
+assertionModeOn
+By.id: baseBeanBaseName
+assertion assertTrue(driver.findElement(By.id("baseBeanBaseName")).getText().matches("TestBase"))
+assertionModeOff
+reset
+By.linkText: Base
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Base]
+click 
+By.id: search:baseBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: search:baseBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Edit]
+click 
+By.id: create:baseBeanBaseName
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: create:baseBeanBaseName]
+clear 
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: create:baseBeanBaseName]
+sendKeys TestBase2
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Save]
+click 
+assertionModeOn
+By.id: baseBeanBaseName
+assertion assertTrue(driver.findElement(By.id("baseBeanBaseName")).getText().matches("TestBase2"))
+assertionModeOff
+reset
+By.linkText: Base
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Base]
+click 
+assertionModeOn
+By.id: search:baseBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:baseBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:baseBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> id: search:baseBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Edit]
+click 
+By.linkText: Delete
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Delete]
+click 
+By.linkText: Base
+[[FirefoxDriver: firefox on MAC (4633708d-72c6-8243-8b25-2efb9d55b660)] -> link text: Base]
+click 
+NewTestCase PizzaOrderSeleniumTest.java
+By.linkText: Pizza Order
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Pizza Order]
+click 
+By.linkText: Create New
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Create New]
+click 
+By.id: create:pizzaOrderBeanPizzaOrderName
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderName]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderName]
+sendKeys TestPizzaOrder
+By.id: create:pizzaOrderBeanPizzaOrderAddress
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderAddress]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderAddress]
+sendKeys TestAddress
+By.id: create:pizzaOrderBeanPizzaOrderTotal
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderTotal]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderTotal]
+sendKeys 1.0
+By.id: create:pizzaOrderBeanPizzaOrderDeliveryDate
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderDeliveryDate]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderDeliveryDate]
+sendKeys Jan 20, 2014 8:33:36 PM
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Save]
+click 
+assertionModeOn
+By.id: search:pizzaOrderBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:pizzaOrderBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:pizzaOrderBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: search:pizzaOrderBeanPageItems:0:itemName]
+click 
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderName
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderName")).getText().matches("TestPizzaOrder"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderAddress
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderAddress")).getText().matches("TestAddress"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderTotal
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderTotal")).getText().matches("1.0"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderDeliveryDate
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderDeliveryDate")).getText().matches("Jan 20, 2014 8:33:36 PM"))
+assertionModeOff
+reset
+By.linkText: Pizza Order
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Pizza Order]
+click 
+By.id: search:pizzaOrderBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: search:pizzaOrderBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Edit]
+click 
+By.id: create:pizzaOrderBeanPizzaOrderName
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderName]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderName]
+sendKeys TestPizzaOrder2
+By.id: create:pizzaOrderBeanPizzaOrderAddress
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderAddress]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderAddress]
+sendKeys TestAddress2
+By.id: create:pizzaOrderBeanPizzaOrderTotal
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderTotal]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderTotal]
+sendKeys 2.1
+By.id: create:pizzaOrderBeanPizzaOrderDeliveryDate
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderDeliveryDate]
+clear 
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: create:pizzaOrderBeanPizzaOrderDeliveryDate]
+sendKeys Jan 20, 2014 8:33:36 PM
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Save]
+click 
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderName
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderName")).getText().matches("TestPizzaOrder2"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderAddress
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderAddress")).getText().matches("TestAddress2"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderTotal
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderTotal")).getText().matches("2.1"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaOrderBeanPizzaOrderDeliveryDate
+assertion assertTrue(driver.findElement(By.id("pizzaOrderBeanPizzaOrderDeliveryDate")).getText().matches("Jan 20, 2014 8:33:36 PM"))
+assertionModeOff
+reset
+By.linkText: Pizza Order
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Pizza Order]
+click 
+assertionModeOn
+By.id: search:pizzaOrderBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:pizzaOrderBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:pizzaOrderBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> id: search:pizzaOrderBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Edit]
+click 
+By.linkText: Delete
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Delete]
+click
+By.linkText: Pizza Order
+[[FirefoxDriver: firefox on MAC (6e9f943e-2834-bb4c-a68d-f4b776e5dcfd)] -> link text: Pizza Order]
+click 
+NewTestCase PizzaSeleniumTest.java
+By.linkText: Pizza
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Pizza]
+click 
+By.linkText: Create New
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Create New]
+click 
+By.id: create:pizzaBeanPizzaName
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaName]
+clear 
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaName]
+sendKeys TestPizza
+By.id: create:pizzaBeanPizzaPrice
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaPrice]
+clear 
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaPrice]
+sendKeys 1.0
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Save]
+click 
+assertionModeOn
+By.id: search:pizzaBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:pizzaBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: search:pizzaBeanPageItems:0:itemName]
+click 
+assertionModeOn
+By.id: pizzaBeanPizzaName
+assertion assertTrue(driver.findElement(By.id("pizzaBeanPizzaName")).getText().matches("TestPizza"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaBeanPizzaPrice
+assertion assertTrue(driver.findElement(By.id("pizzaBeanPizzaPrice")).getText().matches("1.0"))
+assertionModeOff
+reset
+By.linkText: Pizza
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Pizza]
+click 
+By.id: search:pizzaBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: search:pizzaBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Edit]
+click 
+By.id: create:pizzaBeanPizzaName
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaName]
+clear 
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaName]
+sendKeys TestPizza2
+By.id: create:pizzaBeanPizzaPrice
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaPrice]
+clear 
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: create:pizzaBeanPizzaPrice]
+sendKeys 2.1
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Save]
+click 
+assertionModeOn
+By.id: pizzaBeanPizzaName
+assertion assertTrue(driver.findElement(By.id("pizzaBeanPizzaName")).getText().matches("TestPizza2"))
+assertionModeOff
+assertionModeOn
+By.id: pizzaBeanPizzaPrice
+assertion assertTrue(driver.findElement(By.id("pizzaBeanPizzaPrice")).getText().matches("2.1"))
+assertionModeOff
+reset
+By.linkText: Pizza
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Pizza]
+click 
+assertionModeOn
+By.id: search:pizzaBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:pizzaBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:pizzaBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> id: search:pizzaBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Edit]
+click 
+By.linkText: Delete
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Delete]
+click 
+By.linkText: Pizza
+[[FirefoxDriver: firefox on MAC (c211b7fe-772c-4442-afde-4083c0499c41)] -> link text: Pizza]
+click 
+NewTestCase ToppingSeleniumTest.java
+By.linkText: Topping
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Topping]
+click 
+By.linkText: Create New
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Create New]
+click 
+By.id: create:toppingBeanToppingName
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: create:toppingBeanToppingName]
+clear 
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: create:toppingBeanToppingName]
+sendKeys TestTopping
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Save]
+click 
+assertionModeOn
+By.id: search:toppingBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:toppingBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: search:toppingBeanPageItems:0:itemName]
+click 
+assertionModeOn
+assertion assertTrue(driver.findElement(By.id("toppingBeanToppingName")).getText().matches("TestTopping"))
+assertionModeOff
+reset
+By.linkText: Topping
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Topping]
+click 
+By.id: search:toppingBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: search:toppingBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Edit]
+click 
+By.id: create:toppingBeanToppingName
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: create:toppingBeanToppingName]
+clear 
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: create:toppingBeanToppingName]
+sendKeys TestTopping2
+By.linkText: Save
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Save]
+click 
+assertionModeOn
+By.id: toppingBeanToppingName
+assertion assertTrue(driver.findElement(By.id("toppingBeanToppingName")).getText().matches("TestTopping2"))
+assertionModeOff
+reset
+By.linkText: Topping
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Topping]
+click 
+assertionModeOn
+By.id: search:toppingBeanPageItems:0:itemName
+assertion assertTrue(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")))
+assertionModeOff
+By.id: search:toppingBeanPageItems:0:itemName
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> id: search:toppingBeanPageItems:0:itemName]
+click 
+By.linkText: Edit
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Edit]
+click 
+By.linkText: Delete
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Delete]
+click 
+By.linkText: Topping
+[[FirefoxDriver: firefox on MAC (b03bb743-d94a-7b4a-b87e-c3c657f445ff)] -> link text: Topping]
+click 
+assertionModeOn
+By.id: search:toppingBeanPageItems:0:itemName
+assertion assertFalse(isElementPresent(By.id("search:toppingBeanPageItems:0:itemName")))
+assertionModeOff
+TestSuiteEnd
+
+

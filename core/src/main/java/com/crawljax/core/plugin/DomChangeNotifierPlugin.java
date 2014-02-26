@@ -8,6 +8,7 @@ package com.crawljax.core.plugin;
 
 import com.crawljax.core.CrawlerContext;
 import com.crawljax.core.state.Eventable;
+import com.crawljax.core.state.StateVertex;
 
 public interface DomChangeNotifierPlugin extends Plugin {
 
@@ -25,6 +26,8 @@ public interface DomChangeNotifierPlugin extends Plugin {
 	 *            the state after the event.
 	 * @return true if the state is changed according to the compare method of the oracle.
 	 */
-	boolean isDomChanged(CrawlerContext context, String domBefore, Eventable e, String domAfter);
+	//boolean isDomChanged(CrawlerContext context, String domBefore, Eventable e, String domAfter);
+	//Amin
+	boolean isDomChanged(CrawlerContext context, StateVertex stateBefore, Eventable e, StateVertex stateAfter);
 
 }

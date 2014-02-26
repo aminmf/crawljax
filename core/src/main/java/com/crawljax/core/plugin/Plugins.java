@@ -380,8 +380,10 @@ public class Plugins {
 			        .get(DomChangeNotifierPlugin.class).get(0);
 			LOGGER.debug("Calling plugin {}", domChange);
 			try {
-				return domChange.isDomChanged(context, stateBefore.getDom(),
-				        event, stateAfter.getDom());
+				//return domChange.isDomChanged(context, stateBefore.getDom(),
+				//        event, stateAfter.getDom());				
+				// Amin
+				return domChange.isDomChanged(context, stateBefore, event, stateAfter);
 			} catch (RuntimeException ex) {
 				LOGGER.error(
 				        "Could not run {} because of error {}. Now running default DOM comparison",
