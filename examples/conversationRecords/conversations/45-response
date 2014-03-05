@@ -1,0 +1,335 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:54:47 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html
+
+3384
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+	
+<LINK href="files/adminfiles/admin.css" rel="stylesheet" type="text/css">
+	
+<SCRIPT language="javascript" src="files/adminfiles/admin.js" type="text/javascript"></SCRIPT>
+	<SCRIPT language="javascript" src="files/adminfiles/skeleton.js" type="text/javascript"></SCRIPT>
+	<SCRIPT language="javascript" src="files/adminfiles/help.js" type="text/javascript"></SCRIPT>
+	
+<TITLE>Manage Categories of My PhotoGallery</TITLE>
+
+</HEAD>
+<BODY onload="javascript:PrepareBody();">
+
+<CENTER>
+
+	
+<DIV class="Helping" id="helpBoxContainer" style="">
+		
+<TABLE cellpadding="0" cellspacing="0" id="helpBox" ondblclick="HideHelp();" onmouseup="DontHideHelp();">
+			
+<TBODY>
+<TR>
+<TD colspan="2" rowspan="2" style="background-color: #F9F9F9; ">
+				
+<DIV class="fieldCont" style="margin-bottom: -1px;">
+					
+<FIELDSET>
+						
+<LEGEND><SPAN id="helpBoxLegend"></SPAN>
+							&nbsp;<A onclick="HideHelp();">[Dismiss]</A>
+						</LEGEND>
+						
+<DIV id="helpBoxInner"></DIV>
+					
+</FIELDSET>
+				
+</DIV>
+				
+</TD>
+				<TD height="1px" width="10px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD class="dotbgful" height="55px" width="10px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD width="10px">&nbsp;</TD><TD class="dotbgful" colspan="2" width="295px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD width="10px">&nbsp;</TD><TD width="285px">&nbsp;</TD><TD width="10px">&nbsp;</TD>
+</TR>
+		
+</TBODY>
+</TABLE>
+	
+</DIV>
+
+
+
+
+<DIV id="Granny">
+	
+<DIV id="headerBar">
+		
+<SPAN class="VeryTitle">
+			<SPAN class="topHeadAround">&#149;</SPAN>
+			<A href="." style="color: black" target="_blank">&#147;My PhotoGallery&#148; </A>
+		</SPAN>
+		 <A href="?" style="color: snow;">Administration Region</A>
+	
+</DIV>
+		
+<DIV class="shortCuts">
+			
+<A href="?page=photos" title="Manage Photos">			<IMG class="logo" height="20px" src="files/adminfiles/logo_photos.gif" width="20px"></A>
+			<A href="?page=drafts" title="Manage Drafts">			<IMG class="logo" height="20px" src="files/adminfiles/logo_drafts.gif" width="20px"></A>
+			<A href="?page=categories" title="Manage Categories">		<IMG class="logo" height="20px" src="files/adminfiles/logo_categs.gif" width="20px"></A>
+			<A href="?page=stories" title="Manage Stories">			<IMG class="logo" height="20px" src="files/adminfiles/logo_stories.gif" width="20px"></A>
+			<A href="?page=comments" title="Manage Comments">			<IMG class="logo" height="20px" src="files/adminfiles/logo_comments.gif" width="20px"></A>
+			<SPAN>::</SPAN>
+			<A href="?page=basis" title="Adjust Preferences">		<IMG class="logo" height="20px" src="files/adminfiles/logo_preferences.gif" width="20px"></A>
+			<A href="?page=configs" title="Advanced Configurations">	<IMG class="logo" height="20px" src="files/adminfiles/logo_configs.gif" width="20px"></A>
+			<A href="?page=editxml" title="XML Editor">				<IMG class="logo" height="20px" src="files/adminfiles/logo_xml.gif" width="20px"></A>
+			<SPAN>::</SPAN>
+			<A href="?page=logout" title="Log Out">					<IMG class="logo" height="20px" src="files/adminfiles/logo_logout.gif" width="20px"></A>
+		
+</DIV>
+	
+<DIV>
+
+		
+<DIV class="back2mainR">
+<A href="." target="_blank">&nbsp;View Gallery &gt;&gt; </A>
+</DIV>
+		
+<DIV class="back2main">
+<A href="?">&lt;&lt; Admin Page</A>
+</DIV>
+		
+<DIV class="part">
+			
+<DIV class="title">
+				
+<A href="?page=categories" style="color: white">
+					Manage Categories									&nbsp;<SPAN style="color: #EEE">(</SPAN></A><A class="q" onclick="ShowHelp('Container Management', event, 'en');"> ? </A>)
+:
+				
+			</DIV>
+			
+<DIV class="inside">
+				
+<DIV class="method">
+				
+<SPAN class="name">Add a New Category</SPAN>
+<BR>
+					
+<SPAN style="padding-left: 10px;"></SPAN>
+					<SPAN class="dot">&#149;</SPAN>
+						<A href="#add">Add a New Category</A>
+				
+</DIV>
+
+				
+<BR>
+
+				
+<DIV class="method">
+					
+<SPAN class="name">Current Categories List
+					<SPAN class="thumbcntarr" style="color: #666">
+								&nbsp;[<A href="admin.php?page=categories&amp;n=5">5</A>]
+			&nbsp;[<A href="admin.php?page=categories&amp;n=10">10</A>]
+			&nbsp;[<A href="admin.php?page=categories&amp;n=20">20</A>]
+			&nbsp;[<A href="admin.php?page=categories&amp;n=50">50</A>]
+			&nbsp;[<A href="admin.php?page=categories&amp;n=100">100</A>]
+					</SPAN>
+					</SPAN>
+					
+<BR>
+					
+<DIV style="padding-left: 30px">
+							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=1#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=1">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=1" name="1">Default Category</A> <SPAN class="categinfo">[6 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">The default category</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=2#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=2">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=2" name="2">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=3#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=3">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=3" name="3">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=4#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=4">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=4" name="4">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=5#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=5">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=5" name="5">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=6#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=6">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=6" name="6">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=7#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=7">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=7" name="7">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=8#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=8">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=8" name="8">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=9#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=9">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=9" name="9">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>							
+<DIV style="position: relative;">
+<SPAN style="color: #333; position: absolute; top: 0px; right: 80px; "> <A href="?page=categories&amp;cmd=doEdt&amp;cid=10#add">Edit it</A> :: <A href="?page=categories&amp;cmd=doDel&amp;cid=10">Delete / Clear</A></SPAN>
+<SPAN class="dot">&#149;</SPAN><A href="./?c=10" name="10">flowers</A> <SPAN class="categinfo">[0 Photos, Public &amp; Listed]</SPAN> 								
+<DIV class="categdesc">contains photos of all the flowers !</DIV>
+
+</DIV>
+					
+</DIV>
+				
+</DIV>
+				
+<A name="add"></A>
+				
+<DIV class="method" style="margin-top: 25px;">
+					
+<SPAN class="name"><A href="?page=categories" style="color: black">Add a new Category</A></SPAN>
+<BR>
+					
+<CENTER>
+						
+<FORM action="?page=categories&amp;cmd=add" method="post" onsubmit="javascript:return (checkHasPass());">
+						
+<INPUT name="cid" type="hidden" value="11">
+						
+<TABLE cellpadding="5" style="position: relative; text-align: left; " width="70%">
+							
+<TBODY>
+<TR>
+<TD>Name				&nbsp;<SPAN style="color: #789">(<A class="q" onclick="ShowHelp('Container Name', event, 'en');"> ? </A>)</SPAN>
+:</TD>
+								<TD><INPUT autocomplete="off" class="text" id="name" name="name" size="32" type="text" value=""></TD>
+</TR>
+							
+<TR>
+<TD valign="top">Description				&nbsp;<SPAN style="color: #789">(<A class="q" onclick="ShowHelp('Container Description', event, 'en');"> ? </A>)</SPAN>
+:</TD>
+								<TD><TEXTAREA cols="37" name="desc" rows="5"></TEXTAREA></TD>
+</TR>
+							
+							
+<TR>
+<TD>Visibility				&nbsp;<SPAN style="color: #789">(<A class="q" onclick="ShowHelp('Container Visibility', event, 'en');"> ? </A>)</SPAN>
+:</TD>
+								<TD><SPAN style="margin-left: 5px"> </SPAN><LABEL for="listRadioYe"><INPUT checked class="radio" id="listRadioYe" name="list" type="radio" value="list">Listed</LABEL>
+									<SPAN style="margin-left: 42px"></SPAN><LABEL for="listRadioNo"><INPUT class="radio" id="listRadioNo" name="list" type="radio" value="hide">Not Listed</LABEL></TD>
+</TR>
+							
+<TR>
+<TD>Privacy				&nbsp;<SPAN style="color: #789">(<A class="q" onclick="ShowHelp('Container Privacy', event, 'en');"> ? </A>)</SPAN>
+:</TD>
+								<TD>	<SPAN style="margin-left: 5px"> </SPAN><LABEL for="public"><INPUT checked class="radio" id="public" name="passRadio" onclick="javascript:checkPrivacyRow();" type="radio" value="">Public</LABEL>
+										<SPAN style="margin-left: 42px"></SPAN><LABEL for="passworded"><INPUT class="radio" id="passworded" name="passRadio" onclick="javascript:checkPrivacyRow();" type="radio" value="">Passworded</LABEL></TD>
+</TR>
+							
+<TR id="passwordRow" style="display: none">
+<TD>Password:</TD><TD><INPUT autocomplete="off" class="text" id="password" name="pass" size="20" type="text" value=""></TD>
+</TR>
+							
+<TR>
+<TD>Child of				&nbsp;<SPAN style="color: #789">(<A class="q" onclick="ShowHelp('Container Inheritance', event, 'en');"> ? </A>)</SPAN>
+:</TD><TD>
+								<SPAN style="margin-left: 10px"></SPAN>
+								<SELECT class="select" name="sub" type="text">
+									<OPTION selected value="-1">No Inheritance</OPTION>
+																<OPTION value="1">1: Default Category</OPTION>
+								<OPTION value="2">2: flowers</OPTION>
+								<OPTION value="3">3: flowers</OPTION>
+								<OPTION value="4">4: flowers</OPTION>
+								<OPTION value="5">5: flowers</OPTION>
+								<OPTION value="6">6: flowers</OPTION>
+								<OPTION value="7">7: flowers</OPTION>
+								<OPTION value="8">8: flowers</OPTION>
+								<OPTION value="9">9: flowers</OPTION>
+								<OPTION value="10">10: flowers</OPTION>
+								</SELECT></TD>
+</TR>
+							
+<TR>
+<TD colspan="2" style="text-align: center"> </TD>
+</TR>
+							
+<TR>
+<TD colspan="2" style="text-align: center">
+								<INPUT class="submit" type="submit" value="&nbsp;&nbsp;&nbsp;Add Category&nbsp;&nbsp;&nbsp;">
+								<SPAN style="padding-left: 20px;"></SPAN>
+								<INPUT class="reset" type="Reset" value="&nbsp;&nbsp;&nbsp;Reset Changes&nbsp;&nbsp;&nbsp;">
+							</TD>
+</TR>
+						
+</TBODY>
+</TABLE>
+						
+</FORM>
+					
+</CENTER>
+				
+</DIV>
+			
+</DIV>
+		
+</DIV>
+
+	
+<DIV class="footnote">
+		
+<A href=".">This PhotoGallery</A> is powered by <A href="http://p.horm.org/er">Phormer</A>, <BR>
+		a simple <A href="http://php.net">PHP</A> Photo Gallery Manager, under
+		<A href="http://gnu.org/licenses/gpl.txt">GPL</A>.
+	</DIV>
+
+</DIV> <!-- Granny -->
+
+<!-- Created in 0.005 seconds -->
+
+
+</DIV>
+</CENTER>
+</BODY>
+</HTML>
+
+0
+

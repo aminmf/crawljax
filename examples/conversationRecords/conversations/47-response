@@ -1,0 +1,202 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:55:01 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Content-length: 6038
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+	
+<LINK href="files/adminfiles/admin.css" rel="stylesheet" type="text/css">
+	
+<SCRIPT language="javascript" src="files/adminfiles/admin.js" type="text/javascript"></SCRIPT>
+	<SCRIPT language="javascript" src="files/adminfiles/skeleton.js" type="text/javascript"></SCRIPT>
+	<SCRIPT language="javascript" src="files/adminfiles/help.js" type="text/javascript"></SCRIPT>
+	
+<TITLE>Manage Categories of My PhotoGallery</TITLE>
+
+</HEAD>
+<BODY onload="javascript:PrepareBody();">
+
+<CENTER>
+
+	
+<DIV class="Helping" id="helpBoxContainer" style="">
+		
+<TABLE cellpadding="0" cellspacing="0" id="helpBox" ondblclick="HideHelp();" onmouseup="DontHideHelp();">
+			
+<TBODY>
+<TR>
+<TD colspan="2" rowspan="2" style="background-color: #F9F9F9; ">
+				
+<DIV class="fieldCont" style="margin-bottom: -1px;">
+					
+<FIELDSET>
+						
+<LEGEND><SPAN id="helpBoxLegend"></SPAN>
+							&nbsp;<A onclick="HideHelp();">[Dismiss]</A>
+						</LEGEND>
+						
+<DIV id="helpBoxInner"></DIV>
+					
+</FIELDSET>
+				
+</DIV>
+				
+</TD>
+				<TD height="1px" width="10px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD class="dotbgful" height="55px" width="10px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD width="10px">&nbsp;</TD><TD class="dotbgful" colspan="2" width="295px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD width="10px">&nbsp;</TD><TD width="285px">&nbsp;</TD><TD width="10px">&nbsp;</TD>
+</TR>
+		
+</TBODY>
+</TABLE>
+	
+</DIV>
+
+
+
+
+<DIV id="Granny">
+	
+<DIV id="headerBar">
+		
+<SPAN class="VeryTitle">
+			<SPAN class="topHeadAround">&#149;</SPAN>
+			<A href="." style="color: black" target="_blank">&#147;My PhotoGallery&#148; </A>
+		</SPAN>
+		 <A href="?" style="color: snow;">Administration Region</A>
+	
+</DIV>
+		
+<DIV class="shortCuts">
+			
+<A href="?page=photos" title="Manage Photos">			<IMG class="logo" height="20px" src="files/adminfiles/logo_photos.gif" width="20px"></A>
+			<A href="?page=drafts" title="Manage Drafts">			<IMG class="logo" height="20px" src="files/adminfiles/logo_drafts.gif" width="20px"></A>
+			<A href="?page=categories" title="Manage Categories">		<IMG class="logo" height="20px" src="files/adminfiles/logo_categs.gif" width="20px"></A>
+			<A href="?page=stories" title="Manage Stories">			<IMG class="logo" height="20px" src="files/adminfiles/logo_stories.gif" width="20px"></A>
+			<A href="?page=comments" title="Manage Comments">			<IMG class="logo" height="20px" src="files/adminfiles/logo_comments.gif" width="20px"></A>
+			<SPAN>::</SPAN>
+			<A href="?page=basis" title="Adjust Preferences">		<IMG class="logo" height="20px" src="files/adminfiles/logo_preferences.gif" width="20px"></A>
+			<A href="?page=configs" title="Advanced Configurations">	<IMG class="logo" height="20px" src="files/adminfiles/logo_configs.gif" width="20px"></A>
+			<A href="?page=editxml" title="XML Editor">				<IMG class="logo" height="20px" src="files/adminfiles/logo_xml.gif" width="20px"></A>
+			<SPAN>::</SPAN>
+			<A href="?page=logout" title="Log Out">					<IMG class="logo" height="20px" src="files/adminfiles/logo_logout.gif" width="20px"></A>
+		
+</DIV>
+	
+<DIV>
+
+		
+<DIV class="back2mainR">
+<A href="." target="_blank">&nbsp;View Gallery &gt;&gt; </A>
+</DIV>
+		
+<DIV class="back2main">
+<A href="?">&lt;&lt; Admin Page</A>
+</DIV>
+		
+<DIV class="part">
+			
+<DIV class="title">
+				
+<A href="?page=categories" style="color: white">
+					Manage Categories									&nbsp;<SPAN style="color: #EEE">(</SPAN></A><A class="q" onclick="ShowHelp('Container Management', event, 'en');"> ? </A>)
+:
+				
+			</DIV>
+			
+<DIV class="inside">
+				
+<DIV class="method">
+					
+<SPAN class="name">Delete <A href=".?c=1">Category Default Category</A> </SPAN>
+<BR>
+					
+<DIV style="padding: 5px 30px 15px">
+						
+<FORM action="?page=categories&amp;cid=1&amp;cmd=del" method="post" onsubmit="javascript:return confirmDelete('Default Category');">
+							
+<SPAN class="dot">&#149;</SPAN>Which action do you wish to do?<BR>
+							
+<TABLE style="margin-left: 20px;" width="100%">
+							
+<TBODY>
+<TR>
+<TD width="25%"><LABEL><INPUT checked class="radio" name="howto" type="radio" value="empty">&nbsp;<B>Clear The Category:</B></LABEL></TD>
+								<TD> Clears Category Default Category of all its own (direct) photos, <B>nothing will be removed</B>.</TD>
+</TR>
+							
+<TR>
+<TD><LABEL><INPUT class="radio" name="howto" type="radio" value="justc">&nbsp;<B>Delete Only Category:</B></LABEL></TD>
+								<TD> Delete Category Default Category but <B>NOT</B> its photos (parent or default Category will inherited them).</TD>
+</TR>
+							
+<TR>
+<TD><LABEL><INPUT class="radio" name="howto" type="radio" value="justin">&nbsp;<B>Delete photos inside:</B></LABEL></TD>
+								<TD> <B style="color: #900">Delete 6 direct photos</B> inside Category Default Category from Phormer, but saves itself.</TD>
+</TR>
+							
+<TR>
+<TD><LABEL><INPUT class="radio" name="howto" type="radio" value="whole">&nbsp;<B>Delete with photos:</B></LABEL></TD>
+								<TD> <B style="color: #900">Delete Category Default Category and its 6 direct photos</B> - a combination of two prior cases!</TD>
+</TR>
+							
+</TBODY>
+</TABLE>
+							
+<BR>
+							
+<INPUT class="submit" type="submit" value="&nbsp;&nbsp;&nbsp;Delete it!&nbsp;&nbsp;&nbsp;">
+							<SPAN style="padding-left: 20px;"></SPAN>
+						
+</FORM>
+						
+<FORM action="?page=categories" method="post">
+							
+<INPUT class="reset" type="submit" value="&nbsp;&nbsp;&nbsp;Oops, get Back!&nbsp;&nbsp;&nbsp;">
+						
+</FORM>
+					
+</DIV>
+				
+</DIV>
+			
+</DIV>
+		
+</DIV>
+
+	
+<DIV class="footnote">
+		
+<A href=".">This PhotoGallery</A> is powered by <A href="http://p.horm.org/er">Phormer</A>, <BR>
+		a simple <A href="http://php.net">PHP</A> Photo Gallery Manager, under
+		<A href="http://gnu.org/licenses/gpl.txt">GPL</A>.
+	</DIV>
+
+</DIV> <!-- Granny -->
+
+<!-- Created in 0.012 seconds -->
+
+
+</DIV>
+</CENTER>
+</BODY>
+</HTML>

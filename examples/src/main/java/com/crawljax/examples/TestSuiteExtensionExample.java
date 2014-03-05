@@ -32,7 +32,7 @@ public final class TestSuiteExtensionExample {
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php";
 	private static final String URL = "http://localhost:8888/phormer331/";
-	//private static final String URL = "http://localhost:8080/pizza_forge/faces/index.xhtml";
+	//private static final String URL = "http://localhost:8888/wolfcms/?/admin";
 	
 
 	/**
@@ -44,7 +44,7 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(300, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(360, TimeUnit.SECONDS);
 		builder.setMaximumDepth(0);
 
 		// click these elements
@@ -89,7 +89,7 @@ public final class TestSuiteExtensionExample {
 		builder.addPlugin(proxyPlugin);
 		// Configure the proxy to use the port 8084 (you can change this of course)
 		builder.setProxyConfig(ProxyConfiguration.manualProxyOn("127.0.0.1", 8084));
-		 */
+		*/
 		
 		// For this version we use only one browser.
 		builder.setBrowserConfig(new BrowserConfiguration(BrowserType.FIREFOX, 1));

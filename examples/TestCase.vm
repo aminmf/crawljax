@@ -252,6 +252,19 @@ public class ${classname} {
 		public HashSet<String> getAttributes() {
 			return attributes;
 		}
-	}	 
+	}
+	
+	private void mutateDOMTree(int stateID){
+	// execute JavaScript code to mutate DOM
+	String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode(stateID);
+		if (code!= null){
+			long RandomlySelectedDOMElementID = (long) ((JavascriptExecutor)driver).executeScript(code);
+			int MutationOperatorCode = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.MutationOperatorCode;
+			int StateToBeMutated = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.StateToBeMutated;	
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.SelectedRandomElementInDOM[MutationOperatorCode][StateToBeMutated]
+					= (int) RandomlySelectedDOMElementID;
+		}
+	}
+ 
 
 }

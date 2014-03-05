@@ -1,0 +1,125 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:55:35 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Set-Cookie: phormer_sessid=fhykjzeqsgvdanwhcquceqjyzmgtihno; expires=Fri, 28-Feb-2014 18:56:35 GMT; Max-Age=60
+Content-Length: 5540
+Keep-Alive: timeout=5, max=98
+Connection: Keep-Alive
+Content-Type: text/html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		<link rel="stylesheet" type="text/css" href="css.php?theme=white" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="index.xml" />
+		<script language="javascript" type="text/javascript" src="files/phorm.js"></script>
+		<script lanugage="javascript" type="text/javascript">
+			var DarkenVal = 60		</script>
+		<title>SlideShow :: My PhotoGallery</title>
+	</head>
+	<body>
+	<div class="topPhorm">
+		<span class="headerDot">&#149;&nbsp;</span>
+		<a href=".">My PhotoGallery</a>
+		<div class="topPhormAbout">
+			... contains my photos!		</div>
+	</div>
+	<center><div id="Granny">
+	<div class="partmain" id="slideShow">
+		<div class="titlepart" style="letter-spacing: 2px; padding-bottom: 1em; margin-bottom: 0px;">
+			<span class="leaveReply" style="padding-right: 5px;">[ <a href=".&n=30">Back</a> ]</span>
+			<span class="leaveReply" style="padding-right: 5px;">[ <a id="ss_smaller_link" class="q" onclick="javascript:ss_toggleSmaller();">Smaller Size</a> ]</span>
+
+			<span class="reddot" style="padding: 0px 10px;">&#149;</span>
+			SlideShow of <a href=".?feat=slideshow">"Recent Photos"</a>  :: Slide
+			<span id="ss_n">1</span> of 6			<div id="headSlideshow">
+				<span class="dt">&#147;</span><a
+					id="ss_link1" href="?p=6" style="letter-spacing: 5px;"><span
+					id="ss_title">100_0794</span></a><span
+					class="dt">&#148;</span>
+					<br />
+			</div>
+		</div>
+
+			<div style="margin: 0px auto 5px; width: 90%">
+				<table style="width: 100%"><tr>
+					<td style="text-align: left" width="25%">
+						[ <a class="q" onclick="javascript:ss_prev();">Previous</a> ]
+					</td><td style="text-align: center" width="50%">
+						[ <a class="q" id="ss_playpause_link" onclick="javascript:ss_playpause();">Pause it</a> ]
+						&nbsp; &nbsp;
+						<select class="rate" id="ss_refresh" style="position: relative; top: 6px;">
+							<option value="1000">&nbsp;1 Sec</option>
+							<option value="2000">&nbsp;2 Sec</option>
+							<option value="5000">&nbsp;5 Sec</option>
+							<option value="10000" selected="selected">10 Sec</option>
+							<option value="20000">20 Sec</option>
+							<option value="30000">30 Sec</option>
+							<option value="60000">60 Sec</option>
+						</select>
+					</td><td style="text-align: right" width="25%">
+						[ <a class="q" onclick="javascript:ss_next();">Next</a> ]
+					</td>
+				</tr></table>
+			</div>
+
+
+		<div style="text-align: center; margin: 15px 0px 10px;">
+			<a id="ss_link2" href="?p=6" style="display:inline;">
+				<img id="ss_photo" src="images/000006_rryky_0.jpg" onload="javscript:ss_loaddone();" />
+			</a>
+			<div id="ss_theend" style="display: none; margin: 10em 0em;" class="">
+				<b>This is the end of SlideShow .</b><br /><br />
+			</div>
+			<div class="divClear"></div>
+		</div>
+
+		<div style="margin: 1em auto 5px; width: 90%">
+			<table style="width: 100%"><tr>
+				<td style="text-align: left" width="25%">
+					[ <a class="q"onclick="javascript:ss_prev();">Previous</a> ]
+				</td><td style="text-align: center" width="50%">
+					[ <a class="q" id="ss_playpause_link2" onclick="javascript:ss_playpause();">Pause it</a> ]
+					&nbsp; &nbsp;
+				</td><td style="text-align: right" width="25%">
+					[ <a class="q" onclick="javascript:ss_next();">Next</a> ]
+				</td>
+			</tr></table>
+		</div>
+
+		<br />
+		<div id="ss_date">Friday, Nov 9th o 2012</div><br />
+		<div class="midInfo" id="ss_info">
+			<span id="ss_desc"></span>
+<script language="javascript" type="text/javascript">ss_pid 	= new Array();
+ss_ttl 	= new Array();
+ss_date 	= new Array();
+ss_src 	= new Array();
+ss_desc 	= new Array();
+	 ss_pid [0] = '6'; 	 ss_date[0] = 'Friday, Nov 9th o 2012'; 	 ss_src [0] = 'images/000006_rryky_0.jpg'; 	 ss_ttl [0] = '100_0794'; 	 ss_desc[0] = ''; 
+	 ss_pid [1] = '5'; 	 ss_date[1] = 'Friday, Nov 9th o 2012'; 	 ss_src [1] = 'images/000005_jfaji_0.jpg'; 	 ss_ttl [1] = '100_0772'; 	 ss_desc[1] = ''; 
+	 ss_pid [2] = '4'; 	 ss_date[2] = 'Friday, Nov 9th o 2012'; 	 ss_src [2] = 'images/000004_dzeck_0.jpg'; 	 ss_ttl [2] = '100_0773'; 	 ss_desc[2] = ''; 
+	 ss_pid [3] = '3'; 	 ss_date[3] = 'Friday, Nov 9th o 2012'; 	 ss_src [3] = 'images/000003_ncupw_0.jpg'; 	 ss_ttl [3] = '100_0760'; 	 ss_desc[3] = ''; 
+	 ss_pid [4] = '2'; 	 ss_date[4] = 'Friday, Nov 9th o 2012'; 	 ss_src [4] = 'images/000002_ieqey_0.jpg'; 	 ss_ttl [4] = '100_0759'; 	 ss_desc[4] = ''; 
+	 ss_pid [5] = '1'; 	 ss_date[5] = 'Friday, Nov 9th o 2012'; 	 ss_src [5] = 'images/000001_xbudk_0.jpg'; 	 ss_ttl [5] = '100_0758'; 	 ss_desc[5] = ''; 
+	ss_update();
+	setTimeout("ss_slideshow()", 10000);
+</script>		</div>
+		<div class="end" style="padding-top: 0px"></div>
+		</div>
+	</div>
+	</div>
+</div></center> <!-- Granny -->
+	<div style="clear:both;"></div>
+	<div style="width: 100%;">
+		<div class="footer">
+			<a href=".">This PhotoGallery</a> is powered by <a href="http://p.horm.org/er">Phormer, version 3.31</a>.<br />
+Unless stated otherwise, all photos are taken, edited, and copyright by <a href="mailto:myemail[at]mydomain[dot]com?subject=My PhotoGallery Photos">Me</a>.<br />
+Copying or otherwise using these photos requires the permission of author.		</div>
+	</div>
+<!-- Created in 0.02 seconds -->
+</body>
+</html>

@@ -356,8 +356,12 @@ public class Crawler {
 				        "Element {} not clicked because not all crawl conditions where satisfied",
 				        element);
 			}
+			
+			//Amin: Changed this to force it select from manual-test states first
+			action = null;
 			// We have to check if we are still in the same state.
-			action = candidateActionCache.pollActionOrNull(stateMachine.getCurrentState());
+			// action = candidateActionCache.pollActionOrNull(stateMachine.getCurrentState());
+			
 			interrupted = Thread.interrupted();
 			if (!interrupted && crawlerLeftDomain()) {
 				/*

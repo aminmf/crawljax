@@ -131,7 +131,8 @@ public class CrawlController implements Callable<CrawlSession> {
 			plugins.runPostCrawlingPlugins(crawlSessionProvider.get(), exitReason);
 			LOG.info("Shutdown process complete");
 			return;
-		}
+		}else
+			System.out.println("Started crawling to get the extended SFG...");
 		
 		try {
 			exitReason = exitNotifier.awaitTermination();

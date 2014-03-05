@@ -33,7 +33,7 @@ public class MainViewTest {
 		WebElement select = driver.findElement(By.id("rateSelect"));
 		int rating = Integer.parseInt(select.getAttribute("value"));
 		int nextRating = rating % 5 + 2;
-		System.out.println(nextRating);
+		//System.out.println(nextRating);
 		String cssSelector = "#rateSelect > option:nth-child(" + Integer.toString(nextRating) + ")";
 		driver.findElement(By.cssSelector(cssSelector)).click();
 		//assertEquals("Saving your rate", driver.findElement(By.cssSelector("#rateStatus")).getText());

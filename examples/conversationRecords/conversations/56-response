@@ -1,0 +1,244 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:55:19 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Set-Cookie: phormer_sessid=fhykjzeqsgvdanwhcquceqjyzmgtihno; expires=Fri, 28-Feb-2014 18:56:19 GMT; Max-Age=60
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html
+
+2a7d
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		<link rel="stylesheet" type="text/css" href="css.php?theme=white" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="index.xml" />
+		<script language="javascript" type="text/javascript" src="files/phorm.js"></script>
+		<script lanugage="javascript" type="text/javascript">
+			var DarkenVal = 60		</script>
+		<title>"Default Story" Story of My PhotoGallery</title>
+	</head>
+	<body onload="prepareBody();">
+	<div class="topPhorm">
+		<span class="headerDot">&#149;&nbsp;</span>
+		<a href=".">My PhotoGallery</a>
+		<div class="topPhormAbout">
+			... contains my photos!		</div>
+	</div>
+	<center><div id="Granny">
+	<div id="sidecol">
+		<div id="sidecolinner">
+				<div class="part">
+		<div class="titlepart">
+			<span class="reddot">&#149;</span>
+<a href=".">Categories</a></div>
+		<div class="submenu">
+		<div class="item">
+			<span class="categeach"><a href=".?c=1" title="The default category "><span class="dot">&#149;</span>Default Category<span class="categinfo">[6]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=9" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=8" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=10" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=11" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=7" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=5" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=2" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=3" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=4" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?c=6" title="contains photos of all the flowers ! "><span class="dot">&#149;</span>flowers<span class="categinfo">[0]</span> </a></span>
+		</div>
+		</div>
+	</div>
+	<div class="part">
+		<div class="titlepart">
+			<span class="reddot">&#149;</span>
+<a href=".?mode=stories">Stories</a></div>
+		<div class="submenu">
+		<div class="item">
+			<span class="categeach"><a href=".?s=5" title="Greenery !! [2014/02/28]"><span class="dot">&#149;</span>Photos<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?s=4" title="Greenery !! [2014/02/28]"><span class="dot">&#149;</span>Photos<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?s=3" title="Greenery !! [2014/02/28]"><span class="dot">&#149;</span>Photos<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?s=2" title="Greenery !! [2014/01/16]"><span class="dot">&#149;</span>Photos<span class="categinfo">[0]</span> </a></span>
+		</div>
+		<div class="item">
+			<span class="categeach"><a href=".?s=1" title="The default story [2006/04/01]"><span class="reddot" style="font-size: 1em; padding-right: 4px;">&#149;</span>Default Story<span class="categinfo">[6]</span> </a></span>
+		</div>
+		</div>
+	</div>
+			<div class="part">
+			<div class="titlepart"><span class="reddot">&#149;</span>Statistics</div>
+				<div class="submenu">
+					<div class="item"><span class="dot">&#149;</span> Stories: 5</div>
+					<div class="item"><span class="dot">&#149;</span> Photos: 6</div>
+					<div class="item" style="line-height: 130%"><span class="dot">&#149;</span> Last Update: <br />
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 11 months ago</div>
+					<br />
+					<div class="item"><span class="dot">&#149;</span> Visitors Online: 1 </div>
+					<div class="item"><span class="dot">&#149;</span> Today Hits: 41 </div>
+					<div class="item"><span class="dot">&#149;</span> This Month: 41 </div>
+					<div class="item" style="line-height: 130%"><span class="dot">&#149;</span> Photo Hits:
+							<!-- <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
+							11,411</div>
+				</div>
+			</div>
+
+			<div class="part">
+				<div class="submenu">
+				</div>
+				<div class="titlepart"><span class="reddot">&#149;</span>My Links</div>
+				<div class="submenu">
+					<div class="item"><span class="dot">&#149;</span><a target="_blank" href="." title="">My PhotoGallery</a></div>
+				</div>
+				<div class="titlepart"><span class="reddot">&#149;</span>Other Links</div>
+				<div class="submenu">
+					<div class="item"><span class="dot">&#149;</span><a target="_blank" href="http://p.horm.org" title="Another Phormation">Phorm</a></div>
+				</div>
+			</div>
+	<div class="part">
+		<div class="titlepart"><span class="reddot">&#149;</span>Etc</div>
+		<div class="submenu">
+			<div class="item"><span class="dot">&#149;</span>&nbsp;<a href="mailto:myemail[at]mydomain[dot]com?subject=My PhotoGallery Photos">Email</a></div>
+			<div class="item"><span class="dot">&#149;</span>&nbsp;<a href="index.xml" title="RSS Feed">RSS</a></div>
+			<div class="item"><span class="dot">&#149;</span>&nbsp;<a href="admin.php"
+				title="Login to the Administration Region">Admin Page </a></div>
+		</div>
+		<br />
+		<div class="titlepart"><span class="reddot">&#149;</span>Powered by</div>
+		<div class="submenu">
+			<div class="item"><span class="dot">&#149;</span>&nbsp;<a href="http://p.horm.org/er" title="Rephorm Your Phormer Pharm!">Phormer 3.31</a></div>
+		</div>
+
+	</div>
+		</div>
+	</div>
+	<div id="maincol">
+		<div id="maincolinner">
+			<div class="partmain" id="slideShow">
+		<div class="titlepart">
+			<span class="leaveReply">
+				[ <a href=".?feat=slideshow&s=1&n=30">SlideShow</a> ]
+			</span>
+						<span class="reddot">&#149;</span>
+			<span style="font-size: 1.2em;"><a href=".?s=1" class="theTitleA">Default Story</a></span> <span class="small">April 1st 06</span>			<span class="thumbcntarr">
+						&nbsp;[<a href=".?s=1&n=5">5</a>]
+			&nbsp;[<a href=".?s=1&n=10">10</a>]
+			&nbsp;[<a href=".?s=1&n=20">20</a>]
+			&nbsp;[<a href=".?s=1&n=50">50</a>]
+			&nbsp;[<a href=".?s=1&n=100">100</a>]
+			</span>
+		</div>
+				<div class="midInfo">
+			The default story
+<br />
+		</div>
+				<div class="start">
+		</div>
+		<div class="submenu">
+				<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=6"
+		title="100_0794: 91 KB, 2101 hits and rated 0 by 0 person">
+					<img src="images/000006_rryky_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0794</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=5"
+		title="100_0772: 41 KB, 1341 hits and rated 0 by 0 person">
+					<img src="images/000005_jfaji_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0772</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=4"
+		title="100_0773: 62 KB, 1367 hits and rated 0 by 0 person">
+					<img src="images/000004_dzeck_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0773</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=3"
+		title="100_0760: 26 KB, 1480 hits and rated 0 by 0 person">
+					<img src="images/000003_ncupw_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0760</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=2"
+		title="100_0759: 29 KB, 1441 hits and rated 1 by 4 person">
+					<img src="images/000002_ieqey_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0759</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=1"
+		title="100_0758: 25 KB, 3681 hits and rated 0 by 0 person">
+					<img src="images/000001_xbudk_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0758</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		</div>
+		<div class="end">
+		</div>
+		</div>
+	</div>
+	</div>
+</div></center> <!-- Granny -->
+	<div style="clear:both;"></div>
+	<div style="width: 100%;">
+		<div class="footer">
+			<a href=".">This PhotoGallery</a> is powered by <a href="http://p.horm.org/er">Phormer, version 3.31</a>.<br />
+Unless stated otherwise, all photos are taken, edited, and copyright by <a href="mailto:myemail[at]mydomain[dot]com?subject=My PhotoGallery Photos">Me</a>.<br />
+Copying or otherwise using these photos requires the permission of author.		</div>
+	</div>
+<!-- Created in 0.031 seconds -->
+</body>
+</html>
+
+0
+

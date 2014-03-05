@@ -1,0 +1,192 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:54:42 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Set-Cookie: phormer_passwd=+; expires=Fri, 28-Feb-2014 18:55:42 GMT; Max-Age=60; path=/
+Content-length: 5376
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+	
+<LINK href="files/adminfiles/admin.css" rel="stylesheet" type="text/css">
+	
+<SCRIPT language="javascript" src="files/adminfiles/admin.js" type="text/javascript"></SCRIPT>
+	<SCRIPT language="javascript" src="files/adminfiles/skeleton.js" type="text/javascript"></SCRIPT>
+	<SCRIPT language="javascript" src="files/adminfiles/help.js" type="text/javascript"></SCRIPT>
+	
+<TITLE>Login Page of My PhotoGallery</TITLE>
+
+</HEAD>
+<BODY onblur="javascript:blured=true;" onfocus="javascript:if(blured){try{dg('loginAdminPass').focus();blured=false;}catch(e){}}" onload="javascript:PrepareBody();">
+
+<CENTER>
+
+	
+<DIV class="Helping" id="helpBoxContainer" style="">
+		
+<TABLE cellpadding="0" cellspacing="0" id="helpBox" ondblclick="HideHelp();" onmouseup="DontHideHelp();">
+			
+<TBODY>
+<TR>
+<TD colspan="2" rowspan="2" style="background-color: #F9F9F9; ">
+				
+<DIV class="fieldCont" style="margin-bottom: -1px;">
+					
+<FIELDSET>
+						
+<LEGEND><SPAN id="helpBoxLegend"></SPAN>
+							&nbsp;<A onclick="HideHelp();">[Dismiss]</A>
+						</LEGEND>
+						
+<DIV id="helpBoxInner"></DIV>
+					
+</FIELDSET>
+				
+</DIV>
+				
+</TD>
+				<TD height="1px" width="10px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD class="dotbgful" height="55px" width="10px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD width="10px">&nbsp;</TD><TD class="dotbgful" colspan="2" width="295px">&nbsp;</TD>
+</TR>
+			
+<TR>
+<TD width="10px">&nbsp;</TD><TD width="285px">&nbsp;</TD><TD width="10px">&nbsp;</TD>
+</TR>
+		
+</TBODY>
+</TABLE>
+	
+</DIV>
+
+
+
+
+<DIV id="Granny">
+	
+<DIV id="headerBar">
+		
+<SPAN class="VeryTitle">
+			<SPAN class="topHeadAround">&#149;</SPAN>
+			<A href="." style="color: black" target="_blank">&#147;My PhotoGallery&#148; </A>
+		</SPAN>
+		 <A href="?" style="color: snow;">Administration Region</A>
+	
+</DIV>
+		
+<DIV class="shortCuts">
+			
+<A href="?page=photos" title="Manage Photos">			<IMG class="logo" height="20px" src="files/adminfiles/logo_photos.gif" width="20px"></A>
+			<A href="?page=drafts" title="Manage Drafts">			<IMG class="logo" height="20px" src="files/adminfiles/logo_drafts.gif" width="20px"></A>
+			<A href="?page=categories" title="Manage Categories">		<IMG class="logo" height="20px" src="files/adminfiles/logo_categs.gif" width="20px"></A>
+			<A href="?page=stories" title="Manage Stories">			<IMG class="logo" height="20px" src="files/adminfiles/logo_stories.gif" width="20px"></A>
+			<A href="?page=comments" title="Manage Comments">			<IMG class="logo" height="20px" src="files/adminfiles/logo_comments.gif" width="20px"></A>
+			<SPAN>::</SPAN>
+			<A href="?page=basis" title="Adjust Preferences">		<IMG class="logo" height="20px" src="files/adminfiles/logo_preferences.gif" width="20px"></A>
+			<A href="?page=configs" title="Advanced Configurations">	<IMG class="logo" height="20px" src="files/adminfiles/logo_configs.gif" width="20px"></A>
+			<A href="?page=editxml" title="XML Editor">				<IMG class="logo" height="20px" src="files/adminfiles/logo_xml.gif" width="20px"></A>
+			<SPAN>::</SPAN>
+			<A href="?page=logout" title="Log Out">					<IMG class="logo" height="20px" src="files/adminfiles/logo_logout.gif" width="20px"></A>
+		
+</DIV>
+	
+<DIV>
+
+		
+<DIV class="back2mainR">
+<A href="." target="_blank">&nbsp;View Gallery &gt;&gt; </A>
+</DIV>
+		
+<DIV class="clearer" style="margin-top: 20px;"></DIV>
+
+		
+<DIV class="part">
+			
+<DIV class="title">
+<A href="?" style="color: white">Welcome!</A>
+</DIV>
+			
+<DIV class="inside">
+
+				
+<DIV class="method" style="text-align: left">
+				
+<SPAN class="name"><A href="?" style="color: black">Login to Your Phormer</A></SPAN>
+					
+<FORM action="admin.php" method="post">
+						
+<CENTER>
+														
+<DIV class="note_valid">Feel free to back, anytime you wished!<BR>
+I'm waiting for you to rephorm me, again! ;)<BR>
+PS. Backup caught!<BR>
+
+</DIV>
+<BR>							Administrator's password: <DIV style="margin-bottom: 10px;"></DIV>
+							
+<INPUT class="text" id="loginAdminPass" name="passwd" size="12" style="font-size: 2em; font-family: courier new, tahoma, helvetica, serif; font-weight: bold;" type="password">
+							
+<BR>
+<BR>
+							
+<INPUT class="submit" type="submit" value="&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;">
+						
+</CENTER>
+					
+</FORM>
+				
+</DIV>
+
+				
+<BR>
+<BR>
+
+				
+<DIV class="method" style="text-align: left; background: #E8F0F8">
+				
+<SPAN class="name"><A href="?" style="color: black">Update Your Phormer</A>
+									&nbsp;<SPAN style="color: #789">(<A class="q" onclick="ShowHelp('Update Message', event, 'en');"> ? </A>)</SPAN>
+				</SPAN>
+					
+<DIV style="text-align: center; font-size: 1.0em; margin: 0px 0px 8px; ">
+						
+<SPAN style="color: #060;">Great! You're running last version of <A href="http://p.horm.org/er">Phormer</A>, which is 3.31!</SPAN>					
+</DIV>
+				
+</DIV>
+
+			
+</DIV>
+		
+</DIV>
+
+	
+<DIV class="footnote">
+		
+<A href=".">This PhotoGallery</A> is powered by <A href="http://p.horm.org/er">Phormer</A>, <BR>
+		a simple <A href="http://php.net">PHP</A> Photo Gallery Manager, under
+		<A href="http://gnu.org/licenses/gpl.txt">GPL</A>.
+	</DIV>
+
+</DIV> <!-- Granny -->
+
+<!-- Created in 0.186 seconds -->
+
+
+</DIV>
+</CENTER>
+</BODY>
+</HTML>

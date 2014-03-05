@@ -1,6 +1,7 @@
 package com.crawljax.util;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 
 /**
@@ -11,13 +12,16 @@ import java.io.Serializable;
 public class ElementFeatures implements Serializable{
 
 	private static final long serialVersionUID = 2807808630564748091L;
-	
+
 	private String xpath;
-	private int freshness, textImportance; // 1: true and 0:false
-	private double normalBlockWidth, normalBlockHeight, normalBlockCenterX, normalBlockCenterY, innerHtmlDensity, linkDensity, blockDensity;
+	private int textImportance; // 1: true and 0:false
+	private double normalBlockWidth, normalBlockHeight, normalBlockCenterX, normalBlockCenterY, innerHtmlDensity, linkDensity, blockDensity, normalNumOfChildren;
 	private int classLabel; // 1 = the element is a checked element (training), -1 = invariant element (training), 0 = just added to be used for prediction
 
 	private int count = 0; // this is to keep the frequency (count of appearance of the element)
+
+	private String elementPatternAssertion = null;
+
 
 	public int getCount() {
 		return count;
@@ -33,10 +37,10 @@ public class ElementFeatures implements Serializable{
 			double normalBlockWidth, double normalBlockHeight,
 			double normalBlockCenterX, double normalBlockCenterY,
 			double innerHtmlDensity, double linkDensity, double blockDensity,
+			double normalNumOfChildren,
 			int classLabel) {
 		super();
 		this.xpath = xpath;
-		this.freshness = freshness;
 		this.textImportance = textImportance;
 		this.normalBlockWidth = normalBlockWidth;
 		this.normalBlockHeight = normalBlockHeight;
@@ -45,16 +49,8 @@ public class ElementFeatures implements Serializable{
 		this.innerHtmlDensity = innerHtmlDensity;
 		this.linkDensity = linkDensity;
 		this.blockDensity = blockDensity;
+		this.normalNumOfChildren = normalNumOfChildren;
 		this.classLabel = classLabel;
-	}
-
-
-	public int getFreshness() {
-		return freshness;
-	}
-
-	public void setFreshness(int freshness) {
-		this.freshness = freshness;
 	}
 
 	public int getTextImportance() {
@@ -131,13 +127,15 @@ public class ElementFeatures implements Serializable{
 
 	@Override
 	public String toString() {
-		return "ElementFeatures [xpath=" + xpath + ", freshness=" + freshness + ", textImportance="
+		return "ElementFeatures [xpath=" + xpath + ", textImportance="
 				+ textImportance + ", normalBlockWidth=" + normalBlockWidth
 				+ ", normalBlockHeight=" + normalBlockHeight
 				+ ", normalBlockCenterX=" + normalBlockCenterX
 				+ ", normalBlockCenterY=" + normalBlockCenterY
-				+ ", InnerHtmlDensity=" + innerHtmlDensity + ", linkDensity="
-				+ linkDensity + ", blockDensity=" + blockDensity
+				+ ", InnerHtmlDensity=" + innerHtmlDensity 
+				+ ", linkDensity=" + linkDensity 
+				+ ", blockDensity=" + blockDensity
+				+ ", normalNumOfChildren=" + normalNumOfChildren
 				+ ", classLabel=" + classLabel
 				+ ", count=" + count
 				+ "]";
@@ -152,7 +150,6 @@ public class ElementFeatures implements Serializable{
 		temp = Double.doubleToLongBits(blockDensity);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + classLabel;
-		result = prime * result + freshness;
 		temp = Double.doubleToLongBits(innerHtmlDensity);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(linkDensity);
@@ -164,6 +161,8 @@ public class ElementFeatures implements Serializable{
 		temp = Double.doubleToLongBits(normalBlockHeight);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(normalBlockWidth);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		temp = Double.doubleToLongBits(normalNumOfChildren);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + textImportance;
 		return result;
@@ -184,8 +183,6 @@ public class ElementFeatures implements Serializable{
 			return false;
 		//if (classLabel != other.classLabel)
 		//	return false;
-		//if (freshness != other.freshness)
-		//	return false;
 		if (Double.doubleToLongBits(innerHtmlDensity) != Double
 				.doubleToLongBits(other.innerHtmlDensity))
 			return false;
@@ -204,6 +201,9 @@ public class ElementFeatures implements Serializable{
 		if (Double.doubleToLongBits(normalBlockWidth) != Double
 				.doubleToLongBits(other.normalBlockWidth))
 			return false;
+		if (Double.doubleToLongBits(normalNumOfChildren) != Double
+				.doubleToLongBits(other.normalNumOfChildren))
+			return false;
 		if (textImportance != other.textImportance)
 			return false;
 		return true;
@@ -219,10 +219,10 @@ public class ElementFeatures implements Serializable{
 
 	public double cosineSimilarity(ElementFeatures ef) 
 	{
-		double[] docVector1 = {(double) this.freshness, (double) this.textImportance, this.normalBlockWidth, this.normalBlockHeight,
-				this.normalBlockCenterX, this.normalBlockCenterY, this.innerHtmlDensity, this.linkDensity, this.blockDensity};
-		double[] docVector2 = {(double) ef.freshness, (double) ef.textImportance, ef.normalBlockWidth, ef.normalBlockHeight,
-				ef.normalBlockCenterX, ef.normalBlockCenterY, ef.innerHtmlDensity, ef.linkDensity, ef.blockDensity};
+		double[] docVector1 = {(double) this.textImportance, this.normalBlockWidth, this.normalBlockHeight,
+				this.normalBlockCenterX, this.normalBlockCenterY, this.innerHtmlDensity, this.linkDensity, this.blockDensity, this.normalNumOfChildren};
+		double[] docVector2 = {(double) ef.textImportance, ef.normalBlockWidth, ef.normalBlockHeight,
+				ef.normalBlockCenterX, ef.normalBlockCenterY, ef.innerHtmlDensity, ef.linkDensity, ef.blockDensity, ef.normalNumOfChildren};
 		double dotProduct = 0.0;
 		double magnitude1 = 0.0;
 		double magnitude2 = 0.0;
@@ -250,6 +250,16 @@ public class ElementFeatures implements Serializable{
 	}
 
 
+	public double getNormalNumOfChildren() {
+		return normalNumOfChildren;
+	}
+
+
+	public void setNormalNumOfChildren(double normalNumOfChildren) {
+		this.normalNumOfChildren = normalNumOfChildren;
+	}
+
+
 	public String getXpath() {
 		return xpath;
 	}
@@ -259,5 +269,14 @@ public class ElementFeatures implements Serializable{
 		this.xpath = xpath;
 	}
 
+
+	// Adding elementPatternAssertion for a block DOM element
+	public void addElementPatternAssertion(String elementPatternAssertion) {
+		this.elementPatternAssertion = elementPatternAssertion;
+	}
+
+	public String getElementPatternAssertion() {
+		return elementPatternAssertion;
+	}
 
 }

@@ -3,6 +3,7 @@ package com.crawljax.core.state;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 
 import org.w3c.dom.Document;
 
@@ -32,7 +33,7 @@ class StateVertexImpl implements StateVertex {
 	
 	//Amin: Assertions on DOM state
 	private ArrayList<AssertedElementPattern> assertedElementPatterns = new ArrayList<AssertedElementPattern>();
-	private ArrayList<ElementFeatures> elementFeatures = new ArrayList<ElementFeatures>();
+	private HashSet<ElementFeatures> elementFeatures = new HashSet<ElementFeatures>();
 	
 
 	/**
@@ -180,7 +181,7 @@ class StateVertexImpl implements StateVertex {
 	
 	@Override
 	//Amin
-	public ArrayList<ElementFeatures> getElementFeatures() {
+	public HashSet<ElementFeatures> getElementFeatures() {
 		return elementFeatures;
 	}
 }

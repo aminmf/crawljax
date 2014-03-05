@@ -1,0 +1,581 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:55:42 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Set-Cookie: phormer_sessid=fhykjzeqsgvdanwhcquceqjyzmgtihno; expires=Fri, 28-Feb-2014 18:56:42 GMT; Max-Age=60
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html
+
+36ef
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+<META content="text/html; charset=utf-8" http-equiv="Content-Type">
+		
+<META content="en-us" http-equiv="Content-Language">
+		
+<LINK href="css.php?theme=white" rel="stylesheet" type="text/css">
+		
+<LINK href="index.xml" rel="alternate" title="RSS" type="application/rss+xml">
+		
+<SCRIPT language="javascript" src="files/phorm.js" type="text/javascript"></SCRIPT>
+		<SCRIPT lanugage="javascript" type="text/javascript">var script1_exec_counter = new Array();
+for (var i = 0; i < 3; i++) 
+  if (script1_exec_counter[i] == undefined || script1_exec_counter[i] == null) 
+  script1_exec_counter[i] = 0;
+script1_exec_counter[0]++;
+script1_exec_counter[2]++;
+var DarkenVal = 60;
+script1_exec_counter[1]++;
+</SCRIPT>
+		
+<TITLE>My PhotoGallery</TITLE>
+	
+</HEAD>
+<BODY>
+	
+<DIV class="topPhorm">
+		
+<SPAN class="headerDot">&#149;&nbsp;</SPAN>
+		<A href=".">My PhotoGallery</A>
+		
+<DIV class="topPhormAbout">
+			... contains my photos!		</DIV>
+	
+</DIV>
+	
+<CENTER>
+<DIV id="Granny">
+	
+<DIV id="sidecol">
+		
+<DIV id="sidecolinner">
+				
+<DIV class="part">
+		
+<DIV class="titlepart">
+			
+<SPAN class="reddot">&#149;</SPAN>
+<A href=".">Categories</A>
+</DIV>
+		
+<DIV class="submenu">
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=1" title="The default category "><SPAN class="dot">&#149;</SPAN>Default Category<SPAN class="categinfo">[6]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=9" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=8" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=10" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=11" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=7" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=5" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=2" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=3" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=4" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?c=6" title="contains photos of all the flowers ! "><SPAN class="dot">&#149;</SPAN>flowers<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+</DIV>
+	
+</DIV>
+	
+<DIV class="part">
+		
+<DIV class="titlepart">
+			
+<SPAN class="reddot">&#149;</SPAN>
+<A href=".?mode=stories">Stories</A>
+</DIV>
+		
+<DIV class="submenu">
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?s=5" title="Greenery !! [2014/02/28]"><SPAN class="dot">&#149;</SPAN>Photos<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?s=4" title="Greenery !! [2014/02/28]"><SPAN class="dot">&#149;</SPAN>Photos<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?s=3" title="Greenery !! [2014/02/28]"><SPAN class="dot">&#149;</SPAN>Photos<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?s=2" title="Greenery !! [2014/01/16]"><SPAN class="dot">&#149;</SPAN>Photos<SPAN class="categinfo">[0]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+<DIV class="item">
+			
+<SPAN class="categeach"><A href=".?s=1" title="The default story [2006/04/01]"><SPAN class="dot">&#149;</SPAN>Default Story<SPAN class="categinfo">[6]</SPAN> </A></SPAN>
+		
+</DIV>
+		
+</DIV>
+	
+</DIV>
+			
+<DIV class="part">
+			
+<DIV class="titlepart">
+<SPAN class="reddot">&#149;</SPAN>Statistics</DIV>
+				
+<DIV class="submenu">
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN> Stories: 5</DIV>
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN> Photos: 6</DIV>
+					
+<DIV class="item" style="line-height: 130%">
+<SPAN class="dot">&#149;</SPAN> Last Update: <BR>
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 11 months ago</DIV>
+					
+<BR>
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN> Visitors Online: 1 </DIV>
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN> Today Hits: 46 </DIV>
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN> This Month: 46 </DIV>
+					
+<DIV class="item" style="line-height: 130%">
+<SPAN class="dot">&#149;</SPAN> Photo Hits:
+							<!-- <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
+							11,411</DIV>
+				
+</DIV>
+			
+</DIV>
+
+			
+<DIV class="part">
+				
+<DIV class="submenu">
+				
+</DIV>
+				
+<DIV class="titlepart">
+<SPAN class="reddot">&#149;</SPAN>My Links</DIV>
+				
+<DIV class="submenu">
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN><A href="." target="_blank" title="">My PhotoGallery</A>
+</DIV>
+				
+</DIV>
+				
+<DIV class="titlepart">
+<SPAN class="reddot">&#149;</SPAN>Other Links</DIV>
+				
+<DIV class="submenu">
+					
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN><A href="http://p.horm.org" target="_blank" title="Another Phormation">Phorm</A>
+</DIV>
+				
+</DIV>
+			
+</DIV>
+	
+<DIV class="part">
+		
+<DIV class="titlepart">
+<SPAN class="reddot">&#149;</SPAN>Etc</DIV>
+		
+<DIV class="submenu">
+			
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN>&nbsp;<A href="mailto:myemail[at]mydomain[dot]com?subject=My PhotoGallery Photos">Email</A>
+</DIV>
+			
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN>&nbsp;<A href="index.xml" title="RSS Feed">RSS</A>
+</DIV>
+			
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN>&nbsp;<A href="admin.php" title="Login to the Administration Region">Admin Page </A>
+</DIV>
+		
+</DIV>
+		
+<BR>
+		
+<DIV class="titlepart">
+<SPAN class="reddot">&#149;</SPAN>Powered by</DIV>
+		
+<DIV class="submenu">
+			
+<DIV class="item">
+<SPAN class="dot">&#149;</SPAN>&nbsp;<A href="http://p.horm.org/er" title="Rephorm Your Phormer Pharm!">Phormer 3.31</A>
+</DIV>
+		
+</DIV>
+
+	
+</DIV>
+		
+</DIV>
+	
+</DIV>
+	
+<DIV id="maincol">
+		
+<DIV id="maincolinner">
+			
+<DIV class="partmain">
+		
+<DIV class="titlepart">
+			
+<SPAN class="leaveReply">
+				[ <A href=".?feat=slideshow">SlideShow</A> ]
+			</SPAN>
+
+			<SPAN class="reddot">&#149;</SPAN>Recently Added Photos
+			<SPAN class="thumbcntarr">
+						&nbsp;[<A href=".?rpn=5">5</A>]
+			&nbsp;[<A href=".?rpn=10">10</A>]
+			&nbsp;[<A href=".?rpn=20">20</A>]
+			&nbsp;[<A href=".?rpn=50">50</A>]
+			&nbsp;[<A href=".?rpn=100">100</A>]
+			</SPAN>
+		
+</DIV>
+		
+<DIV class="submenu">
+				
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=6" title="100_0794: 91 KB, 2101 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000006_rryky_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0794</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=5" title="100_0772: 41 KB, 1341 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000005_jfaji_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0772</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=4" title="100_0773: 62 KB, 1367 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000004_dzeck_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0773</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=3" title="100_0760: 26 KB, 1480 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000003_ncupw_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0760</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=2" title="100_0759: 29 KB, 1441 hits and rated 1 by 4 person">
+					<IMG height="75px" src="images/000002_ieqey_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0759</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=1" title="100_0758: 25 KB, 3681 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000001_xbudk_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0758</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+</DIV>
+		
+<DIV class="end">
+		
+</DIV>
+
+	
+<DIV class="partmain">
+		
+<DIV class="titlepart">
+			
+<A name="tr"></A>
+			<SPAN class="reddot">&#149;</SPAN>Recently Visited Photos
+			<SPAN class="thumbcntarr">
+						&nbsp;[<A href=".?trn=5#tr">5</A>]
+			&nbsp;[<A href=".?trn=10#tr">10</A>]
+			&nbsp;[<A href=".?trn=20#tr">20</A>]
+			&nbsp;[<A href=".?trn=50#tr">50</A>]
+			&nbsp;[<A href=".?trn=100#tr">100</A>]
+			</SPAN>
+		
+</DIV>
+		
+<DIV class="submenu">
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=3" title="100_0760: 26 KB, 1480 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000003_ncupw_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">one month ago</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=6" title="100_0794: 91 KB, 2101 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000006_rryky_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">10 months ago</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=5" title="100_0772: 41 KB, 1341 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000005_jfaji_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">10 months ago</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=4" title="100_0773: 62 KB, 1367 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000004_dzeck_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">10 months ago</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=1" title="100_0758: 25 KB, 3681 hits and rated 0 by 0 person">
+					<IMG height="75px" src="images/000001_xbudk_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">10 months ago</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+<DIV class="aThumb" onmouseout="javascript: DarkenIt(this);" onmouseover="javascript: LightenIt(this);" style="-moz-opacity:0.6;">
+			
+<CENTER>
+				
+<A href=".?p=2" title="100_0759: 29 KB, 1441 hits and rated 1 by 4 person">
+					<IMG height="75px" src="images/000002_ieqey_3.jpg" width="75px"><BR>
+					
+<DIV class="thumbNameLine">100_0759</DIV>
+					
+<DIV class="thumbDate">November 9th o&#12; 12</DIV>
+				
+</A>
+			
+</CENTER>
+		
+</DIV>
+		
+</DIV>
+		
+<DIV class="end">
+		
+</DIV>
+	
+</DIV>
+
+		
+</DIV>
+	
+</DIV>
+	
+</DIV>
+
+</DIV>
+</CENTER> <!-- Granny -->
+	
+<DIV style="clear:both;"></DIV>
+	
+<DIV style="width: 100%;">
+		
+<DIV class="footer">
+			
+<A href=".">This PhotoGallery</A> is powered by <A href="http://p.horm.org/er">Phormer, version 3.31</A>.<BR>
+Unless stated otherwise, all photos are taken, edited, and copyright by <A href="mailto:myemail[at]mydomain[dot]com?subject=My PhotoGallery Photos">Me</A>.<BR>
+Copying or otherwise using these photos requires the permission of author.		</DIV>
+	
+</DIV>
+<!-- Created in 0.048 seconds -->
+
+
+</BODY>
+</HTML>
+
+0
+

@@ -3,6 +3,7 @@ package com.crawljax.core.state;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import org.w3c.dom.Document;
 
@@ -63,6 +64,6 @@ public interface StateVertex extends Serializable {
 	void addElementFeatures(ElementFeatures ef);
 	ArrayList<String> getAssertions();
 	ArrayList<AssertedElementPattern> getAssertedElementPatters();
-	ArrayList<ElementFeatures> getElementFeatures();
+	HashSet<ElementFeatures> getElementFeatures();
 
 }

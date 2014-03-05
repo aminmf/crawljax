@@ -88,7 +88,7 @@ public class PluginsWithCrawlerTest {
 			}
 		});
 
-		builder.addPlugin(new DomChangeNotifierPlugin() {
+		/*builder.addPlugin(new DomChangeNotifierPlugin() {
 
 			@Override
 			public boolean isDomChanged(CrawlerContext context, String domBefore, Eventable e,
@@ -99,7 +99,7 @@ public class PluginsWithCrawlerTest {
 
 			}
 
-		});
+		});*/
 
 		builder.addPlugin(new OnBrowserCreatedPlugin() {
 

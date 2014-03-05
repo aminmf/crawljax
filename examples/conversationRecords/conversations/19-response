@@ -1,0 +1,208 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:54:14 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+Last-Modified: Sat, 06 Jan 2007 09:35:14 GMT
+ETag: "449ce2-119e-4265be9d87880"
+Accept-Ranges: bytes
+Content-length: 7419
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/javascript
+
+var skeleton_js_exec_counter = new Array();
+for (var i = 0; i < 85; i++) 
+  if (skeleton_js_exec_counter[i] == undefined || skeleton_js_exec_counter[i] == null) 
+  skeleton_js_exec_counter[i] = 0;
+skeleton_js_exec_counter[0]++;
+var stickToMouse = -1;
+skeleton_js_exec_counter[2]++;
+var wasX, wasY, wasSklW, wasSklH, wasSklT, wasSklL;
+skeleton_js_exec_counter[3]++;
+var theRatio = 1;
+skeleton_js_exec_counter[4]++;
+var dBord = 0;
+skeleton_js_exec_counter[5]++;
+var shiftDown = false;
+function SaveRatio() {
+  skeleton_js_exec_counter[6]++;
+  skeleton_js_exec_counter[8]++;
+  theRatio = parseFloat(dg('skeleton').style.width) / parseFloat(dg('skeleton').style.height);
+  skeleton_js_exec_counter[7]++;
+}
+function MouseDown(x, eve) {
+  skeleton_js_exec_counter[9]++;
+  skeleton_js_exec_counter[11]++;
+  stickToMouse = x;
+  skeleton_js_exec_counter[12]++;
+  wasX = getMyXY(eve, 0);
+  skeleton_js_exec_counter[13]++;
+  wasY = getMyXY(eve, 1);
+  skeleton_js_exec_counter[14]++;
+  wasSklW = parseInt(dg('skeleton').style.width);
+  skeleton_js_exec_counter[15]++;
+  wasSklH = parseInt(dg('skeleton').style.height);
+  skeleton_js_exec_counter[16]++;
+  wasSklT = parseInt(dg('skeleton').style.top);
+  skeleton_js_exec_counter[17]++;
+  wasSklL = parseInt(dg('skeleton').style.left);
+  skeleton_js_exec_counter[10]++;
+}
+function MouseDownTheSkeleton(eve) {
+  skeleton_js_exec_counter[18]++;
+  if (stickToMouse == -1) {
+    skeleton_js_exec_counter[20]++;
+    MouseDown(5, eve);
+  }
+  skeleton_js_exec_counter[19]++;
+}
+function ReleaseMouse() {
+  skeleton_js_exec_counter[21]++;
+  skeleton_js_exec_counter[23]++;
+  stickToMouse = -1;
+  skeleton_js_exec_counter[22]++;
+}
+function ExpandSkl() {
+  skeleton_js_exec_counter[24]++;
+  skeleton_js_exec_counter[26]++;
+  var ImgW = parseInt(dg('thePhoto').style.width);
+  skeleton_js_exec_counter[27]++;
+  var ImgH = parseInt(dg('thePhoto').style.height);
+  skeleton_js_exec_counter[28]++;
+  var ImgWH = Math.min(ImgW, ImgH);
+  skeleton_js_exec_counter[29]++;
+  dg('skeleton').style.top = Math.round((ImgH - ImgWH) / 2) + 'px';
+  skeleton_js_exec_counter[30]++;
+  dg('skeleton').style.left = Math.round((ImgW - ImgWH) / 2) + 'px';
+  if (parseInt(dg('skeleton').style.height) != ImgWH) 
+  {
+    skeleton_js_exec_counter[31]++;
+    dg('skeleton').style.height = ImgWH + 'px';
+    skeleton_js_exec_counter[32]++;
+    dg('skeleton').style.width = ImgWH + 'px';
+  } else {
+    skeleton_js_exec_counter[33]++;
+    dg('skeleton').style.height = dg('thumbPrevCont').style.height;
+    skeleton_js_exec_counter[34]++;
+    dg('skeleton').style.width = dg('thumbPrevCont').style.width;
+  }
+  skeleton_js_exec_counter[35]++;
+  UpdateThumbPrev();
+  skeleton_js_exec_counter[25]++;
+}
+function MouseMoveInside(eve) {
+  skeleton_js_exec_counter[36]++;
+  if (stickToMouse == -1) {
+    skeleton_js_exec_counter[38]++;
+    return;
+  }
+  skeleton_js_exec_counter[39]++;
+  var ImgW = parseInt(dg('thePhoto').style.width);
+  skeleton_js_exec_counter[40]++;
+  var ImgH = parseInt(dg('thePhoto').style.height);
+  skeleton_js_exec_counter[41]++;
+  var SklW = parseInt(dg('skeleton').style.width);
+  skeleton_js_exec_counter[42]++;
+  var SklH = parseInt(dg('skeleton').style.height);
+  skeleton_js_exec_counter[43]++;
+  var SklT = parseInt(dg('skeleton').style.top);
+  skeleton_js_exec_counter[44]++;
+  var SklL = parseInt(dg('skeleton').style.left);
+  skeleton_js_exec_counter[45]++;
+  var dX = getMyXY(eve, 0) - wasX;
+  skeleton_js_exec_counter[46]++;
+  var dY = getMyXY(eve, 1) - wasY;
+  skeleton_js_exec_counter[47]++;
+  var thereY = Math.max(0, Math.min(ImgH - SklH - dBord, wasSklT + dY));
+  skeleton_js_exec_counter[48]++;
+  var thereX = Math.max(0, Math.min(ImgW - SklW - dBord, wasSklL + dX));
+  if (stickToMouse == 5) 
+  {
+    skeleton_js_exec_counter[49]++;
+    dg('skeleton').style.top = thereY + 'px';
+    skeleton_js_exec_counter[50]++;
+    dg('skeleton').style.left = thereX + 'px';
+  } else {
+    skeleton_js_exec_counter[51]++;
+    var SignH = (stickToMouse >= 2) ? -1 : 1;
+    skeleton_js_exec_counter[52]++;
+    var SignW = (stickToMouse % 2) ? -1 : 1;
+    skeleton_js_exec_counter[53]++;
+    var sd = (shiftDown) ? 2 : 1;
+    skeleton_js_exec_counter[54]++;
+    var ValH = Math.min(ImgH - dBord, wasSklH + sd * SignH * (-dY));
+    skeleton_js_exec_counter[55]++;
+    var ValW = Math.min(ImgW - dBord, wasSklW + sd * SignW * (-dX));
+    skeleton_js_exec_counter[56]++;
+    ValH = Math.min(ImgH - dBord, Math.min(ValH, ValW));
+    skeleton_js_exec_counter[57]++;
+    ValW = Math.min(ImgW - dBord, ValH * theRatio);
+    if (shiftDown) {
+      skeleton_js_exec_counter[58]++;
+      SignH = SignW = 1;
+    }
+    skeleton_js_exec_counter[59]++;
+    thereY = Math.max(0, Math.min(ImgH - SklH - dBord, Math.round((wasSklH - ValH) * SignH / sd) + wasSklT));
+    skeleton_js_exec_counter[60]++;
+    thereX = Math.max(0, Math.min(ImgW - SklW - dBord, Math.round((wasSklW - ValW) * SignW / sd) + wasSklL));
+    if (ValH > 0) 
+    {
+      if (SignH == 1) {
+        skeleton_js_exec_counter[61]++;
+        dg('skeleton').style.top = thereY + 'px';
+      }
+      skeleton_js_exec_counter[62]++;
+      dg('skeleton').style.height = ValH + 'px';
+    }
+    if (ValW > 0) 
+    {
+      if (SignW == 1) {
+        skeleton_js_exec_counter[63]++;
+        dg('skeleton').style.left = thereX + 'px';
+      }
+      skeleton_js_exec_counter[64]++;
+      dg('skeleton').style.width = ValW + 'px';
+    }
+  }
+  skeleton_js_exec_counter[65]++;
+  UpdateThumbPrev();
+  skeleton_js_exec_counter[37]++;
+}
+function UpdateThumbPrev() {
+  skeleton_js_exec_counter[66]++;
+  skeleton_js_exec_counter[68]++;
+  dg('sklW').value = parseInt(dg('skeleton').style.width);
+  skeleton_js_exec_counter[69]++;
+  dg('sklH').value = parseInt(dg('skeleton').style.height);
+  skeleton_js_exec_counter[70]++;
+  dg('sklL').value = parseInt(dg('skeleton').style.left);
+  skeleton_js_exec_counter[71]++;
+  dg('sklT').value = parseInt(dg('skeleton').style.top);
+  skeleton_js_exec_counter[72]++;
+  dg('kines_l').style.width = dg('sklL').value + 'px';
+  skeleton_js_exec_counter[73]++;
+  dg('kines_r').style.width = Math.max(0, ImgW - dg('sklL').value - dg('sklW').value - 1) + 'px';
+  skeleton_js_exec_counter[74]++;
+  dg('kines_t').style.left = dg('sklL').value + 'px';
+  skeleton_js_exec_counter[75]++;
+  dg('kines_t').style.height = dg('sklT').value + 'px';
+  skeleton_js_exec_counter[76]++;
+  dg('kines_t').style.width = (1 + parseInt(dg('sklW').value)) + 'px';
+  skeleton_js_exec_counter[77]++;
+  dg('kines_b').style.left = dg('sklL').value + 'px';
+  skeleton_js_exec_counter[78]++;
+  dg('kines_b').style.height = Math.max(0, ImgH - dg('sklT').value - dg('sklH').value - 1) + 'px';
+  skeleton_js_exec_counter[79]++;
+  dg('kines_b').style.width = (1 + parseInt(dg('sklW').value)) + 'px';
+  skeleton_js_exec_counter[80]++;
+  var rr = parseInt(dg('skeleton').style.width) / parseInt(dg('thumbPrevCont').style.width);
+  skeleton_js_exec_counter[81]++;
+  dg('thumbPrev').style.width = (parseInt(dg('thePhoto').style.width) / rr) + 'px';
+  skeleton_js_exec_counter[82]++;
+  dg('thumbPrev').style.height = (parseInt(dg('thePhoto').style.height) / rr) + 'px';
+  skeleton_js_exec_counter[83]++;
+  dg('thumbPrev').style.left = (-parseInt(dg('skeleton').style.left) / rr) + 'px';
+  skeleton_js_exec_counter[84]++;
+  dg('thumbPrev').style.top = (-parseInt(dg('skeleton').style.top) / rr) + 'px';
+  skeleton_js_exec_counter[67]++;
+}
+skeleton_js_exec_counter[1]++;

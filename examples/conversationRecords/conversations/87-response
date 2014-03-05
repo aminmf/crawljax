@@ -1,0 +1,11 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:55:53 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Set-Cookie: rate_2=1; expires=Sat, 28-Feb-2015 18:55:53 GMT; Max-Age=31536000
+Content-Length: 24
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+
+<ajax>Done 1 by 5</ajax>

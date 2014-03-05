@@ -1,0 +1,250 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Feb 2014 18:55:43 GMT
+Server: Apache/2.2.25 (Unix) mod_ssl/2.2.25 OpenSSL/0.9.8y DAV/2 PHP/5.5.3
+X-Powered-By: PHP/5.5.3
+Set-Cookie: phormer_sessid=fhykjzeqsgvdanwhcquceqjyzmgtihno; expires=Fri, 28-Feb-2014 18:56:43 GMT; Max-Age=60
+Keep-Alive: timeout=5, max=98
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: text/html
+
+28cc
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Language" content="en-us" />
+		<link rel="stylesheet" type="text/css" href="css.php?theme=white" />
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="index.xml" />
+		<script language="javascript" type="text/javascript" src="files/phorm.js"></script>
+		<script lanugage="javascript" type="text/javascript">
+			var DarkenVal = 60		</script>
+		<title>"100_0759" of My PhotoGallery</title>
+	</head>
+	<body onload="prepareBody();">
+	<div class="topPhorm">
+		<span class="headerDot">&#149;&nbsp;</span>
+		<a href=".">My PhotoGallery</a>
+		<div class="topPhormAbout">
+			... contains my photos!		</div>
+	</div>
+	<center><div id="Granny">
+	<div class="pvTitle"><span class="pvTitleInfo">[<a target="_top" href="javascript:toggleInfo();" title="Show/Hide additional info and de/centralize the photo">  <span id="hin">Hide&nbsp;</span> info </a>]&nbsp; &nbsp;[<a target="_top" href=".?c=1" title="Navigate to container Category (Default Category)"> Up </a>]</span>
+<span class="dt">&#147;</span> <span class="titleName"><a class="oneImageTitle" title="Refresh this page" href=".?p=2">100_0759</a></span> <span class="dt">&#148;</span>
+</div>
+	<div class="wholePhoto">
+		<div class="photoTheImg" >
+<a title="Click to view original size :: 3664x2442 :: 1244KB" href="images/000002_ieqey_9.jpg"><div id="theImage" style="float: left;" ><img src="images/000002_ieqey_0.jpg" width="640px" height="427px"  alt="100_0759"  />
+</a><div class="divClear" style="width: 300px;"></div></div></div>
+		<div id="photoBoxes">
+		<div class="photoBox">
+<span class="titlePhotoBox">Photo Notes </span><br />No Descripton.</div>
+		<div class="photoBox">
+			<span class="titlePhotoBox">Further Details</span><br />
+			<span class="darkdot">&#149;</span> Date added: Nov 9th 12, 12:46<br />
+		<div class="spc"> </div>
+			<span class="darkdot">&#149;</span> Photo ID: <a target="_top" href=".?p=2">2</a><br />
+			<span class="darkdot">&#149;</span> Category: <a href=".?c=1">Default Category</a><br />
+			<span class="darkdot">&#149;</span> Story: <a href=".?s=1">Default Story</a><br />
+		<div class="spc"> </div>
+			<span class="darkdot">&#149;</span> Other Sizes: <a href="images/000002_ieqey_9.jpg" title="Photo 2 :: 3664x2442 :: 1244KB">Original</a>, 
+<a href="images/000002_ieqey_1.jpg" title="width: 240px">BlogSize</a>
+<br />
+		</div>
+ 		<div class="photoBox" style="line-height: 150%">
+			<span class="titlePhotoBox">Photo Statistics</span><br />
+			<span class="darkdot">&#149;</span> Hits: 1442<br />
+			<span class="darkdot">&#149;</span> Rated <span id="sumRate">1 by 4</span> persons<br />
+				<div>
+					<noscript>
+					<span class="darkdot">&#149;</span> <b>Rating needs javascript</b><br />
+					</noscript>
+					<span class="darkdot">&#149;</span>
+					<span id="rateStatus">
+						Rate now:
+					</span>
+					<span id="indicator" class="dot" style="padding: 0px; color: #454; font-size: 1em;"></span>
+				</div>
+				<span style="margin-left: 7px;"></span>
+				<select name="rate" class="rate" id="rateSelect" onchange="javascript:SaveRating(2, this.value);">
+					<option value="0" selected="selected">Select Your Rate</option>
+					<option value="1">1: Damn it!</option>
+					<option value="2">2: I dislike it!</option>
+					<option value="3">3: Umm...</option>
+					<option value="4">4: Nice at all!</option>
+					<option value="5">5: Excellent!</option>
+				</select>
+			</div>
+			</div>
+			<script language="javascript" type="text/javascript">
+				reToggleInfo();
+			</script>
+		<div class="divClear"></div>
+		</div>
+		<br />
+	<div class="navigation">
+		<div class="title"><span class="darkdot">&#149; </span>Prev.</div>
+					<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=1"
+		title="100_0758: 25 KB, 3681 hits and rated 0 by 0 person">
+					<img src="images/000001_xbudk_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0758</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="bottitle">&nbsp;</div>
+	</div>
+
+	<div class="navigation">
+		<div class="title" style="text-align: center">
+			<span class="darkdot">&#149;</span>
+			Random Neighbours
+			<span class="darkdot">&#149;</span>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=2"
+		title="100_0759: 29 KB, 1442 hits and rated 1 by 4 person">
+					<img src="images/000002_ieqey_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0759</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=3"
+		title="100_0760: 26 KB, 1480 hits and rated 0 by 0 person">
+					<img src="images/000003_ncupw_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0760</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=5"
+		title="100_0772: 41 KB, 1341 hits and rated 0 by 0 person">
+					<img src="images/000005_jfaji_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0772</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=6"
+		title="100_0794: 91 KB, 2101 hits and rated 0 by 0 person">
+					<img src="images/000006_rryky_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0794</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="bottitle">&nbsp;</div>
+	</div>
+
+	<div class="navigation">
+		<div class="title" style="text-align: right">Next<span class="darkdot"> &#149;</span></div>
+					<div class="aThumb" style="-moz-opacity:0.6;" onmouseover="javascript: LightenIt(this);" onmouseout="javascript: DarkenIt(this);">
+			<center>
+				<a href=".?p=3"
+		title="100_0760: 26 KB, 1480 hits and rated 0 by 0 person">
+					<img src="images/000003_ncupw_3.jpg" height="75px" width="75px" /><br />
+					<div class="thumbNameLine">100_0760</div>
+					<div class="thumbDate">November 9th o 12</div>
+				</a>
+			</center>
+		</div>
+		<div class="bottitle">&nbsp;</div>
+	</div>
+	<div class="divClear"></div>
+<a name="cmnts"></a>	<center>
+	<a name="Commenting"></a>
+	<div class="Commenting">
+		<div class="title" style="width: 100%">
+			<span class="leaveReply" style="padding-right: 5px; letter-spacing :0px;">
+				[<a href="#hide" onclick="toggle('allComments', 'contractComments', this);"> Hide all </a> ]
+			</span>
+			<span class="reddot" style="font-size: 14px">&#149;</span>
+			<a href="#Commenting">Comments on this Photo</a>
+		</div>
+		<div id="contractComments" class="bcell" style="display: none; text-align: center">
+			&#133; Comments Contracted &#133;
+		</div>
+		<div id ="allComments" style="display: block;">
+<div class="bcell">No Comment yet.</div>
+		</div>
+		<div class="bottitle">&nbsp;</div>
+		<a name="leaveComment"></a>
+		<div class="title"><span class="reddot">&#149;</span><a href="?p=2"> Leave your own comment</a></div>
+		<div class="bcell">
+			<form action=".?p=2#cmnts" method="post" onsubmit="return checkWV();">
+			<table cellspacing="2" cellpadding="2" width="60%">
+					<tr id="ComNameTR"  style="display: table-row ;">
+						<td width="40%">  Name:   </td>
+						<td width="60%"><input type="text" size="20" name="name" value=""></td>
+					</tr>
+					<tr id="ComEmailTR"  style="display: table-row ;">
+						<td>  Email:  </td>
+						<td><input type="text" size="20" name="email" value=""></td>
+					</tr>
+					<tr id="ComWebTR"  style="display: table-row ;">
+						<td>  Webpage:</td>
+						<td><input type="text" size="20" name="url" value=""></td>
+					</tr>
+					<tr id="ComWVTR"  style="display: table-row ;">
+						<td valign="bottom">
+							Word verification:
+						</td>
+						<td>
+							<script language="javascript" type="text/javascript">
+								md5 = "603429d0508c1f40b7003d8e721b3617";
+							</script>
+							<input id="wvinput" type="text" size="10" name="wvw" autocomplete="off">
+							<img id="wvwimg" src="wv.php?rand=473374845" style="position: relative; top: 4px;" />
+						</td>
+					</tr>
+					<tr id="ComReplyTR" style="display: none;">
+						<td>  Reply to Comment: </td>
+						<td>
+							<span class="leaveReply" style="padding-right: 5px">
+								[<a href="#" id="viewComment"> View That </a>] &nbsp;
+								[<a href="#leaveComment" onclick="javascript:doReply('0');"> New Thread </a>]
+							</span>
+							<input id="cmntReply" type="text" size="4" name="reply" value="">
+						</td>
+					</tr>
+
+					<tr><td colspan="2">
+						<textarea id="cmntTextArea" rows="6" cols="40" type="text" name="txt"></textarea>
+					</td></tr>
+					<tr><td colspan="2" style="text-align: center">
+						<input type="hidden" name="cmd" value="addcmntp"></input>
+						<input type="submit" value=" &nbsp; Submit Comment &nbsp; "></input>
+					</td></tr>
+			</table>
+			</form>
+		</div>
+		<div class="bottitle">&nbsp;</div>
+	</div>
+	</center>
+		</div>
+	</div>
+	</div>
+</div></center> <!-- Granny -->
+	<div style="clear:both;"></div>
+	<div style="width: 100%;">
+		<div class="footer">
+			<a href=".">This PhotoGallery</a> is powered by <a href="http://p.horm.org/er">Phormer, version 3.31</a>.<br />
+Unless stated otherwise, all photos are taken, edited, and copyright by <a href="mailto:myemail[at]mydomain[dot]com?subject=My PhotoGallery Photos">Me</a>.<br />
+Copying or otherwise using these photos requires the permission of author.		</div>
+	</div>
+<!-- Created in 0.045 seconds -->
+</body>
+</html>
+
+0
+
