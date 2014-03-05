@@ -89,8 +89,8 @@ public class GeneratedTestCase4 {
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[1]/SPAN[1]/A[1]")).click();
 			//From state 30 to state 31
 			//Eventable{eventType=click, identification=text Log Out, element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
-			mutateDOMTree(30);
-			driver.findElement(By.linkText("Log Out")).click();
+			//mutateDOMTree(30);
+			//driver.findElement(By.linkText("Log Out")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
