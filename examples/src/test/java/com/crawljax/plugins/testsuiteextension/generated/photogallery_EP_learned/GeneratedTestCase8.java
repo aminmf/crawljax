@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 23:53:39 PST 2014
+ * Generated @ Thu Mar 06 00:52:16 PST 2014
  */
 
 public class GeneratedTestCase8 {
@@ -83,8 +83,8 @@ public class GeneratedTestCase8 {
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
 			driver.findElement(By.linkText("Admin Page")).click();
-			//From state 13 to state 7
-			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=7, name=state7}}
+			//From state 13 to state 2
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=2, name=state2}}
 			mutateDOMTree(13);
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 			parentElement = new DOMElement("CENTER", "", new ArrayList<String>(Arrays.asList("")));
@@ -100,9 +100,9 @@ public class GeneratedTestCase8 {
 			driver.findElement(By.id("loginAdminPass")).clear();
 			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
 			driver.findElement(By.cssSelector("input.submit")).click();
-			//From state 7 to state 29
-			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=7, name=state7}, target=StateVertexImpl{id=29, name=state29}}
-			mutateDOMTree(7);
+			//From state 2 to state 3
+			//Eventable{eventType=click, identification=text Manage Stories, element=Element{node=[A: null], tag=A, text=Manage Stories, attributes={href=?page=stories}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=3, name=state3}}
+			mutateDOMTree(2);
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 			parentElement = new DOMElement("CENTER", "", new ArrayList<String>(Arrays.asList("")));
 			childrenElements.clear();
@@ -116,10 +116,10 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-			driver.findElement(By.linkText("Manage Categories")).click();
-			//From state 29 to state 30
-			//Eventable{eventType=click, identification=text << Admin Page, element=Element{node=[A: null], tag=A, text=<< Admin Page, attributes={href=?}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=30, name=state30}}
-			mutateDOMTree(29);
+			driver.findElement(By.linkText("Manage Stories")).click();
+			//From state 3 to state 4
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Story   }}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=4, name=state4}}
+			mutateDOMTree(3);
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 			parentElement = new DOMElement("CENTER", "", new ArrayList<String>(Arrays.asList("")));
 			childrenElements.clear();
@@ -133,10 +133,15 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-			driver.findElement(By.linkText("<< Admin Page")).click();
-			//From state 30 to state 31
-			//Eventable{eventType=click, identification=text Log Out, element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
-			mutateDOMTree(30);
+			driver.findElement(By.name("desc")).clear();
+			driver.findElement(By.name("desc")).sendKeys("Greenery !!");
+			driver.findElement(By.id("name")).clear();
+			driver.findElement(By.id("name")).sendKeys("Photos");
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 4 to state 41
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[2]/A[1], element=Element{node=[A: null], tag=A, text=Add a New Story, attributes={href=#add}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=41, name=state41}}
+			mutateDOMTree(4);
+			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$")); // original assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 			parentElement = new DOMElement("CENTER", "", new ArrayList<String>(Arrays.asList("")));
 			childrenElements.clear();
@@ -150,7 +155,7 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#comment", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-			driver.findElement(By.linkText("Log Out")).click();
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[2]/A[1]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

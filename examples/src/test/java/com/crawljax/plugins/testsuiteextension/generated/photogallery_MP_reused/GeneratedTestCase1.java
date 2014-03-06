@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 20:32:18 PST 2014
+ * Generated @ Thu Mar 06 01:02:25 PST 2014
  */
 
 public class GeneratedTestCase1 {
@@ -78,16 +78,24 @@ public class GeneratedTestCase1 {
 	public void method1(){
 		try {
 			driver.get(url);
-			//From state 0 to state 37
-			//Eventable{eventType=click, identification=cssSelector div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=100_0759November 9th o 12, attributes={href=.?p=2, title=100_0759: 29 KB, 1442 hits and rated 1 by 5 person}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=37, name=state37}}
+			//From state 0 to state 32
+			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=32, name=state32}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
-			//From state 37 to state 40
-			//Eventable{eventType=click, identification=cssSelector #rateSelect > option:nth-child(2), element=Element{node=[OPTION: null], tag=OPTION, text=1: Damn it!, attributes={value=1}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=40, name=state40}}
-			mutateDOMTree(37);
-			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed()); // original assertion
-			driver.findElement(By.cssSelector("#rateSelect > option:nth-child(2)")).click();
+			driver.findElement(By.linkText("SlideShow")).click();
+			//From state 32 to state 33
+			//Eventable{eventType=click, identification=id ss_playpause_link, element=Element{node=[A: null], tag=A, text=Pause it, attributes={class=q, id=ss_playpause_link, onclick=javascript:ss_playpause();}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=33, name=state33}}
+			mutateDOMTree(32);
+			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
+			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // reused assertion in case of ElementFullMatch
+			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // reused assertion in case of ElementFullMatch
+			driver.findElement(By.id("ss_playpause_link")).click();
+			//From state 33 to state 34
+			//Eventable{eventType=click, identification=text Next, element=Element{node=[A: null], tag=A, text=Next, attributes={class=q, onclick=javascript:ss_next();}}, source=StateVertexImpl{id=33, name=state33}, target=StateVertexImpl{id=34, name=state34}}
+			mutateDOMTree(33);
+			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // original assertion
+			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
+			driver.findElement(By.linkText("Next")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

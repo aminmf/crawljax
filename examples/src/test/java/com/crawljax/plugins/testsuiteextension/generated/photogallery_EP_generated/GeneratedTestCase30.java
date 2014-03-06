@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 23:51:56 PST 2014
+ * Generated @ Thu Mar 06 00:50:13 PST 2014
  */
 
 public class GeneratedTestCase30 {
@@ -168,8 +168,8 @@ public class GeneratedTestCase30 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
 			driver.findElement(By.partialLinkText("Default Category")).click();
-			//From state 24 to state 82
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[4]/DIV[3]/CENTER[1]/A[1], element=Element{node=[A: null], tag=A, text=100_0773November 9th o 12, attributes={href=.?p=4, title=100_0773: 62 KB, 1367 hits and rated 0 by 0 person}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=82, name=state82}}
+			//From state 24 to state 61
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[2], element=Element{node=[A: null], tag=A, text=10, attributes={href=.?c=1&n=10}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=61, name=state61}}
 			mutateDOMTree(24);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"midInfo\"")));
@@ -223,7 +223,7 @@ public class GeneratedTestCase30 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[4]/DIV[3]/CENTER[1]/A[1]")).click();
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[2]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

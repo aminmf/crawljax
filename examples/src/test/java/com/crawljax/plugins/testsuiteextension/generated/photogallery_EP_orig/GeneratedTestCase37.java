@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 23:56:32 PST 2014
+ * Generated @ Thu Mar 06 00:33:04 PST 2014
  */
 
 public class GeneratedTestCase37 {
@@ -78,26 +78,16 @@ public class GeneratedTestCase37 {
 	public void method37(){
 		try {
 			driver.get(url);
-			//From state 0 to state 23
-			//Eventable{eventType=click, identification=text Stories, element=Element{node=[A: null], tag=A, text=Stories, attributes={href=.?mode=stories}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=23, name=state23}}
+			//From state 0 to state 37
+			//Eventable{eventType=click, identification=cssSelector div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=100_0759November 9th o 12, attributes={href=.?p=2, title=100_0759: 29 KB, 1454 hits and rated 1 by 9 person}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=37, name=state37}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.linkText("Stories")).click();
-			//From state 23 to state 24
-			//Eventable{eventType=click, identification=partialText Default Category, element=Element{node=[A: null], tag=A, text=•Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}
-			mutateDOMTree(23);
-			assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$")); // original assertion
-			driver.findElement(By.partialLinkText("Default Category")).click();
-			//From state 24 to state 25
-			//Eventable{eventType=click, identification=partialText Default Story, element=Element{node=[A: null], tag=A, text=•Default Story[6], attributes={href=.?s=1, title=The default story [2006/04/01]}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=25, name=state25}}
-			mutateDOMTree(24);
-			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
-			driver.findElement(By.partialLinkText("Default Story")).click();
-			//From state 25 to state 83
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[3], element=Element{node=[A: null], tag=A, text=20, attributes={href=.?s=1&n=20}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=83, name=state83}}
-			mutateDOMTree(25);
-			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$")); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[3]")).click();
+			driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
+			//From state 37 to state 50
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/SPAN[3]/A[1], element=Element{node=[A: null], tag=A, text=100_0759, attributes={class=oneImageTitle, href=.?p=2, title=Refresh this page}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=50, name=state50}}
+			mutateDOMTree(37);
+			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed()); // original assertion
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/SPAN[3]/A[1]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

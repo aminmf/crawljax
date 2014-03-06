@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 23:51:56 PST 2014
+ * Generated @ Thu Mar 06 00:50:13 PST 2014
  */
 
 public class GeneratedTestCase31 {
@@ -168,8 +168,8 @@ public class GeneratedTestCase31 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
 			driver.findElement(By.partialLinkText("Default Category")).click();
-			//From state 24 to state 63
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[4], element=Element{node=[A: null], tag=A, text=50, attributes={href=.?c=1&n=50}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=63, name=state63}}
+			//From state 24 to state 66
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[3], element=Element{node=[A: null], tag=A, text=20, attributes={href=.?c=1&n=20}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=66, name=state66}}
 			mutateDOMTree(24);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"midInfo\"")));
@@ -223,7 +223,7 @@ public class GeneratedTestCase31 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[4]")).click();
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[3]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

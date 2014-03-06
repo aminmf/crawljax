@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 19:49:14 PST 2014
+ * Generated @ Thu Mar 06 01:05:43 PST 2014
  */
 
 public class GeneratedTestCase4 {
@@ -78,29 +78,34 @@ public class GeneratedTestCase4 {
 	public void method4(){
 		try {
 			driver.get(url);
-			//From state 0 to state 27
-			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=27, name=state27}}
+			//From state 0 to state 13
+			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=13, name=state13}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
 			driver.findElement(By.linkText("Admin Page")).click();
-			//From state 27 to state 14
-			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=27, name=state27}, target=StateVertexImpl{id=14, name=state14}}
-			mutateDOMTree(27);
+			//From state 13 to state 2
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(13);
 			driver.findElement(By.id("loginAdminPass")).clear();
 			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
 			driver.findElement(By.cssSelector("input.submit")).click();
-			//From state 14 to state 29
-			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=14, name=state14}, target=StateVertexImpl{id=29, name=state29}}
-			mutateDOMTree(14);
-			driver.findElement(By.linkText("Manage Categories")).click();
-			//From state 29 to state 30
-			//Eventable{eventType=click, identification=text << Admin Page, element=Element{node=[A: null], tag=A, text=<< Admin Page, attributes={href=?}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=30, name=state30}}
-			mutateDOMTree(29);
-			driver.findElement(By.linkText("<< Admin Page")).click();
-			//From state 30 to state 31
-			//Eventable{eventType=click, identification=text Log Out, element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
-			mutateDOMTree(30);
-			driver.findElement(By.linkText("Log Out")).click();
+			//From state 2 to state 3
+			//Eventable{eventType=click, identification=text Manage Stories, element=Element{node=[A: null], tag=A, text=Manage Stories, attributes={href=?page=stories}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=3, name=state3}}
+			mutateDOMTree(2);
+			driver.findElement(By.linkText("Manage Stories")).click();
+			//From state 3 to state 4
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Story   }}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=4, name=state4}}
+			mutateDOMTree(3);
+			driver.findElement(By.name("desc")).clear();
+			driver.findElement(By.name("desc")).sendKeys("Greenery !!");
+			driver.findElement(By.id("name")).clear();
+			driver.findElement(By.id("name")).sendKeys("Photos");
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 4 to state 5
+			//Eventable{eventType=click, identification=cssSelector a[title="Log Out"], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=logout, title=Log Out}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=5, name=state5}}
+			mutateDOMTree(4);
+			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$")); // original assertion
+			driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

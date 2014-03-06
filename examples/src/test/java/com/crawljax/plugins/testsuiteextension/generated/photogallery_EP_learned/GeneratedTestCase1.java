@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 04 23:53:39 PST 2014
+ * Generated @ Thu Mar 06 00:52:16 PST 2014
  */
 
 public class GeneratedTestCase1 {
@@ -78,11 +78,11 @@ public class GeneratedTestCase1 {
 	public void method1(){
 		try {
 			driver.get(url);
-			//From state 0 to state 66
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=Categories, attributes={href=.}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=66, name=state66}}
+			//From state 0 to state 48
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=My PhotoGallery, attributes={href=.}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=48, name=state48}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1]")).click();
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/A[1]")).click();
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
