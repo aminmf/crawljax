@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 01:02:25 PST 2014
+ * Generated @ Fri Mar 07 15:47:20 PST 2014
  */
 
 public class GeneratedTestCase7 {
@@ -98,6 +98,11 @@ public class GeneratedTestCase7 {
 			mutateDOMTree(25);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$")); // original assertion
 			driver.findElement(By.linkText("SlideShow")).click();
+			//Sink node at state 26
+			mutateDOMTree(26);
+			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
+			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // reused assertion in case of ElementFullMatch
+			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // reused assertion in case of ElementFullMatch
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

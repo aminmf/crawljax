@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 01:02:25 PST 2014
+ * Generated @ Fri Mar 07 15:47:20 PST 2014
  */
 
 public class GeneratedTestCase3 {
@@ -117,6 +117,8 @@ public class GeneratedTestCase3 {
 			mutateDOMTree(21);
 			assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to delete [\\s\\S]*$")); // original assertion
 			driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
+			//Sink node at state 22
+			mutateDOMTree(22);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 00:33:04 PST 2014
+ * Generated @ Fri Mar 07 15:54:46 PST 2014
  */
 
 public class GeneratedTestCase1 {
@@ -83,6 +83,8 @@ public class GeneratedTestCase1 {
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/A[1]")).click();
+			//Sink node at state 48
+			mutateDOMTree(48);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

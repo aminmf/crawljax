@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 10:48:18 PST 2014
+ * Generated @ Fri Mar 07 15:55:38 PST 2014
  */
 
 public class GeneratedTestCase12 {
@@ -87,6 +87,8 @@ public class GeneratedTestCase12 {
 			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=“My PhotoGallery”, attributes={href=., style=color: black, target=_blank}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=56, name=state56}}
 			mutateDOMTree(1);
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[1]/SPAN[1]/A[1]")).click();
+			//Sink node at state 56
+			mutateDOMTree(56);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

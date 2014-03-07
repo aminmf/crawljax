@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 01:05:43 PST 2014
+ * Generated @ Fri Mar 07 15:45:58 PST 2014
  */
 
 public class GeneratedTestCase5 {
@@ -106,6 +106,8 @@ public class GeneratedTestCase5 {
 			mutateDOMTree(4);
 			assertTrue(driver.findElement(By.cssSelector("div.method")).getText().matches("^[\\s\\S]*Story \"Photos\" added succesfully![\\s\\S]*$")); // original assertion
 			driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
+			//Sink node at state 5
+			mutateDOMTree(5);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

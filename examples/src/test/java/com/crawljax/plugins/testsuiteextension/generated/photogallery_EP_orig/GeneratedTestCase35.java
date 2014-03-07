@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 00:33:04 PST 2014
+ * Generated @ Fri Mar 07 15:54:46 PST 2014
  */
 
 public class GeneratedTestCase35 {
@@ -88,6 +88,9 @@ public class GeneratedTestCase35 {
 			mutateDOMTree(37);
 			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed()); // original assertion
 			driver.findElement(By.cssSelector("#rateSelect > option:nth-child(2)")).click();
+			//Sink node at state 40
+			mutateDOMTree(40);
+			assertEquals("Your rating saved!", driver.findElement(By.cssSelector("span#rateStatus")).getText()); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

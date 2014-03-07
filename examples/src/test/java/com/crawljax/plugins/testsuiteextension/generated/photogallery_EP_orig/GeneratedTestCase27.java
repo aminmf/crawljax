@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 00:33:04 PST 2014
+ * Generated @ Fri Mar 07 15:54:46 PST 2014
  */
 
 public class GeneratedTestCase27 {
@@ -103,6 +103,8 @@ public class GeneratedTestCase27 {
 			mutateDOMTree(26);
 			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[2]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/A[1]")).click();
+			//Sink node at state 67
+			mutateDOMTree(67);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

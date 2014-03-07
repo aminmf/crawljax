@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 10:15:30 PST 2014
+ * Generated @ Fri Mar 07 15:57:26 PST 2014
  */
 
 public class GeneratedTestCase40 {
@@ -239,6 +239,8 @@ public class GeneratedTestCase40 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/A[1]")).click();
+			//Sink node at state 65
+			mutateDOMTree(65);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

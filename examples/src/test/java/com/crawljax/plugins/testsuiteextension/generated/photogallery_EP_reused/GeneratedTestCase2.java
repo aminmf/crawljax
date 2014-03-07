@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 10:48:18 PST 2014
+ * Generated @ Fri Mar 07 15:55:38 PST 2014
  */
 
 public class GeneratedTestCase2 {
@@ -90,6 +90,8 @@ public class GeneratedTestCase2 {
 			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // reused assertion in case of ElementFullMatch
 			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // reused assertion in case of ElementFullMatch
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1]")).click();
+			//Sink node at state 60
+			mutateDOMTree(60);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 01:00:55 PST 2014
+ * Generated @ Fri Mar 07 15:48:25 PST 2014
  */
 
 public class GeneratedTestCase6 {
@@ -122,6 +122,10 @@ public class GeneratedTestCase6 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
 			driver.findElement(By.linkText("Admin Page")).click();
+			//Sink node at state 1
+			mutateDOMTree(1);
+			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // generated assertion in case of ElementTagAttMatch
+
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

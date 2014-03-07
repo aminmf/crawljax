@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 01:02:25 PST 2014
+ * Generated @ Fri Mar 07 15:47:20 PST 2014
  */
 
 public class GeneratedTestCase11 {
@@ -101,6 +101,8 @@ public class GeneratedTestCase11 {
 			//Eventable{eventType=click, identification=text Log Out, element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
 			mutateDOMTree(30);
 			driver.findElement(By.linkText("Log Out")).click();
+			//Sink node at state 31
+			mutateDOMTree(31);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

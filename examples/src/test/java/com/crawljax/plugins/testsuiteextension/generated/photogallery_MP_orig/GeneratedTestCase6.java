@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 01:05:43 PST 2014
+ * Generated @ Fri Mar 07 15:45:59 PST 2014
  */
 
 public class GeneratedTestCase6 {
@@ -83,6 +83,8 @@ public class GeneratedTestCase6 {
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
 			driver.findElement(By.linkText("Admin Page")).click();
+			//Sink node at state 1
+			mutateDOMTree(1);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
