@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Mar 06 00:53:25 PST 2014
+ * Generated @ Thu Mar 06 10:13:48 PST 2014
  */
 
 public class GeneratedTestCase3 {
@@ -132,7 +132,7 @@ public class GeneratedTestCase3 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"partmain\"","id=\"slideShow\""))));
 			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"\"","id=\"ss_theend\"","style=\"display: none; margin: 10em 0em;\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"text-align: center; margin: 15px 0px 10px;\"")));
 			childrenElements.clear();
@@ -141,7 +141,7 @@ public class GeneratedTestCase3 {
 			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"partmain\"","id=\"slideShow\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 			childrenElements.clear();
@@ -163,7 +163,7 @@ public class GeneratedTestCase3 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // generated assertion in case of ElementTagAttMatch
 
 			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // reused assertion in case of ElementFullMatch
@@ -220,7 +220,7 @@ public class GeneratedTestCase3 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"\"","id=\"ss_theend\"","style=\"display: none; margin: 10em 0em;\"")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"text-align: center; margin: 15px 0px 10px;\"")));
 			childrenElements.clear();
@@ -229,14 +229,14 @@ public class GeneratedTestCase3 {
 			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("BR", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 			parentElement = new DOMElement("CENTER", "", new ArrayList<String>(Arrays.asList("")));
 			childrenElements.clear();
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"partmain\"","id=\"slideShow\""))));
 			childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("id=\"ss_photo\"","onload=\"javscript:ss_loaddone();\"","src=\"images/000006_rryky_0.jpg\"")));
 			parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=6\"","id=\"ss_link2\"","style=\"display:inline;\"")));
 			childrenElements.clear();
