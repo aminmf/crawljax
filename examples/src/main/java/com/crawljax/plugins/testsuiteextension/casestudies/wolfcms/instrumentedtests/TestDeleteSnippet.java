@@ -28,7 +28,7 @@ public class TestDeleteSnippet {
 
     @Test
     public void testDeleteSnippet() throws Exception {
-        driver.get("http://localhost:8081/wolfcms/?/admin");
+        driver.get("http://localhost:8888/wolfcms/?/admin");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("login-username"))), "clear", "").clear();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("login-username"))), "sendKeys", "admin").sendKeys("admin");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.id("login-password"))), "clear", "").clear();
@@ -45,7 +45,7 @@ public class TestDeleteSnippet {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.xpath("//ul[@id='snippets']/li[3]/div[@class='remove']/a"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        //driver.findElement(By.cssSelector("#snippet_3 > div:nth-child(4) > a:nth-child(1)")).click();  
+        //driver.findElement(By.cssSelector("#snippet_3 > div:nth-child(4) > a:nth-child(1)")).click(); 
         assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete[\\s\\S]*$"));
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(closeAlertAndGetItsText().matches(\"^Are you sure you wish to delete[\\\\s\\\\S]*$\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();

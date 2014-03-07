@@ -28,7 +28,7 @@ public class TestEnableAndUninstallPlugin {
 
     @Test
     public void testEnableAndUninstallPlugin() throws Exception {
-        driver.get("http://localhost:8081/wolfcms/?/admin");
+        driver.get("http://localhost:8888/wolfcms/?/admin");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
         assertEquals("Login - Wolf CMS", driver.getTitle());
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Login - Wolf CMS\", driver.getTitle())");
@@ -51,7 +51,6 @@ public class TestEnableAndUninstallPlugin {
         assertEquals("Settings | Wolf CMS", driver.getTitle());
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Settings | Wolf CMS\", driver.getTitle())");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
-        assertFalse(isElementPresent(By.xpath("//li[@id='backup_restore-plugin']/a[text()='Backup Restore']")));
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.xpath("//div[@id='plugins']/table/tbody/tr/td/input[@value='backup_restore']"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
         assertEquals("Settings | Wolf CMS", driver.getTitle());

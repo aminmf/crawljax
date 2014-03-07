@@ -28,7 +28,7 @@ public class TestDeleteUser {
 
     @Test
     public void testDeleteUser() throws Exception {
-        driver.get("http://localhost:8081/wolfcms/?/admin");
+        driver.get("http://localhost:8888/wolfcms/?/admin");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
         assertEquals("Login - Wolf CMS", driver.getTitle());
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Login - Wolf CMS\", driver.getTitle())");
@@ -72,7 +72,7 @@ public class TestDeleteUser {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.cssSelector("tr.node:nth-child(2) > td:nth-child(4) > a:nth-child(1) > img:nth-child(1)"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        //assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete Test User One[\\s\\S]$"));  
+        //assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete Test User One[\\s\\S]$")); 
         assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$"));
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(closeAlertAndGetItsText().matches(\"^Are you sure you wish to delete [\\\\s\\\\S]*$\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();

@@ -28,7 +28,7 @@ public class TestPageAndSnippetUsage {
 
     @Test
     public void testPageAndSnippetUsage() throws Exception {
-        driver.get("http://localhost:8081/wolfcms/?/admin");
+        driver.get("http://localhost:8888/wolfcms/?/admin");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.partialLinkText("Wolf CMS"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.partialLinkText("RND"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();

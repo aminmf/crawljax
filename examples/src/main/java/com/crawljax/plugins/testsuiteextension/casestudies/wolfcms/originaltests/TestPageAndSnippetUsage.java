@@ -24,7 +24,7 @@ public class TestPageAndSnippetUsage {
 
 	@Test
 	public void testPageAndSnippetUsage() throws Exception {
-		driver.get("http://localhost:8081/wolfcms/?/admin");
+		driver.get("http://localhost:8888/wolfcms/?/admin");
 		driver.findElement(By.partialLinkText("Wolf CMS")).click();
 		driver.findElement(By.partialLinkText("RND")).click();
 		assertTrue(driver.findElement(By.xpath("//div[@id='colmask']//div[@id='col1']/h2")).getText().contains("RND"));

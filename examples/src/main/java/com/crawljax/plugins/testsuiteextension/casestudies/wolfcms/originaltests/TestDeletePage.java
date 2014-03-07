@@ -24,7 +24,7 @@ public class TestDeletePage {
 
 	@Test
 	public void testDeletePage() throws Exception {
-		driver.get("http://localhost:8081/wolfcms/?/admin");
+		driver.get("http://localhost:8888/wolfcms/?/admin");
 		assertEquals("Login - Wolf CMS", driver.getTitle());
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");

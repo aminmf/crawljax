@@ -32,7 +32,7 @@ public final class TestSuiteExtensionExample {
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php";
 	//private static final String URL = "http://localhost:8888/phormer331/";
-	private static final String URL = "http://localhost:8081/wolfcms/?/admin";
+	private static final String URL = "http://localhost:8888/wolfcms/?/admin";
 	
 
 	/**

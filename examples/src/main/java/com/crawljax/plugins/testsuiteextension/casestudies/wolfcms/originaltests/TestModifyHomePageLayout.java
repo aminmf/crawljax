@@ -24,7 +24,7 @@ public class TestModifyHomePageLayout {
 
 	@Test
 	public void testModifyHomePageLayout() throws Exception {
-	    driver.get("http://localhost:8081/wolfcms/?/admin");
+	    driver.get("http://localhost:8888/wolfcms/?/admin");
 	    assertEquals("Login - Wolf CMS", driver.getTitle());
 	    driver.findElement(By.id("login-username")).clear();
 	    driver.findElement(By.id("login-username")).sendKeys("admin");
@@ -37,12 +37,6 @@ public class TestModifyHomePageLayout {
 		driver.findElement(By.linkText("Metadata")).click();
 		driver.findElement(By.linkText("Settings")).click();
 		driver.findElement(By.cssSelector("#page_layout_id > option:nth-child(3)")).click();
-		driver.findElement(By.name("commit")).click();
-		assertEquals("Pages | Wolf CMS", driver.getTitle());
-		driver.findElement(By.xpath("//div[@class='page']/span/a/span[text()='Home Page']")).click();
-		assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle());
-		driver.findElement(By.linkText("Settings")).click();
-		driver.findElement(By.cssSelector("#page_layout_id > option:nth-child(2)")).click();
 		driver.findElement(By.name("commit")).click();
 		assertEquals("Pages | Wolf CMS", driver.getTitle());
 	}

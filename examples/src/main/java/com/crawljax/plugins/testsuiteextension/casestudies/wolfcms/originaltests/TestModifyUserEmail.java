@@ -24,7 +24,7 @@ public class TestModifyUserEmail {
 
 	@Test
 	public void testModifyUserEmail() throws Exception {
-		driver.get("http://localhost:8081/wolfcms/?/admin");
+		driver.get("http://localhost:8888/wolfcms/?/admin");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();

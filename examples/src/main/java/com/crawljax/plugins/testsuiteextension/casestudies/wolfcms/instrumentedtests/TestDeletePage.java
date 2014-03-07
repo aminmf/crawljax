@@ -28,7 +28,7 @@ public class TestDeletePage {
 
     @Test
     public void testDeletePage() throws Exception {
-        driver.get("http://localhost:8081/wolfcms/?/admin");
+        driver.get("http://localhost:8888/wolfcms/?/admin");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
         assertEquals("Login - Wolf CMS", driver.getTitle());
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Login - Wolf CMS\", driver.getTitle())");
@@ -48,27 +48,27 @@ public class TestDeletePage {
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Pages | Wolf CMS\", driver.getTitle())");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        //assertEquals("Selenium test page", driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a[span='Selenium test page']")).getText());  
+        //assertEquals("Selenium test page", driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a[span='Selenium test page']")).getText()); 
         assertTrue(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != "");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(driver.findElement(By.xpath(\"//ul[@id='site-map']/li/span/div/span/a/span\")).getText() != \"\")");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getWebElement(driver.findElement(com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getBy(By.cssSelector("img[alt='Remove page']"))), "click", "").click();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        //assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S] and its underlying pages[\\s\\S]$"));  
+        //assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S] and its underlying pages[\\s\\S]$")); 
         assertTrue(closeAlertAndGetItsText().contains("Are you sure you wish to delete"));
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertTrue(closeAlertAndGetItsText().contains(\"Are you sure you wish to delete\"))");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        //Thread.sleep(500);  
-        //assertEquals("Page Selenium test page has been deleted!", driver.findElement(By.xpath("//div[@class='message']")).getText());  
-        //assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page Selenium test page has been deleted!']")));  
+        //Thread.sleep(500); 
+        //assertEquals("Page Selenium test page has been deleted!", driver.findElement(By.xpath("//div[@class='message']")).getText()); 
+        //assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page Selenium test page has been deleted!']"))); 
         assertEquals("Pages | Wolf CMS", driver.getTitle());
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Pages | Wolf CMS\", driver.getTitle())");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOn();
-        //Thread.sleep(500);  
-        //assertEquals("Page Selenium test page has been deleted!", driver.findElement(By.xpath("//div[@class='message']")).getText());  
-        //assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page Selenium test page has been deleted!']")));  
+        //Thread.sleep(500); 
+        //assertEquals("Page Selenium test page has been deleted!", driver.findElement(By.xpath("//div[@class='message']")).getText()); 
+        //assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page Selenium test page has been deleted!']"))); 
         assertEquals("Pages | Wolf CMS", driver.getTitle());
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.getAssertion("assertEquals(\"Pages | Wolf CMS\", driver.getTitle())");
         com.crawljax.plugins.testsuiteextension.seleniuminstrumentor.SeleniumInstrumentor.assertionModeOff();
