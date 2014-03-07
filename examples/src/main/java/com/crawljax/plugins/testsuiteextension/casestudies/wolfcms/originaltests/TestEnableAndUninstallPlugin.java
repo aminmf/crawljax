@@ -25,7 +25,7 @@ public class TestEnableAndUninstallPlugin {
 	@Test
 	public void testEnableAndUninstallPlugin() throws Exception {
 
-		driver.get("http://localhost:8888/wolfcms/?/admin");
+		driver.get("http://localhost:8081/wolfcms/?/admin");
 		assertEquals("Login - Wolf CMS", driver.getTitle());
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");

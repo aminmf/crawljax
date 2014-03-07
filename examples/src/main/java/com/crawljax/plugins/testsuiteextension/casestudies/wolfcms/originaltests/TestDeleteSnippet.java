@@ -24,7 +24,7 @@ public class TestDeleteSnippet {
 
 	@Test
 	public void testDeleteSnippet() throws Exception {
-		driver.get("http://localhost:8888/wolfcms/?/admin");
+		driver.get("http://localhost:8081/wolfcms/?/admin");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -33,8 +33,9 @@ public class TestDeleteSnippet {
 		driver.findElement(By.linkText("Snippets")).click();
 		assertEquals("Snippets | Wolf CMS", driver.getTitle());
 		//driver.findElement(By.xpath("//ul[@id='snippets']/li[a='Selenium Test Snippet One']/div[@class='remove']/a")).click();
-		driver.findElement(By.xpath("//ul[@id='snippets']/li/a/div[@class='remove']/a")).click();
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete[\\s\\S] Selenium Test Snippet One[\\s\\S]$"));
+		driver.findElement(By.xpath("//ul[@id='snippets']/li[3]/div[@class='remove']/a")).click();
+		//driver.findElement(By.cssSelector("#snippet_3 > div:nth-child(4) > a:nth-child(1)")).click();
+		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete[\\s\\S]*$"));
 		assertEquals("Snippets | Wolf CMS", driver.getTitle());
 		//assertFalse(isElementPresent(By.xpath("//ul[@id='snippets']/li/a[text()='Selenium Test Snippet One']")));
 	}

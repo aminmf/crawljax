@@ -270,3 +270,6 @@ By.selector: span#rateStatus
 assertion assertEquals("Your rating saved!", driver.findElement(By.cssSelector("span#rateStatus")).getText())
 assertionModeOff
 TestSuiteEnd
+
+
+
