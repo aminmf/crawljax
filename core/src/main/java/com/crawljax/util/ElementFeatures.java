@@ -43,6 +43,8 @@ public class ElementFeatures implements Serializable{
 		this.xpath = xpath;
 		this.textImportance = textImportance;
 		this.normalBlockWidth = normalBlockWidth;
+		if (normalBlockHeight > 1)
+			normalBlockHeight = 1;
 		this.normalBlockHeight = normalBlockHeight;
 		this.normalBlockCenterX = normalBlockCenterX;
 		this.normalBlockCenterY = normalBlockCenterY;
@@ -183,6 +185,8 @@ public class ElementFeatures implements Serializable{
 			return false;
 		//if (classLabel != other.classLabel)
 		//	return false;
+		if (!elementPatternAssertion.equals(other.elementPatternAssertion))
+			return false;
 		if (Double.doubleToLongBits(innerHtmlDensity) != Double
 				.doubleToLongBits(other.innerHtmlDensity))
 			return false;

@@ -1,586 +1,1059 @@
 TestSuiteBegin
-NewTestCase testCreatePage.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-username]
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: login]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-password]
+By.id: login
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> xpath: //input[@value='Login']]
+By.id: password
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type="submit"]]
 click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[@id='footer']/p
-assertion assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))
-assertionModeOff
-By.xpath: //div[@class='page']/span/a/span[text()='Home Page']/../../../../div[@class="modify"]/a/img[@title='Add child']
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> xpath: //div[@class='page']/span/a/span[text()='Home Page']/../../../../div[@class="modify"]/a/img[@title='Add child']]
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Platform administration]
 click 
-assertionModeOn
-assertion assertEquals("Pages - Add | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: page_title
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: page_title]
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Manage course categories]
+click 
+By.linkText: Create a category
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Create a category]
+click 
+By.id: category_name
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_name]
 clear 
-By.id: page_title
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: page_title]
+By.id: category_name
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_name]
+sendKeys Software Eng
+By.id: category_code
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
+clear 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: category_code]
 sendKeys $RandValue
-By.id: part_0_content
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: part_0_content]
-clear 
-By.id: part_0_content
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: part_0_content]
-sendKeys Just a selenium test page.
-By.selector: #page_status_id > option:nth-child(3)
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> css selector: #page_status_id > option:nth-child(3)]
+By.id: hidden
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: hidden]
 click 
-By.linkText: Metadata
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> link text: Metadata]
+By.id: visible
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: visible]
 click 
-By.name: commit
-[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> name: commit]
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input[type="submit"]]
 click 
 assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
 assertionModeOff
-reset
-NewTestCase TestCreateSnippet.java
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: login-username]
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Logout]
+click
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: login]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: login-password]
+By.id: login
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: password]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> xpath: //input[@value='Login']]
+By.id: password
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> css selector: button[type="submit"]]
 click 
-By.linkText: Snippets
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> link text: Snippets]
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Platform administration]
 click 
-assertionModeOn
-assertion assertEquals("Snippets | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[@id='site-map-def']/div[@class='snippet']
-assertion assertEquals("Snippet (reorder)", driver.findElement(By.xpath("//div[@id='site-map-def']/div[@class='snippet']")).getText())
-assertionModeOff
-By.xpath: //div[@id='sidebar']/p/a[text()=' New Snippet']
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> xpath: //div[@id='sidebar']/p/a[text()=' New Snippet']]
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Manage course categories]
 click 
-assertionModeOn
-assertion assertEquals("Snippets - Add | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: snippet_name
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: snippet_name]
+By.linkText: Create a category
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Create a category]
+click 
+By.id: category_name
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: category_name]
 clear 
-By.id: snippet_name
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: snippet_name]
+By.id: category_name
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: category_name]
+sendKeys Software Testing
+By.id: category_code
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: category_code]
+clear 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> id: category_code]
 sendKeys $RandValue
-By.id: snippet_content
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: snippet_content]
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: login]
 clear 
-By.id: snippet_content
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: snippet_content]
-sendKeys Just a Selenium test snippet.
-By.name: commit
-[[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> name: commit]
-click 
-assertionModeOn
-assertion assertEquals("Snippets | Wolf CMS", driver.getTitle())
-assertionModeOff
-reset
-NewTestCase testCreateUser.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: login-username]
+By.id: login
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: login-password]
+By.id: password
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> link text: Platform administration]
+click 
+By.linkText: Claroline.net news
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> link text: Claroline.net news]
+click 
+assertionModeOn
+By.selector: div.toolTitleBlock
+assertion assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Manage my account
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> link text: Manage my account]
+click 
+By.id: phone
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: phone]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> xpath: //input[@value='Login']]
+By.id: phone
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: phone]
+sendKeys 7788814476
+By.id: old_password
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: old_password]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password]
+sendKeys nainy
+By.id: password_conf
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: password_conf]
+sendKeys nainy
+By.id: applyChange
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> id: applyChange]
 click 
 assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$"))
 assertionModeOff
-By.linkText: Users
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> link text: Users]
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (ca8822c9-fcd2-4e99-81bf-5bbf3a50340d)] -> link text: Logout]
 click 
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.xpath: //div[@id='sidebar']/p/a[text()=' New User']
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> xpath: //div[@id='sidebar']/p/a[text()=' New User']]
-click 
-assertionModeOn
-assertion assertEquals("Users - Add | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: user_name
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_name]
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> id: login]
 clear 
-By.id: user_name
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_name]
-sendKeys $RandValue
-By.id: user_email
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_email]
+By.id: login
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> id: password]
 clear 
-By.id: user_email
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_email]
-sendKeys $RandValue@example.com
-By.id: user_username
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_username]
+By.id: password
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> link text: Platform administration]
+click 
+By.linkText: Manage classes
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> link text: Manage classes]
+click 
+By.linkText: Create a new class
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> link text: Create a new class]
+click 
+By.name: class_name
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> name: class_name]
 clear 
-By.id: user_username
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_username]
-sendKeys $RandValue
-By.id: user_password
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_password]
+By.name: class_name
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> name: class_name]
+sendKeys EG
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The new class has been created[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (188ec7de-9c5d-4420-afd3-942f1c0bd78e)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: login]
 clear 
-By.id: user_password
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_password]
-sendKeys pswpsw
-By.id: user_confirm
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_confirm]
+By.id: login
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password]
 clear 
-By.id: user_confirm
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_confirm]
-sendKeys pswpsw
-By.id: user_role-editor
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> id: user_role-editor]
-click 
-By.name: commit
-[[FirefoxDriver: firefox on MAC (6ad42042-5f8e-9742-9d19-fd9951dc9b60)] -> name: commit]
-click 
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[text()='User has been added!']
-assertion assertTrue(isElementPresent(By.xpath("//div[text()='User has been added!']")))
-assertionModeOff
-reset
-NewTestCase TestDeletePage.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> id: login-username]
+By.id: password
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> id: login-password]
+By.id: password
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> link text: Platform administration]
+click 
+By.linkText: Create user
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> link text: Create user]
+click 
+By.id: lastname
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: lastname]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> xpath: //input[@value='Login']]
-click 
-By.linkText: Pages
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> link text: Pages]
-click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //ul[@id='site-map']/li/span/div/span/a/span
-assertion assertTrue(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != "")
-assertionModeOff
-By.selector: img[alt='Remove page']
-[[FirefoxDriver: firefox on MAC (6265d49c-d895-1c43-bc64-9fd9ab7f3f29)] -> css selector: img[alt='Remove page']]
-click 
-assertionModeOn
-assertion assertTrue(closeAlertAndGetItsText().contains("Are you sure you wish to delete"))
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-reset
-NewTestCase TestDeleteSnippet.java
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> id: login-username]
+By.id: lastname
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: lastname]
+sendKeys Naman
+By.id: firstname
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: firstname]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> id: login-password]
+By.id: firstname
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: firstname]
+sendKeys Agr
+By.id: officialCode
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: officialCode]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> xpath: //input[@value='Login']]
-click 
-By.linkText: Snippets
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> link text: Snippets]
-click 
-assertionModeOn
-assertion assertEquals("Snippets | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Snippets | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.xpath: //ul[@id='snippets']/li[3]/div[@class='remove']/a
-[[FirefoxDriver: firefox on MAC (b5f8da0f-6323-df46-8934-044624d64363)] -> xpath: //ul[@id='snippets']/li[3]/div[@class='remove']/a]
-click 
-assertionModeOn
-assertion assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete[\\s\\S]*$"))
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Snippets | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Snippets | Wolf CMS", driver.getTitle())
-assertionModeOff
-reset
-NewTestCase TestDeleteUser.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> id: login-username]
+By.id: officialCode
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: officialCode]
+sendKeys a7
+By.id: username
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: username]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> id: login-password]
+By.id: username
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: username]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> xpath: //input[@value='Login']]
-click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.linkText: Users
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> link text: Users]
-click 
-By.linkText: Users
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> link text: Users]
-click 
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.linkText: Users
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> link text: Users]
-click 
-By.linkText: Users
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> link text: Users]
-click 
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.selector: tr.node:nth-child(2) > td:nth-child(4) > a:nth-child(1) > img:nth-child(1)
-[[FirefoxDriver: firefox on MAC (9b67f0b2-35da-a041-9daa-3b11cc6fe23c)] -> css selector: tr.node:nth-child(2) > td:nth-child(4) > a:nth-child(1) > img:nth-child(1)]
-click 
-assertionModeOn
-assertion assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$"))
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-reset
-NewTestCase TestEnableAndUninstallPlugin.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> id: login-username]
+By.id: username
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: username]
+sendKeys nam
+By.id: username
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: username]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> id: login-password]
+By.id: username
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: username]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> xpath: //input[@value='Login']]
-click 
-By.linkText: Administration
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> link text: Administration]
-click 
-assertionModeOn
-assertion assertEquals("Settings | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.xpath: //div[@id='plugins']/table/tbody/tr/td/input[@value='backup_restore']
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> xpath: //div[@id='plugins']/table/tbody/tr/td/input[@value='backup_restore']]
-click 
-assertionModeOn
-assertion assertEquals("Settings | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //li[@id='backup_restore-plugin']/a[text()='Backup Restore']
-assertion assertTrue(isElementPresent(By.xpath("//li[@id='backup_restore-plugin']/a[text()='Backup Restore']")))
-assertionModeOff
-By.xpath: //div[@id='plugins']/table/tbody/tr/td/a[@name='uninstall_backup_restore']
-[[FirefoxDriver: firefox on MAC (35fcd975-f5b6-6e40-9103-dd3b105789f4)] -> xpath: //div[@id='plugins']/table/tbody/tr/td/a[@name='uninstall_backup_restore']]
-click 
-assertionModeOn
-assertion assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to uninstall this plugin[\\s\\S]$"))
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Settings | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //li[@id='backup_restore-plugin']/a[text()='Backup Restore']
-assertion assertTrue(isElementPresent(By.xpath("//li[@id='backup_restore-plugin']/a[text()='Backup Restore']")))
-assertionModeOff
-reset
-NewTestCase testLoginLogoutAsAdmin.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> id: login-username]
+By.id: username
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: username]
+sendKeys naman
+By.id: password
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> id: login-password]
+By.id: password
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> xpath: //input[@value='Login']]
-click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[@id='footer']/p
-assertion assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))
-assertionModeOff
-By.linkText: Log Out
-[[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> link text: Log Out]
-click 
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[@id='dialog']/form/div/label[@class='checkbox']
-assertion assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))
-assertionModeOff
-reset
-NewTestCase TestModifyHomePageLayout.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> id: login-username]
+By.id: password
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password]
+sendKeys 123456
+By.id: password_conf
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password_conf]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> id: login-password]
+By.id: password_conf
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: password_conf]
+sendKeys 123456
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: student
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: student]
+click 
+By.id: applyChange
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> id: applyChange]
+click 
+assertionModeOn
+assertion assertEquals("Create a new user - Claroline", driver.getTitle())
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (df5229ef-351e-4148-a036-11848a70e909)] -> link text: Logout]
+click
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: login]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> xpath: //input[@value='Login']]
-click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.xpath: //div[@class='page']/span/a/span[text()='Home Page']
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> xpath: //div[@class='page']/span/a/span[text()='Home Page']]
-click 
-assertionModeOn
-assertion assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.linkText: Metadata
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> link text: Metadata]
-click 
-By.linkText: Settings
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> link text: Settings]
-click 
-By.selector: #page_layout_id > option:nth-child(3)
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> css selector: #page_layout_id > option:nth-child(3)]
-click 
-By.name: commit
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> name: commit]
-click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.xpath: //div[@class='page']/span/a/span[text()='Home Page']
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> xpath: //div[@class='page']/span/a/span[text()='Home Page']]
-click 
-assertionModeOn
-assertion assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.linkText: Settings
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> link text: Settings]
-click 
-By.selector: #page_layout_id > option:nth-child(2)
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> css selector: #page_layout_id > option:nth-child(2)]
-click 
-By.name: commit
-[[FirefoxDriver: firefox on MAC (205056a3-6200-fb40-8dc4-aac74729444e)] -> name: commit]
-click 
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-reset
-NewTestCase TestModifyPage.java
-assertionModeOn
-assertion assertEquals("Login - Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> id: login-username]
+By.id: login
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: password]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> id: login-password]
+By.id: password
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> link text: Platform administration]
+click 
+By.linkText: Configuration
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> link text: Configuration]
+click 
+By.linkText: Announcement
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> link text: Announcement]
+click 
+assertionModeOn
+By.id: claroBody
+assertion assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Use 0 to display all[\\s\\S]*$"))
+assertionModeOff
+By.id: label_announcementPortletMaxItems
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: label_announcementPortletMaxItems]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> xpath: //input[@value='Login']]
+By.id: label_announcementPortletMaxItems
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> id: label_announcementPortletMaxItems]
+sendKeys 0
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> css selector: input[type="submit"]]
 click 
-By.linkText: Pages
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> link text: Pages]
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> css selector: input[type="submit"]]
 click 
 assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Announcement, \\(CLANN\\) are now effective on server[\\s\\S]*$"))
 assertionModeOff
-By.xpath: //a[@class='edit-link']/span[1]
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> xpath: //a[@class='edit-link']/span[1]]
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> css selector: input[type="submit"]]
 click 
-By.id: part_0_content
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> id: part_0_content]
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> css selector: input[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (8599dfea-e1b4-48cd-980b-8ecaea1250f0)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: login]
 clear 
-By.id: part_0_content
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> id: part_0_content]
-sendKeys Just a selenium test page.
-
-<?php Page::includeSnippet('Selenium Test Snippet One'); ?>
-By.selector: #page_status_id > option:nth-child(3)
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> css selector: #page_status_id > option:nth-child(3)]
-click 
-By.linkText: Metadata
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> link text: Metadata]
-click 
-By.name: commit
-[[FirefoxDriver: firefox on MAC (3a7b4c54-a555-4d40-a054-9c971122eb24)] -> name: commit]
-click 
-assertionModeOn
-By.xpath: //div[@class='message']
-assertion assertEquals("Page has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[@class='message' and text()='Page has been saved!']
-assertion assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!']")))
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-assertion assertEquals("Pages | Wolf CMS", driver.getTitle())
-assertionModeOff
-reset
-NewTestCase TestModifyUserEmail.java
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> id: login-username]
+By.id: login
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: password]
 clear 
-By.id: login-username
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> id: login-username]
-sendKeys admin
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> id: login-password]
+By.id: password
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: Platform administration]
+click 
+By.linkText: Configuration
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: Configuration]
+click 
+By.linkText: Assignments
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: Assignments]
+click 
+By.id: label_confval_def_sub_vis_change_only_new_FALSE
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_confval_def_sub_vis_change_only_new_FALSE]
+click 
+By.id: label_confval_def_sub_vis_change_only_new_TRUE
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_confval_def_sub_vis_change_only_new_TRUE]
+click 
+assertionModeOn
+By.name: editConfClass
+assertion assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*ets how the assignment property \"default works visibility\" acts\\. It will change the visibility of all the new submissions or it will change the visibility of all submissions already done in the assignment and the new one\\.[\\s\\S]*$"))
+assertionModeOff
+assertionModeOn
+By.name: editConfClass
+assertion assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*For assignments list[\\s\\S]*$"))
+assertionModeOff
+assertionModeOn
+By.name: editConfClass
+assertion assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*/<COURSEID>/work/[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Quota
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: Quota]
+click 
+assertionModeOn
+By.name: editConfClass
+assertion assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*Maximum size of a document that a user can uploa[\\s\\S]*$"))
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Assignments, \\(CLWRK\\) are now effective on server\\.[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Submissions
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: Submissions]
+click 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_clwrk_endDateDelay]
 clear 
-By.id: login-password
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> id: login-password]
-sendKeys admin
-By.xpath: //input[@value='Login']
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> xpath: //input[@value='Login']]
-click 
-By.linkText: Users
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> link text: Users]
-click 
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.partialLinkText: RND
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> partial link text: RND]
-click 
-assertionModeOn
-assertion assertEquals("Users - Edit | Wolf CMS", driver.getTitle())
-assertionModeOff
-By.id: user_email
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> id: user_email]
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_clwrk_endDateDelay]
 clear 
-By.id: user_email
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> id: user_email]
-sendKeys test1@example.com
-By.name: commit
-[[FirefoxDriver: firefox on MAC (c109c720-ebae-0a40-9934-a5ac557ac581)] -> name: commit]
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_clwrk_endDateDelay]
+sendKeys 364
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_clwrk_endDateDelay]
+clear 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_clwrk_endDateDelay]
+clear 
+By.id: label_clwrk_endDateDelay
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> id: label_clwrk_endDateDelay]
+sendKeys 365
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> css selector: input[type="submit"]]
+click 
+By.linkText: View all
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: View all]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (1bbf6c06-dda7-4068-813b-7c3307ff7f17)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> link text: Platform administration]
+click 
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> link text: Manage course categories]
+click 
+By.selector: img[alt="Edit category"]
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> css selector: img[alt="Edit category"]]
+click 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> id: category_code]
+clear 
+By.id: category_code
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> id: category_code]
+sendKeys Sci
+By.selector: img[alt="Move down category"]
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> css selector: img[alt="Move down category"]]
 click 
 assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$"))
 assertionModeOff
-assertionModeOn
-assertion assertEquals("Users | Wolf CMS", driver.getTitle())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[@class='message']
-assertion assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())
-assertionModeOff
-assertionModeOn
-By.xpath: //div[text()='User has been saved!']
-assertion assertTrue(isElementPresent(By.xpath("//div[text()='User has been saved!']")))
-assertionModeOff
-reset
-NewTestCase TestPageAndSnippetUsage.java
-By.partialLinkText: Wolf CMS
-[[FirefoxDriver: firefox on MAC (e462661b-2166-6a47-bb68-9b60278fe289)] -> partial link text: Wolf CMS]
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (3b867e91-6f2f-495c-b32d-a2594a90ab3e)] -> link text: Logout]
 click 
-By.partialLinkText: RND
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> link text: Platform administration]
+click 
+By.linkText: Manage course categories
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> link text: Manage course categories]
+click 
+By.xpath: (//img[@alt='Delete category'])[5]
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: (//img[@alt='Delete category'])[5]]
+click 
+assertionModeOn
+assertion assertTrue(closeAlertAndGetItsText().matches("^[\\s\\S]*Are you sure to delete[\\s\\S]*$"))
+assertionModeOff
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category deleted\\.[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> link text: Platform administration]
+click 
+By.linkText: Edit text zones
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> link text: Edit text zones]
+click 
+By.selector: img[alt="Preview"]
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> css selector: img[alt="Preview"]]
+click 
+assertionModeOn
+By.id: claroBody
+assertion assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$"))
+assertionModeOff
+By.xpath: (//img[@alt='Preview'])[5]
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> xpath: (//img[@alt='Preview'])[5]]
+click 
+By.selector: img[alt="Edit"]
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> css selector: img[alt="Edit"]]
+click 
+By.selector: input.claroButton
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> css selector: input.claroButton]
+click 
+assertionModeOn
+By.selector: .claroDialogBox
+assertion assertTrue(driver.findElement(By.cssSelector(".claroDialogBox")).getText().contains("The changes have been carried out correctly"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (a58e3863-f5fb-44d7-9c23-f1778aba09ff)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> link text: Platform administration]
+click 
+By.linkText: Configuration
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> link text: Configuration]
+click 
+By.linkText: Exercises
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> link text: Exercises]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Exercises, \\(CLQWZ\\) are now effective on server\\.[\\s\\S]*$"))
+assertionModeOff
+assertionModeOn
+By.name: editConfClass
+assertion assertTrue(driver.findElement(By.name("editConfClass")).getText().matches("^[\\s\\S]*Automatically insert an event in the calendar at the end date[\\s\\S]*$"))
+assertionModeOff
+By.id: label_exercisesPerPage
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> id: label_exercisesPerPage]
+clear 
+By.id: label_exercisesPerPage
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> id: label_exercisesPerPage]
+sendKeys 20
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> css selector: input[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (a8a9f81a-1ec2-40c3-9baf-ce691257f588)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (803db28d-a729-4340-8436-1eedfd5b4185)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (803db28d-a729-4340-8436-1eedfd5b4185)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (803db28d-a729-4340-8436-1eedfd5b4185)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (803db28d-a729-4340-8436-1eedfd5b4185)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (803db28d-a729-4340-8436-1eedfd5b4185)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (803db28d-a729-4340-8436-1eedfd5b4185)] -> link text: Logout]
+click 
+assertionModeOn
+By.id: loginBox
+assertion assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$"))
+assertionModeOff
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> link text: Platform administration]
+click 
+By.linkText: Manage administrator email notifications
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> link text: Manage administrator email notifications]
+click 
+assertionModeOn
+By.selector: TABLE.claroTable.emphaseLine
+assertion assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine")))
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> css selector: input[type="submit"]]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Platform administration]
+click 
+By.linkText: Modules
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Modules]
+click 
+By.selector: img[alt="Properties"]
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> css selector: img[alt="Properties"]]
+click 
+By.linkText: Visible
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Visible]
+click 
+assertionModeOn
+assertion assertTrue(closeAlertAndGetItsText().matches("^ Are you sure you want to make this module visible in all courses [\\s\\S]$"))
+assertionModeOff
+By.linkText: Local settings
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Local settings]
+click 
+By.linkText: About
+[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: About]
+click 
+assertionModeOn
+By.id: claroBody
+assertion assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Course description[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> link text: Logout]
+click
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> link text: Platform administration]
+click 
+By.linkText: Send a message to all users
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> link text: Send a message to all users]
+click 
+By.id: message_subject
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: message_subject]
+clear 
+By.id: message_subject
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: message_subject]
+sendKeys Hello
+By.name: send
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> name: send]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxWarning
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxWarning")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Show/Hide
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> link text: Show/Hide]
+click 
+assertionModeOn
+By.selector: div.content.collapsible-wrapper
+assertion assertTrue(driver.findElement(By.cssSelector("div.content.collapsible-wrapper")).getText().matches("^[\\s\\S]*textzone_top\\.authenticated\\.inc\\.html[\\s\\S]*$"))
+assertionModeOff
+By.linkText: View all my messages
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> link text: View all my messages]
+click 
+assertionModeOn
+By.selector: div.toolTitleBlock
+assertion assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> link text: Platform administration]
+click 
+By.linkText: User list
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> link text: User list]
+click 
+assertionModeOn
+By.selector: table.claroTable.emphaseLine
+assertion assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*nainy[\\s\\S]*$"))
+assertionModeOff
+assertionModeOn
+By.selector: table.claroTable.emphaseLine
+assertion assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> link text: Platform administration]
+click 
+By.linkText: Right profile list
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> link text: Right profile list]
+click 
+assertionModeOn
+By.selector: table.claroTable.emphaseLine
+assertion assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Course member \\(the user is actually enrolled in the course\\)[\\s\\S]*$"))
+assertionModeOff
+By.xpath: (//img[@alt='Edit'])[6]
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> xpath: (//img[@alt='Edit'])[6]]
+click 
+assertionModeOn
+assertion assertEquals("Claroline", driver.getTitle())
+assertionModeOff
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+By.selector: a > span
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> css selector: a > span]
+click 
+assertionModeOn
+By.selector: table.claroTable.emphaseLine
+assertion assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Access allowed[\\s\\S]*$"))
+assertionModeOff
+By.linkText: View all right profile
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> link text: View all right profile]
+click 
+assertionModeOn
+By.selector: table.claroTable.emphaseLine
+assertion assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Edition allowed[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (428b4c1f-f618-4279-8d32-cc314dd82e3d)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Create a course site
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Create a course site]
+click 
+By.id: course_title
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: course_title]
+clear 
+By.id: course_title
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: course_title]
+sendKeys Computer Science
+By.id: course_officialCode
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: course_officialCode]
+clear 
+By.id: course_officialCode
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: course_officialCode]
+sendKeys A7
+By.linkText: Advanced options
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Advanced options]
+click 
+By.id: course_status_date
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> id: course_status_date]
+click 
+By.name: changeProperties
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> name: changeProperties]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (c9a4a125-8630-42f6-8436-3d0250ceba65)] -> link text: Logout]
+click 
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Platform administration]
+click 
+By.linkText: Modules
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Modules]
+click 
+By.selector: .claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1)
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: .claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1)]
+click 
+By.linkText: Local settings
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Local settings]
+click 
+By.id: label_showWikiEditorToolbar_FALSE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_showWikiEditorToolbar_FALSE]
+click 
+By.id: label_forcePreviewBeforeSaving_TRUE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_forcePreviewBeforeSaving_TRUE]
+click 
+By.id: label_forcePreviewBeforeSaving_FALSE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_forcePreviewBeforeSaving_FALSE]
+click 
+By.id: label_showWikiEditorToolbar_TRUE
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> id: label_showWikiEditorToolbar_TRUE]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+assertionModeOn
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Wiki, \\(CLWIKI\\) are now effective on server\\.[\\s\\S]*$"))
+assertionModeOff
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+By.selector: input[type="submit"]
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> css selector: input[type="submit"]]
+click 
+By.linkText: About
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: About]
+click 
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (c533f3a2-9d6c-4215-bd84-281ace18274c)] -> link text: Logout]
+click
+NewTestCase
+By.id: login
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> id: login]
+clear 
+By.id: login
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> id: login]
+sendKeys nainy
+By.id: password
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> id: password]
+clear 
+By.id: password
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> id: password]
+sendKeys nainy
+By.selector: button[type="submit"]
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> css selector: button[type="submit"]]
+click 
+By.linkText: Platform administration
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> link text: Platform administration]
+click 
+By.linkText: Manage user desktop
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> link text: Manage user desktop]
+click 
+assertionModeOn
+By.selector: table.claroTable.emphaseLine
+assertion assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*My course list[\\s\\S]*$"))
+assertionModeOff
+By.linkText: Logout
+[[FirefoxDriver: firefox on XP (763d5ba9-02d7-4b95-a925-826742fc5d17)] -> link text: Logout]
+click
 TestSuiteEnd

@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:49:36 PST 2014
+ * Generated @ Sun Mar 09 13:48:11 PDT 2014
  */
 
 public class GeneratedTestCase6 {

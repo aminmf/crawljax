@@ -93,8 +93,8 @@ By.selector: input[type="submit"]
 [[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> css selector: input[type="submit"]]
 click 
 assertionModeOn
-By.selector: BODY
-assertion assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
+By.selector: div.claroDialogBox.boxSuccess
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$"))
 assertionModeOff
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Logout]
@@ -511,84 +511,6 @@ By.linkText: Logout
 click 
 NewTestCase
 By.id: login
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Create a course site
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> link text: Create a course site]
-click 
-By.id: course_title
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_title]
-clear 
-By.id: course_title
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_title]
-sendKeys Engineering Graphics
-By.id: course_officialCode
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_officialCode]
-clear 
-By.id: course_officialCode
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_officialCode]
-sendKeys AAOC112
-By.id: access_public
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: access_public]
-click 
-assertionModeOn
-By.id: courseSettings
-assertion assertTrue(driver.findElement(By.id("courseSettings")).getText().matches("^[\\s\\S]* Access allowed to anybody[\\s\\S]*$"))
-assertionModeOff
-By.id: registration_validation
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: registration_validation]
-click 
-By.id: registration_validation
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: registration_validation]
-click 
-By.id: registration_validation
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: registration_validation]
-click 
-By.id: registration_validation
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: registration_validation]
-click 
-By.linkText: Optionnal settings
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> link text: Optionnal settings]
-click 
-By.id: course_departmentName
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_departmentName]
-clear 
-By.id: course_departmentName
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_departmentName]
-sendKeys ECE
-By.linkText: Advanced options
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> link text: Advanced options]
-click 
-By.id: course_userLimit
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_userLimit]
-clear 
-By.id: course_userLimit
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> id: course_userLimit]
-sendKeys 60
-By.name: changeProperties
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> name: changeProperties]
-click 
-assertionModeOn
-By.selector: div.claroDialogBox.boxSuccess
-assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*You have just created the course website[\\s\\S]*$"))
-assertionModeOff
-By.linkText: Logout
-[[FirefoxDriver: firefox on XP (bc08f02f-b29c-4531-88f2-1eb018dc58cd)] -> link text: Logout]
-click 
-NewTestCase
-By.id: login
 [[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> id: login]
 clear 
 By.id: login
@@ -820,31 +742,8 @@ assertionModeOn
 By.id: claroBody
 assertion assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Course description[\\s\\S]*$"))
 assertionModeOff
-By.linkText: Global settings
-[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Global settings]
-click 
-By.linkText: Activated
-[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Activated]
-click 
-By.linkText: Deactivated
-[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Deactivated]
-click 
-assertionModeOn
-By.selector: div.claroDialogBox.boxSuccess
-assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Module activation succeeded[\\s\\S]*$"))
-assertionModeOff
-By.linkText: Automatic
-[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Automatic]
-click 
-By.linkText: Manual
-[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Manual]
-click 
-assertionModeOn
-By.selector: div.claroDialogBox.boxSuccess
-assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Module activation at course creation set to AUTOMATIC[\\s\\S]*$"))
-assertionModeOff
 By.linkText: Logout
-[[FirefoxDriver: firefox on XP (6493ad3f-fd98-4ec3-b5f8-0b2b1107a379)] -> link text: Logout]
+[[FirefoxDriver: firefox on XP (19bb8b1a-8da2-480b-870f-44b290ded61a)] -> link text: Logout]
 click
 NewTestCase
 By.id: login
@@ -874,58 +773,16 @@ clear
 By.id: message_subject
 [[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: message_subject]
 sendKeys Hello
-By.id: message_fontselect_open
-[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> id: message_fontselect_open]
-click 
-By.selector: #mce_18_aria > span.mceText
-[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> css selector: #mce_18_aria > span.mceText]
-click 
-By.selector: span.mceIcon.mce_bold
-[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> css selector: span.mceIcon.mce_bold]
-click 
-By.selector: span.mceIcon.mce_italic
-[[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> css selector: span.mceIcon.mce_italic]
-click 
 By.name: send
 [[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> name: send]
 click 
 assertionModeOn
-By.selector: div.claroDialogBox.boxInfo
-assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxInfo")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$"))
+By.selector: div.claroDialogBox.boxWarning
+assertion assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxWarning")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$"))
 assertionModeOff
 By.linkText: Logout
 [[FirefoxDriver: firefox on XP (c0b96c17-510b-44fa-b798-3bb9f0ac130f)] -> link text: Logout]
 click 
-NewTestCase
-By.id: login
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> id: login]
-clear 
-By.id: login
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> id: login]
-sendKeys nainy
-By.id: password
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> id: password]
-clear 
-By.id: password
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> id: password]
-sendKeys nainy
-By.selector: button[type="submit"]
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> css selector: button[type="submit"]]
-click 
-By.linkText: Platform administration
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> link text: Platform administration]
-click 
-By.linkText: Support forum
-[[FirefoxDriver: firefox on XP (af83bec1-b5e8-44ac-98ff-70880f6f62f6)] -> link text: Support forum]
-click 
-assertionModeOn
-By.id: page-body
-assertion assertTrue(driver.findElement(By.id("page-body")).getText().matches("^[\\s\\S]*It is currently[\\s\\S]*$"))
-assertionModeOff
-reset
-By.linkText: Logout
-[[FirefoxDriver: firefox on XP (3f227754-fa29-45b9-bb47-be33c9f772c3)] -> link text: Logout]
-click
 NewTestCase
 By.id: login
 [[FirefoxDriver: firefox on XP (2a67db07-1582-43da-8971-a34950290cc5)] -> id: login]

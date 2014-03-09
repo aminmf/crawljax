@@ -583,4 +583,11 @@ By.partialLinkText: Wolf CMS
 [[FirefoxDriver: firefox on MAC (e462661b-2166-6a47-bb68-9b60278fe289)] -> partial link text: Wolf CMS]
 click 
 By.partialLinkText: RND
+[[FirefoxDriver: firefox on MAC (e462661b-2166-6a47-bb68-9b60278fe289)] -> partial link text: RND]
+click 
+assertionModeOn
+By.xpath: //div[@id='colmask']//div[@id='col1']/h2
+assertion assertTrue(driver.findElement(By.xpath("//div[@id='colmask']//div[@id='col1']/h2")).getText().contains("RND"));
+assertionModeOff
+reset
 TestSuiteEnd
