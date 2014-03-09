@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:14:55 PDT 2014
+ * Generated @ Sun Mar 09 15:54:08 PDT 2014
  */
 
 public class GeneratedTestCase132 {
@@ -78,33 +78,26 @@ public class GeneratedTestCase132 {
 	public void method132(){
 		try {
 			driver.get(url);
-			//From state 0 to state 118
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=118, name=state118}}
+			//From state 0 to state 1
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
 			mutateDOMTree(0);
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 118 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=2, name=state2}}
-			mutateDOMTree(118);
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(1);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 17
-			//Eventable{eventType=click, identification=text Claroline.net news, element=Element{node=[A: null], tag=A, text=Claroline.net news, attributes={href=clarolinenews.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=17, name=state17}}
+			//From state 2 to state 124
+			//Eventable{eventType=click, identification=text User list, element=Element{node=[A: null], tag=A, text=User list, attributes={href=admin_users.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=124, name=state124}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Claroline.net news")).click();
-			//From state 17 to state 18
-			//Eventable{eventType=click, identification=text Manage my account, element=Element{node=[A: null], tag=A, text=Manage my account, attributes={href=/claroline-1.11.7/claroline/auth/profile.php, target=_top}}, source=StateVertexImpl{id=17, name=state17}, target=StateVertexImpl{id=18, name=state18}}
-			mutateDOMTree(17);
-			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$")); // original assertion
-			driver.findElement(By.linkText("Manage my account")).click();
-			//From state 18 to state 212
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/UL[1]/LI[1]/A[1], element=Element{node=[A: null], tag=A, text=View my statistics, attributes={href=/claroline-1.11.7/claroline/tracking/userReport.php?userId=1, style=background-image: url(/claroline-1.11.7/web/img/statistics.png?1232379976); background-repeat: no-repeat; background-position: left center; padding-left: 20px;}}, source=StateVertexImpl{id=18, name=state18}, target=StateVertexImpl{id=212, name=state212}}
-			mutateDOMTree(18);
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/UL[1]/LI[1]/A[1]")).click();
-			//Sink node at state 212
-			mutateDOMTree(212);
+			driver.findElement(By.linkText("User list")).click();
+			//Sink node at state 124
+			mutateDOMTree(124);
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*nainy[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

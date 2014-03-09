@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:10:08 PDT 2014
+ * Generated @ Sun Mar 09 15:55:21 PDT 2014
  */
 
 public class GeneratedTestCase1 {
@@ -78,8 +78,8 @@ public class GeneratedTestCase1 {
 	public void method1(){
 		try {
 			driver.get(url);
-			//From state 0 to state 147
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=147, name=state147}}
+			//From state 0 to state 1
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
 			mutateDOMTree(0);
 			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 			driver.findElement(By.id("login")).clear();
@@ -87,22 +87,22 @@ public class GeneratedTestCase1 {
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 147 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=147, name=state147}, target=StateVertexImpl{id=2, name=state2}}
-			mutateDOMTree(147);
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(1);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 164
-			//Eventable{eventType=click, identification=text Manage user desktop, element=Element{node=[A: null], tag=A, text=Manage user desktop, attributes={href=../desktop/config.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=164, name=state164}}
+			//From state 2 to state 101
+			//Eventable{eventType=click, identification=text Manage administrator email notifications, element=Element{node=[A: null], tag=A, text=Manage administrator email notifications, attributes={href=adminmailsystem.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=101, name=state101}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Manage user desktop")).click();
-			//From state 164 to state 146
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=164, name=state164}, target=StateVertexImpl{id=146, name=state146}}
-			mutateDOMTree(164);
-			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*My course list[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Manage administrator email notifications")).click();
+			//From state 101 to state 87
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=101, name=state101}, target=StateVertexImpl{id=87, name=state87}}
+			mutateDOMTree(101);
+			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // original assertion
 			driver.findElement(By.linkText("Logout")).click();
-			//Sink node at state 146
-			mutateDOMTree(146);
-			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
+			//Sink node at state 87
+			mutateDOMTree(87);
+			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

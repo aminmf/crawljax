@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:09:36 PDT 2014
+ * Generated @ Sun Mar 09 15:53:04 PDT 2014
  */
 
 public class GeneratedTestCase95 {
@@ -78,31 +78,38 @@ public class GeneratedTestCase95 {
 	public void method95(){
 		try {
 			driver.get(url);
-			//From state 0 to state 1
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+			//From state 0 to state 147
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=147, name=state147}}
 			mutateDOMTree(0);
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 1 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
-			mutateDOMTree(1);
+			//From state 147 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=147, name=state147}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(147);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 115
-			//Eventable{eventType=click, identification=text Send a message to all users, element=Element{node=[A: null], tag=A, text=Send a message to all users, attributes={href=../messaging/sendmessage.php?cmd=rqMessageToAllUsers}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=115, name=state115}}
+			//From state 2 to state 82
+			//Eventable{eventType=click, identification=text Edit text zones, element=Element{node=[A: null], tag=A, text=Edit text zones, attributes={href=managing/editFile.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=82, name=state82}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Send a message to all users")).click();
-			//From state 115 to state 116
-			//Eventable{eventType=click, identification=name send, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={name=send, type=submit, value=Send}}, source=StateVertexImpl{id=115, name=state115}, target=StateVertexImpl{id=116, name=state116}}
-			mutateDOMTree(115);
-			driver.findElement(By.id("message_subject")).clear();
-			driver.findElement(By.id("message_subject")).sendKeys("Hello");
-			driver.findElement(By.name("send")).click();
-			//Sink node at state 116
-			mutateDOMTree(116);
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxWarning")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Edit text zones")).click();
+			//From state 82 to state 83
+			//Eventable{eventType=click, identification=cssSelector img[alt="Preview"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Preview, src=/claroline-1.11.7/web/img/preview.png?1232379976}}, source=StateVertexImpl{id=82, name=state82}, target=StateVertexImpl{id=83, name=state83}}
+			mutateDOMTree(82);
+			driver.findElement(By.cssSelector("img[alt=\"Preview\"]")).click();
+			//From state 83 to state 85
+			//Eventable{eventType=click, identification=cssSelector img[alt="Edit"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit, src=/claroline-1.11.7/web/img/edit.png?1232379976}}, source=StateVertexImpl{id=83, name=state83}, target=StateVertexImpl{id=85, name=state85}}
+			mutateDOMTree(83);
+			assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*textzone_top\\.inc\\.html[\\s\\S]*$")); // original assertion
+			driver.findElement(By.cssSelector("img[alt=\"Edit\"]")).click();
+			//From state 85 to state 86
+			//Eventable{eventType=click, identification=cssSelector input.claroButton, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=claroButton, type=submit, value=Ok}}, source=StateVertexImpl{id=85, name=state85}, target=StateVertexImpl{id=86, name=state86}}
+			mutateDOMTree(85);
+			driver.findElement(By.cssSelector("input.claroButton")).click();
+			//Sink node at state 86
+			mutateDOMTree(86);
+			assertTrue(driver.findElement(By.cssSelector(".claroDialogBox")).getText().contains("The changes have been carried out correctly")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

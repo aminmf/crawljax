@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:14:55 PDT 2014
+ * Generated @ Sun Mar 09 15:54:08 PDT 2014
  */
 
 public class GeneratedTestCase9 {
@@ -78,20 +78,36 @@ public class GeneratedTestCase9 {
 	public void method9(){
 		try {
 			driver.get(url);
-			//From state 0 to state 118
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=118, name=state118}}
+			//From state 0 to state 147
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=147, name=state147}}
 			mutateDOMTree(0);
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 118 to state 166
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[2]/DIV[3]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/A[1], element=Element{node=[A: null], tag=A, text=Hello, attributes={href=/claroline-1.11.7/claroline/messaging/readmessage.php?messageId=372&type=received}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=166, name=state166}}
-			mutateDOMTree(118);
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[2]/DIV[3]/DIV[3]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/A[1]")).click();
-			//Sink node at state 166
-			mutateDOMTree(166);
+			//From state 147 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=147, name=state147}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(147);
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 115
+			//Eventable{eventType=click, identification=text Send a message to all users, element=Element{node=[A: null], tag=A, text=Send a message to all users, attributes={href=../messaging/sendmessage.php?cmd=rqMessageToAllUsers}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=115, name=state115}}
+			mutateDOMTree(2);
+			driver.findElement(By.linkText("Send a message to all users")).click();
+			//From state 115 to state 116
+			//Eventable{eventType=click, identification=name send, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={name=send, type=submit, value=Send}}, source=StateVertexImpl{id=115, name=state115}, target=StateVertexImpl{id=116, name=state116}}
+			mutateDOMTree(115);
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.name("send")).click();
+			//From state 116 to state 87
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=116, name=state116}, target=StateVertexImpl{id=87, name=state87}}
+			mutateDOMTree(116);
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxWarning")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Logout")).click();
+			//Sink node at state 87
+			mutateDOMTree(87);
+			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

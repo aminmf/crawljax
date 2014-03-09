@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:09:35 PDT 2014
+ * Generated @ Sun Mar 09 15:53:04 PDT 2014
  */
 
 public class GeneratedTestCase35 {
@@ -78,37 +78,51 @@ public class GeneratedTestCase35 {
 	public void method35(){
 		try {
 			driver.get(url);
-			//From state 0 to state 147
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=147, name=state147}}
+			//From state 0 to state 1
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
 			mutateDOMTree(0);
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 147 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=147, name=state147}, target=StateVertexImpl{id=2, name=state2}}
-			mutateDOMTree(147);
+			//From state 1 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(1);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 43
-			//Eventable{eventType=click, identification=text Configuration, element=Element{node=[A: null], tag=A, text=Configuration, attributes={href=tool/config_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=43, name=state43}}
+			//From state 2 to state 17
+			//Eventable{eventType=click, identification=text Claroline.net news, element=Element{node=[A: null], tag=A, text=Claroline.net news, attributes={href=clarolinenews.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=17, name=state17}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Configuration")).click();
-			//From state 43 to state 44
-			//Eventable{eventType=click, identification=text Announcement, element=Element{node=[A: null], tag=A, text=Announcement, attributes={href=config_edit.php?config_code=CLANN}}, source=StateVertexImpl{id=43, name=state43}, target=StateVertexImpl{id=44, name=state44}}
-			mutateDOMTree(43);
-			driver.findElement(By.linkText("Announcement")).click();
-			//From state 44 to state 45
-			//Eventable{eventType=click, identification=cssSelector input[type="submit"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={type=submit, value=Ok}}, source=StateVertexImpl{id=44, name=state44}, target=StateVertexImpl{id=45, name=state45}}
-			mutateDOMTree(44);
-			assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Use 0 to display all[\\s\\S]*$")); // original assertion
-			driver.findElement(By.id("label_announcementPortletMaxItems")).clear();
-			driver.findElement(By.id("label_announcementPortletMaxItems")).sendKeys("0");
-			driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-			//From state 45 to state 14
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=45, name=state45}, target=StateVertexImpl{id=14, name=state14}}
-			mutateDOMTree(45);
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Announcement, \\(CLANN\\) are now effective on server[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Claroline.net news")).click();
+			//From state 17 to state 18
+			//Eventable{eventType=click, identification=text Manage my account, element=Element{node=[A: null], tag=A, text=Manage my account, attributes={href=/claroline-1.11.7/claroline/auth/profile.php, target=_top}}, source=StateVertexImpl{id=17, name=state17}, target=StateVertexImpl{id=18, name=state18}}
+			mutateDOMTree(17);
+			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*CLAROLINE\\.NET NEWS[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Manage my account")).click();
+			//From state 18 to state 19
+			//Eventable{eventType=click, identification=id applyChange, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={id=applyChange, name=applyChange, type=submit, value=Ok}}, source=StateVertexImpl{id=18, name=state18}, target=StateVertexImpl{id=19, name=state19}}
+			mutateDOMTree(18);
+			driver.findElement(By.id("old_password")).clear();
+			driver.findElement(By.id("old_password")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.id("password_conf")).clear();
+			driver.findElement(By.id("password_conf")).sendKeys("nainy");
+			driver.findElement(By.id("phone")).clear();
+			driver.findElement(By.id("phone")).sendKeys("7788814476");
+			driver.findElement(By.id("applyChange")).click();
+			//From state 19 to state 14
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=14, name=state14}}
+			mutateDOMTree(19);
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*The information have been modified[\\s\\S]*$")); // original assertion
+			driver.findElement(By.id("old_password")).clear();
+			driver.findElement(By.id("old_password")).sendKeys("nainy");
+			driver.findElement(By.id("password")).clear();
+			driver.findElement(By.id("password")).sendKeys("nainy");
+			driver.findElement(By.id("password_conf")).clear();
+			driver.findElement(By.id("password_conf")).sendKeys("nainy");
+			driver.findElement(By.id("phone")).clear();
+			driver.findElement(By.id("phone")).sendKeys("7788814476");
 			driver.findElement(By.linkText("Logout")).click();
 			//Sink node at state 14
 			mutateDOMTree(14);

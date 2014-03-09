@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:16:00 PDT 2014
+ * Generated @ Sun Mar 09 15:57:12 PDT 2014
  */
 
 public class GeneratedTestCase141 {
@@ -78,42 +78,14 @@ public class GeneratedTestCase141 {
 	public void method141(){
 		try {
 			driver.get(url);
-			//From state 0 to state 118
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=118, name=state118}}
+			//From state 0 to state 173
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=Claroline, attributes={href=/claroline-1.11.7/index.php, target=_top}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=173, name=state173}}
 			mutateDOMTree(0);
 			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.id("login")).clear();
-			driver.findElement(By.id("login")).sendKeys("nainy");
-			driver.findElement(By.id("password")).clear();
-			driver.findElement(By.id("password")).sendKeys("nainy");
-			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 118 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=2, name=state2}}
-			mutateDOMTree(118);
-			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 107
-			//Eventable{eventType=click, identification=text Modules, element=Element{node=[A: null], tag=A, text=Modules, attributes={href=module/module_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=107, name=state107}}
-			mutateDOMTree(2);
-			driver.findElement(By.linkText("Modules")).click();
-			//From state 107 to state 150
-			//Eventable{eventType=click, identification=cssSelector .claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1), element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Properties, src=/claroline-1.11.7/web/img/settings.png?1232379976}}, source=StateVertexImpl{id=107, name=state107}, target=StateVertexImpl{id=150, name=state150}}
-			mutateDOMTree(107);
-			driver.findElement(By.cssSelector(".claroTable > tbody:nth-child(2) > tr:nth-child(11) > td:nth-child(6) > a:nth-child(1) > img:nth-child(1)")).click();
-			//From state 150 to state 151
-			//Eventable{eventType=click, identification=text Local settings, element=Element{node=[A: null], tag=A, text=Local settings, attributes={href=module.php?module_id=11&item=LOCAL}}, source=StateVertexImpl{id=150, name=state150}, target=StateVertexImpl{id=151, name=state151}}
-			mutateDOMTree(150);
-			driver.findElement(By.linkText("Local settings")).click();
-			//From state 151 to state 156
-			//Eventable{eventType=click, identification=cssSelector input[type="submit"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={type=submit, value=Ok}}, source=StateVertexImpl{id=151, name=state151}, target=StateVertexImpl{id=156, name=state156}}
-			mutateDOMTree(151);
-			driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-			//From state 156 to state 186
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[3]/FORM[1]/TABLE[1]/TBODY[1]/TR[3]/TD[2]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=http://localhost:8888/claroline-1.11.7/claroline/admin/module/module.php?module_id=11&item=LOCAL}}, source=StateVertexImpl{id=156, name=state156}, target=StateVertexImpl{id=186, name=state186}}
-			mutateDOMTree(156);
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Properties for Wiki, \\(CLWIKI\\) are now effective on server\\.[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[3]/FORM[1]/TABLE[1]/TBODY[1]/TR[3]/TD[2]/A[1]")).click();
-			//Sink node at state 186
-			mutateDOMTree(186);
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1]")).click();
+			//Sink node at state 173
+			mutateDOMTree(173);
+			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

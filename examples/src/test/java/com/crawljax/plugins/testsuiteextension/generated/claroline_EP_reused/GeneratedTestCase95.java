@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:16:00 PDT 2014
+ * Generated @ Sun Mar 09 15:57:12 PDT 2014
  */
 
 public class GeneratedTestCase95 {
@@ -91,18 +91,16 @@ public class GeneratedTestCase95 {
 			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
 			mutateDOMTree(1);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 124
-			//Eventable{eventType=click, identification=text User list, element=Element{node=[A: null], tag=A, text=User list, attributes={href=admin_users.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=124, name=state124}}
+			//From state 2 to state 115
+			//Eventable{eventType=click, identification=text Send a message to all users, element=Element{node=[A: null], tag=A, text=Send a message to all users, attributes={href=../messaging/sendmessage.php?cmd=rqMessageToAllUsers}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=115, name=state115}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("User list")).click();
-			//From state 124 to state 168
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/LI[3]/A[1], element=Element{node=[A: null], tag=A, text=User list, attributes={href=/claroline-1.11.7/claroline/admin/admin_users.php, target=_top}}, source=StateVertexImpl{id=124, name=state124}, target=StateVertexImpl{id=168, name=state168}}
-			mutateDOMTree(124);
-			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*nainy[\\s\\S]*$")); // original assertion
-			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$")); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/LI[3]/A[1]")).click();
-			//Sink node at state 168
-			mutateDOMTree(168);
+			driver.findElement(By.linkText("Send a message to all users")).click();
+			//From state 115 to state 170
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/A[1], element=Element{node=[A: null], tag=A, text=Font Family, attributes={class=mceText mceTitle, href=javascript:;, id=message_fontselect_text, onclick=return false;, onmousedown=return false;, tabindex=-1}}, source=StateVertexImpl{id=115, name=state115}, target=StateVertexImpl{id=170, name=state170}}
+			mutateDOMTree(115);
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[2]/FORM[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[2]/SPAN[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/A[1]")).click();
+			//Sink node at state 170
+			mutateDOMTree(170);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

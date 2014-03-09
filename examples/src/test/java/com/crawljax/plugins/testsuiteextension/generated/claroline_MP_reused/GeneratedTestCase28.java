@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:10:08 PDT 2014
+ * Generated @ Sun Mar 09 15:55:21 PDT 2014
  */
 
 public class GeneratedTestCase28 {
@@ -78,8 +78,8 @@ public class GeneratedTestCase28 {
 	public void method28(){
 		try {
 			driver.get(url);
-			//From state 0 to state 1
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+			//From state 0 to state 118
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=118, name=state118}}
 			mutateDOMTree(0);
 			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 			driver.findElement(By.id("login")).clear();
@@ -87,39 +87,27 @@ public class GeneratedTestCase28 {
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 1 to state 2
-			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
-			mutateDOMTree(1);
+			//From state 118 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(118);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 107
-			//Eventable{eventType=click, identification=text Modules, element=Element{node=[A: null], tag=A, text=Modules, attributes={href=module/module_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=107, name=state107}}
+			//From state 2 to state 77
+			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=77, name=state77}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Modules")).click();
-			//From state 107 to state 108
-			//Eventable{eventType=click, identification=cssSelector img[alt="Properties"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Properties, src=/claroline-1.11.7/web/img/settings.png?1232379976}}, source=StateVertexImpl{id=107, name=state107}, target=StateVertexImpl{id=108, name=state108}}
-			mutateDOMTree(107);
-			driver.findElement(By.cssSelector("img[alt=\"Properties\"]")).click();
-			//From state 108 to state 109
-			//Eventable{eventType=click, identification=text Visible, element=Element{node=[A: null], tag=A, text=Visible, attributes={href=/claroline-1.11.7/claroline/admin/module/module.php?module_id=1&cmd=makeVisible&item=GLOBAL, onclick=return confirmMakeVisible();, title=Make module visible in all courses}}, source=StateVertexImpl{id=108, name=state108}, target=StateVertexImpl{id=109, name=state109}}
-			mutateDOMTree(108);
-			driver.findElement(By.linkText("Visible")).click();
-			//From state 109 to state 110
-			//Eventable{eventType=click, identification=text Local settings, element=Element{node=[A: null], tag=A, text=Local settings, attributes={href=module.php?module_id=1&item=LOCAL}}, source=StateVertexImpl{id=109, name=state109}, target=StateVertexImpl{id=110, name=state110}}
-			mutateDOMTree(109);
-			assertTrue(closeAlertAndGetItsText().matches("^ Are you sure you want to make this module visible in all courses [\\s\\S]$")); // original assertion
-			driver.findElement(By.linkText("Local settings")).click();
-			//From state 110 to state 111
-			//Eventable{eventType=click, identification=text About, element=Element{node=[A: null], tag=A, text=About, attributes={href=module.php?module_id=1&item=About}}, source=StateVertexImpl{id=110, name=state110}, target=StateVertexImpl{id=111, name=state111}}
-			mutateDOMTree(110);
-			driver.findElement(By.linkText("About")).click();
-			//From state 111 to state 87
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=111, name=state111}, target=StateVertexImpl{id=87, name=state87}}
-			mutateDOMTree(111);
-			assertTrue(driver.findElement(By.id("claroBody")).getText().matches("^[\\s\\S]*Course description[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Manage course categories")).click();
+			//From state 77 to state 78
+			//Eventable{eventType=click, identification=xpath (//img[@alt='Delete category'])[5], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Delete category, src=/claroline-1.11.7/web/img/delete.png?1232379976}}, source=StateVertexImpl{id=77, name=state77}, target=StateVertexImpl{id=78, name=state78}}
+			mutateDOMTree(77);
+			driver.findElement(By.xpath("(//img[@alt='Delete category'])[5]")).click();
+			//From state 78 to state 14
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=78, name=state78}, target=StateVertexImpl{id=14, name=state14}}
+			mutateDOMTree(78);
+			assertTrue(closeAlertAndGetItsText().matches("^[\\s\\S]*Are you sure to delete[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category deleted\\.[\\s\\S]*$")); // original assertion
 			driver.findElement(By.linkText("Logout")).click();
-			//Sink node at state 87
-			mutateDOMTree(87);
-			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // original assertion
+			//Sink node at state 14
+			mutateDOMTree(14);
+			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

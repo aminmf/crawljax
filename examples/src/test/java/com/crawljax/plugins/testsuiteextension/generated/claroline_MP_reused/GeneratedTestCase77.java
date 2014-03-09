@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:10:08 PDT 2014
+ * Generated @ Sun Mar 09 15:55:22 PDT 2014
  */
 
 public class GeneratedTestCase77 {
@@ -91,23 +91,19 @@ public class GeneratedTestCase77 {
 			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
 			mutateDOMTree(1);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 71
-			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=71, name=state71}}
+			//From state 2 to state 115
+			//Eventable{eventType=click, identification=text Send a message to all users, element=Element{node=[A: null], tag=A, text=Send a message to all users, attributes={href=../messaging/sendmessage.php?cmd=rqMessageToAllUsers}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=115, name=state115}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Manage course categories")).click();
-			//From state 71 to state 72
-			//Eventable{eventType=click, identification=cssSelector img[alt="Edit category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit category, src=/claroline-1.11.7/web/img/edit.png?1232379976}}, source=StateVertexImpl{id=71, name=state71}, target=StateVertexImpl{id=72, name=state72}}
-			mutateDOMTree(71);
-			driver.findElement(By.cssSelector("img[alt=\"Edit category\"]")).click();
-			//From state 72 to state 73
-			//Eventable{eventType=click, identification=cssSelector img[alt="Move down category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Move down category, src=/claroline-1.11.7/web/img/move_down.png?1232379976}}, source=StateVertexImpl{id=72, name=state72}, target=StateVertexImpl{id=73, name=state73}}
-			mutateDOMTree(72);
-			driver.findElement(By.id("category_code")).clear();
-			driver.findElement(By.id("category_code")).sendKeys("Sci");
-			driver.findElement(By.cssSelector("img[alt=\"Move down category\"]")).click();
-			//Sink node at state 73
-			mutateDOMTree(73);
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Send a message to all users")).click();
+			//From state 115 to state 116
+			//Eventable{eventType=click, identification=name send, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={name=send, type=submit, value=Send}}, source=StateVertexImpl{id=115, name=state115}, target=StateVertexImpl{id=116, name=state116}}
+			mutateDOMTree(115);
+			driver.findElement(By.id("message_subject")).clear();
+			driver.findElement(By.id("message_subject")).sendKeys("Hello");
+			driver.findElement(By.name("send")).click();
+			//Sink node at state 116
+			mutateDOMTree(116);
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxWarning")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

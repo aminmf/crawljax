@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:10:08 PDT 2014
+ * Generated @ Sun Mar 09 15:55:22 PDT 2014
  */
 
 public class GeneratedTestCase64 {
@@ -99,15 +99,10 @@ public class GeneratedTestCase64 {
 			//Eventable{eventType=click, identification=xpath (//img[@alt='Delete category'])[5], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Delete category, src=/claroline-1.11.7/web/img/delete.png?1232379976}}, source=StateVertexImpl{id=77, name=state77}, target=StateVertexImpl{id=78, name=state78}}
 			mutateDOMTree(77);
 			driver.findElement(By.xpath("(//img[@alt='Delete category'])[5]")).click();
-			//From state 78 to state 79
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=78, name=state78}, target=StateVertexImpl{id=79, name=state79}}
+			//Sink node at state 78
 			mutateDOMTree(78);
 			assertTrue(closeAlertAndGetItsText().matches("^[\\s\\S]*Are you sure to delete[\\s\\S]*$")); // original assertion
 			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category deleted\\.[\\s\\S]*$")); // original assertion
-			driver.findElement(By.linkText("Logout")).click();
-			//Sink node at state 79
-			mutateDOMTree(79);
-			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

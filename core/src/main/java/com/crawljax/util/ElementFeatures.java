@@ -185,8 +185,8 @@ public class ElementFeatures implements Serializable{
 			return false;
 		//if (classLabel != other.classLabel)
 		//	return false;
-		if (!elementPatternAssertion.equals(other.elementPatternAssertion))
-			return false;
+		//if (!elementPatternAssertion.equals(other.elementPatternAssertion))
+		//	return false;
 		if (Double.doubleToLongBits(innerHtmlDensity) != Double
 				.doubleToLongBits(other.innerHtmlDensity))
 			return false;

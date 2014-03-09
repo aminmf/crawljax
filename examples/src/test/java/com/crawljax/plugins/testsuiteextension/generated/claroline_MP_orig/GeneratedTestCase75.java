@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:09:36 PDT 2014
+ * Generated @ Sun Mar 09 15:53:04 PDT 2014
  */
 
 public class GeneratedTestCase75 {
@@ -90,23 +90,28 @@ public class GeneratedTestCase75 {
 			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=2, name=state2}}
 			mutateDOMTree(118);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 71
-			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=71, name=state71}}
+			//From state 2 to state 128
+			//Eventable{eventType=click, identification=text Right profile list, element=Element{node=[A: null], tag=A, text=Right profile list, attributes={href=right/profile_list.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=128, name=state128}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Manage course categories")).click();
-			//From state 71 to state 72
-			//Eventable{eventType=click, identification=cssSelector img[alt="Edit category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit category, src=/claroline-1.11.7/web/img/edit.png?1232379976}}, source=StateVertexImpl{id=71, name=state71}, target=StateVertexImpl{id=72, name=state72}}
-			mutateDOMTree(71);
-			driver.findElement(By.cssSelector("img[alt=\"Edit category\"]")).click();
-			//From state 72 to state 73
-			//Eventable{eventType=click, identification=cssSelector img[alt="Move down category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Move down category, src=/claroline-1.11.7/web/img/move_down.png?1232379976}}, source=StateVertexImpl{id=72, name=state72}, target=StateVertexImpl{id=73, name=state73}}
-			mutateDOMTree(72);
-			driver.findElement(By.id("category_code")).clear();
-			driver.findElement(By.id("category_code")).sendKeys("Sci");
-			driver.findElement(By.cssSelector("img[alt=\"Move down category\"]")).click();
-			//Sink node at state 73
-			mutateDOMTree(73);
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("Right profile list")).click();
+			//From state 128 to state 129
+			//Eventable{eventType=click, identification=xpath (//img[@alt='Edit'])[6], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit, src=/claroline-1.11.7/web/img/settings.png?1232379976}}, source=StateVertexImpl{id=128, name=state128}, target=StateVertexImpl{id=129, name=state129}}
+			mutateDOMTree(128);
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Course member \\(the user is actually enrolled in the course\\)[\\s\\S]*$")); // original assertion
+			driver.findElement(By.xpath("(//img[@alt='Edit'])[6]")).click();
+			//From state 129 to state 130
+			//Eventable{eventType=click, identification=cssSelector a > span, element=Element{node=[SPAN: null], tag=SPAN, text=Access allowed, attributes={style=font-size: smaller;}}, source=StateVertexImpl{id=129, name=state129}, target=StateVertexImpl{id=130, name=state130}}
+			mutateDOMTree(129);
+			assertEquals("Claroline", driver.getTitle()); // original assertion
+			driver.findElement(By.cssSelector("a > span")).click();
+			//From state 130 to state 139
+			//Eventable{eventType=click, identification=text View all right profile, element=Element{node=[A: null], tag=A, text=View all right profile, attributes={href=/claroline-1.11.7/claroline/admin/right/profile.php?display_profile=all}}, source=StateVertexImpl{id=130, name=state130}, target=StateVertexImpl{id=139, name=state139}}
+			mutateDOMTree(130);
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Access allowed[\\s\\S]*$")); // original assertion
+			driver.findElement(By.linkText("View all right profile")).click();
+			//Sink node at state 139
+			mutateDOMTree(139);
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Edition allowed[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

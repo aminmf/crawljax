@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:09:35 PDT 2014
+ * Generated @ Sun Mar 09 15:53:04 PDT 2014
  */
 
 public class GeneratedTestCase3 {
@@ -78,48 +78,31 @@ public class GeneratedTestCase3 {
 	public void method3(){
 		try {
 			driver.get(url);
-			//From state 0 to state 118
-			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=118, name=state118}}
+			//From state 0 to state 147
+			//Eventable{eventType=click, identification=cssSelector button[type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Enter, attributes={tabindex=3, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=147, name=state147}}
 			mutateDOMTree(0);
 			driver.findElement(By.id("login")).clear();
 			driver.findElement(By.id("login")).sendKeys("nainy");
 			driver.findElement(By.id("password")).clear();
 			driver.findElement(By.id("password")).sendKeys("nainy");
 			driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
-			//From state 118 to state 142
-			//Eventable{eventType=click, identification=text Create a course site, element=Element{node=[A: null], tag=A, text=Create a course site, attributes={class=userCommandsItem, href=/claroline-1.11.7/claroline/course/create.php}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=142, name=state142}}
-			mutateDOMTree(118);
-			driver.findElement(By.linkText("Create a course site")).click();
-			//From state 142 to state 143
-			//Eventable{eventType=click, identification=text Advanced options, element=Element{node=[A: null], tag=A, text=Advanced options, attributes={class=doCollapse, href=#}}, source=StateVertexImpl{id=142, name=state142}, target=StateVertexImpl{id=143, name=state143}}
-			mutateDOMTree(142);
-			driver.findElement(By.id("course_title")).clear();
-			driver.findElement(By.id("course_title")).sendKeys("Computer Science");
-			driver.findElement(By.id("course_officialCode")).clear();
-			driver.findElement(By.id("course_officialCode")).sendKeys("A7");
-			driver.findElement(By.linkText("Advanced options")).click();
-			//From state 143 to state 144
-			//Eventable{eventType=click, identification=id course_status_date, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={id=course_status_date, name=course_status_selection, type=radio, value=date}}, source=StateVertexImpl{id=143, name=state143}, target=StateVertexImpl{id=144, name=state144}}
-			mutateDOMTree(143);
-			driver.findElement(By.id("course_title")).clear();
-			driver.findElement(By.id("course_title")).sendKeys("Computer Science");
-			driver.findElement(By.id("course_officialCode")).clear();
-			driver.findElement(By.id("course_officialCode")).sendKeys("A7");
-			driver.findElement(By.id("course_status_date")).click();
-			//From state 144 to state 145
-			//Eventable{eventType=click, identification=name changeProperties, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={name=changeProperties, type=submit, value=Ok}}, source=StateVertexImpl{id=144, name=state144}, target=StateVertexImpl{id=145, name=state145}}
-			mutateDOMTree(144);
-			driver.findElement(By.id("course_title")).clear();
-			driver.findElement(By.id("course_title")).sendKeys("Computer Science");
-			driver.findElement(By.id("course_officialCode")).clear();
-			driver.findElement(By.id("course_officialCode")).sendKeys("A7");
-			driver.findElement(By.name("changeProperties")).click();
-			//From state 145 to state 146
-			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=145, name=state145}, target=StateVertexImpl{id=146, name=state146}}
-			mutateDOMTree(145);
+			//From state 147 to state 2
+			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=147, name=state147}, target=StateVertexImpl{id=2, name=state2}}
+			mutateDOMTree(147);
+			driver.findElement(By.linkText("Platform administration")).click();
+			//From state 2 to state 124
+			//Eventable{eventType=click, identification=text User list, element=Element{node=[A: null], tag=A, text=User list, attributes={href=admin_users.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=124, name=state124}}
+			mutateDOMTree(2);
+			driver.findElement(By.linkText("User list")).click();
+			//From state 124 to state 87
+			//Eventable{eventType=click, identification=text Logout, element=Element{node=[A: null], tag=A, text=Logout, attributes={href=/claroline-1.11.7/index.php?logout=true, target=_top}}, source=StateVertexImpl{id=124, name=state124}, target=StateVertexImpl{id=87, name=state87}}
+			mutateDOMTree(124);
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*nainy[\\s\\S]*$")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("table.claroTable.emphaseLine")).getText().matches("^[\\s\\S]*Administrator[\\s\\S]*$")); // original assertion
 			driver.findElement(By.linkText("Logout")).click();
-			//Sink node at state 146
-			mutateDOMTree(146);
+			//Sink node at state 87
+			mutateDOMTree(87);
+			assertTrue(driver.findElement(By.id("loginBox")).getText().matches("^[\\s\\S]*Authentication[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

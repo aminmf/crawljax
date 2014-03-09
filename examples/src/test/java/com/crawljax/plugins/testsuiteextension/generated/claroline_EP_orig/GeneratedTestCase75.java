@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:14:55 PDT 2014
+ * Generated @ Sun Mar 09 15:54:08 PDT 2014
  */
 
 public class GeneratedTestCase75 {
@@ -90,13 +90,16 @@ public class GeneratedTestCase75 {
 			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=118, name=state118}, target=StateVertexImpl{id=2, name=state2}}
 			mutateDOMTree(118);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 101
-			//Eventable{eventType=click, identification=text Manage administrator email notifications, element=Element{node=[A: null], tag=A, text=Manage administrator email notifications, attributes={href=adminmailsystem.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=101, name=state101}}
+			//From state 2 to state 23
+			//Eventable{eventType=click, identification=text Manage classes, element=Element{node=[A: null], tag=A, text=Manage classes, attributes={href=admin_class.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=23, name=state23}}
 			mutateDOMTree(2);
-			driver.findElement(By.linkText("Manage administrator email notifications")).click();
-			//Sink node at state 101
-			mutateDOMTree(101);
-			assertTrue(isElementPresent(By.cssSelector("TABLE.claroTable.emphaseLine"))); // original assertion
+			driver.findElement(By.linkText("Manage classes")).click();
+			//From state 23 to state 179
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/LI[3]/A[1], element=Element{node=[A: null], tag=A, text=Classes, attributes={href=/claroline-1.11.7/claroline/admin/admin_class.php, target=_top}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=179, name=state179}}
+			mutateDOMTree(23);
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/LI[3]/A[1]")).click();
+			//Sink node at state 179
+			mutateDOMTree(179);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

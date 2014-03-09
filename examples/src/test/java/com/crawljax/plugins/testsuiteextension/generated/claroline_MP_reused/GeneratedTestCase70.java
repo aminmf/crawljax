@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Sun Mar 09 12:10:08 PDT 2014
+ * Generated @ Sun Mar 09 15:55:22 PDT 2014
  */
 
 public class GeneratedTestCase70 {
@@ -91,26 +91,23 @@ public class GeneratedTestCase70 {
 			//Eventable{eventType=click, identification=text Platform administration, element=Element{node=[A: null], tag=A, text=Platform administration, attributes={href=/claroline-1.11.7/claroline/admin/, target=_top}}, source=StateVertexImpl{id=147, name=state147}, target=StateVertexImpl{id=2, name=state2}}
 			mutateDOMTree(147);
 			driver.findElement(By.linkText("Platform administration")).click();
-			//From state 2 to state 11
-			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=11, name=state11}}
+			//From state 2 to state 71
+			//Eventable{eventType=click, identification=text Manage course categories, element=Element{node=[A: null], tag=A, text=Manage course categories, attributes={href=admin_category.php}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=71, name=state71}}
 			mutateDOMTree(2);
 			driver.findElement(By.linkText("Manage course categories")).click();
-			//From state 11 to state 12
-			//Eventable{eventType=click, identification=text Create a category, element=Element{node=[A: null], tag=A, text=Create a category, attributes={href=/claroline-1.11.7/claroline/admin/admin_category.php?cmd=rqAdd, style=background-image: url(/claroline-1.11.7/web/img/category_new.png?1315407288); background-repeat: no-repeat; background-position: left center; padding-left: 20px;}}, source=StateVertexImpl{id=11, name=state11}, target=StateVertexImpl{id=12, name=state12}}
-			mutateDOMTree(11);
-			driver.findElement(By.linkText("Create a category")).click();
-			//From state 12 to state 13
-			//Eventable{eventType=click, identification=cssSelector input[type="submit"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={type=submit, value=Ok}}, source=StateVertexImpl{id=12, name=state12}, target=StateVertexImpl{id=13, name=state13}}
-			mutateDOMTree(12);
-			driver.findElement(By.id("category_name")).clear();
-			driver.findElement(By.id("category_name")).sendKeys("Software Testing");
+			//From state 71 to state 72
+			//Eventable{eventType=click, identification=cssSelector img[alt="Edit category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Edit category, src=/claroline-1.11.7/web/img/edit.png?1232379976}}, source=StateVertexImpl{id=71, name=state71}, target=StateVertexImpl{id=72, name=state72}}
+			mutateDOMTree(71);
+			driver.findElement(By.cssSelector("img[alt=\"Edit category\"]")).click();
+			//From state 72 to state 73
+			//Eventable{eventType=click, identification=cssSelector img[alt="Move down category"], element=Element{node=[IMG: null], tag=IMG, text=, attributes={alt=Move down category, src=/claroline-1.11.7/web/img/move_down.png?1232379976}}, source=StateVertexImpl{id=72, name=state72}, target=StateVertexImpl{id=73, name=state73}}
+			mutateDOMTree(72);
 			driver.findElement(By.id("category_code")).clear();
-			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-			driver.findElement(By.id("category_code")).sendKeys(RandValue);
-			driver.findElement(By.cssSelector("input[type=\"submit\"]")).click();
-			//Sink node at state 13
-			mutateDOMTree(13);
-			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category created[\\s\\S]*$")); // original assertion
+			driver.findElement(By.id("category_code")).sendKeys("Sci");
+			driver.findElement(By.cssSelector("img[alt=\"Move down category\"]")).click();
+			//Sink node at state 73
+			mutateDOMTree(73);
+			assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxSuccess")).getText().matches("^[\\s\\S]*Category moved down[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
