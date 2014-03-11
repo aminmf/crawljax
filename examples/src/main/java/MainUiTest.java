@@ -17,7 +17,7 @@ public class MainUiTest {
 	@Before
 	public void setUp() throws Exception {
 		driver = new FirefoxDriver();
-		baseUrl = "http://localhost:8080/index.html";
+		baseUrl = "http://localhost:8888/capstone/index.html";
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 

@@ -1,5 +1,20 @@
 TestSuiteBegin
 NewTestCase testCreatePage.java
+assertionModeOn
+assertion assertEquals("Login - Wolf CMS", driver.getTitle())
+assertionModeOff
+By.id: login-username
+[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-username]
+clear 
+By.id: login-username
+[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-username]
+sendKeys admin
+By.id: login-password
+[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-password]
+clear 
+By.id: login-password
+[[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> id: login-password]
+sendKeys admin
 By.xpath: //input[@value='Login']
 [[FirefoxDriver: firefox on MAC (9adbf521-4ac5-5a48-b5d6-5242e90747ef)] -> xpath: //input[@value='Login']]
 click 
@@ -43,8 +58,6 @@ assertionModeOff
 By.linkText: Log Out
 [[FirefoxDriver: firefox on MAC (8c8a0b6c-15f9-7b41-be0e-21d5613acb6b)] -> link text: Log Out]
 click 
-TestSuiteEnd
-
 NewTestCase TestCreateSnippet.java
 By.id: login-username
 [[FirefoxDriver: firefox on MAC (9e4c004a-319a-6441-afa2-b177d32a5452)] -> id: login-username]

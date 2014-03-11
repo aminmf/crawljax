@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.slf4j.Logger;
@@ -112,6 +113,14 @@ public class Crawler {
 		                crawlRules.getInvariants(), plugins, stateComparator);
 		context.setStateMachine(stateMachine);
 		crawlpath = new CrawlPath();
+
+		// for wolfcms app -> first perform a logout
+		if (crawlDepth.get() > 0)
+			if (!browser.getCurrentUrl().equals("http://localhost:8888/wolfcms/?/admin/login"))
+				if (browser.getCurrentUrl().contains("admin"))
+					if (!browser.getCurrentUrl().contains("login"))
+						browser.getBrowser().findElement(By.linkText("Log Out")).click();
+
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);
 		crawlDepth.set(0);
@@ -192,6 +201,7 @@ public class Crawler {
 			plugins.runOnRevisitStatePlugins(context, curState);
 
 		} else {
+			// Amin: comment this out to let it continue even with erroe
 			throw new StateUnreachableException(targetState, "couldn't fire eventable "
 			        + clickable);
 		}
@@ -209,7 +219,7 @@ public class Crawler {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
 
 		// Amin: changed this part to fill the "formInput" values based on values in "formInputs" that came from test suites
-		boolean usetestExt = false;
+		boolean usetestExt = true;
 		if (!usetestExt ){
 			// Original
 			for (FormInput formInput : formHandler.getFormInputs()) {

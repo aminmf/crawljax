@@ -102,8 +102,10 @@ class StateVertexImpl implements StateVertex {
 		if (object instanceof StateVertex) {
 			StateVertex that = (StateVertex) object;
 			// Amin: For Testex
-			//return Objects.equal(this.strippedDom, that.getStrippedDom());
-			return Objects.equal(this.dom, that.getDom());
+			//return Objects.equal(this.dom, that.getDom());
+			
+			// for wolfcms app
+			return Objects.equal(this.strippedDom, that.getStrippedDom());
 		}
 		return false;
 	}

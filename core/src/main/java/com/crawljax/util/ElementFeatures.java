@@ -43,8 +43,6 @@ public class ElementFeatures implements Serializable{
 		this.xpath = xpath;
 		this.textImportance = textImportance;
 		this.normalBlockWidth = normalBlockWidth;
-		if (normalBlockHeight > 1)
-			normalBlockHeight = 1;
 		this.normalBlockHeight = normalBlockHeight;
 		this.normalBlockCenterX = normalBlockCenterX;
 		this.normalBlockCenterY = normalBlockCenterY;
@@ -53,6 +51,25 @@ public class ElementFeatures implements Serializable{
 		this.blockDensity = blockDensity;
 		this.normalNumOfChildren = normalNumOfChildren;
 		this.classLabel = classLabel;
+
+	
+		if (this.normalBlockWidth > 1)
+			this.normalBlockWidth = 1;
+		if (this.normalBlockHeight > 1)
+			this.normalBlockHeight = 1;
+		if (this.normalBlockCenterX > 1)
+			this.normalBlockCenterX = 1;
+		if (this.normalBlockCenterY > 1)
+			this.normalBlockCenterY = 1;
+		if (this.innerHtmlDensity > 1)
+			this.innerHtmlDensity = 1;
+		if (this.linkDensity > 1)
+			this.linkDensity = 1;
+		if (this.blockDensity > 1)
+			this.blockDensity = 1;
+		if (this.normalNumOfChildren > 1)
+			this.normalNumOfChildren = 1;
+	
 	}
 
 	public int getTextImportance() {
