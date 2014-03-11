@@ -108,7 +108,7 @@ public class GeneratedTestCase100 {
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]/A[1]")).click();
 			//Sink node at state 174
 			mutateDOMTree(174);
-			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
+			//assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

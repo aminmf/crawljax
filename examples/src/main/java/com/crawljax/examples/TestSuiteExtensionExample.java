@@ -30,9 +30,9 @@ public final class TestSuiteExtensionExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
-	private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
+	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
 	//private static final String URL = "http://localhost:8888/phormer331/";
-	//private static final String URL = "http://localhost:8888/wolfcms/?/admin";
+	private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
 	
 
 	/**
@@ -44,7 +44,7 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(750, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(400, TimeUnit.SECONDS);
 		builder.setMaximumDepth(0);
 
 		// click these elements
@@ -106,10 +106,10 @@ public final class TestSuiteExtensionExample {
 		//contactForm.field("female").setValues(false, true);
 		//contactForm.field("name").setValues("Bob", "Alice", "John");
 		//contactForm.field("phone").setValues("1234567890", "1234888888", "");
-		//contactForm.field("login").setValues("nainy", "3214321421");
-		//contactForm.field("password").setValues("nainy", "Teacher");
+		contactForm.field("login-username").setValues("admin");
+		contactForm.field("login-password").setValues("admin");
 		//contactForm.field("active").setValues(true);
-		//input.setValuesInForm(contactForm).beforeClickElement("button");//. .withText("Save");
+		input.setValuesInForm(contactForm).beforeClickElement("button");//. .withText("Save");
 		return input;
 	}
 

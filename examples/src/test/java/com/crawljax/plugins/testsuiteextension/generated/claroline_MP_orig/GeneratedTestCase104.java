@@ -97,7 +97,7 @@ public class GeneratedTestCase104 {
 			driver.findElement(By.linkText("View all my messages")).click();
 			//Sink node at state 120
 			mutateDOMTree(120);
-			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // original assertion
+			//assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

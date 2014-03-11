@@ -209,7 +209,7 @@ public class Crawler {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
 
 		// Amin: changed this part to fill the "formInput" values based on values in "formInputs" that came from test suites
-		boolean usetestExt = true;
+		boolean usetestExt = false;
 		if (!usetestExt ){
 			// Original
 			for (FormInput formInput : formHandler.getFormInputs()) {

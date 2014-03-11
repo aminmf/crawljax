@@ -99,11 +99,11 @@ public class GeneratedTestCase139 {
 			//From state 120 to state 169
 			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/LI[2]/A[1], element=Element{node=[A: null], tag=A, text=My messages, attributes={href=/claroline-1.11.7/claroline/messaging/messagebox.php?box=inbox, target=_top}}, source=StateVertexImpl{id=120, name=state120}, target=StateVertexImpl{id=169, name=state169}}
 			mutateDOMTree(120);
-			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // original assertion
+			//assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // original assertion
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/UL[1]/LI[2]/A[1]")).click();
 			//Sink node at state 169
 			mutateDOMTree(169);
-			assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
+			//assertTrue(driver.findElement(By.cssSelector("div.toolTitleBlock")).getText().matches("^[\\s\\S]*My messages\r\n[\\s\\S]*$")); // reused assertion in case of ElementFullMatch
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
