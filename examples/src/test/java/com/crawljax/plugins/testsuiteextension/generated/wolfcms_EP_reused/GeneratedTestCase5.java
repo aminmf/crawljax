@@ -135,7 +135,6 @@ public class GeneratedTestCase5 {
 			driver.findElement(By.id("user_email")).clear();
 			driver.findElement(By.id("user_email")).sendKeys("test1@example.com");
 			driver.findElement(By.id("user_username")).clear();
-			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 			driver.findElement(By.id("user_username")).sendKeys(RandValue);
 			driver.findElement(By.id("user_password")).clear();
 			driver.findElement(By.id("user_password")).sendKeys("pswpsw");

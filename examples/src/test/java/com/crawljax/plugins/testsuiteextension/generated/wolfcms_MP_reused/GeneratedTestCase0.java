@@ -83,12 +83,6 @@ public class GeneratedTestCase0 {
 			mutateDOMTree(0);
 			assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
 			assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();
@@ -99,44 +93,23 @@ public class GeneratedTestCase0 {
 			mutateDOMTree(48);
 			assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
 			assertTrue(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != ""); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.linkText("Users")).click();
 			//From state 49 to state 50
 			//Eventable{eventType=click, identification=partialText RND, element=Element{node=[A: null], tag=A, text=RNDUserBxum, attributes={href=http://localhost:8888/wolfcms/?/admin/user/edit/4}}, source=StateVertexImpl{id=49, name=state49}, target=StateVertexImpl{id=50, name=state50}}
 			mutateDOMTree(49);
 			assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
 			assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.partialLinkText("RND")).click();
 			//From state 50 to state 51
 			//Eventable{eventType=click, identification=name commit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={accesskey=s, class=button, name=commit, type=submit, value=Save}}, source=StateVertexImpl{id=50, name=state50}, target=StateVertexImpl{id=51, name=state51}}
 			mutateDOMTree(50);
 			assertEquals("Users - Edit | Wolf CMS", driver.getTitle()); // original assertion
 			assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.id("user_name")).clear();
 			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 			driver.findElement(By.id("user_name")).sendKeys(RandValue);
 			driver.findElement(By.id("user_email")).clear();
 			driver.findElement(By.id("user_email")).sendKeys("test1@example.com");
-			driver.findElement(By.id("user_username")).clear();
-			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-			driver.findElement(By.id("user_username")).sendKeys(RandValue);
 			driver.findElement(By.id("user_password")).clear();
 			driver.findElement(By.id("user_password")).sendKeys("pswpsw");
 			driver.findElement(By.id("user_confirm")).clear();
