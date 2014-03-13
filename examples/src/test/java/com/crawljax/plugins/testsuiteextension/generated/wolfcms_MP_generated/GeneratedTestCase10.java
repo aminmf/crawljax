@@ -89,12 +89,8 @@ public class GeneratedTestCase10 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of AEP for Original
 
-			assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p"))); // generated assertion in case of ElementTagAttMatch
+			//assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p"))); // generated assertion in case of ElementTagAttMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();

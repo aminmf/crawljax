@@ -91,10 +91,6 @@ public class GeneratedTestCase36 {
 
 			assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p"))); // generated assertion in case of ElementTagAttMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();
@@ -224,10 +220,6 @@ public class GeneratedTestCase36 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.linkText("Snippets")).click();
 			//From state 23 to state 95
 			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/UL[1]/LI[24]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={class=remove, href=http://localhost:8888/wolfcms/?/admin/snippet/delete/74, onclick=return confirm('Are you sure you wish to delete? RNDyjia?');}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=95, name=state95}}

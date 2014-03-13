@@ -83,10 +83,6 @@ public class GeneratedTestCase36 {
 			mutateDOMTree(0);
 			assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
 			assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();
@@ -96,10 +92,6 @@ public class GeneratedTestCase36 {
 			//Eventable{eventType=click, identification=text Snippets, element=Element{node=[A: null], tag=A, text=Snippets, attributes={href=http://localhost:8888/wolfcms/?/admin/snippet}}, source=StateVertexImpl{id=22, name=state22}, target=StateVertexImpl{id=23, name=state23}}
 			mutateDOMTree(22);
 			assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.linkText("Snippets")).click();
 			//From state 23 to state 95
 			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/UL[1]/LI[24]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={class=remove, href=http://localhost:8888/wolfcms/?/admin/snippet/delete/74, onclick=return confirm('Are you sure you wish to delete? RNDyjia?');}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=95, name=state95}}

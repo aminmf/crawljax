@@ -202,10 +202,7 @@ public class GeneratedTestCase28 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
+
 			driver.findElement(By.id("snippet_name")).clear();
 			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 			driver.findElement(By.id("snippet_name")).sendKeys(RandValue);

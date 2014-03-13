@@ -107,11 +107,6 @@ public class GeneratedTestCase9 {
 			//From state 4 to state 5
 			//Eventable{eventType=click, identification=name commit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={accesskey=s, class=button, name=commit, type=submit, value=Save and Close}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=5, name=state5}}
 			mutateDOMTree(4);
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("page_title")).clear();
-			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-			driver.findElement(By.id("page_title")).sendKeys(RandValue);
 			driver.findElement(By.name("commit")).click();
 			//Sink node at state 5
 			mutateDOMTree(5);

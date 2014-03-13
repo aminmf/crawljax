@@ -213,10 +213,6 @@ public class GeneratedTestCase28 {
 			//Eventable{eventType=click, identification=name commit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={accesskey=s, class=button, name=commit, type=submit, value=Save}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=10, name=state10}}
 			mutateDOMTree(9);
 			assertEquals("Snippets - Add | Wolf CMS", driver.getTitle()); // original assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("snippet_name")).clear();
 			String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 			driver.findElement(By.id("snippet_name")).sendKeys(RandValue);

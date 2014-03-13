@@ -89,12 +89,8 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of AEP for Original
 
-			assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p"))); // generated assertion in case of ElementTagAttMatch
+			//assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p"))); // generated assertion in case of ElementTagAttMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();
@@ -131,10 +127,6 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.linkText("Snippets")).click();
 			//From state 23 to state 24
 			//Eventable{eventType=click, identification=xpath //ul[@id='snippets']/li[3]/div[@class='remove']/a, element=Element{node=[A: null], tag=A, text=, attributes={class=remove, href=http://localhost:8888/wolfcms/?/admin/snippet/delete/53, onclick=return confirm('Are you sure you wish to delete? RNDXeAs?');}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}
@@ -170,7 +162,7 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternFullMatch
 
-			assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2"))); // generated assertion in case of ElementTagAttMatch
+			//assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2"))); // generated assertion in case of ElementTagAttMatch
 
 			element = new DOMElement("H2", "", new ArrayList<String>(Arrays.asList("")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"col1\"")));
@@ -178,10 +170,6 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.xpath("//ul[@id='snippets']/li[3]/div[@class='remove']/a")).click();
 			//Sink node at state 24
 			mutateDOMTree(24);
@@ -217,7 +205,7 @@ public class GeneratedTestCase8 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternFullMatch
 
-			assertTrue(isElementPresent(By.xpath("//div[text()='User has been added!']"))); // generated assertion in case of ElementTagAttMatch
+			//assertTrue(isElementPresent(By.xpath("//div[text()='User has been added!']"))); // generated assertion in case of ElementTagAttMatch
 
 			element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"message\"","id=\"success\"","style=\"opacity: 1;\"")));
 			parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -232,12 +220,6 @@ public class GeneratedTestCase8 {
 			childrenElements.clear();
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
-
-			assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!']"))); // generated assertion in case of ElementTagAttMatch
-
-			assertTrue(isElementPresent(By.xpath("//div[text()='User has been saved!']"))); // generated assertion in case of ElementTagAttMatch
-
-			assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2"))); // generated assertion in case of ElementTagAttMatch
 
 			element = new DOMElement("H2", "", new ArrayList<String>(Arrays.asList("")));
 			parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"col1\"")));

@@ -83,8 +83,8 @@ public class GeneratedTestCase29 {
 			mutateDOMTree(0);
 			assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
 			assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
+
+
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();
@@ -93,16 +93,16 @@ public class GeneratedTestCase29 {
 			//From state 7 to state 8
 			//Eventable{eventType=click, identification=text Snippets, element=Element{node=[A: null], tag=A, text=Snippets, attributes={href=http://localhost:8888/wolfcms/?/admin/snippet}}, source=StateVertexImpl{id=7, name=state7}, target=StateVertexImpl{id=8, name=state8}}
 			mutateDOMTree(7);
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
+
+
 			driver.findElement(By.linkText("Snippets")).click();
 			//From state 8 to state 9
 			//Eventable{eventType=click, identification=xpath //div[@id='sidebar']/p/a[text()=' New Snippet'], element=Element{node=[A: null], tag=A, text=New Snippet, attributes={href=http://localhost:8888/wolfcms/?/admin/snippet/add}}, source=StateVertexImpl{id=8, name=state8}, target=StateVertexImpl{id=9, name=state9}}
 			mutateDOMTree(8);
 			assertEquals("Snippets | Wolf CMS", driver.getTitle()); // original assertion
 			assertEquals("Snippet (reorder)", driver.findElement(By.xpath("//div[@id='site-map-def']/div[@class='snippet']")).getText()); // original assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
+
+
 			driver.findElement(By.xpath("//div[@id='sidebar']/p/a[text()=' New Snippet']")).click();
 			//From state 9 to state 75
 			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/FORM[1]/P[1]/A[1], element=Element{node=[A: null], tag=A, text=Cancel, attributes={href=http://localhost:8888/wolfcms/?/admin/snippet}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=75, name=state75}}

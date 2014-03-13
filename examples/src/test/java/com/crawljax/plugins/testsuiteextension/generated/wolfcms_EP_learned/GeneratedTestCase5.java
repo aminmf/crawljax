@@ -85,10 +85,6 @@ public class GeneratedTestCase5 {
 			assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
 			driver.findElement(By.id("part_0_content")).clear();
 			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.id("login-username")).clear();
 			driver.findElement(By.id("login-username")).sendKeys("admin");
 			driver.findElement(By.id("login-password")).clear();
@@ -191,19 +187,11 @@ public class GeneratedTestCase5 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
 			driver.findElement(By.id("part_0_content")).clear();
 			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.linkText("Users")).click();
 			//From state 49 to state 50
 			//Eventable{eventType=click, identification=partialText RND, element=Element{node=[A: null], tag=A, text=RNDUserBxum, attributes={href=http://localhost:8888/wolfcms/?/admin/user/edit/4}}, source=StateVertexImpl{id=49, name=state49}, target=StateVertexImpl{id=50, name=state50}}
 			mutateDOMTree(49);
 			assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("part_0_content")).clear();
 			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.partialLinkText("RND")).click();
@@ -225,10 +213,6 @@ public class GeneratedTestCase5 {
 			childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("for=\"user_role-editor\""))));
 			childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList(""))));
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 			driver.findElement(By.id("part_0_content")).clear();
 			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 			driver.findElement(By.id("user_name")).clear();

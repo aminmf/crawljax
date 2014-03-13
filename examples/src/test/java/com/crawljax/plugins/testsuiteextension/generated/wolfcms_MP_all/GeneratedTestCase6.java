@@ -91,17 +91,9 @@ public class GeneratedTestCase6 {
 
 			assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p"))); // generated assertion in case of ElementTagAttMatch
 
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("snippet_content")).clear();
-			driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-			driver.findElement(By.id("part_0_content")).clear();
-			driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-			driver.findElement(By.id("login-username")).clear();
-			driver.findElement(By.id("login-username")).sendKeys("admin");
-			driver.findElement(By.id("login-password")).clear();
-			driver.findElement(By.id("login-password")).sendKeys("admin");
 			driver.findElement(By.partialLinkText("Wolf CMS")).click();
+			driver.findElement(By.partialLinkText("RND")).click();
+
 			//Sink node at state 53
 			mutateDOMTree(53);
 			assertTrue(driver.findElement(By.xpath("//div[@id='colmask']//div[@id='col1']/h2")).getText().contains("RND"));; // original assertion
