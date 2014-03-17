@@ -34,7 +34,7 @@ class StateVertexImpl implements StateVertex {
 	//Amin: Assertions on DOM state
 	private ArrayList<AssertedElementPattern> assertedElementPatterns = new ArrayList<AssertedElementPattern>();
 	private HashSet<ElementFeatures> elementFeatures = new HashSet<ElementFeatures>();
-	
+	private HashSet<org.w3c.dom.Element> DOMElements = new HashSet<org.w3c.dom.Element>();
 
 	/**
 	 * Creates a current state without an url and the stripped dom equals the dom.
@@ -92,19 +92,19 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	public int hashCode() {
-		//return Objects.hashCode(strippedDom);
-		// Amin: For Testex
-		return Objects.hashCode(dom);
+		return Objects.hashCode(strippedDom);
+		
+		// Amin: Previously For Testex
+		//return Objects.hashCode(dom);
 	}
 
 	@Override
 	public boolean equals(Object object) {
 		if (object instanceof StateVertex) {
 			StateVertex that = (StateVertex) object;
-			// Amin: For Testex
+			// Amin: Previously For Testex
 			//return Objects.equal(this.dom, that.getDom());
 			
-			// for wolfcms app
 			return Objects.equal(this.strippedDom, that.getStrippedDom());
 		}
 		return false;
@@ -186,4 +186,21 @@ class StateVertexImpl implements StateVertex {
 	public HashSet<ElementFeatures> getElementFeatures() {
 		return elementFeatures;
 	}
+
+	@Override
+	//Amin
+	public HashSet<org.w3c.dom.Element> getDOMElements() {
+		return DOMElements;
+	}
+	@Override
+	//Amin
+	public void setDOMElements(HashSet<org.w3c.dom.Element> dOMElements) {
+		DOMElements = dOMElements;
+	}
+	@Override
+	//Amin
+	public void addDOMElements(org.w3c.dom.Element element) {
+		DOMElements.add(element);
+	}
+	
 }

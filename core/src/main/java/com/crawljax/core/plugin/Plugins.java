@@ -482,5 +482,36 @@ public class Plugins {
 			}
 		}
 	}
+
+
+	
+	/**
+	 * Amin: load and run the OnCloneStateDetectedPlugins. OnCloneStateDetectedPlugins are plugins that are ran when a clone
+	 * state was found while adding states to SFG.
+	 * <p>
+	 * This method can be called from multiple threads with different {@link CrawlerContext}
+	 * </p>
+	 * 
+	 * @param context
+	 *            the current {@link CrawlerContext} for this crawler.
+	 * @param cloneState
+	 *            The clone state
+	 */
+	public void runOnCloneStateDetectedPlugins(CrawlerContext context,
+	        StateVertex cloneState) {
+		LOGGER.debug("Running OnCloneStateDetectedPlugins...");
+		counters.get(OnCloneStateDetectedPlugin.class).inc();
+		for (Plugin plugin : plugins.get(OnCloneStateDetectedPlugin.class)) {
+			if (plugin instanceof OnCloneStateDetectedPlugin) {
+				try {
+					LOGGER.debug("Calling plugin {}", plugin);
+					((OnCloneStateDetectedPlugin) plugin).onCloneState(context, cloneState);
+				} catch (RuntimeException e) {
+					reportFailingPlugin(plugin, e);
+				}
+			}
+		}
+	}
+
 	
 }

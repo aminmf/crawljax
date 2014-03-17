@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 import com.crawljax.util.AssertedElementPattern;
 import com.crawljax.util.ElementFeatures;
@@ -65,5 +66,11 @@ public interface StateVertex extends Serializable {
 	ArrayList<String> getAssertions();
 	ArrayList<AssertedElementPattern> getAssertedElementPatters();
 	HashSet<ElementFeatures> getElementFeatures();
+
+	HashSet<Element> getDOMElements();
+
+	void setDOMElements(HashSet<Element> dOMElements);
+
+	void addDOMElements(Element element);
 
 }

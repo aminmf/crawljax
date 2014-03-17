@@ -114,13 +114,14 @@ public class Crawler {
 		context.setStateMachine(stateMachine);
 		crawlpath = new CrawlPath();
 
-		// for wolfcms app -> first perform a logout
-		if (crawlDepth.get() > 0)
+		// Amin: For wolfcms app -> first perform a logout
+		/*if (crawlDepth.get() > 0)
 			if (!browser.getCurrentUrl().equals("http://localhost:8888/wolfcms/?/admin/login"))
 				if (browser.getCurrentUrl().contains("admin"))
 					if (!browser.getCurrentUrl().contains("login"))
 						browser.getBrowser().findElement(By.linkText("Log Out")).click();
-
+		 */
+		
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);
 		crawlDepth.set(0);
