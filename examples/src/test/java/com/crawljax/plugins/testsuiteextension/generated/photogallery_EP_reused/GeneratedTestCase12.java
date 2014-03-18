@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:55:38 PST 2014
+ * Generated @ Tue Mar 18 00:59:58 PDT 2014
  */
 
 public class GeneratedTestCase12 {
@@ -78,17 +78,31 @@ public class GeneratedTestCase12 {
 	public void method12(){
 		try {
 			driver.get(url);
-			//From state 0 to state 1
-			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+			//From state 0 to state 6
+			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=6, name=state6}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
 			driver.findElement(By.linkText("Admin Page")).click();
-			//From state 1 to state 56
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=“My PhotoGallery”, attributes={href=., style=color: black, target=_blank}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=56, name=state56}}
-			mutateDOMTree(1);
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[1]/SPAN[1]/A[1]")).click();
-			//Sink node at state 56
-			mutateDOMTree(56);
+			//From state 6 to state 28
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=6, name=state6}, target=StateVertexImpl{id=28, name=state28}}
+			mutateDOMTree(6);
+			driver.findElement(By.id("loginAdminPass")).clear();
+			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 28 to state 29
+			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=28, name=state28}, target=StateVertexImpl{id=29, name=state29}}
+			mutateDOMTree(28);
+			driver.findElement(By.linkText("Manage Categories")).click();
+			//From state 29 to state 30
+			//Eventable{eventType=click, identification=text << Admin Page, element=Element{node=[A: null], tag=A, text=<< Admin Page, attributes={href=?}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=30, name=state30}}
+			mutateDOMTree(29);
+			driver.findElement(By.linkText("<< Admin Page")).click();
+			//From state 30 to state 31
+			//Eventable{eventType=click, identification=text Log Out, element=Element{node=[A: null], tag=A, text=Log Out, attributes={href=?page=logout}}, source=StateVertexImpl{id=30, name=state30}, target=StateVertexImpl{id=31, name=state31}}
+			mutateDOMTree(30);
+			driver.findElement(By.linkText("Log Out")).click();
+			//Sink node at state 31
+			mutateDOMTree(31);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

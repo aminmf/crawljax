@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:54:46 PST 2014
+ * Generated @ Tue Mar 18 00:58:42 PDT 2014
  */
 
 public class GeneratedTestCase25 {
@@ -93,18 +93,13 @@ public class GeneratedTestCase25 {
 			mutateDOMTree(24);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
 			driver.findElement(By.partialLinkText("Default Story")).click();
-			//From state 25 to state 26
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow&s=1&n=30}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=26, name=state26}}
+			//From state 25 to state 47
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow&s=1&n=30}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=47, name=state47}}
 			mutateDOMTree(25);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$")); // original assertion
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1]")).click();
-			//From state 26 to state 57
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=100_0794, attributes={href=.?p=6, id=ss_link1, style=letter-spacing: 5px;}}, source=StateVertexImpl{id=26, name=state26}, target=StateVertexImpl{id=57, name=state57}}
-			mutateDOMTree(26);
-			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1]")).click();
-			//Sink node at state 57
-			mutateDOMTree(57);
+			//Sink node at state 47
+			mutateDOMTree(47);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

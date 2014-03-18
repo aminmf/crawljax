@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:54:46 PST 2014
+ * Generated @ Tue Mar 18 00:58:42 PDT 2014
  */
 
 public class GeneratedTestCase1 {
@@ -78,13 +78,18 @@ public class GeneratedTestCase1 {
 	public void method1(){
 		try {
 			driver.get(url);
-			//From state 0 to state 48
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=My PhotoGallery, attributes={href=.}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=48, name=state48}}
+			//From state 0 to state 32
+			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=32, name=state32}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/A[1]")).click();
-			//Sink node at state 48
-			mutateDOMTree(48);
+			driver.findElement(By.linkText("SlideShow")).click();
+			//From state 32 to state 44
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=Back, attributes={href=.&n=30}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=44, name=state44}}
+			mutateDOMTree(32);
+			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1]")).click();
+			//Sink node at state 44
+			mutateDOMTree(44);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

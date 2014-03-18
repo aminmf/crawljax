@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:54:46 PST 2014
+ * Generated @ Tue Mar 18 00:58:42 PDT 2014
  */
 
 public class GeneratedTestCase19 {
@@ -93,13 +93,18 @@ public class GeneratedTestCase19 {
 			mutateDOMTree(24);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*category[\\s\\S]*$")); // original assertion
 			driver.findElement(By.partialLinkText("Default Story")).click();
-			//From state 25 to state 63
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[1], element=Element{node=[A: null], tag=A, text=5, attributes={href=.?s=1&n=5}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=63, name=state63}}
+			//From state 25 to state 26
+			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow&s=1&n=30}}, source=StateVertexImpl{id=25, name=state25}, target=StateVertexImpl{id=26, name=state26}}
 			mutateDOMTree(25);
 			assertTrue(driver.findElement(By.cssSelector("div.midInfo")).getText().matches("^[\\s\\S]*story[\\s\\S]*$")); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[5]/A[1]")).click();
-			//Sink node at state 63
-			mutateDOMTree(63);
+			driver.findElement(By.linkText("SlideShow")).click();
+			//From state 26 to state 73
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[2]/A[1], element=Element{node=[A: null], tag=A, text=Smaller Size, attributes={class=q, id=ss_smaller_link, onclick=javascript:ss_toggleSmaller();}}, source=StateVertexImpl{id=26, name=state26}, target=StateVertexImpl{id=73, name=state73}}
+			mutateDOMTree(26);
+			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[2]/A[1]")).click();
+			//Sink node at state 73
+			mutateDOMTree(73);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

@@ -80,6 +80,9 @@ public final class DomUtils {
 			domParser.parse(new InputSource(new StringReader(html)));
 		} catch (SAXException e) {
 			throw new IOException("Error while reading HTML: " + html, e);
+		}catch (Exception unknown){
+			unknown.printStackTrace();
+			throw new IOException("Error while reading HTML: " + html);
 		}
 		return domParser.getDocument();
 	}

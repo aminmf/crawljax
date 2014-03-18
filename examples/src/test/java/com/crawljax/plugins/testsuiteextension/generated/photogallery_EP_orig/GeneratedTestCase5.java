@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:54:46 PST 2014
+ * Generated @ Tue Mar 18 00:58:42 PDT 2014
  */
 
 public class GeneratedTestCase5 {
@@ -78,29 +78,27 @@ public class GeneratedTestCase5 {
 	public void method5(){
 		try {
 			driver.get(url);
-			//From state 0 to state 32
-			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=32, name=state32}}
+			//From state 0 to state 13
+			//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=13, name=state13}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.linkText("SlideShow")).click();
-			//From state 32 to state 33
-			//Eventable{eventType=click, identification=id ss_playpause_link, element=Element{node=[A: null], tag=A, text=Pause it, attributes={class=q, id=ss_playpause_link, onclick=javascript:ss_playpause();}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=33, name=state33}}
-			mutateDOMTree(32);
-			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
-			driver.findElement(By.id("ss_playpause_link")).click();
-			//From state 33 to state 34
-			//Eventable{eventType=click, identification=text Next, element=Element{node=[A: null], tag=A, text=Next, attributes={class=q, onclick=javascript:ss_next();}}, source=StateVertexImpl{id=33, name=state33}, target=StateVertexImpl{id=34, name=state34}}
-			mutateDOMTree(33);
-			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // original assertion
-			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
-			driver.findElement(By.linkText("Next")).click();
-			//From state 34 to state 45
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=100_0772, attributes={href=.?p=5, id=ss_link1, style=letter-spacing: 5px;}}, source=StateVertexImpl{id=34, name=state34}, target=StateVertexImpl{id=45, name=state45}}
-			mutateDOMTree(34);
-			assertEquals("2", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1]")).click();
-			//Sink node at state 45
-			mutateDOMTree(45);
+			driver.findElement(By.linkText("Admin Page")).click();
+			//From state 13 to state 14
+			//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=14, name=state14}}
+			mutateDOMTree(13);
+			driver.findElement(By.id("loginAdminPass")).clear();
+			driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
+			driver.findElement(By.cssSelector("input.submit")).click();
+			//From state 14 to state 15
+			//Eventable{eventType=click, identification=text Manage Categories, element=Element{node=[A: null], tag=A, text=Manage Categories, attributes={href=?page=categories}}, source=StateVertexImpl{id=14, name=state14}, target=StateVertexImpl{id=15, name=state15}}
+			mutateDOMTree(14);
+			driver.findElement(By.linkText("Manage Categories")).click();
+			//From state 15 to state 42
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[2]/DIV[1]/DIV[12]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=Edit it, attributes={href=?page=categories&cmd=doEdt&cid=12#add}}, source=StateVertexImpl{id=15, name=state15}, target=StateVertexImpl{id=42, name=state42}}
+			mutateDOMTree(15);
+			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[2]/DIV[1]/DIV[12]/SPAN[1]/A[1]")).click();
+			//Sink node at state 42
+			mutateDOMTree(42);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

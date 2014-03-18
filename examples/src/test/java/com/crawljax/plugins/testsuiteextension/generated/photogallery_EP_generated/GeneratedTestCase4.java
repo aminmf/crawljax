@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:56:31 PST 2014
+ * Generated @ Tue Mar 18 01:01:03 PDT 2014
  */
 
 public class GeneratedTestCase4 {
@@ -187,8 +187,8 @@ public class GeneratedTestCase4 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
 			driver.findElement(By.linkText("Next")).click();
-			//From state 34 to state 47
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[3]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=.?p=5, id=ss_link2, style=display:inline;}}, source=StateVertexImpl{id=34, name=state34}, target=StateVertexImpl{id=47, name=state47}}
+			//From state 34 to state 56
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[3]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=.?p=5, id=ss_link2, style=display:inline;}}, source=StateVertexImpl{id=34, name=state34}, target=StateVertexImpl{id=56, name=state56}}
 			mutateDOMTree(34);
 			assertEquals("2", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
 			element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("id=\"ss_n\"")));
@@ -219,8 +219,8 @@ public class GeneratedTestCase4 {
 			assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // generated assertion in case of PatternTagMatch
 
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[3]/A[1]")).click();
-			//Sink node at state 47
-			mutateDOMTree(47);
+			//Sink node at state 56
+			mutateDOMTree(56);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // generated assertion in case of ElementTagAttMatch
 
 			element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("id=\"ss_photo\"","onload=\"javscript:ss_loaddone();\"","src=\"images/000006_rryky_0.jpg\"")));

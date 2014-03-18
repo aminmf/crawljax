@@ -15,6 +15,11 @@ import com.crawljax.core.configuration.ProxyConfiguration;
 import com.crawljax.core.configuration.CrawljaxConfiguration.CrawljaxConfigurationBuilder;
 import com.crawljax.core.configuration.Form;
 import com.crawljax.core.configuration.InputSpecification;
+import com.crawljax.oraclecomparator.OracleComparator;
+import com.crawljax.oraclecomparator.comparators.EditDistanceComparator;
+import com.crawljax.oraclecomparator.comparators.ScriptComparator;
+import com.crawljax.oraclecomparator.comparators.SimpleComparator;
+import com.crawljax.oraclecomparator.comparators.XPathExpressionComparator;
 import com.crawljax.plugins.crawloverview.CrawlOverview;
 import com.crawljax.plugins.proxy.JSInjectorProxyAddon;
 import com.crawljax.plugins.proxy.WebScarabProxyPlugin;
@@ -30,9 +35,9 @@ public final class TestSuiteExtensionExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
+	private static final String URL = "http://localhost:8888/phormer331/";
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
-	//private static final String URL = "http://localhost:8888/phormer331/";
-	private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
+	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
 	
 
 	/**
@@ -44,8 +49,15 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(400, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(600, TimeUnit.SECONDS);
 		builder.setMaximumDepth(0);
+
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='item']")));
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("ScriptComparator", new ScriptComparator()));
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("SimpleComparator", new SimpleComparator()));
 
 		// click these elements
 		builder.crawlRules().clickDefaultElements();

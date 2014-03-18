@@ -34,7 +34,26 @@ class StateVertexImpl implements StateVertex {
 	//Amin: Assertions on DOM state
 	private ArrayList<AssertedElementPattern> assertedElementPatterns = new ArrayList<AssertedElementPattern>();
 	private HashSet<ElementFeatures> elementFeatures = new HashSet<ElementFeatures>();
-	private HashSet<org.w3c.dom.Element> DOMElements = new HashSet<org.w3c.dom.Element>();
+
+	private HashSet<String> elementTagAttAssertions = new HashSet<String>();
+	public HashSet<String> getElementTagAttAssertions() {
+		return elementTagAttAssertions;
+	}
+
+	private HashSet<String> patternTagAssertions = new HashSet<String>();
+	public HashSet<String> getPatternTagAssertions() {
+		return patternTagAssertions;
+	}
+
+	private HashSet<String> patternSimilarAssertions = new HashSet<String>();
+	public HashSet<String> getPatternSimilarAssertions() {
+		return patternSimilarAssertions;
+	}
+
+	private HashSet<String> patternFullAssertions = new HashSet<String>();
+	public HashSet<String> getPatternFullAssertions() {
+		return patternFullAssertions;
+	}
 
 	/**
 	 * Creates a current state without an url and the stripped dom equals the dom.
@@ -102,10 +121,10 @@ class StateVertexImpl implements StateVertex {
 	public boolean equals(Object object) {
 		if (object instanceof StateVertex) {
 			StateVertex that = (StateVertex) object;
+			return Objects.equal(this.strippedDom, that.getStrippedDom());
+
 			// Amin: Previously For Testex
 			//return Objects.equal(this.dom, that.getDom());
-			
-			return Objects.equal(this.strippedDom, that.getStrippedDom());
 		}
 		return false;
 	}
@@ -187,20 +206,26 @@ class StateVertexImpl implements StateVertex {
 		return elementFeatures;
 	}
 
+
 	@Override
-	//Amin
-	public HashSet<org.w3c.dom.Element> getDOMElements() {
-		return DOMElements;
+	public void addElementTagAttAssertion(String assertion) {
+		elementTagAttAssertions.add(assertion);
 	}
+
+
 	@Override
-	//Amin
-	public void setDOMElements(HashSet<org.w3c.dom.Element> dOMElements) {
-		DOMElements = dOMElements;
+	public void addPatternTagAssertion(String assertion) {
+		patternTagAssertions.add(assertion);
 	}
+
 	@Override
-	//Amin
-	public void addDOMElements(org.w3c.dom.Element element) {
-		DOMElements.add(element);
+	public void addPatternSimilarAssertion(String assertion) {
+		patternSimilarAssertions.add(assertion);
 	}
-	
+
+	@Override
+	public void addPatternFullAssertion(String assertion) {
+		patternFullAssertions.add(assertion);
+	}
+		
 }

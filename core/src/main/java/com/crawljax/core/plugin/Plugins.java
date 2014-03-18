@@ -500,7 +500,6 @@ public class Plugins {
 	public void runOnCloneStateDetectedPlugins(CrawlerContext context,
 	        StateVertex cloneState) {
 		LOGGER.debug("Running OnCloneStateDetectedPlugins...");
-		counters.get(OnCloneStateDetectedPlugin.class).inc();
 		for (Plugin plugin : plugins.get(OnCloneStateDetectedPlugin.class)) {
 			if (plugin instanceof OnCloneStateDetectedPlugin) {
 				try {

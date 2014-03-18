@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:54:46 PST 2014
+ * Generated @ Tue Mar 18 00:58:42 PDT 2014
  */
 
 public class GeneratedTestCase2 {
@@ -83,13 +83,20 @@ public class GeneratedTestCase2 {
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
 			driver.findElement(By.linkText("SlideShow")).click();
-			//From state 32 to state 60
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=Back, attributes={href=.&n=30}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=60, name=state60}}
+			//From state 32 to state 33
+			//Eventable{eventType=click, identification=id ss_playpause_link, element=Element{node=[A: null], tag=A, text=Pause it, attributes={class=q, id=ss_playpause_link, onclick=javascript:ss_playpause();}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=33, name=state33}}
 			mutateDOMTree(32);
 			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/SPAN[1]/A[1]")).click();
-			//Sink node at state 60
-			mutateDOMTree(60);
+			driver.findElement(By.id("ss_playpause_link")).click();
+			//From state 33 to state 36
+			//Eventable{eventType=click, identification=text Smaller Size, element=Element{node=[A: null], tag=A, text=Smaller Size, attributes={class=q, id=ss_smaller_link, onclick=javascript:ss_toggleSmaller();}}, source=StateVertexImpl{id=33, name=state33}, target=StateVertexImpl{id=36, name=state36}}
+			mutateDOMTree(33);
+			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // original assertion
+			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
+			driver.findElement(By.linkText("Smaller Size")).click();
+			//Sink node at state 36
+			mutateDOMTree(36);
+			assertEquals("SlideShow :: My PhotoGallery", driver.getTitle()); // original assertion
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

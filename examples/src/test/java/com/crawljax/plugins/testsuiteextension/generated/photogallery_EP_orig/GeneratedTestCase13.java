@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Fri Mar 07 15:54:46 PST 2014
+ * Generated @ Tue Mar 18 00:58:42 PDT 2014
  */
 
 public class GeneratedTestCase13 {
@@ -78,18 +78,13 @@ public class GeneratedTestCase13 {
 	public void method13(){
 		try {
 			driver.get(url);
-			//From state 0 to state 23
-			//Eventable{eventType=click, identification=text Stories, element=Element{node=[A: null], tag=A, text=Stories, attributes={href=.?mode=stories}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=23, name=state23}}
+			//From state 0 to state 69
+			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=•flowers[0], attributes={href=.?c=9, title=contains photos of all the flowers ! }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=69, name=state69}}
 			mutateDOMTree(0);
 			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.linkText("Stories")).click();
-			//From state 23 to state 59
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=•flowers[0], attributes={href=.?c=19, title=contains photos of all the flowers ! }}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=59, name=state59}}
-			mutateDOMTree(23);
-			assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$")); // original assertion
 			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/SPAN[1]/A[1]")).click();
-			//Sink node at state 59
-			mutateDOMTree(59);
+			//Sink node at state 69
+			mutateDOMTree(69);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}

@@ -7,6 +7,7 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
@@ -19,6 +20,7 @@ import javax.inject.Singleton;
 import org.apache.commons.math.stat.descriptive.moment.Mean;
 import org.jgrapht.DirectedGraph;
 import org.jgrapht.GraphPath;
+import org.jgrapht.Graphs;
 import org.jgrapht.alg.DijkstraShortestPath;
 import org.jgrapht.alg.KShortestPaths;
 import org.jgrapht.graph.DirectedMultigraph;
@@ -397,4 +399,58 @@ public class InMemoryStateFlowGraph implements Serializable, StateFlowGraph {
 		return ImmutableSet.copyOf(result);
 	}
 
+	
+	
+	/*
+	
+	private Stack<StateVertex> path  = new Stack<StateVertex>();   // the current path
+	private Set<StateVertex> onPath = new HashSet<StateVertex>();  // the set of vertices on the path
+	private ArrayList<ArrayList<String>> allPaths1  = new ArrayList<ArrayList<String>>();
+	
+	public double getPathDiversity(StateVertex s1, StateVertex s2) {
+		allPaths1.clear();
+		getAllPaths(s1, allPaths1);
+		
+		// calculate intersection of pair-wise event paths
+		for (ArrayList<String> eventPath1 : allPaths1){
+		}
+		return 1;
+	}
+
+	
+	//	generate all paths from "index" state to target state "t"
+	public void getAllPaths(StateVertex t, ArrayList<ArrayList<String>> allPaths){
+		// find index state
+		for (StateVertex s: sfg.vertexSet())
+			if (s.getName().equals("index")){
+				enumerateAllPaths(s, t, allPaths); // using DFS
+				break;
+			}
+	}
+	
+	public void enumerateAllPaths(StateVertex v, StateVertex t, ArrayList<ArrayList<String>> allPaths) {
+		// add node v to current path from s
+		path.push(v);
+		onPath.add(v);
+		// found path from s to t - currently prints in reverse order because of stack
+		if (v.getName().equals(t.getName())){ 
+			ArrayList<String> newPath = new ArrayList<String>(); // storing one discovered path from index to t
+			newPath.clear();
+			for (StateVertex s: path)
+				newPath.add(s.getName());
+			allPaths.add(newPath);
+		}
+		else { // consider all neighbors that would continue path with repeating a node
+			for (StateVertex w : Graphs.neighborListOf(sfg, v)) {
+				if (!onPath.contains(w)) 
+					enumerateAllPaths(w, t, allPaths);
+			}
+		}
+		// done exploring from v, so remove from path
+		path.pop();
+		onPath.remove(v);
+	}
+	*/
+
+	
 }
