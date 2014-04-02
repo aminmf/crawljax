@@ -69,12 +69,14 @@ public interface StateVertex extends Serializable {
 
 	void addElementTagAttAssertion(String assertion);
 	void addPatternTagAssertion(String assertion);
-	void addPatternSimilarAssertion(String assertion);
 	void addPatternFullAssertion(String assertion);
 	
 	public HashSet<String> getElementTagAttAssertions();
 	public HashSet<String> getPatternTagAssertions();
-	public HashSet<String> getPatternSimilarAssertions();
 	public HashSet<String> getPatternFullAssertions();
+
+	void clearElementTagAttAssertions();
+	void clearPatternTagAssertions();
+	void clearPatternFullAssertions();
 
 }

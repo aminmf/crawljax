@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 18 00:59:58 PDT 2014
+ * Generated @ Tue Apr 01 19:42:59 PDT 2014
  */
 
 public class GeneratedTestCase38 {
@@ -76,24 +76,25 @@ public class GeneratedTestCase38 {
 	 
 	@Test
 	public void method38(){
-		try {
-			driver.get(url);
-			//From state 0 to state 37
-			//Eventable{eventType=click, identification=cssSelector div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=100_0759November 9th o 12, attributes={href=.?p=2, title=100_0759: 29 KB, 1442 hits and rated 1 by 5 person}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=37, name=state37}}
-			mutateDOMTree(0);
-			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
-			//From state 37 to state 38
-			//Eventable{eventType=click, identification=partialText Hide, element=Element{node=[A: null], tag=A, text=Hide  info, attributes={href=javascript:toggleInfo();, target=_top, title=Show/Hide additional info and de/centralize the photo}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=38, name=state38}}
-			mutateDOMTree(37);
-			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed()); // original assertion
-			driver.findElement(By.partialLinkText("Hide")).click();
-			//Sink node at state 38
-			mutateDOMTree(38);
-			assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed() == false); // original assertion
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+		driver.get(url);
+		//From state 0 to state 27
+		//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=27, name=state27}}
+		mutateDOMTree(0);
+		checkState0();
+		driver.findElement(By.linkText("Admin Page")).click();
+		//Sink node at state 27
+		mutateDOMTree(27);
+		checkState27();
+	}
+
+
+
+	public void checkState0(){
+		assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
+
+	}
+
+	public void checkState27(){
 	}
 
 

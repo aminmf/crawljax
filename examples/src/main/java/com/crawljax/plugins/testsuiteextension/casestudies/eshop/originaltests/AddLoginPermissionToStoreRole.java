@@ -24,7 +24,7 @@ public class AddLoginPermissionToStoreRole {
 
   @Test
   public void testAddLoginPermissionToStoreRole() throws Exception {
-    driver.get(baseUrl + "/admin/t/mytestdomain.com/carbon/role/add-step1.jsp?roleType=Internal");
+    driver.get(baseUrl + "admin/t/mytestdomain.com/carbon/role/add-step1.jsp?roleType=Internal");
     driver.findElement(By.cssSelector("#menu-panel-button3 > span")).click();
     driver.findElement(By.linkText("Users and Roles")).click();
     driver.findElement(By.linkText("Roles")).click();

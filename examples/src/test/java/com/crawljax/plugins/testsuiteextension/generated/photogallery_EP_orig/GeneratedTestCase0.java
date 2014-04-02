@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 18 00:58:42 PDT 2014
+ * Generated @ Tue Apr 01 19:41:53 PDT 2014
  */
 
 public class GeneratedTestCase0 {
@@ -76,18 +76,25 @@ public class GeneratedTestCase0 {
 	 
 	@Test
 	public void method0(){
-		try {
-			driver.get(url);
-			//From state 0 to state 68
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=•Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=68, name=state68}}
-			mutateDOMTree(0);
-			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]/A[1]")).click();
-			//Sink node at state 68
-			mutateDOMTree(68);
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+		driver.get(url);
+		//From state 0 to state 83
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[5]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=•flowers[0], attributes={href=.?c=3, title=contains photos of all the flowers ! }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=83, name=state83}}
+		mutateDOMTree(0);
+		checkState0();
+		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[5]/SPAN[1]/A[1]")).click();
+		//Sink node at state 83
+		mutateDOMTree(83);
+		checkState83();
+	}
+
+
+
+	public void checkState0(){
+		assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
+
+	}
+
+	public void checkState83(){
 	}
 
 

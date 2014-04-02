@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 18 00:58:42 PDT 2014
+ * Generated @ Tue Apr 01 19:41:53 PDT 2014
  */
 
 public class GeneratedTestCase14 {
@@ -76,18 +76,43 @@ public class GeneratedTestCase14 {
 	 
 	@Test
 	public void method14(){
-		try {
-			driver.get(url);
-			//From state 0 to state 59
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=My PhotoGallery, attributes={href=.}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=59, name=state59}}
-			mutateDOMTree(0);
-			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[1]/A[1]")).click();
-			//Sink node at state 59
-			mutateDOMTree(59);
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+		driver.get(url);
+		//From state 0 to state 13
+		//Eventable{eventType=click, identification=text Admin Page, element=Element{node=[A: null], tag=A, text=Admin Page, attributes={href=admin.php, title=Login to the Administration Region}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=13, name=state13}}
+		mutateDOMTree(0);
+		checkState0();
+		driver.findElement(By.linkText("Admin Page")).click();
+		//From state 13 to state 2
+		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=2, name=state2}}
+		mutateDOMTree(13);
+		checkState13();
+		driver.findElement(By.id("loginAdminPass")).clear();
+		driver.findElement(By.id("loginAdminPass")).sendKeys("editor");
+		driver.findElement(By.cssSelector("input.submit")).click();
+		//From state 2 to state 41
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[2]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=photos, title=Manage Photos}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=41, name=state41}}
+		mutateDOMTree(2);
+		checkState2();
+		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[2]/DIV[2]/A[1]")).click();
+		//Sink node at state 41
+		mutateDOMTree(41);
+		checkState41();
+	}
+
+
+
+	public void checkState0(){
+		assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
+
+	}
+
+	public void checkState13(){
+	}
+
+	public void checkState2(){
+	}
+
+	public void checkState41(){
 	}
 
 

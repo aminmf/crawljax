@@ -45,8 +45,7 @@ public class TestAddReview {
     }
 
     driver.navigate().refresh();
-    int starWidth = driver.findElement(By.css("css=.asset-introduction-box > .asset-rating > div"));
-    assertEquals(Math.round(starWidth/16), 3);
+
   }
 
   @After

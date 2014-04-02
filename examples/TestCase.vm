@@ -77,14 +77,20 @@ public class ${classname} {
 #foreach( $method in $testMethods )
 	@Test
 	public void ${method.methodName}(){
-		try {
-			driver.get(url);
+		driver.get(url);
 #foreach( $statement in $method.statements )
-			$statement
+		$statement
 #end
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+	}
+
+#end
+
+
+#foreach( $method in $checkMethods )
+	public void ${method.methodName}(){
+#foreach( $statement in $method.statements )
+		$statement
+#end
 	}
 
 #end

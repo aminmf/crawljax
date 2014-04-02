@@ -45,11 +45,6 @@ class StateVertexImpl implements StateVertex {
 		return patternTagAssertions;
 	}
 
-	private HashSet<String> patternSimilarAssertions = new HashSet<String>();
-	public HashSet<String> getPatternSimilarAssertions() {
-		return patternSimilarAssertions;
-	}
-
 	private HashSet<String> patternFullAssertions = new HashSet<String>();
 	public HashSet<String> getPatternFullAssertions() {
 		return patternFullAssertions;
@@ -206,12 +201,10 @@ class StateVertexImpl implements StateVertex {
 		return elementFeatures;
 	}
 
-
 	@Override
 	public void addElementTagAttAssertion(String assertion) {
 		elementTagAttAssertions.add(assertion);
 	}
-
 
 	@Override
 	public void addPatternTagAssertion(String assertion) {
@@ -219,13 +212,23 @@ class StateVertexImpl implements StateVertex {
 	}
 
 	@Override
-	public void addPatternSimilarAssertion(String assertion) {
-		patternSimilarAssertions.add(assertion);
+	public void addPatternFullAssertion(String assertion) {
+		patternFullAssertions.add(assertion);
 	}
 
 	@Override
-	public void addPatternFullAssertion(String assertion) {
-		patternFullAssertions.add(assertion);
+	public void clearElementTagAttAssertions() {
+		elementTagAttAssertions.clear();
+	}
+
+	@Override
+	public void clearPatternTagAssertions() {
+		patternTagAssertions.clear();
+	}
+
+	@Override
+	public void clearPatternFullAssertions() {
+		patternFullAssertions.clear();
 	}
 		
 }

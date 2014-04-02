@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 18 00:59:58 PDT 2014
+ * Generated @ Tue Apr 01 19:42:59 PDT 2014
  */
 
 public class GeneratedTestCase3 {
@@ -76,36 +76,35 @@ public class GeneratedTestCase3 {
 	 
 	@Test
 	public void method3(){
-		try {
-			driver.get(url);
-			//From state 0 to state 32
-			//Eventable{eventType=click, identification=text SlideShow, element=Element{node=[A: null], tag=A, text=SlideShow, attributes={href=.?feat=slideshow}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=32, name=state32}}
-			mutateDOMTree(0);
-			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.linkText("SlideShow")).click();
-			//From state 32 to state 33
-			//Eventable{eventType=click, identification=id ss_playpause_link, element=Element{node=[A: null], tag=A, text=Pause it, attributes={class=q, id=ss_playpause_link, onclick=javascript:ss_playpause();}}, source=StateVertexImpl{id=32, name=state32}, target=StateVertexImpl{id=33, name=state33}}
-			mutateDOMTree(32);
-			assertTrue(driver.getTitle().matches("^SlideShow[\\s\\S]*$")); // original assertion
-			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // reused assertion in case of ElementFullMatch
-			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // reused assertion in case of ElementFullMatch
-			driver.findElement(By.id("ss_playpause_link")).click();
-			//From state 33 to state 34
-			//Eventable{eventType=click, identification=text Next, element=Element{node=[A: null], tag=A, text=Next, attributes={class=q, onclick=javascript:ss_next();}}, source=StateVertexImpl{id=33, name=state33}, target=StateVertexImpl{id=34, name=state34}}
-			mutateDOMTree(33);
-			assertTrue(isElementPresent(By.cssSelector("img#ss_photo"))); // original assertion
-			assertEquals("1", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
-			driver.findElement(By.linkText("Next")).click();
-			//From state 34 to state 41
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=100_0772, attributes={href=.?p=5, id=ss_link1, style=letter-spacing: 5px;}}, source=StateVertexImpl{id=34, name=state34}, target=StateVertexImpl{id=41, name=state41}}
-			mutateDOMTree(34);
-			assertEquals("2", driver.findElement(By.cssSelector("span#ss_n")).getText()); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1]")).click();
-			//Sink node at state 41
-			mutateDOMTree(41);
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+		driver.get(url);
+		//From state 0 to state 37
+		//Eventable{eventType=click, identification=cssSelector div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=100_0759November 9th o 12, attributes={href=.?p=2, title=100_0759: 29 KB, 1439 hits and rated 1 by 2 person}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=37, name=state37}}
+		mutateDOMTree(0);
+		checkState0();
+		driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
+		//From state 37 to state 67
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=images/000002_ieqey_9.jpg, title=Click to view original size :: 3664x2442 :: 1244KB}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=67, name=state67}}
+		mutateDOMTree(37);
+		checkState37();
+		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/A[1]")).click();
+		//Sink node at state 67
+		mutateDOMTree(67);
+		checkState67();
+	}
+
+
+
+	public void checkState0(){
+		assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
+
+	}
+
+	public void checkState37(){
+		assertTrue(driver.findElement(By.id("photoBoxes")).isDisplayed()); // original assertion
+
+	}
+
+	public void checkState67(){
 	}
 
 

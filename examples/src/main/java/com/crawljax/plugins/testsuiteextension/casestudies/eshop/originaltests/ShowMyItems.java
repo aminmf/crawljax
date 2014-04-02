@@ -18,7 +18,7 @@ public class ShowMyItems {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://localhost:9763/";
+    baseUrl = "http://localhost:9763";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -26,11 +26,7 @@ public class ShowMyItems {
   public void testShowMyItems() throws Exception {
     driver.get(baseUrl + "/store/assets/gadget");
     driver.findElement(By.linkText("My Items")).click();
-    try {
-      assertEquals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText());
-    } catch (Error e) {
-      verificationErrors.append(e.toString());
-    }
+    assertEquals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText());
   }
 
   @After

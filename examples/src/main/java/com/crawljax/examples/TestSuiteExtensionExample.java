@@ -49,7 +49,7 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(600, TimeUnit.SECONDS);
+		builder.setMaximumRunTime(500, TimeUnit.SECONDS);
 		builder.setMaximumDepth(0);
 
 		builder.crawlRules().addOracleComparator(

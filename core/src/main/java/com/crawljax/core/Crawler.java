@@ -1,5 +1,6 @@
 package com.crawljax.core;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -15,6 +16,7 @@ import java.util.regex.Pattern;
 import javax.inject.Inject;
 import javax.inject.Provider;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
@@ -104,6 +106,9 @@ public class Crawler {
 	 * Reset the crawler to its initial state.
 	 */
 	public void reset() {
+		
+		resetApplicationFiles();
+		
 		CrawlSession sess = context.getSession();
 		if (crawlpath != null) {
 			sess.addCrawlPath(crawlpath);
@@ -125,6 +130,17 @@ public class Crawler {
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);
 		crawlDepth.set(0);
+	}
+
+	private void resetApplicationFiles() {
+
+		File source = new File("/Applications/MAMP/htdocs/phormer331_clean");
+		File desc = new File("/Applications/MAMP/htdocs/phormer331");
+		try {
+			FileUtils.copyDirectory(source, desc);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

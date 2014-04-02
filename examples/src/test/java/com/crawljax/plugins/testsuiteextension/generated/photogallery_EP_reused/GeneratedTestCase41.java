@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Tue Mar 18 00:59:58 PDT 2014
+ * Generated @ Tue Apr 01 19:43:00 PDT 2014
  */
 
 public class GeneratedTestCase41 {
@@ -76,18 +76,35 @@ public class GeneratedTestCase41 {
 	 
 	@Test
 	public void method41(){
-		try {
-			driver.get(url);
-			//From state 0 to state 66
-			//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=Categories, attributes={href=.}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=66, name=state66}}
-			mutateDOMTree(0);
-			assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
-			driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1]")).click();
-			//Sink node at state 66
-			mutateDOMTree(66);
-		} catch (Exception e) {
-			fail(e.getMessage());
-		}
+		driver.get(url);
+		//From state 0 to state 23
+		//Eventable{eventType=click, identification=text Stories, element=Element{node=[A: null], tag=A, text=Stories, attributes={href=.?mode=stories}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=23, name=state23}}
+		mutateDOMTree(0);
+		checkState0();
+		driver.findElement(By.linkText("Stories")).click();
+		//From state 23 to state 48
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[2]/A[1], element=Element{node=[A: null], tag=A, text=5, attributes={href=.?mode=stories&rsn=5}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=48, name=state48}}
+		mutateDOMTree(23);
+		checkState23();
+		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[2]/DIV[1]/DIV[1]/DIV[1]/SPAN[2]/A[1]")).click();
+		//Sink node at state 48
+		mutateDOMTree(48);
+		checkState48();
+	}
+
+
+
+	public void checkState0(){
+		assertTrue(isElementPresent(By.cssSelector("div#Granny"))); // original assertion
+
+	}
+
+	public void checkState23(){
+		assertTrue(driver.getCurrentUrl().matches("^http://localhost:8888/[\\s\\S]*mode=stories$")); // original assertion
+
+	}
+
+	public void checkState48(){
 	}
 
 

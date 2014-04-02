@@ -1,5 +1,6 @@
 package com.crawljax.plugins.testsuiteextension.casestudies.eshop.originaltests;
 
+import java.util.List;
 import java.util.regex.Pattern;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -18,7 +19,7 @@ public class PromoteToPublished {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "http://localhost:9763/";
+    baseUrl = "http://localhost:9763";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
