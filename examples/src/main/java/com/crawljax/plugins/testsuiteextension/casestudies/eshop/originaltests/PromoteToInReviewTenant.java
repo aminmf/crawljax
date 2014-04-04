@@ -19,7 +19,7 @@ public class PromoteToInReviewTenant {
   @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
-    baseUrl = "https://localhost:9443/";
+    baseUrl = "https://localhost:9443";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 

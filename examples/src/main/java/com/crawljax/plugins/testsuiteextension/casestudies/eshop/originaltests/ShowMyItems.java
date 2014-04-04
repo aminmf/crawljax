@@ -19,13 +19,27 @@ public class ShowMyItems {
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://localhost:9763";
+    driver.get(baseUrl + "/store");
+    //Utils.waitSomeTime();
+
+    driver.findElement(By.linkText("Sign in")).click();
+    driver.findElement(By.id("username")).clear();
+    driver.findElement(By.id("username")).sendKeys("admin");
+    driver.findElement(By.id("password")).clear();
+    driver.findElement(By.id("password")).sendKeys("admin");
+    driver.findElement(By.xpath("//button[@type='submit']")).click();
+    Utils.waitSomeTime();
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
   @Test
   public void testShowMyItems() throws Exception {
     driver.get(baseUrl + "/store/assets/gadget");
+    Utils.waitSomeTime();
+
     driver.findElement(By.linkText("My Items")).click();
+    Utils.waitSomeTime();
+
     assertEquals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText());
   }
 

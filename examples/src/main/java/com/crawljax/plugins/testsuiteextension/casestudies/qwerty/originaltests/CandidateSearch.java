@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CandidateSearch {
   private WebDriver driver;
-  private WebDriverWait wait;
+  //private WebDriverWait wait;
   private String baseUrl;
 
   @Before
@@ -22,20 +22,22 @@ public class CandidateSearch {
 	driver = Common.driver();
     baseUrl = Common.baseUrl();
     driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-    wait = new WebDriverWait(driver, 5);
+    //wait = new WebDriverWait(driver, 5);
   }
   
   @Test
   public void testCandidateSearch() throws Exception {
-	  wait.pollingEvery(100, TimeUnit.MILLISECONDS);
+	  //wait.pollingEvery(100, TimeUnit.MILLISECONDS);
 	  
 	  driver.get(baseUrl + "kandidaadid");
-	  WebElement candidatesDiv = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("candidates")));
-	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Onu Heino')]")));
+		 //.sendKeys("admin");
+
+	  WebElement candidatesDiv =  driver.findElement(By.id("candidates"));
+	 // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Onu Heino')]")));
 	  
 	  driver.findElement(By.id("nimi")).clear();
 	  driver.findElement(By.id("nimi")).sendKeys("li");
-	  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Onu Heino')]")));
+	  //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Onu Heino')]")));
 	  
 	  assertThat(driver.getCurrentUrl(), containsString("/kandidaadid/kogu_riik/erakonnata/li"));
 	  assertThat(candidatesDiv.getText(), containsString("Linnar Lind"));
@@ -43,14 +45,15 @@ public class CandidateSearch {
 	  
 	  new Select(driver.findElement(By.id("erakond"))).selectByVisibleText("ABC");
 	  new Select(driver.findElement(By.id("ringkond"))).selectByVisibleText("Haabersti, Kristiine, Põhja-Tallinn");
-	  wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Liine Näri')]")));
+	  //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//p[contains(text(),'Liine Näri')]")));
 	  
 	  assertThat(driver.getCurrentUrl(), containsString("/kandidaadid/HAAB/ABC/li"));
 	  assertThat(candidatesDiv.getText(), containsString("Linnar Lind"));
 	  
 	  driver.get(baseUrl + "kandidaadid/V%C3%95RU/%C3%9CPE/j%C3%B5");
-	  candidatesDiv = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("candidates")));
-	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Jõuluvana')]")));
+	  // candidatesDiv = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("candidates")));
+	  candidatesDiv = driver.findElement(By.id("candidates"));
+	  //wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[contains(text(),'Jõuluvana')]")));
 	  assertThat(candidatesDiv.getText(), not(containsString("Linnar Lind")));
   }
   

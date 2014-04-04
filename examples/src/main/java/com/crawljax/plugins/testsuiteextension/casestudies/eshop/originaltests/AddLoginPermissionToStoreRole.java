@@ -1,13 +1,13 @@
 package com.crawljax.plugins.testsuiteextension.casestudies.eshop.originaltests;
 
-import java.util.regex.Pattern;
-import java.util.concurrent.TimeUnit;
-import org.junit.*;
 import static org.junit.Assert.*;
-import static org.hamcrest.CoreMatchers.*;
+
+import java.util.NoSuchElementException;
+import java.util.concurrent.TimeUnit;
+
+import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.Select;
 
 public class AddLoginPermissionToStoreRole {
   private WebDriver driver;
