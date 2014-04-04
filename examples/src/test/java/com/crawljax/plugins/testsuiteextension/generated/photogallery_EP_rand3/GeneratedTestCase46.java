@@ -83,12 +83,12 @@ public class GeneratedTestCase46 {
 		checkState0();
 		driver.findElement(By.linkText("Stories")).click();
 		//From state 23 to state 24
-		//Eventable{eventType=click, identification=partialText Default Category, element=Element{node=[A: null], tag=A, text=•Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}
+		//Eventable{eventType=click, identification=partialText Default Category, element=Element{node=[A: null], tag=A, text=???Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}
 		mutateDOMTree(23);
 		checkState23();
 		driver.findElement(By.partialLinkText("Default Category")).click();
 		//From state 24 to state 25
-		//Eventable{eventType=click, identification=partialText Default Story, element=Element{node=[A: null], tag=A, text=•Default Story[6], attributes={href=.?s=1, title=The default story [2006/04/01]}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=25, name=state25}}
+		//Eventable{eventType=click, identification=partialText Default Story, element=Element{node=[A: null], tag=A, text=???Default Story[6], attributes={href=.?s=1, title=The default story [2006/04/01]}}, source=StateVertexImpl{id=24, name=state24}, target=StateVertexImpl{id=25, name=state25}}
 		mutateDOMTree(24);
 		checkState24();
 		driver.findElement(By.partialLinkText("Default Story")).click();
@@ -172,7 +172,7 @@ assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=1\"","title=\"100_0758: 25 KB, 3681 hits and rated 0 by 0 person\"")));
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"dot\"")));
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?c=2\"","title=\"contains photos of all the flowers ! \"")));
 childrenElements.clear();
@@ -329,7 +329,7 @@ assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements
 parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("name=\"cmd\"","type=\"hidden\"","value=\"addcmntp\""))));
-childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("type=\"submit\"","value=\"   Submit Comment   \""))));
+childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("type=\"submit\"","value=\" ?? Submit Comment ?? \""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));

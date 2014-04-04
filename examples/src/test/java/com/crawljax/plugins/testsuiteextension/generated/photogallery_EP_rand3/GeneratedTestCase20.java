@@ -83,7 +83,7 @@ public class GeneratedTestCase20 {
 		checkState0();
 		driver.findElement(By.linkText("Admin Page")).click();
 		//From state 1 to state 2
-		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Login   }}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=??????Login??????}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
 		mutateDOMTree(1);
 		checkState1();
 		driver.findElement(By.id("loginAdminPass")).clear();
@@ -95,7 +95,7 @@ public class GeneratedTestCase20 {
 		checkState2();
 		driver.findElement(By.linkText("Manage Categories")).click();
 		//From state 8 to state 18
-		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Add Category   }}, source=StateVertexImpl{id=8, name=state8}, target=StateVertexImpl{id=18, name=state18}}
+		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=??????Add Category??????}}, source=StateVertexImpl{id=8, name=state8}, target=StateVertexImpl{id=18, name=state18}}
 		mutateDOMTree(8);
 		checkState8();
 		driver.findElement(By.name("desc")).clear();
@@ -109,13 +109,14 @@ public class GeneratedTestCase20 {
 		checkState18();
 		driver.findElement(By.xpath("(//a[contains(text(),'Delete / Clear')])[2]")).click();
 		//From state 19 to state 21
-		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=   Delete it!   }}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=21, name=state21}}
+		//Eventable{eventType=click, identification=cssSelector input.submit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=submit, type=submit, value=??????Delete it!??????}}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=21, name=state21}}
 		mutateDOMTree(19);
 		checkState19();
 		driver.findElement(By.cssSelector("input.submit")).click();
 		//From state 21 to state 22
 		//Eventable{eventType=click, identification=cssSelector a[title="Log Out"], element=Element{node=[A: null], tag=A, text=, attributes={href=?page=logout, title=Log Out}}, source=StateVertexImpl{id=21, name=state21}, target=StateVertexImpl{id=22, name=state22}}
 		mutateDOMTree(21);
+		closeAlertAndGetItsText();
 		checkState21();
 		driver.findElement(By.cssSelector("a[title=\"Log Out\"]")).click();
 		//Sink node at state 22
@@ -263,7 +264,7 @@ assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements
 	public void checkState8(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[3]/CENTER/FORM/TABLE/TBODY/TR[3]/TD"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/DIV[3]/CENTER/FORM/TABLE/TBODY/TR[8]/TD/INPUT"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD[2]/DIV/BR[5]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV[2]/DIV[3]/DIV[3]/DIV[2]/TABLE/TBODY/TR/TD[2]/DIV/BR[5]"))); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"?page=drafts\"","title=\"Manage Drafts\"")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"shortCuts\"")));
 childrenElements.clear();
@@ -288,12 +289,12 @@ parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("c
 childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("class=\"logo\"","height=\"20px\"","src=\"files/adminfiles/logo_preferences.gif\"","width=\"20px\""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"q\"","onclick=\"ShowHelp('Manage Categories', event, 'en');\"","title=\"Help on \"Manage Categories', eve\"\"")));
 parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("style=\"color: #789\"")));
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("class=\"logo\"","height=\"20px\"","src=\"files/adminfiles/logo_drafts.gif\"","width=\"20px\"")));
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"?page=drafts\"","title=\"Manage Drafts\"")));
 childrenElements.clear();

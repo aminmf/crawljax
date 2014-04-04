@@ -78,7 +78,7 @@ public class GeneratedTestCase32 {
 	public void method32(){
 		driver.get(url);
 		//From state 0 to state 59
-		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=•Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=59, name=state59}}
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=???Default Category[6], attributes={href=.?c=1, title=The default category }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=59, name=state59}}
 		mutateDOMTree(0);
 		checkState0();
 		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[1]/SPAN[1]/A[1]")).click();
@@ -164,7 +164,7 @@ childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"admin.php?page=categories&cmd=doEdt&cid=1#add\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"reddot\"","style=\"font-size: 1em; padding-right: 4px;\"")));
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?c=1\"","title=\"The default category \"")));
 childrenElements.clear();

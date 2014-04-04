@@ -83,7 +83,7 @@ public class GeneratedTestCase4 {
 		checkState0();
 		driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
 		//From state 37 to state 38
-		//Eventable{eventType=click, identification=partialText Hide, element=Element{node=[A: null], tag=A, text=Hide  info, attributes={href=javascript:toggleInfo();, target=_top, title=Show/Hide additional info and de/centralize the photo}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=38, name=state38}}
+		//Eventable{eventType=click, identification=partialText Hide, element=Element{node=[A: null], tag=A, text=Hide?? info, attributes={href=javascript:toggleInfo();, target=_top, title=Show/Hide additional info and de/centralize the photo}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=38, name=state38}}
 		mutateDOMTree(37);
 		checkState37();
 		driver.findElement(By.partialLinkText("Hide")).click();
@@ -171,7 +171,7 @@ assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=4\"","title=\"100_0773: 62 KB, 1367 hits and rated 0 by 0 person\"")));
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"titlePhotoBox\"")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\"")));
 childrenElements.clear();

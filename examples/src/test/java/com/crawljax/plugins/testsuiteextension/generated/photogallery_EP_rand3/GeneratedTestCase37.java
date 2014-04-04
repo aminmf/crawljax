@@ -298,7 +298,7 @@ assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)
 		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("checked=\"checked\"","class=\"radio\"","id=\"ComIsAdminYe\"","name=\"byadmin\"","onclick=\"javascript:hideElem('ComNameTR');hideElem('ComEmailTR');hideElem('ComWebTR');hideElem('ComWVTR');\"","type=\"radio\"","value=\"yes\"")));
 parentElement = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"ComIsAdminYe\"")));
 childrenElements.clear();
-assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("BR", "", new ArrayList<String>(Arrays.asList("")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"footer\"")));
 childrenElements.clear();
@@ -315,7 +315,7 @@ parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
 

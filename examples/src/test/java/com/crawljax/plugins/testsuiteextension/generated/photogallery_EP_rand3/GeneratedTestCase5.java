@@ -83,7 +83,7 @@ public class GeneratedTestCase5 {
 		checkState0();
 		driver.findElement(By.cssSelector("div.aThumb:nth-child(5) > center:nth-child(1) > a:nth-child(1)")).click();
 		//From state 37 to state 51
-		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=Hide  info, attributes={href=javascript:toggleInfo();, target=_top, title=Show/Hide additional info and de/centralize the photo}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=51, name=state51}}
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=Hide?? info, attributes={href=javascript:toggleInfo();, target=_top, title=Show/Hide additional info and de/centralize the photo}}, source=StateVertexImpl{id=37, name=state37}, target=StateVertexImpl{id=51, name=state51}}
 		mutateDOMTree(37);
 		checkState37();
 		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/SPAN[1]/A[1]")).click();
@@ -171,7 +171,7 @@ assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=4\"","title=\"100_0773: 62 KB, 1367 hits and rated 0 by 0 person\"")));
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"titlePhotoBox\"")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\"")));
 childrenElements.clear();
@@ -201,11 +201,11 @@ assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)
 parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("class=\"rate\"","id=\"rateSelect\"","name=\"rate\"","onchange=\"javascript:SaveRating(2, this.value);\"")));
 childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("BR", "", new ArrayList<String>(Arrays.asList("")));
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=6\"","title=\"100_0794: 91 KB, 2101 hits and rated 0 by 0 person\"")));
 childrenElements.clear();
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"images/000002_ieqey_9.jpg\"","title=\"Photo 2 :: 3664x2442 :: 1244KB\"")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"photoBox\"")));
 childrenElements.clear();

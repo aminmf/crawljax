@@ -78,7 +78,7 @@ public class GeneratedTestCase0 {
 	public void method0(){
 		driver.get(url);
 		//From state 0 to state 83
-		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[5]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=•flowers[0], attributes={href=.?c=3, title=contains photos of all the flowers ! }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=83, name=state83}}
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[5]/SPAN[1]/A[1], element=Element{node=[A: null], tag=A, text=???flowers[0], attributes={href=.?c=3, title=contains photos of all the flowers ! }}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=83, name=state83}}
 		mutateDOMTree(0);
 		checkState0();
 		driver.findElement(By.xpath("/HTML[1]/BODY[1]/CENTER[1]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/DIV[2]/DIV[5]/SPAN[1]/A[1]")).click();
@@ -181,7 +181,7 @@ childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asL
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"submenu\"")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"part\"")));
 childrenElements.clear();

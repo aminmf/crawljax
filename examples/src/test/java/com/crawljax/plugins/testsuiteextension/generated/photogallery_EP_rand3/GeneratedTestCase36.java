@@ -310,7 +310,7 @@ assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)
 		element = new DOMElement("BR", "", new ArrayList<String>(Arrays.asList("")));
 parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\".?p=1\"","title=\"100_0758: 25 KB, 3681 hits and rated 0 by 0 person\"")));
 childrenElements.clear();
-assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("name=\"cmnts\"")));
 parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"Granny\"")));
 childrenElements.clear();
