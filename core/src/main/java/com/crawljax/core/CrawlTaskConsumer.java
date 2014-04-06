@@ -30,6 +30,11 @@ public class CrawlTaskConsumer implements Callable<Void> {
 
 	private ArrayList<Integer> manualTestStateIDs = new ArrayList<Integer>(); 
 
+	//Amin: One should only be true
+	private boolean alternativePathStrategy = true;  // highest priority to manual-test staes
+	private boolean randomStrategy = false;
+	private boolean codeCoverageStrategy = false;
+	
 
 	@Inject
 	CrawlTaskConsumer(UnfiredCandidateActions candidates,
@@ -103,9 +108,7 @@ public class CrawlTaskConsumer implements Callable<Void> {
 		LOG.info("There are {} states with unfired actions", numberOfStatesWithCandidates);
 		int selectedStateId = 0;
 
-		boolean randomStrategy = false;
-		boolean codeCoverageStrategy = false;
-		boolean alternativePathStrategy = true;  // highest  priority to manual-test staes
+
 
 		if (randomStrategy){
 			Random randomGenerator = new Random();

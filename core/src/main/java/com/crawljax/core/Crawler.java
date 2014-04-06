@@ -73,6 +73,12 @@ public class Crawler {
 	private CrawlPath crawlpath;
 	private StateMachine stateMachine;
 
+	//Amin
+	private boolean useTestExtToHandleForms = true;
+	private boolean crawlPhormerApplication = false;
+	private boolean crawlWolfCMSApplication = true;
+
+	
 	@Inject
 	Crawler(CrawlerContext context, CrawljaxConfiguration config,
 	        StateComparator stateComparator, UnfiredCandidateActions candidateActionCache,
@@ -120,12 +126,11 @@ public class Crawler {
 		crawlpath = new CrawlPath();
 
 		// Amin: For wolfcms app -> first perform a logout
-		/*if (crawlDepth.get() > 0)
+		if (crawlWolfCMSApplication==true && crawlDepth.get() > 0)
 			if (!browser.getCurrentUrl().equals("http://localhost:8888/wolfcms/?/admin/login"))
 				if (browser.getCurrentUrl().contains("admin"))
 					if (!browser.getCurrentUrl().contains("login"))
 						browser.getBrowser().findElement(By.linkText("Log Out")).click();
-		 */
 		
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);
@@ -134,6 +139,9 @@ public class Crawler {
 
 	private void resetApplicationFiles() {
 
+		if (crawlPhormerApplication==false)
+			return;
+		
 		File source = new File("/Applications/MAMP/htdocs/phormer331_clean");
 		File desc = new File("/Applications/MAMP/htdocs/phormer331");
 		try {
@@ -218,7 +226,7 @@ public class Crawler {
 			plugins.runOnRevisitStatePlugins(context, curState);
 
 		} else {
-			// Amin: comment this out to let it continue even with erroe
+			// Amin: comment this out to let it continue even with error
 			throw new StateUnreachableException(targetState, "couldn't fire eventable "
 			        + clickable);
 		}
@@ -236,8 +244,7 @@ public class Crawler {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
 
 		// Amin: changed this part to fill the "formInput" values based on values in "formInputs" that came from test suites
-		boolean usetestExt = true;
-		if (!usetestExt ){
+		if (!useTestExtToHandleForms ){
 			// Original
 			for (FormInput formInput : formHandler.getFormInputs()) {
 				if (!formInputs.contains(formInput)) {
@@ -432,7 +439,7 @@ public class Crawler {
 
 
 
-	// Amin: This should be a public so that it can be called from plugins
+	// Amin: This should be public so that it can be called from plugins
 	public void inspectNewStateForInitailPaths(Eventable event) {
 		StateVertex newState = stateMachine.newStateFor(browser);
 
