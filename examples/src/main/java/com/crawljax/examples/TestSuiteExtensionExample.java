@@ -35,11 +35,11 @@ public final class TestSuiteExtensionExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
-	private static final String URL = "http://localhost:8888/phormer331/";
+	//private static final String URL = "http://localhost:8888/phormer331/";
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
-	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
+	private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
 	
-
+	
 	/**
 	 * Run this method to start the crawl.
 	 * 
@@ -49,11 +49,34 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(500, TimeUnit.SECONDS);
+		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for phormer 200 + 300
+		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for claroline
+		builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for claroline 600 + 300
 		builder.setMaximumDepth(0);
 
+		// Phormer
 		builder.crawlRules().addOracleComparator(
 		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='item']")));
+
+		// WolfCMS
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='node level-1 no-children']")));
+
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='node odd']")));
+
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='node even']")));
+
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='snippet node odd']")));
+
+		builder.crawlRules().addOracleComparator(
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='snippet node even']")));
+		
+
+		
+		
 		builder.crawlRules().addOracleComparator(
 		        new OracleComparator("ScriptComparator", new ScriptComparator()));
 		builder.crawlRules().addOracleComparator(
@@ -118,10 +141,10 @@ public final class TestSuiteExtensionExample {
 		//contactForm.field("female").setValues(false, true);
 		//contactForm.field("name").setValues("Bob", "Alice", "John");
 		//contactForm.field("phone").setValues("1234567890", "1234888888", "");
-		//contactForm.field("login-username").setValues("admin");
-		//contactForm.field("login-password").setValues("admin");
+		contactForm.field("login-username").setValues("admin");
+		contactForm.field("login-password").setValues("admin");
 		//contactForm.field("active").setValues(true);
-		//input.setValuesInForm(contactForm).beforeClickElement("button");//. .withText("Save");
+		input.setValuesInForm(contactForm).beforeClickElement("input");//. .withText("Save");
 		return input;
 	}
 
