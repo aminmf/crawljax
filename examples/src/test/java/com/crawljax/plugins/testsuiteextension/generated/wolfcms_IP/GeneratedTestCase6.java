@@ -398,7 +398,7 @@ public class GeneratedTestCase6 {
 	}
 
 	public void checkState31_AllAssertions(){
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$")); // original assertion
+		//assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$")); // original assertion
 
 		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
 

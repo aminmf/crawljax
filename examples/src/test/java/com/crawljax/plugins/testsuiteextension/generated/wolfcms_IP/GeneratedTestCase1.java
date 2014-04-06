@@ -142,8 +142,6 @@ public class GeneratedTestCase1 {
 		driver.findElement(By.id("user_email")).clear();
 		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4) + "@example.com";
 		driver.findElement(By.id("user_email")).sendKeys(RandValue);
-		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-		driver.findElement(By.id("user_email")).sendKeys(RandValue);
 		driver.findElement(By.id("user_username")).clear();
 		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("user_username")).sendKeys(RandValue);
@@ -151,6 +149,7 @@ public class GeneratedTestCase1 {
 		driver.findElement(By.id("user_password")).sendKeys("pswpsw");
 		driver.findElement(By.id("user_confirm")).clear();
 		driver.findElement(By.id("user_confirm")).sendKeys("pswpsw");
+		driver.findElement(By.id("user_role-editor")).click();
 		driver.findElement(By.name("commit")).click();
 		//Sink node at state 16
 		mutateDOMTree(16);

@@ -141,9 +141,6 @@ public class GeneratedTestCase7 {
 		driver.findElement(By.id("user_name")).sendKeys(RandValue);
 		driver.findElement(By.id("user_email")).clear();
 		driver.findElement(By.id("user_email")).sendKeys("test1@example.com");
-		driver.findElement(By.id("user_username")).clear();
-		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-		driver.findElement(By.id("user_username")).sendKeys(RandValue);
 		driver.findElement(By.id("user_password")).clear();
 		driver.findElement(By.id("user_password")).sendKeys("pswpsw");
 		driver.findElement(By.id("user_confirm")).clear();
@@ -304,7 +301,7 @@ public class GeneratedTestCase7 {
 	public void checkState51_OriginalAssertions(){
 		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
 
-		assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText()); // original assertion
+		//assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText()); // original assertion
 
 		assertTrue(isElementPresent(By.xpath("//div[text()='User has been saved!']"))); // original assertion
 
@@ -322,7 +319,7 @@ public class GeneratedTestCase7 {
 	public void checkState51_AllAssertions(){
 		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
 
-		assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText()); // original assertion
+		//assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText()); // original assertion
 
 		assertTrue(isElementPresent(By.xpath("//div[text()='User has been saved!']"))); // original assertion
 

@@ -231,7 +231,7 @@ public class GeneratedTestCase4 {
 	}
 
 	public void checkState36_OriginalAssertions(){
-		assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle()); // original assertion
+		//assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle()); // original assertion
 
 	}
 
@@ -245,7 +245,7 @@ public class GeneratedTestCase4 {
 	}
 
 	public void checkState36_AllAssertions(){
-		assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle()); // original assertion
+		//assertEquals("Pages - Edit - Home Page | Wolf CMS", driver.getTitle()); // original assertion
 
 	}
 
