@@ -163,9 +163,9 @@ public class GeneratedTestCase7 {
 
 
 	public void checkState0_OriginalAssertions(){
-		assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -179,9 +179,9 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState0_AllAssertions(){
-		assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -231,7 +231,7 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState49_OriginalAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -245,7 +245,7 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState49_AllAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -265,7 +265,7 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState50_OriginalAssertions(){
-		assertEquals("Users - Edit | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users - Edit | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -279,7 +279,7 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState50_AllAssertions(){
-		assertEquals("Users - Edit | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users - Edit | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -299,11 +299,11 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState51_OriginalAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		//assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText()); // original assertion
+		//if(!helper.equals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(isElementPresent(By.xpath("//div[text()='User has been saved!']"))); // original assertion
+		if(!(isElementPresent(By.xpath("//div[text()='User has been saved!']")))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -317,11 +317,11 @@ public class GeneratedTestCase7 {
 	}
 
 	public void checkState51_AllAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		//assertEquals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText()); // original assertion
+		//if(!helper.equals("User has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(isElementPresent(By.xpath("//div[text()='User has been saved!']"))); // original assertion
+		if(!(isElementPresent(By.xpath("//div[text()='User has been saved!']")))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
