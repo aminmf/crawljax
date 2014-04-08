@@ -77,6 +77,8 @@ public class GeneratedTestCase3 {
 	@Test
 	public void method3(){
 		driver.get(url);
+		if (true)
+			return;
 		//From state 0 to state 53
 		//Eventable{eventType=click, identification=partialText Wolf CMS, element=Element{node=[A: null], tag=A, text=Wolf CMS, attributes={href=http://localhost:8888/wolfcms/}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=53, name=state53}}
 		mutateDOMTree(0);
