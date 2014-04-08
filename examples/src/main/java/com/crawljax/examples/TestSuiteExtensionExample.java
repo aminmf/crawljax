@@ -35,9 +35,9 @@ public final class TestSuiteExtensionExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
-	//private static final String URL = "http://localhost:8888/phormer331/";
+	private static final String URL = "http://localhost:8888/phormer331/";
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
-	private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
+	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
 	
 	
 	/**
@@ -49,9 +49,9 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for phormer 200 + 300
+		builder.setMaximumRunTime(550, TimeUnit.SECONDS); // for phormer 250 + 300
 		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for claroline
-		builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for claroline 600 + 300
+		//builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for wolfcms 600 + 300
 		builder.setMaximumDepth(0);
 
 		// Phormer
