@@ -114,8 +114,6 @@ public class AllTests {
 		driver.findElement(By.xpath("//button[text()=\"OK\"]")).click();
 
 
- 		if(true)return;
-
 		 */
 
 
@@ -135,9 +133,8 @@ public class AllTests {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		assertEquals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText());
 
-		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
-
 		// testBookmarkAsset() and remove it
+		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 		driver.findElement(By.cssSelector("#assets-container a")).click();
 		driver.findElement(By.id("btn-add-gadget")).click();
 		assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText());
@@ -151,68 +148,21 @@ public class AllTests {
 		driver.findElement(By.cssSelector("a.btn:nth-child(3) > i:nth-child(1)")).click();
 		assertTrue(driver.findElement(By.id("no-data-my-items")).getText().contains("You still haven't any bookmarks from the Store."));
 
-
-		/******* This does not work! ********/
-		// testAddReview()
-		/*driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
-		driver.findElement(By.xpath("((//div[@class='span3 asset'])[last()])//a")).click();
-		driver.findElement(By.linkText("User Reviews")).click();
-		Thread.sleep(5000);
-		driver.findElement(By.cssSelector("#com-body")).clear();
-		driver.findElement(By.cssSelector("#com-body")).sendKeys("my test rating with 3 stars");
-		driver.findElement(By.linkText("3")).click();
-		driver.findElement(By.id("btn-post")).click();
-		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
-			try { if (isElementPresent(By.cssSelector(".com-review"))) break; } catch (Exception e) {}
-			Thread.sleep(1000);
-		}
-				
-		// testSortByPopAfterReview
-		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
-		driver.findElement(By.xpath("((//div[@class='span3 asset'])[8])//a")).click();
-		String populerAsset = driver.getCurrentUrl();
-		driver.findElement(By.linkText("User Reviews")).click();
-		// ERROR: Caught exception [ERROR: Unsupported command [waitForFrameToLoad | id=socialIfr | ]]
-		driver.findElement(By.id("com-body")).clear();
-		driver.findElement(By.id("com-body")).sendKeys("my test rating with 5 stars");
-		driver.findElement(By.linkText("5")).click();
-		driver.findElement(By.id("btn-post")).click();
-		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
-			try { if (isElementPresent(By.cssSelector(".com-review"))) break; } catch (Exception e) {}
-			Thread.sleep(1000);
-		}
-
-		driver.get(baseUrl + "/store/assets/gadget");
-		driver.findElement(By.cssSelector("i.icon-star")).click();
-		driver.findElement(By.xpath("((//div[@class='span3 asset'])[1])//a")).click();
-		assertEquals(populerAsset, driver.getCurrentUrl());
-		*/
-		
-
-
 		// testFilterByTag()
 		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 		driver.findElement(By.linkText("wso2")).click();
 		Thread.sleep(3000);
-		
 		assertEquals(4, ((List<WebElement>) driver.findElements(By.xpath("//div[@class='span3 asset']"))).size());
-
 
 		// testLogout
 		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Sign out")).click();
 		assertTrue(driver.findElement(By.linkText("Sign in")).isDisplayed());
 		assertTrue(driver.findElement(By.linkText("Register")).isDisplayed());
-		driver.findElement(By.linkText("Sign in")).click();
 
-
-
-
-
+		
 		// testCreateSuperTenantUser
-		//driver.findElement(By.id("btn-register")).click();
+		driver.findElement(By.linkText("Register")).click();
 		driver.findElement(By.id("reg-username")).clear();
 		String RandUser = "RND-" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("reg-username")).sendKeys(RandUser);
@@ -226,9 +176,10 @@ public class AllTests {
 
 		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Sign out")).click();
-		driver.findElement(By.linkText("Sign in")).click();
 	
+		
 		// testAddNewAsset
+		driver.findElement(By.linkText("Sign in")).click();
 		// going to  /publisher/assets/gadget/
 		driver.findElement(By.cssSelector("a[href*='publisher']")).click();
 		driver.findElement(By.id("username")).clear();
@@ -253,55 +204,17 @@ public class AllTests {
 		// testIfAssetAddedToPublisher
 		assertTrue(driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).getText().contains("RND"));
 		
-		
-		
-		// LogoutFromPublisher
-		driver.findElement(By.cssSelector("a.dropdown-toggle")).click();
-		driver.findElement(By.linkText("Sign out")).click();
-		
-
-	
-		// LoginAsSuperTenantUser
-		driver.findElement(By.cssSelector("a[href*='store']")).click();
-		driver.findElement(By.linkText("Sign in")).click();
-		driver.findElement(By.id("username")).clear();
-		driver.findElement(By.id("username")).sendKeys("supertenantuser");
-		driver.findElement(By.id("password")).clear();
-		driver.findElement(By.id("password")).sendKeys("supertenantuser");
-		driver.findElement(By.xpath("//button[@type='submit']")).click();
-
-
- 		if(true)return;
-
- 		
-		// TestIfAssetAddedToStore
-		driver.findElement(By.xpath("//a[contains(text(),\"userAddedAsset\")]")).click();
-		assertEquals("by supertenantuser", driver.findElement(By.xpath("//div[@id='container-assets']//small[2]")).getText());
-
-		// Logout
-		driver.get(baseUrl + "/store/assets/gadget");
-		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
-		driver.findElement(By.linkText("Sign out")).click();
-		assertTrue(driver.findElement(By.linkText("Sign in")).isDisplayed());
-
 		// UpdateDescription
-		driver.get(baseUrl + "/publisher/assets/gadget/");
-		driver.findElement(By.xpath("//a[contains(text(),\"userAddedAsset\")]")).click();
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
 		driver.findElement(By.id("editAssetButton")).click();
+		assertTrue(driver.findElement(By.cssSelector(".alert")).getText().contains("Asset updated successfully"));
 		
-		// PromoteToInReview
-		driver.get(baseUrl + "/publisher/assets/gadget/");
-		driver.findElement(By.xpath("//a[contains(text(),\"userAddedAsset\")]")).click();
-		driver.findElement(By.linkText("Life Cycle")).click();
-		driver.findElement(By.id("In-Review")).click();
-		List<WebElement> rows2 = driver.findElements(By.xpath("//table[@id='lc-history']//tr"));
-		WebElement val2 = rows2.get(0).findElement(By.xpath("./td[2]"));
-		System.out.println(val2.getText());
-		assertEquals(val2.getText(), "supertenantuser changed the asset from Created to In-Review");
-
+		
+ 		if(true)return;
+		
+		
 		// LogoutFromPublisher
 		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Sign out")).click();
@@ -314,23 +227,27 @@ public class AllTests {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("admin1234");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-
 		assertEquals("tenantAdmin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText());
 
-		// PromoteToPublished
-		driver.get(baseUrl + "/publisher/assets/gadget/");
-		driver.findElement(By.xpath("//a[contains(text(),\"userAddedAsset\")]")).click();
-		driver.findElement(By.linkText("Life Cycle")).click();
-		driver.findElement(By.id("Published")).click();
-		List<WebElement> rows3 = driver.findElements(By.xpath("//table[@id='lc-history']//tr"));
-		WebElement val3 = rows3.get(0).findElement(By.xpath("./td[2]"));
-		System.out.println(val3.getText());
-		assertEquals(val3.getText(), "admin changed the asset from In-Review to Published");
-
-		// LogoutFromPublisher
+		// testLogout
 		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Sign out")).click();
 
+		// LoginAsSuperTenantUser
+		driver.findElement(By.cssSelector("a[href*='store']")).click();
+		driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.id("username")).clear();
+		driver.findElement(By.id("username")).sendKeys("supertenantuser");
+		driver.findElement(By.id("password")).clear();
+		driver.findElement(By.id("password")).sendKeys("supertenantuser");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		assertEquals("supertenantuser", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText());
+
+		// testLogout
+		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
+		driver.findElement(By.linkText("Sign out")).click();
+
+	
 		// LoginAsTenantUser
 		driver.get(baseUrl + "/store/assets/gadget");
 		driver.findElement(By.linkText("Sign in")).click();
