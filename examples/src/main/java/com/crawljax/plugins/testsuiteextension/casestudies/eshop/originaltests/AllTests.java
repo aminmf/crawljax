@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class AllTests {
@@ -29,14 +30,14 @@ public class AllTests {
 		// URL => /admin/carbon/admin/login.jsp
 
 		// LoginToCarbon
-		driver.get(baseUrl + "/admin/carbon/admin/login.jsp");
+		/*driver.get(baseUrl + "/admin/carbon/admin/login.jsp");
 		driver.findElement(By.cssSelector("#txtUserName.user")).clear();
 		driver.findElement(By.cssSelector("#txtUserName.user")).sendKeys("admin");
 		driver.findElement(By.cssSelector("#txtPassword")).clear();
 		driver.findElement(By.cssSelector("#txtPassword")).sendKeys("admin");
 		driver.findElement(By.cssSelector("input.button")).click();
 		assertEquals("WSO2 Management Console", driver.getTitle());
-		
+		*/
 
 		// testAddTenant
 		/*driver.findElement(By.cssSelector("#menu-panel-button3")).click();
@@ -61,7 +62,7 @@ public class AllTests {
 		 */
 
 		// testLogoutFromCarbon
-		driver.findElement(By.linkText("Sign-out")).click();  
+		//driver.findElement(By.linkText("Sign-out")).click();  
 
 		// testLoginToCarbonAsTenant
 		/*driver.get(baseUrl + "/admin/carbon/admin/login.jsp");
@@ -109,11 +110,14 @@ public class AllTests {
 
 
 
+		
+		
+		
 
 		// URL => /store/assets/gadget
 
 		// testLoginAsAdmin
-		driver.get(baseUrl + "/store/assets/gadget");
+		driver.get(baseUrl + "/store");
 		driver.findElement(By.linkText("Sign in")).click();
 		driver.findElement(By.id("username")).clear();
 		driver.findElement(By.id("username")).sendKeys("admin");
@@ -122,52 +126,43 @@ public class AllTests {
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		assertEquals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText());
 
+		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 
-
-		// testBookmarkAsset()
-		/*driver.get(baseUrl + "/store/assets/gadget");
+		// testBookmarkAsset() and remove it
+		//driver.get(baseUrl + "/store/assets/gadget");
 		driver.findElement(By.cssSelector("#assets-container a")).click();
 		driver.findElement(By.id("btn-add-gadget")).click();
-		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
-			try { if ("Bookmarked".equals(driver.findElement(By.id("btn-add-gadget")).getText())) break; } catch (Exception e) {}
-			Thread.sleep(1000);
-		}*/
-
-
+		assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText());
+		driver.findElement(By.cssSelector(".nav-separator > a:nth-child(1)")).click();
+	
 		// testShowMyItems
 		driver.get(baseUrl + "/store/assets/gadget");
 		driver.findElement(By.linkText("My Items")).click();
 		assertEquals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText());
 
+		// remove from list
+		driver.findElement(By.cssSelector("a.btn:nth-child(3) > i:nth-child(1)")).click();
+		assertTrue(driver.findElement(By.id("no-data-my-items")).getText().contains("You still haven't any bookmarks from the Store."));
 
-		/******* TODO ********/
+
+		/******* This does not work! ********/
 		// testAddReview()
-		driver.get(baseUrl + "/store/assets/gadget");
+		/*driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 		driver.findElement(By.xpath("((//div[@class='span3 asset'])[last()])//a")).click();
 		driver.findElement(By.linkText("User Reviews")).click();
 		Thread.sleep(5000);
-
-		driver.findElement(By.id("com-body")).clear();
-		driver.findElement(By.id("com-body")).sendKeys("my test rating with 3 stars");
+		driver.findElement(By.cssSelector("#com-body")).clear();
+		driver.findElement(By.cssSelector("#com-body")).sendKeys("my test rating with 3 stars");
 		driver.findElement(By.linkText("3")).click();
 		driver.findElement(By.id("btn-post")).click();
-		
-		if(true) return;
-
-		
 		for (int second = 0;; second++) {
 			if (second >= 60) fail("timeout");
 			try { if (isElementPresent(By.cssSelector(".com-review"))) break; } catch (Exception e) {}
 			Thread.sleep(1000);
 		}
-
-		if(true) return;
-
-
-
+				
 		// testSortByPopAfterReview
-		/*driver.get(baseUrl + "/store/assets/gadget");
+		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 		driver.findElement(By.xpath("((//div[@class='span3 asset'])[8])//a")).click();
 		String populerAsset = driver.getCurrentUrl();
 		driver.findElement(By.linkText("User Reviews")).click();
@@ -186,27 +181,29 @@ public class AllTests {
 		driver.findElement(By.cssSelector("i.icon-star")).click();
 		driver.findElement(By.xpath("((//div[@class='span3 asset'])[1])//a")).click();
 		assertEquals(populerAsset, driver.getCurrentUrl());
-		 */
+		*/
+		
 
 
 		// testFilterByTag()
-		driver.get(baseUrl + "/store/assets/gadget/");
+		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 		driver.findElement(By.linkText("wso2")).click();
-		for (int second = 0;; second++) {
-			if (second >= 60) fail("timeout");
-			try { if (!driver.findElement(By.cssSelector(".loading")).isDisplayed()) break; } catch (Exception e) {}
-			Thread.sleep(1000);
-		}
+		Thread.sleep(3000);
+		
+		assertEquals(4, ((List<WebElement>) driver.findElements(By.xpath("//div[@class='span3 asset']"))).size());
 
 
 		// testLogout
-		driver.get(baseUrl + "/store/assets/gadget");
+		driver.findElement(By.cssSelector(".search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)")).click();  // clicking on gadget
 		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Sign out")).click();
 		assertTrue(driver.findElement(By.linkText("Sign in")).isDisplayed());
+		assertTrue(driver.findElement(By.linkText("Register")).isDisplayed());
 
 
 
+
+		/*** This can't be done multiple times ***/
 		// testCreateSuperTenantUser
 		/*driver.get(baseUrl + "/store/");
 		driver.findElement(By.id("btn-register")).click();
@@ -218,11 +215,24 @@ public class AllTests {
 		driver.findElement(By.id("reg-password2")).sendKeys("supertenantuser4");
 		driver.findElement(By.id("registrationSubmit")).click();
 		assertEquals("supertenantuser4", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText());
-		/*
+		*/
 
-		// TODO ***************
+		
+		
+		/**** CHECK THIS LATER *****/
 		// testAddNewAsset
-		/*driver.get(baseUrl + "/publisher/assets/gadget/");
+
+		// going to  /publisher/assets/gadget/
+		driver.findElement(By.cssSelector("div.pull-right > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)")).click();
+		
+		driver.findElement(By.linkText("Sign in")).click();
+		driver.findElement(By.id("username")).clear();
+		driver.findElement(By.id("username")).sendKeys("admin");
+		driver.findElement(By.id("password")).clear();
+		driver.findElement(By.id("password")).sendKeys("admin");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+		
 		driver.findElement(By.linkText("Add gadget")).click();
 		driver.findElement(By.id("overview_name")).clear();
 		driver.findElement(By.id("overview_name")).sendKeys("userAddedAsset");
@@ -244,8 +254,11 @@ public class AllTests {
 			try { if (!driver.findElement(By.cssSelector(".asset-being-added")).isDisplayed()) break; } catch (Exception e) {}
 			Thread.sleep(1000);
 		}
-		 */
+		
+		if(true) return;
 
+		
+		
 		// testReLogin
 		driver.get(baseUrl + "/store/assets/gadget");
 		driver.findElement(By.linkText("Sign in")).click();
