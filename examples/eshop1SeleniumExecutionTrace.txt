@@ -1,148 +1,148 @@
 TestSuiteBegin
 NewTestCase AdminCarbon
 By.selector: #txtUserName.user
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
 clear 
 By.selector: #txtUserName.user
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
 sendKeys admin
 By.cssSelector: #txtPassword
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
 clear 
 By.cssSelector: #txtPassword
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
 sendKeys admin
 By.selector: input.button
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
 click 
 assertionModeOn
 assertion assertEquals("WSO2 Management Console", driver.getTitle());
 assertionModeOff
 By.selector: #menu-panel-button3
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #menu-panel-button3]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #menu-panel-button3]
 click 
 By.linkText: Add New Tenant
-[[FirefoxDriver: firefox on XP (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Add New Tenant]
+[[FirefoxDriver: firefox on MAC (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Add New Tenant]
 click 
 By.id: domain
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: domain]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: domain]
 sendKeys $RandValue
 By.id: admin-firstname
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-firstname]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-firstname]
 sendKeys testAdminFirstName
 By.id: admin-lastname
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-lastname]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-lastname]
 sendKeys testAdminLastName
 By.id: admin
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin]
 sendKeys tenantAdmin
 By.id: admin-password
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-password]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-password]
 sendKeys admin1234
 By.id: admin-password-repeat
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-password-repeat]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-password-repeat]
 sendKeys admin1234
 By.id: admin-email
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-email]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: admin-email]
 sendKeys tenantadminmail@mytestdomain.com
 By.selector: input.button
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
 click 
 assertionModeOn
 By.selector: #messagebox-info
 assertion assertEquals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())
 assertionModeOff
 By.selector: button[type=\"button\"]
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type=\"button\"]]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type=\"button\"]]
 click 
 By.linkText: Sign-out
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Sign-out]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Sign-out]
 click 
 By.selector: #txtUserName.user
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
 clear 
 By.selector: #txtUserName.user
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtUserName.user]
 sendKeys tenantAdmin@mytestdomain.com
 By.cssSelector: #txtPassword
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
 clear 
 By.cssSelector: #txtPassword
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #txtPassword]
 sendKeys admin1234
 By.selector: input.button
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
 click 
 assertionModeOn
 assertion assertEquals("WSO2 Management Console", driver.getTitle());
 assertionModeOff
 By.selector: #menu-panel-button3
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #menu-panel-button3]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #menu-panel-button3]
 click 
 By.linkText: Users and Roles
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Users and Roles]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Users and Roles]
 click 
 By.linkText: Users
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Users]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Users]
 click 
 By.linkText: Add New User
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Add New User]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Add New User]
 click 
 By.name: username
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: username]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: username]
 sendKeys $RandValue
 By.name: password
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: password]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: password]
 sendKeys tenantUser
 By.name: retype
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: retype]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: retype]
 sendKeys tenantUser
 By.selector: input.button
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: input.button]
 click 
 sendKeys tenantUser
 By.selector: td.buttonRow > input.button
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: td.buttonRow > input.button]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: td.buttonRow > input.button]
 click 
 assertionModeOn
 By.selector: #messagebox-info
 assertion assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully."))
 assertionModeOff
 By.selector: button[type=\"button\"]
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type=\"button\"]]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: button[type=\"button\"]]
 click 
 By.linkText: Users and Roles
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Users and Roles]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Users and Roles]
 click 
 By.linkText: Roles
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Roles]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Roles]
 click 
 By.linkText: Add New Internal Role
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Add New Internal Role]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> link text: Add New Internal Role]
 click 
 By.name: roleName
-[[FirefoxDriver: firefox on XP (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: roleName]
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: roleName]
 sendKeys $RandValue
 By.xpath: //input[contains(@value,\"Next\")]
-[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[contains(@value,\"Next\")]]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[contains(@value,\"Next\")]]
 click 
 By.xpath: //span[contains(text(),\"Login\")]/../..//td[last()-1]/div
-[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //span[contains(text(),\"Login\")]/../..//td[last()-1]/div]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //span[contains(text(),\"Login\")]/../..//td[last()-1]/div]
 click 
 By.xpath: //input[contains(@value,\"Next\")]
-[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[contains(@value,\"Next\")]]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[contains(@value,\"Next\")]]
 click 
 By.xpath: //input[@value=\"tenantUser\"]
-[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[@value=\"tenantUser\"]]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[@value=\"tenantUser\"]]
 click 
 By.xpath: //input[@value=\"Finish\"]
-[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[@value=\"Finish\"]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[@value=\"Finish\"]
 click 
 assertionModeOn
 By.selector: #messagebox-info
 assertion assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully."))
 assertionModeOff
 By.xpath: //button[text()=\"OK\"]
-[[FirefoxDriver: firefox on XP (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //button[text()=\"OK\"]]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //button[text()=\"OK\"]]
 click 
 TestSuiteEnd

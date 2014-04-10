@@ -205,6 +205,7 @@ public class AllTests {
 		assertTrue(driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).getText().contains("RND"));
 		
 		// UpdateDescription
+		driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
