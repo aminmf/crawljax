@@ -75,7 +75,7 @@ public class Crawler {
 
 	//Amin
 	private boolean useTestExtToHandleForms = true;
-	private boolean crawlPhormerApplication = true;
+	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
 
 	
