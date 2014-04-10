@@ -36,9 +36,10 @@ public final class TestSuiteExtensionExample {
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
 	//private static final String URL = "http://localhost:8888/phormer331/";
-	private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
+	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
 	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
-	
+	private static final String URL = "https://localhost:9443/admin/carbon/admin/login.jsp";
+
 	
 	/**
 	 * Run this method to start the crawl.
@@ -50,8 +51,9 @@ public final class TestSuiteExtensionExample {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
 		//builder.setMaximumRunTime(550, TimeUnit.SECONDS); // for phormer 250 + 300
-		builder.setMaximumRunTime(1560, TimeUnit.SECONDS); // for claroline 1200 + 300
+		//builder.setMaximumRunTime(1560, TimeUnit.SECONDS); // for claroline 1200 + 300
 		//builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for wolfcms 600 + 300
+		builder.setMaximumRunTime(600, TimeUnit.SECONDS); // for eshop1 300 + 300
 		builder.setMaximumDepth(0);
 
 		// Phormer
@@ -159,10 +161,13 @@ public final class TestSuiteExtensionExample {
 		//contactForm.field("female").setValues(false, true);
 		//contactForm.field("name").setValues("Bob", "Alice", "John");
 		//contactForm.field("phone").setValues("1234567890", "1234888888", "");
-		contactForm.field("login-username").setValues("admin");
-		contactForm.field("login-password").setValues("admin");
+		
+		//contactForm.field("login-username").setValues("admin");
+		//contactForm.field("login-password").setValues("admin");
+
 		//contactForm.field("active").setValues(true);
-		input.setValuesInForm(contactForm).beforeClickElement("input");//. .withText("Save");
+				
+		//input.setValuesInForm(contactForm).beforeClickElement("input");//. .withText("Save");
 		return input;
 	}
 

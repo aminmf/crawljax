@@ -77,6 +77,7 @@ public class Crawler {
 	private boolean useTestExtToHandleForms = true;
 	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
+	private boolean crawlEshopApplication = true;
 
 	
 	@Inject
@@ -125,12 +126,21 @@ public class Crawler {
 		context.setStateMachine(stateMachine);
 		crawlpath = new CrawlPath();
 
+		// Amin: For eshop app -> first perform a logout
+		if (crawlEshopApplication==true && crawlDepth.get() > 0)
+			//if (!browser.getCurrentUrl().equals("https://localhost:9443/admin/carbon/admin/login.jsp"))
+				//if (browser.getCurrentUrl().contains("admin"))
+					if (!browser.getCurrentUrl().contains("login"))
+						browser.getBrowser().findElement(By.linkText("Sign-out")).click();
+		
+
 		// Amin: For wolfcms app -> first perform a logout
 		if (crawlWolfCMSApplication==true && crawlDepth.get() > 0)
 			if (!browser.getCurrentUrl().equals("http://localhost:8888/wolfcms/?/admin/login"))
 				if (browser.getCurrentUrl().contains("admin"))
 					if (!browser.getCurrentUrl().contains("login"))
 						browser.getBrowser().findElement(By.linkText("Log Out")).click();
+
 		
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);

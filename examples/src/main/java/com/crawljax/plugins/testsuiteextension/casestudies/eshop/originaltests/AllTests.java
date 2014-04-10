@@ -108,7 +108,6 @@ public class AllTests {
 		driver.findElement(By.xpath("//input[contains(@value,\"Next\")]")).click();
 		driver.findElement(By.xpath("//span[contains(text(),\"Login\")]/../..//td[last()-1]/div")).click();
 		driver.findElement(By.xpath("//input[contains(@value,\"Next\")]")).click();
-		driver.findElement(By.xpath("//input[@value=\"tenantUser\"]")).click();
 		driver.findElement(By.xpath("//input[@value=\"Finish\"]")).click();
 		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully."));
 		driver.findElement(By.xpath("//button[text()=\"OK\"]")).click();
