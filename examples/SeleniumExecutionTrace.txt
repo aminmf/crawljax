@@ -122,12 +122,6 @@ click
 By.name: roleName
 [[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> name: roleName]
 sendKeys $RandValue
-By.xpath: //input[contains(@value,"Next")]
-[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[contains(@value,"Next")]]
-click 
-By.xpath: //span[contains(text(),"Login")]/../..//td[last()-1]/div
-[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //span[contains(text(),"Login")]/../..//td[last()-1]/div]
-click 
 By.xpath: //input[@value="Finish"]
 [[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //input[@value="Finish"]]
 click 
