@@ -19,7 +19,7 @@ import com.crawljax.forms.RandomInputValueGenerator;
 import com.crawljax.util.DomUtils;
 
 /*
- * Generated @ Thu Apr 10 10:08:07 PDT 2014
+ * Generated @ Thu Apr 10 10:44:19 PDT 2014
  */
 
 public class GeneratedTestCase2 {
@@ -109,8 +109,8 @@ public class GeneratedTestCase2 {
 		checkState7_RandAssertions4();
 		checkState7_RandAssertions5();
 		driver.findElement(By.linkText("Users and Roles")).click();
-		//From state 9 to state 10
-		//Eventable{eventType=click, identification=text Users, element=Element{node=[A: null], tag=A, text=Users, attributes={class=icon-link, href=../user/user-mgt.jsp, style=background-image:url(images/users.gif);}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=10, name=state10}}
+		//From state 9 to state 16
+		//Eventable{eventType=click, identification=text Roles, element=Element{node=[A: null], tag=A, text=Roles, attributes={class=icon-link, href=../role/role-mgt.jsp, style=background-image:url(images/user-roles.gif);}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=16, name=state16}}
 		mutateDOMTree(9);
 		checkState9_OriginalAssertions();
 		checkState9_ReusedAssertions();
@@ -122,82 +122,92 @@ public class GeneratedTestCase2 {
 		checkState9_RandAssertions3();
 		checkState9_RandAssertions4();
 		checkState9_RandAssertions5();
-		driver.findElement(By.linkText("Users")).click();
-		//From state 10 to state 11
-		//Eventable{eventType=click, identification=text Add New User, element=Element{node=[A: null], tag=A, text=Add New User, attributes={class=icon-link, href=add-step1.jsp, style=background-image:url(images/add.gif);}}, source=StateVertexImpl{id=10, name=state10}, target=StateVertexImpl{id=11, name=state11}}
-		mutateDOMTree(10);
-		checkState10_OriginalAssertions();
-		checkState10_ReusedAssertions();
-		checkState10_GeneratedAssertions();
-		checkState10_LearnedAssertions();
-		checkState10_AllAssertions();
-		checkState10_RandAssertions1();
-		checkState10_RandAssertions2();
-		checkState10_RandAssertions3();
-		checkState10_RandAssertions4();
-		checkState10_RandAssertions5();
-		driver.findElement(By.linkText("Add New User")).click();
-		//From state 11 to state 12
-		//Eventable{eventType=click, identification=cssSelector input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, onclick=doNext();, type=button, value=Next >}}, source=StateVertexImpl{id=11, name=state11}, target=StateVertexImpl{id=12, name=state12}}
-		mutateDOMTree(11);
-		checkState11_OriginalAssertions();
-		checkState11_ReusedAssertions();
-		checkState11_GeneratedAssertions();
-		checkState11_LearnedAssertions();
-		checkState11_AllAssertions();
-		checkState11_RandAssertions1();
-		checkState11_RandAssertions2();
-		checkState11_RandAssertions3();
-		checkState11_RandAssertions4();
-		checkState11_RandAssertions5();
-		driver.findElement(By.name("username")).clear();
+		driver.findElement(By.linkText("Roles")).click();
+		//From state 16 to state 17
+		//Eventable{eventType=click, identification=text Add New Internal Role, element=Element{node=[A: null], tag=A, text=Add New Internal Role, attributes={class=icon-link, href=add-step1.jsp?roleType=Internal, style=background-image:url(images/add.gif);}}, source=StateVertexImpl{id=16, name=state16}, target=StateVertexImpl{id=17, name=state17}}
+		mutateDOMTree(16);
+		checkState16_OriginalAssertions();
+		checkState16_ReusedAssertions();
+		checkState16_GeneratedAssertions();
+		checkState16_LearnedAssertions();
+		checkState16_AllAssertions();
+		checkState16_RandAssertions1();
+		checkState16_RandAssertions2();
+		checkState16_RandAssertions3();
+		checkState16_RandAssertions4();
+		checkState16_RandAssertions5();
+		driver.findElement(By.linkText("Add New Internal Role")).click();
+		//From state 17 to state 18
+		//Eventable{eventType=click, identification=xpath //input[contains(@value,"Next")], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, onclick=doNext();, type=button, value=Next >}}, source=StateVertexImpl{id=17, name=state17}, target=StateVertexImpl{id=18, name=state18}}
+		mutateDOMTree(17);
+		checkState17_OriginalAssertions();
+		checkState17_ReusedAssertions();
+		checkState17_GeneratedAssertions();
+		checkState17_LearnedAssertions();
+		checkState17_AllAssertions();
+		checkState17_RandAssertions1();
+		checkState17_RandAssertions2();
+		checkState17_RandAssertions3();
+		checkState17_RandAssertions4();
+		checkState17_RandAssertions5();
+		driver.findElement(By.name("roleName")).clear();
 		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-		driver.findElement(By.name("username")).sendKeys(RandValue);
-		driver.findElement(By.name("password")).clear();
-		driver.findElement(By.name("password")).sendKeys("tenantUser");
-		driver.findElement(By.name("retype")).clear();
-		driver.findElement(By.name("retype")).sendKeys("tenantUser");
-		driver.findElement(By.cssSelector("input.button")).click();
-		//From state 12 to state 13
-		//Eventable{eventType=click, identification=cssSelector td.buttonRow > input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, type=submit, value=Finish}}, source=StateVertexImpl{id=12, name=state12}, target=StateVertexImpl{id=13, name=state13}}
-		mutateDOMTree(12);
-		checkState12_OriginalAssertions();
-		checkState12_ReusedAssertions();
-		checkState12_GeneratedAssertions();
-		checkState12_LearnedAssertions();
-		checkState12_AllAssertions();
-		checkState12_RandAssertions1();
-		checkState12_RandAssertions2();
-		checkState12_RandAssertions3();
-		checkState12_RandAssertions4();
-		checkState12_RandAssertions5();
-		driver.findElement(By.cssSelector("td.buttonRow > input.button")).click();
-		//From state 13 to state 14
-		//Eventable{eventType=click, identification=cssSelector button[type="button"], element=Element{node=[BUTTON: null], tag=BUTTON, text=OK, attributes={type=button}}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=14, name=state14}}
-		mutateDOMTree(13);
-		checkState13_OriginalAssertions();
-		checkState13_ReusedAssertions();
-		checkState13_GeneratedAssertions();
-		checkState13_LearnedAssertions();
-		checkState13_AllAssertions();
-		checkState13_RandAssertions1();
-		checkState13_RandAssertions2();
-		checkState13_RandAssertions3();
-		checkState13_RandAssertions4();
-		checkState13_RandAssertions5();
-		driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
-		//Sink node at state 14
-		mutateDOMTree(14);
-		checkState14_OriginalAssertions();
-		checkState14_ReusedAssertions();
-		checkState14_GeneratedAssertions();
-		checkState14_LearnedAssertions();
-		checkState14_AllAssertions();
-		checkState14_RandAssertions1();
-		checkState14_RandAssertions2();
-		checkState14_RandAssertions3();
-		checkState14_RandAssertions4();
-		checkState14_RandAssertions5();
+		driver.findElement(By.name("roleName")).sendKeys(RandValue);
+		driver.findElement(By.xpath("//input[contains(@value,\"Next\")]")).click();
+		//From state 18 to state 19
+		//Eventable{eventType=click, identification=xpath //span[contains(text(),"Login")]/../..//td[last()-1]/div, element=Element{node=[DIV: null], tag=DIV, text=, attributes={class=ygtvspacer}}, source=StateVertexImpl{id=18, name=state18}, target=StateVertexImpl{id=19, name=state19}}
+		mutateDOMTree(18);
+		checkState18_OriginalAssertions();
+		checkState18_ReusedAssertions();
+		checkState18_GeneratedAssertions();
+		checkState18_LearnedAssertions();
+		checkState18_AllAssertions();
+		checkState18_RandAssertions1();
+		checkState18_RandAssertions2();
+		checkState18_RandAssertions3();
+		checkState18_RandAssertions4();
+		checkState18_RandAssertions5();
+		driver.findElement(By.xpath("//span[contains(text(),\"Login\")]/../..//td[last()-1]/div")).click();
+		//From state 19 to state 20
+		//Eventable{eventType=click, identification=xpath //input[@value="Finish"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, type=submit, value=Finish}}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=20, name=state20}}
+		mutateDOMTree(19);
+		checkState19_OriginalAssertions();
+		checkState19_ReusedAssertions();
+		checkState19_GeneratedAssertions();
+		checkState19_LearnedAssertions();
+		checkState19_AllAssertions();
+		checkState19_RandAssertions1();
+		checkState19_RandAssertions2();
+		checkState19_RandAssertions3();
+		checkState19_RandAssertions4();
+		checkState19_RandAssertions5();
+		driver.findElement(By.xpath("//input[@value=\"Finish\"]")).click();
+		//From state 20 to state 21
+		//Eventable{eventType=click, identification=xpath //button[text()="OK"], element=Element{node=[BUTTON: null], tag=BUTTON, text=OK, attributes={type=button}}, source=StateVertexImpl{id=20, name=state20}, target=StateVertexImpl{id=21, name=state21}}
+		mutateDOMTree(20);
+		checkState20_OriginalAssertions();
+		checkState20_ReusedAssertions();
+		checkState20_GeneratedAssertions();
+		checkState20_LearnedAssertions();
+		checkState20_AllAssertions();
+		checkState20_RandAssertions1();
+		checkState20_RandAssertions2();
+		checkState20_RandAssertions3();
+		checkState20_RandAssertions4();
+		checkState20_RandAssertions5();
+		driver.findElement(By.xpath("//button[text()=\"OK\"]")).click();
+		//Sink node at state 21
+		mutateDOMTree(21);
+		checkState21_OriginalAssertions();
+		checkState21_ReusedAssertions();
+		checkState21_GeneratedAssertions();
+		checkState21_LearnedAssertions();
+		checkState21_AllAssertions();
+		checkState21_RandAssertions1();
+		checkState21_RandAssertions2();
+		checkState21_RandAssertions3();
+		checkState21_RandAssertions4();
+		checkState21_RandAssertions5();
 	}
 
 
@@ -249,20 +259,6 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState7_LearnedAssertions(){
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header-div\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("colspan=\"3\"","id=\"header\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"right-logo\""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"left-logo\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"middle-ad\""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"header-links\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
 		childrenElements.clear();
@@ -281,20 +277,6 @@ public class GeneratedTestCase2 {
 	public void checkState7_AllAssertions(){
 		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
 
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header-div\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("colspan=\"3\"","id=\"header\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"right-logo\""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"left-logo\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"middle-ad\""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"header-links\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
 		childrenElements.clear();
@@ -312,7 +294,7 @@ public class GeneratedTestCase2 {
 
 	public void checkState7_RandAssertions1(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV[2]/DIV/TABLE/TBODY/TR[3]/TD[6]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/TABLE/TBODY/TR/TD/DIV/TABLE/TBODY/TR[4]/TD[2]/H3"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../yui/build/yahoo-dom-event/yahoo-dom-event.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -335,7 +317,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState7_RandAssertions2(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/TABLE/TBODY/TR/TD/DIV/TABLE/TBODY/TR[4]/TD[2]/H3"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"tip-content\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
@@ -375,9 +357,10 @@ public class GeneratedTestCase2 {
 		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("H2", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"loginbox\"")));
@@ -391,28 +374,27 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState7_RandAssertions4(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV[2]/DIV/TABLE/TBODY/TR[2]/TD[3]/DIV"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV[2]/DIV/TABLE/TBODY/TR[3]"))); // Random element assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV[2]/DIV/TABLE/TBODY/TR[2]/TD[3]/DIV"))); // Random element assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../resources/images/config.gif);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"menu\""))));
 		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
-		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
@@ -546,11 +528,9 @@ public class GeneratedTestCase2 {
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
-		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"menu\""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
@@ -568,9 +548,11 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"menu\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
@@ -609,16 +591,16 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState10_OriginalAssertions(){
+	public void checkState16_OriginalAssertions(){
 	}
 
-	public void checkState10_ReusedAssertions(){
+	public void checkState16_ReusedAssertions(){
 	}
 
-	public void checkState10_GeneratedAssertions(){
+	public void checkState16_GeneratedAssertions(){
 	}
 
-	public void checkState10_LearnedAssertions(){
+	public void checkState16_LearnedAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -632,7 +614,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState10_AllAssertions(){
+	public void checkState16_AllAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -646,7 +628,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState10_RandAssertions1(){
+	public void checkState16_RandAssertions1(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM/TABLE/TBODY/TR"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE/TBODY/TR"))); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../yui/build/yahoo-dom-event/yahoo-dom-event.js\"","type=\"text/javascript\"")));
@@ -670,16 +652,16 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState10_RandAssertions2(){
+	public void checkState16_RandAssertions2(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[2]/TBODY/TR/TD[2]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[3]/TBODY"))); // Random element assertion
-		element = new DOMElement("TH", "", new ArrayList<String>(Arrays.asList("colspan=\"2\"")));
-		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
-		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("TH", "", new ArrayList<String>(Arrays.asList("colspan=\"2\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
@@ -695,56 +677,43 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState10_RandAssertions3(){
+	public void checkState16_RandAssertions3(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
-		element = new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"","id=\"userTable\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"middle\"")));
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","width=\"100%\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("action=\"user-mgt.jsp\"","method=\"post\"","name=\"filterForm\""))));
-		childrenElements.add(new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"","id=\"userTable\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","style=\"margin-top:2px;\"","width=\"100%\""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState10_RandAssertions4(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
+	public void checkState16_RandAssertions4(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]"))); // Random element assertion
-		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../resources/images/config.gif);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"icon-link\"","href=\"../user/user-mgt.jsp\"","style=\"background-image:url(images/users.gif);\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
@@ -762,9 +731,9 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState10_RandAssertions5(){
+	public void checkState16_RandAssertions5(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE/TBODY/TR/TD/TABLE/TBODY/TR[2]/TD"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD/DIV/UL/LI[5]/UL/LI[7]/UL/LI[2]/A"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -782,31 +751,23 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_edit.jsp?region=region3&item=governance_add_gadget_menu&key=gadget&lifecycleAttribute=null&breadcrumb=Gadget\"","style=\"background-image: url(../generic/images/add10.png);\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"icon-link\"","href=\"../user/change-passwd.jsp?isUserChange=true&returnPath=../userstore/index.jsp\"","style=\"background-image: url(images/keys.gif);\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://docs.wso2.org/display/ES100/WSO2+Enterprise+Store\"","target=\"_blank\""))));
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState11_OriginalAssertions(){
+	public void checkState17_OriginalAssertions(){
 	}
 
-	public void checkState11_ReusedAssertions(){
+	public void checkState17_ReusedAssertions(){
 	}
 
-	public void checkState11_GeneratedAssertions(){
+	public void checkState17_GeneratedAssertions(){
 	}
 
-	public void checkState11_LearnedAssertions(){
-		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"middle\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
+	public void checkState17_LearnedAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -814,13 +775,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState11_AllAssertions(){
-		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"middle\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
+	public void checkState17_AllAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -828,7 +783,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState11_RandAssertions1(){
+	public void checkState17_RandAssertions1(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM/TABLE/TBODY/TR"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../yui/build/yahoo-dom-event/yahoo-dom-event.js\"","type=\"text/javascript\"")));
@@ -845,20 +800,14 @@ public class GeneratedTestCase2 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"main\""))));
 		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"buttonRow\"")));
-		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_content.jsp?region=region3&item=governance_add_wsdl_menu&key=wsdl&lifecycleAttribute=null&breadcrumb=WSDL&mediaType=application/wsdl+xml&extension=wsdl&singularLabel=WSDL&pluralLabel=WSDLs&hasNamespacetrue\"","style=\"background-image: url(../generic/images/add28.png);\"")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"button\"","onclick=\"doNext();\"","type=\"button\"","value=\"Next >\""))));
-		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"button\"","onclick=\"doFinish();\"","type=\"button\"","value=\"Finish\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"button\"","onclick=\"doCancel();\"","type=\"button\"","value=\"Cancel\""))));
-		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState11_RandAssertions2(){
+	public void checkState17_RandAssertions2(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
@@ -871,8 +820,8 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_content.jsp?region=region3&item=governance_add_wsdl_menu&key=wsdl&lifecycleAttribute=null&breadcrumb=WSDL&mediaType=application/wsdl+xml&extension=wsdl&singularLabel=WSDL&pluralLabel=WSDLs&hasNamespacetrue\"","style=\"background-image: url(../generic/images/add28.png);\"")));
-		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
@@ -883,7 +832,7 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState11_RandAssertions3(){
+	public void checkState17_RandAssertions3(){
 		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR"))); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
@@ -895,9 +844,17 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"sharedRoleTd\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
@@ -907,7 +864,7 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState11_RandAssertions4(){
+	public void checkState17_RandAssertions4(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD/DIV/UL/LI[5]/UL/LI[7]/UL/LI[2]/A"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD/DIV/UL/LI[5]/UL/LI[5]/UL/LI"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
@@ -936,9 +893,9 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState11_RandAssertions5(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[4]/UL/LI/A"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR/TD/TABLE"))); // Random element assertion
+	public void checkState17_RandAssertions5(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI/IMG"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD/DIV[4]/SPAN"))); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -960,147 +917,132 @@ public class GeneratedTestCase2 {
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("id=\"usr_primary_null\"","name=\"usr_primary_null\"","type=\"hidden\"","value=\"^[\S]{3,30}$\"")));
-		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"add-finish.jsp\"","method=\"post\"","name=\"dataForm\"","onsubmit=\"return doValidation();\"")));
-		childrenElements.clear();
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-	}
-
-	public void checkState12_OriginalAssertions(){
-	}
-
-	public void checkState12_ReusedAssertions(){
-	}
-
-	public void checkState12_GeneratedAssertions(){
-	}
-
-	public void checkState12_LearnedAssertions(){
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
-		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
-		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
-	}
-
-	public void checkState12_AllAssertions(){
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
-		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
-		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
-	}
-
-	public void checkState12_RandAssertions1(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE/TBODY/TR"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM/TABLE/TBODY/TR"))); // Random element assertion
-		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../yui/build/yahoo-dom-event/yahoo-dom-event.js\"","type=\"text/javascript\"")));
-		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../admin/js/main.js\"","type=\"text/javascript\"")));
+		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../dialog/js/jqueryui/jquery-ui.min.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"menu\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"main\""))));
-		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_content.jsp?region=region3&item=governance_add_wsdl_menu&key=wsdl&lifecycleAttribute=null&breadcrumb=WSDL&mediaType=application/wsdl+xml&extension=wsdl&singularLabel=WSDL&pluralLabel=WSDLs&hasNamespacetrue\"","style=\"background-image: url(../generic/images/add28.png);\"")));
-		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState12_RandAssertions2(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM[2]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
-		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("name=\"userRoles\"","type=\"checkbox\"","value=\"Internal/RND-uBAP\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("colspan=\"2\"")));
+	public void checkState18_OriginalAssertions(){
+	}
+
+	public void checkState18_ReusedAssertions(){
+	}
+
+	public void checkState18_GeneratedAssertions(){
+	}
+
+	public void checkState18_LearnedAssertions(){
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+
+	}
+
+	public void checkState18_AllAssertions(){
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+
+	}
+
+	public void checkState18_RandAssertions1(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV/TABLE/TBODY/TR/TD/DIV"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[12]/TABLE/TBODY"))); // Random element assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel8\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel69\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
 		childrenElements.clear();
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
-		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck0\"","id=\"ygtvcheck50\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_site_menu&key=site&breadcrumb=Sites&singularLabel=Site&pluralLabel=Sites\"","style=\"background-image: url(../generic/images/list10.png);\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvspacer\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel27\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState12_RandAssertions3(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+	public void checkState18_RandAssertions2(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[3]/DIV/DIV/TABLE/TBODY/TR/TD[9]/SPAN"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV[10]/TABLE/TBODY/TR/TD[2]/DIV"))); // Random element assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth5 ygtv-highlight0\"","id=\"ygtvtableel46\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"leftCol-med\"","style=\"white-space:nowrap\""))));
-		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"leftCol-small\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("style=\"text-align:left;\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvblankdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvtn\"","id=\"ygtvt9\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel9\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck0\"","id=\"ygtvcheck9\""))));
 		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth4 ygtv-highlight0\"","id=\"ygtvtableel64\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth5 ygtv-highlight0\"","id=\"ygtvtableel48\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv48\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState12_RandAssertions4(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM[2]/TABLE/TBODY/TR/TD/TABLE/TBODY/TR[2]/TD/INPUT[8]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]"))); // Random element assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../resources/images/config.gif);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+	public void checkState18_RandAssertions3(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/TABLE/TBODY/TR/TD[5]/DIV"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[3]/DIV/DIV[2]/TABLE/TBODY/TR/TD[6]/A"))); // Random element assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel54\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv41\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvchildren\"","id=\"ygtvc37\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"logged-user\""))));
-		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth4 ygtv-highlight0\"","id=\"ygtvtableel41\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvchildren\"","id=\"ygtvc41\""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvchildren\"","id=\"ygtvc62\"","style=\"display:none;\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv62\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth3 ygtv-highlight0\"","id=\"ygtvtableel36\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv36\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState18_RandAssertions4(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV[5]/TABLE/TBODY"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV[5]/TABLE/TBODY/TR/TD[3]"))); // Random element assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck0\"","id=\"ygtvcheck23\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvspacer\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel43\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvspacer\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck0\"","id=\"ygtvcheck67\"")));
+		childrenElements.clear();
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
@@ -1111,40 +1053,210 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState12_RandAssertions5(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/SCRIPT"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR"))); // Random element assertion
-		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("type=\"text/javascript\"")));
+	public void checkState18_RandAssertions5(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[6]/TABLE/TBODY/TR/TD[3]/DIV"))); // Random element assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel51\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth2 ygtv-highlight0\"","id=\"ygtvtableel4\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvln\"","id=\"ygtvt72\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"ygtvspacer\"","href=\"#\""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck0\"","id=\"ygtvcheck61\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvspacer\""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState19_OriginalAssertions(){
+	}
+
+	public void checkState19_ReusedAssertions(){
+	}
+
+	public void checkState19_GeneratedAssertions(){
+	}
+
+	public void checkState19_LearnedAssertions(){
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("checked=\"checked\"","disabled=\"disabled\"","name=\"userRoles\"","type=\"checkbox\"","value=\"Internal/everyone\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("colspan=\"2\"")));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+
+	}
+
+	public void checkState19_AllAssertions(){
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+
+	}
+
+	public void checkState19_RandAssertions1(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[12]/TABLE/TBODY"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[3]/DIV/DIV/TABLE/TBODY/TR/TD[9]/SPAN"))); // Random element assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_edit.jsp?region=region3&item=governance_add_gadget_menu&key=gadget&lifecycleAttribute=null&breadcrumb=Gadget\"","style=\"background-image: url(../generic/images/add10.png);\""))));
+		childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel8\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvblankdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvtn\"","id=\"ygtvt8\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel8\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck2\"","id=\"ygtvcheck8\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel27\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("class=\"normal\"","style=\"width:100%\"")));
-		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"add-step2.jsp?username=PRIMARY/RNDDyPk\"","method=\"post\"","name=\"filterForm\"")));
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth4 ygtv-highlight0\"","id=\"ygtvtableel64\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState19_RandAssertions2(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV/TABLE/TBODY/TR/TD/DIV"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV[10]/TABLE/TBODY/TR/TD[2]/DIV"))); // Random element assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel69\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth5 ygtv-highlight0\"","id=\"ygtvtableel46\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvchildren\"","id=\"ygtvc62\"","style=\"display:none;\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv62\"")));
+		childrenElements.clear();
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth5 ygtv-highlight0\"","id=\"ygtvtableel48\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv48\"")));
+		childrenElements.clear();
 		childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState13_OriginalAssertions(){
+	public void checkState19_RandAssertions3(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/TABLE/TBODY/TR/TD[5]/DIV"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[3]/DIV/DIV[2]/TABLE/TBODY/TR/TD[6]/A"))); // Random element assertion
+		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvblankdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvtm\"","id=\"ygtvt2\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel2\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck2\"","id=\"ygtvcheck2\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel54\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth3 ygtv-highlight0\"","id=\"ygtvtableel36\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv36\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"menu\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState19_RandAssertions4(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV[5]/TABLE/TBODY/TR/TD[3]"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV/DIV/DIV[2]/DIV/DIV[5]/TABLE/TBODY"))); // Random element assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvitem\"","id=\"ygtv41\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvchildren\"","id=\"ygtvc37\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth4 ygtv-highlight0\"","id=\"ygtvtableel41\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ygtvchildren\"","id=\"ygtvc41\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel43\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvln\"","id=\"ygtvt72\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"ygtvspacer\"","href=\"#\""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../dialog/js/jqueryui/jquery-ui.min.js\"","type=\"text/javascript\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState19_RandAssertions5(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[4]/DIV/DIV[4]/DIV/DIV[6]/TABLE/TBODY/TR/TD[3]/DIV"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/DIV/DIV[2]/DIV/DIV/DIV/DIV/DIV[3]/DIV/DIV[2]/DIV/DIV/DIV"))); // Random element assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"ygtvtable ygtvdepth2 ygtv-highlight0\"","id=\"ygtvtableel4\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"ygtvlabel\"","id=\"ygtvlabelel51\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"buttonRow\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"button\"","onclick=\"doNext();\"","type=\"button\"","value=\"Next >\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"button\"","type=\"submit\"","value=\"Finish\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"button\"","onclick=\"doCancel();\"","type=\"button\"","value=\"Cancel\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"ygtvrow\"")));
+		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvblankdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvdepthcell\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell ygtvtm\"","id=\"ygtvt28\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcell  ygtvcontent\"","id=\"ygtvcontentel28\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"ygtvcheck2\"","id=\"ygtvcheck28\""))));
+		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState20_OriginalAssertions(){
 		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully.")); // original assertion
 
 	}
 
-	public void checkState13_ReusedAssertions(){
+	public void checkState20_ReusedAssertions(){
 	}
 
-	public void checkState13_GeneratedAssertions(){
+	public void checkState20_GeneratedAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"messagebox-info\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ui-dialog-content\"","id=\"dialog\"","style=\"height: 136px; width: 450px;\"")));
 		childrenElements.clear();
@@ -1161,7 +1273,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState13_LearnedAssertions(){
+	public void checkState20_LearnedAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1175,7 +1287,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState13_AllAssertions(){
+	public void checkState20_AllAssertions(){
 		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully.")); // original assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"messagebox-info\"")));
@@ -1196,7 +1308,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState13_RandAssertions1(){
+	public void checkState20_RandAssertions1(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE/TBODY/TR"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM/TABLE/TBODY/TR"))); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../yui/build/yahoo-dom-event/yahoo-dom-event.js\"","type=\"text/javascript\"")));
@@ -1207,29 +1319,29 @@ public class GeneratedTestCase2 {
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"menu\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"main\""))));
-		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"ALL-USER-STORE-DOMAINS\"")));
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"domain\"","name=\"domain\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"menu\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"main\""))));
+		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState13_RandAssertions2(){
+	public void checkState20_RandAssertions2(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[2]/TBODY/TR/TD[2]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[3]/TBODY"))); // Random element assertion
-		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
-		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("TH", "", new ArrayList<String>(Arrays.asList("colspan=\"2\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("TH", "", new ArrayList<String>(Arrays.asList("colspan=\"2\"")));
-		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
@@ -1238,70 +1350,55 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_site_menu&key=site&breadcrumb=Sites&singularLabel=Site&pluralLabel=Sites\"","style=\"background-image: url(../generic/images/list10.png);\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState13_RandAssertions3(){
+	public void checkState20_RandAssertions3(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
-		element = new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"","id=\"userTable\"")));
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_site_menu&key=site&breadcrumb=Sites&singularLabel=Site&pluralLabel=Sites\"","style=\"background-image: url(../generic/images/list10.png);\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"middle\"")));
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","width=\"100%\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("action=\"user-mgt.jsp\"","method=\"post\"","name=\"filterForm\""))));
-		childrenElements.add(new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"","id=\"userTable\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","style=\"margin-top:2px;\"","width=\"100%\""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState13_RandAssertions4(){
+	public void checkState20_RandAssertions4(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]"))); // Random element assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../resources/images/config.gif);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ui-resizable-handle ui-resizable-nw\"","style=\"position: absolute; overflow: hidden; z-index: 1004; -moz-user-select: none;\"","unselectable=\"on\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ui-dialog ui-draggable ui-resizable\"","style=\"display: block; position: absolute; width: 450px; height: 160px; overflow: hidden; z-index: 1002; outline: 0px none; top: 174.5px; left: 315px;\"","tabindex=\"-1\"")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ui-resizable-handle ui-resizable-se\"","style=\"position: absolute; overflow: hidden; z-index: 1001; -moz-user-select: none;\"","unselectable=\"on\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"ui-dialog ui-draggable ui-resizable\"","style=\"display: block; position: absolute; width: 450px; height: 160px; overflow: hidden; z-index: 1002; outline: 0px none; top: 174.5px; left: 315px;\"","tabindex=\"-1\"")));
+		childrenElements.clear();
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
@@ -1312,7 +1409,7 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState13_RandAssertions5(){
+	public void checkState20_RandAssertions5(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD/DIV/UL/LI[5]/UL/LI[7]/UL/LI[2]/A"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
@@ -1327,30 +1424,28 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_edit.jsp?region=region3&item=governance_add_gadget_menu&key=gadget&lifecycleAttribute=null&breadcrumb=Gadget\"","style=\"background-image: url(../generic/images/add10.png);\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://docs.wso2.org/display/ES100/WSO2+Enterprise+Store\"","target=\"_blank\""))));
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState14_OriginalAssertions(){
+	public void checkState21_OriginalAssertions(){
 	}
 
-	public void checkState14_ReusedAssertions(){
+	public void checkState21_ReusedAssertions(){
 	}
 
-	public void checkState14_GeneratedAssertions(){
+	public void checkState21_GeneratedAssertions(){
 	}
 
-	public void checkState14_LearnedAssertions(){
+	public void checkState21_LearnedAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1364,7 +1459,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState14_AllAssertions(){
+	public void checkState21_AllAssertions(){
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dcontainer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1378,7 +1473,7 @@ public class GeneratedTestCase2 {
 
 	}
 
-	public void checkState14_RandAssertions1(){
+	public void checkState21_RandAssertions1(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/FORM/TABLE/TBODY/TR"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE/TBODY/TR"))); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"../yui/build/yahoo-dom-event/yahoo-dom-event.js\"","type=\"text/javascript\"")));
@@ -1402,7 +1497,7 @@ public class GeneratedTestCase2 {
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState14_RandAssertions2(){
+	public void checkState21_RandAssertions2(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[2]/TBODY/TR/TD[2]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[3]/TBODY"))); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_service_menu&key=service&breadcrumb=Services&singularLabel=Service&pluralLabel=Services\"","style=\"background-image: url(../generic/images/list27.png);\"")));
@@ -1420,83 +1515,48 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_site_menu&key=site&breadcrumb=Sites&singularLabel=Site&pluralLabel=Sites\"","style=\"background-image: url(../generic/images/list10.png);\""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-	}
-
-	public void checkState14_RandAssertions3(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
-		element = new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"","id=\"userTable\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../cassandramgt/images/cassandra-keyspace.png);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"workArea\"")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"middle\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("action=\"user-mgt.jsp\"","method=\"post\"","name=\"filterForm\""))));
-		childrenElements.add(new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"styledLeft\"","id=\"userTable\""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","style=\"margin-top:2px;\"","width=\"100%\""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
-	public void checkState14_RandAssertions4(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]"))); // Random element assertion
+	public void checkState21_RandAssertions3(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/SCRIPT"))); // Random element assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../eventing/images/topics.gif);\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("height=\"1px\"","src=\"../admin/images/1px.gif\"","width=\"225px\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/list.jsp?region=region3&item=governance_list_site_menu&key=site&breadcrumb=Sites&singularLabel=Site&pluralLabel=Sites\"","style=\"background-image: url(../generic/images/list10.png);\""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","width=\"100%\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState21_RandAssertions4(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR[3]/TD/DIV/UL/LI[6]/UL/LI[2]/UL/LI[10]"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"menu-disabled-link\"","style=\"background-image: url(../resources/images/config.gif);\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"sub\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
-		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
-		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"menu\""))));
-		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-	}
-
-	public void checkState14_RandAssertions5(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[3]/TABLE/TBODY/TR[2]/TD/DIV/DIV/TABLE[2]/TBODY/TR[2]/TD[2]/A[4]"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1504,9 +1564,33 @@ public class GeneratedTestCase2 {
 		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("id=\"region5\"")));
+		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"menu\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"menu-panel-buttons selected\"","id=\"menu-panel-button3\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+	}
+
+	public void checkState21_RandAssertions5(){
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR"))); // Random element assertion
+		assertTrue(isElementPresent(By.xpath("/HTML/BODY/TABLE/TBODY/TR[2]/TD[2]/TABLE/TBODY/TR/TD/DIV/UL/LI[5]/UL/LI[7]/UL/LI[2]/A"))); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("type=\"text/javascript\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer-div\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("colspan=\"3\"","id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"footer-content\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
@@ -1514,11 +1598,15 @@ public class GeneratedTestCase2 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"menu-default\"","href=\"../generic/add_edit.jsp?region=region3&item=governance_add_gadget_menu&key=gadget&lifecycleAttribute=null&breadcrumb=Gadget\"","style=\"background-image: url(../generic/images/add10.png);\""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"middle\"")));
-		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		element = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"domain\"","name=\"domain\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://docs.wso2.org/display/ES100/WSO2+Enterprise+Store\"","target=\"_blank\""))));
-		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("value=\"PRIMARY\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"ALL-USER-STORE-DOMAINS\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("value=\"Internal\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
