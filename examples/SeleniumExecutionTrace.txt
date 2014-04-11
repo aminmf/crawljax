@@ -1,19 +1,21 @@
-By.linkText: Sign in
-[[FirefoxDriver: firefox on MAC (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Sign in]
-click 
+TestSuiteBegin
+NewTestCase AdminCarbon
 By.id: username
 [[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: username]
 sendKeys admin
 By.id: password
 [[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
 sendKeys admin
-By.xpath: //button[@type='submit']
-[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //button[@type='submit']
+By.xpath: //button[@type="submit"]
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //button[@type="submit"]]
 click 
 assertionModeOn
 By.selector: ul.nav li a.dropdown-toggle
 assertion assertEquals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText())
 assertionModeOff
+By.selector: .search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: .search-bar > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)]
+click 
 By.selector: #assets-container a
 [[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: #assets-container a]
 click 
@@ -104,7 +106,7 @@ By.id: password
 [[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> id: password]
 sendKeys admin
 By.xpath: //button[@type='submit']
-[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //button[@type='submit']
+[[FirefoxDriver: firefox on MAC (3e58f443-085f-44aa-ade3-f3e59e06be86)] -> xpath: //button[@type='submit']]
 click 
 By.selector: ul.nav:nth-child(1) > li:nth-child(1) > a:nth-child(1)
 [[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: ul.nav:nth-child(1) > li:nth-child(1) > a:nth-child(1)]
@@ -135,8 +137,8 @@ assertionModeOn
 By.selector: .table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)
 assertion assertTrue(driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).getText().contains("RND"))
 assertionModeOff
-By.selector: .table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)
-[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: .table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)]
+By.selector: .table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: .table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)]
 click 
 By.linkText: Edit
 [[FirefoxDriver: firefox on MAC (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Edit]
@@ -151,4 +153,10 @@ assertionModeOn
 By.selector: .alert
 assertion assertTrue(driver.findElement(By.cssSelector(".alert")).getText().contains("Asset updated successfully"))
 assertionModeOff
+By.selector: a.dropdown-toggle
+[[FirefoxDriver: firefox on MAC (2810dd36-c6dc-49c0-bbdd-c6261e7f233a)] -> css selector: a.dropdown-toggle]
+click 
+By.linkText: Sign out
+[[FirefoxDriver: firefox on MAC (56771d8b-b039-4e1e-8cdf-8843aea50486)] -> link text: Sign out]
+click 	
 TestSuiteEnd

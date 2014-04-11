@@ -203,14 +203,15 @@ public class AllTests {
 		// testIfAssetAddedToPublisher
 		assertTrue(driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).getText().contains("RND"));
 		
+		
 		// UpdateDescription
-		driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).click();
+		driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2)")).click();
+		//driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Edit")).click();
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
 		driver.findElement(By.id("editAssetButton")).click();
 		assertTrue(driver.findElement(By.cssSelector(".alert")).getText().contains("Asset updated successfully"));
-		
 		
  		if(true)return;
 		

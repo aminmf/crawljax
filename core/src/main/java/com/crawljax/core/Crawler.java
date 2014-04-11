@@ -77,17 +77,18 @@ public class Crawler {
 	private boolean useTestExtToHandleForms = true;
 	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
-	private boolean crawlEshopApplication = true;
+	private boolean crawlEshop1Application = false;
+	private boolean crawlEshop2Application = true;
 
-	
+
 	@Inject
 	Crawler(CrawlerContext context, CrawljaxConfiguration config,
-	        StateComparator stateComparator, UnfiredCandidateActions candidateActionCache,
-	        FormHandlerFactory formHandlerFactory,
-	        WaitConditionChecker waitConditionChecker,
-	        CandidateElementExtractorFactory elementExtractor,
-	        Provider<InMemoryStateFlowGraph> graphProvider,
-	        Plugins plugins) {
+			StateComparator stateComparator, UnfiredCandidateActions candidateActionCache,
+			FormHandlerFactory formHandlerFactory,
+			WaitConditionChecker waitConditionChecker,
+			CandidateElementExtractorFactory elementExtractor,
+			Provider<InMemoryStateFlowGraph> graphProvider,
+			Plugins plugins) {
 		this.context = context;
 		this.graphProvider = graphProvider;
 		this.browser = context.getBrowser();
@@ -113,35 +114,54 @@ public class Crawler {
 	 * Reset the crawler to its initial state.
 	 */
 	public void reset() {
-		
+
 		resetApplicationFiles();
-		
+
 		CrawlSession sess = context.getSession();
 		if (crawlpath != null) {
 			sess.addCrawlPath(crawlpath);
 		}
 		stateMachine =
-		        new StateMachine(graphProvider.get(),
-		                crawlRules.getInvariants(), plugins, stateComparator);
+				new StateMachine(graphProvider.get(),
+						crawlRules.getInvariants(), plugins, stateComparator);
 		context.setStateMachine(stateMachine);
 		crawlpath = new CrawlPath();
 
 		// Amin: For eshop app -> first perform a logout
-		if (crawlEshopApplication==true && crawlDepth.get() > 0)
+		if (crawlEshop1Application==true && crawlDepth.get() > 0){
 			//if (!browser.getCurrentUrl().equals("https://localhost:9443/admin/carbon/admin/login.jsp"))
-				//if (browser.getCurrentUrl().contains("admin"))
-					if (!browser.getCurrentUrl().contains("login"))
-						browser.getBrowser().findElement(By.linkText("Sign-out")).click();
-		
+			//if (browser.getCurrentUrl().contains("admin"))
+			if (!browser.getCurrentUrl().contains("login"))
+				browser.getBrowser().findElement(By.linkText("Sign-out")).click();
+		}
+
+		// Amin: For eshop app -> first perform a logout
+		if (crawlEshop2Application==true && crawlDepth.get() > 0){
+			if (browser.getCurrentUrl().contains("publisher")){
+				if (browser.getCurrentUrl().contains("sso")){
+					browser.getBrowser().findElement(By.cssSelector("a[href*='store']")).click();
+					browser.getBrowser().findElement(By.linkText("Sign in")).click();
+				}else{
+					browser.getBrowser().findElement(By.cssSelector("a.dropdown-toggle")).click();
+					browser.getBrowser().findElement(By.linkText("Sign out")).click();
+				}
+			}
+			else if (browser.getCurrentUrl().contains("store") && !browser.getCurrentUrl().contains("sso")){
+				browser.getBrowser().findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
+				browser.getBrowser().findElement(By.linkText("Sign out")).click();
+			}
+		}		
+
 
 		// Amin: For wolfcms app -> first perform a logout
-		if (crawlWolfCMSApplication==true && crawlDepth.get() > 0)
+		if (crawlWolfCMSApplication==true && crawlDepth.get() > 0){
 			if (!browser.getCurrentUrl().equals("http://localhost:8888/wolfcms/?/admin/login"))
 				if (browser.getCurrentUrl().contains("admin"))
 					if (!browser.getCurrentUrl().contains("login"))
 						browser.getBrowser().findElement(By.linkText("Log Out")).click();
+		}
 
-		
+
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);
 		crawlDepth.set(0);
@@ -151,7 +171,7 @@ public class Crawler {
 
 		if (crawlPhormerApplication==false)
 			return;
-		
+
 		File source = new File("/Applications/MAMP/htdocs/phormer331_clean");
 		File desc = new File("/Applications/MAMP/htdocs/phormer331");
 		try {
@@ -188,13 +208,13 @@ public class Crawler {
 	}
 
 	private void follow(CrawlPath path, StateVertex targetState)
-	        throws StateUnreachableException, CrawljaxException {
+			throws StateUnreachableException, CrawljaxException {
 		StateVertex curState = context.getSession().getInitialState();
 
 		for (Eventable clickable : path) {
 			checkCrawlConditions(targetState);
 			LOG.debug("Backtracking by executing {} on element: {}", clickable.getEventType(),
-			        clickable);
+					clickable);
 			curState = changeState(targetState, clickable);
 			handleInputElements(clickable);
 			tryToFireEvent(targetState, curState, clickable);
@@ -203,15 +223,15 @@ public class Crawler {
 
 		if (!curState.equals(targetState)) {
 			throw new StateUnreachableException(targetState,
-			        "The path didn't result in the desired state but in state "
-			                + curState.getName());
+					"The path didn't result in the desired state but in state "
+							+ curState.getName());
 		}
 	}
 
 	private void checkCrawlConditions(StateVertex targetState) {
 		if (!candidateExtractor.checkCrawlCondition()) {
 			throw new StateUnreachableException(targetState,
-			        "Crawl conditions not complete. Not following path");
+					"Crawl conditions not complete. Not following path");
 		}
 	}
 
@@ -229,7 +249,7 @@ public class Crawler {
 		if (fireEvent(clickable)) {
 			if (crawlerLeftDomain()) {
 				throw new StateUnreachableException(targetState,
-				        "Domain left while following path");
+						"Domain left while following path");
 			}
 			int depth = crawlDepth.incrementAndGet();
 			LOG.info("Crawl depth is now {}", depth);
@@ -238,7 +258,7 @@ public class Crawler {
 		} else {
 			// Amin: comment this out to let it continue even with error
 			throw new StateUnreachableException(targetState, "couldn't fire eventable "
-			        + clickable);
+					+ clickable);
 		}
 	}
 
@@ -293,7 +313,7 @@ public class Crawler {
 	public boolean fireEvent(Eventable eventable) {
 		Eventable eventToFire = eventable;
 		if (eventable.getIdentification().getHow().toString().equals("xpath")
-		        && eventable.getRelatedFrame().equals("")) {
+				&& eventable.getRelatedFrame().equals("")) {
 			eventToFire = resolveByXpath(eventable, eventToFire);
 		}
 		boolean isFired = false;
@@ -301,7 +321,7 @@ public class Crawler {
 			isFired = browser.fireEventAndWait(eventToFire);
 		} catch (ElementNotVisibleException | NoSuchElementException e) {
 			if (crawlRules.isCrawlHiddenAnchors() && eventToFire.getElement() != null
-			        && "A".equals(eventToFire.getElement().getTag())) {
+					&& "A".equals(eventToFire.getElement().getTag())) {
 				isFired = visitAnchorHrefIfPossible(eventToFire);
 			} else {
 				LOG.debug("Ignoring invisble element {}", eventToFire.getElement());
@@ -325,7 +345,7 @@ public class Crawler {
 			 * removed 1 state to represent the path TO here.
 			 */
 			plugins.runOnFireEventFailedPlugins(context, eventable,
-			        crawlpath.immutableCopyWithoutLast());
+					crawlpath.immutableCopyWithoutLast());
 			return false; // no event fired
 		}
 	}
@@ -342,10 +362,10 @@ public class Crawler {
 		String newXPath = new ElementResolver(eventable, browser).resolve();
 		if (newXPath != null && !xpath.equals(newXPath)) {
 			LOG.debug("XPath changed from {} to {} relatedFrame: {}", xpath, newXPath,
-			        eventable.getRelatedFrame());
+					eventable.getRelatedFrame());
 			eventToFire =
-			        new Eventable(new Identification(Identification.How.xpath, newXPath),
-			                eventType);
+					new Eventable(new Identification(Identification.How.xpath, newXPath),
+							eventType);
 		}
 		return eventToFire;
 	}
@@ -380,14 +400,14 @@ public class Crawler {
 	private void crawlThroughActions() {
 		boolean interrupted = Thread.interrupted();
 		CandidateCrawlAction action =
-		        candidateActionCache.pollActionOrNull(stateMachine.getCurrentState());
+				candidateActionCache.pollActionOrNull(stateMachine.getCurrentState());
 		while (action != null && !interrupted) {
 			CandidateElement element = action.getCandidateElement();
 			if (element.allConditionsSatisfied(browser)) {
 				Eventable event = new Eventable(element, action.getEventType());
-				
+
 				System.out.println("event: " + event);
-				
+
 				handleInputElements(event);
 				waitForRefreshTagIfAny(event);
 
@@ -397,15 +417,15 @@ public class Crawler {
 				}
 			} else {
 				LOG.info(
-				        "Element {} not clicked because not all crawl conditions where satisfied",
-				        element);
+						"Element {} not clicked because not all crawl conditions where satisfied",
+						element);
 			}
-			
+
 			//Amin: Changed this to force it select from manual-test states first
 			action = null;
 			// We have to check if we are still in the same state.
 			// action = candidateActionCache.pollActionOrNull(stateMachine.getCurrentState());
-			
+
 			interrupted = Thread.interrupted();
 			if (!interrupted && crawlerLeftDomain()) {
 				/*
@@ -419,7 +439,7 @@ public class Crawler {
 			LOG.info("Interrupted while firing actions. Putting back the actions on the todo list");
 			if (action != null) {
 				candidateActionCache.addActions(ImmutableList.of(action),
-				        stateMachine.getCurrentState());
+						stateMachine.getCurrentState());
 			}
 			Thread.currentThread().interrupt();
 		}
@@ -431,7 +451,7 @@ public class Crawler {
 			goBackOneState();
 		} else {
 			StateVertex newState = stateMachine.newStateFor(browser);
-			
+
 			/*
 			 * Amin: Execute the OnFireEventSucceededPlugins. This can be used to get code coverage after each event execution
 			 *       Code coverage was previously calculated using onNewState plugin but shoudld be done after successful event execution.
@@ -459,24 +479,24 @@ public class Crawler {
 		 */
 		plugins.OnFireEventSucceededPlugins(context, stateMachine.getCurrentState(), event, newState);
 
-	
+
 		if (domChanged(event, newState)) {
 			inspectNewDom(event, newState);
 		} else {
 			LOG.debug("Dom unchanged");
 		}
 	}
-	
+
 	private boolean domChanged(final Eventable eventable, StateVertex newState) {
 		return plugins.runDomChangeNotifierPlugins(context, stateMachine.getCurrentState(),
-		        eventable, newState);
+				eventable, newState);
 	}
 
 	private void inspectNewDom(Eventable event, StateVertex newState) {
 		LOG.debug("The DOM has changed. Event added to the crawl path");
 		crawlpath.add(event);
 		boolean isNewState =
-		        stateMachine.swithToStateAndCheckIfClone(event, newState, context);
+				stateMachine.swithToStateAndCheckIfClone(event, newState, context);
 		if (isNewState) {
 			int depth = crawlDepth.incrementAndGet();
 			LOG.info("New DOM is a new state! crawl depth is now {}", depth);
@@ -520,7 +540,7 @@ public class Crawler {
 
 	private boolean crawlerLeftDomain() {
 		return !browser.getCurrentUrl().toLowerCase()
-		        .contains(url.getHost().toLowerCase());
+				.contains(url.getHost().toLowerCase());
 	}
 
 	private long parseWaitTimeOrReturnDefault(Matcher m) {
@@ -556,10 +576,10 @@ public class Crawler {
 		browser.goToUrl(url);
 		plugins.runOnUrlLoadPlugins(context);
 		StateVertex index =
-		        StateMachine.createIndex(url.toExternalForm(), browser.getStrippedDom(),
-		                stateComparator.getStrippedDom(browser));
+				StateMachine.createIndex(url.toExternalForm(), browser.getStrippedDom(),
+						stateComparator.getStrippedDom(browser));
 		Preconditions.checkArgument(index.getId() == StateVertex.INDEX_ID,
-		        "It seems some the index state is crawled more than once.");
+				"It seems some the index state is crawled more than once.");
 
 		LOG.debug("Parsing the index for candidate elements");
 		ImmutableList<CandidateElement> extract = candidateExtractor.extract(index);
@@ -575,5 +595,5 @@ public class Crawler {
 	public CrawlerContext getContext() {
 		return context;
 	}
-	
+
 }
