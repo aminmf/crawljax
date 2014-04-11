@@ -78,7 +78,7 @@ public class GeneratedTestCase11 {
 	public void method11(){
 		driver.get(url);
 		//From state 0 to state 1
-		//Eventable{eventType=click, identification=cssSelector input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, tabindex=3, type=submit, value=Sign-in}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+		//Eventable{eventType=click, identification=cssSelector input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, tabindex=3, type=submit, value=Sign-in}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=7, name=state7}}
 		mutateDOMTree(0);
 		checkState0_OriginalAssertions();
 		checkState0_ReusedAssertions();
@@ -137,7 +137,7 @@ public class GeneratedTestCase11 {
 		checkState3_RandAssertions4();
 		checkState3_RandAssertions5();
 		driver.findElement(By.id("domain")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4) + ".com";
 		driver.findElement(By.id("domain")).sendKeys(RandValue);
 		driver.findElement(By.id("admin-firstname")).clear();
 		driver.findElement(By.id("admin-firstname")).sendKeys("testAdminFirstName");
@@ -165,9 +165,6 @@ public class GeneratedTestCase11 {
 		checkState4_RandAssertions3();
 		checkState4_RandAssertions4();
 		checkState4_RandAssertions5();
-		driver.findElement(By.id("domain")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-		driver.findElement(By.id("domain")).sendKeys(RandValue);
 		driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
 		//Sink node at state 5
 		mutateDOMTree(5);
