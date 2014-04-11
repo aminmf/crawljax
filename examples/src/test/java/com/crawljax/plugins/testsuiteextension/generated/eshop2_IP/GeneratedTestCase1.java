@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -367,7 +368,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState3_OriginalAssertions(){
-		assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText()); // original assertion
+		//assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText()); // original assertion
 
 	}
 
@@ -381,7 +382,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState3_AllAssertions(){
-		assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText()); // original assertion
+		//assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText()); // original assertion
 
 	}
 

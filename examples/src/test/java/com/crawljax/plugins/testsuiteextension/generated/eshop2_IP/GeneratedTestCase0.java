@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.junit.*;
@@ -75,7 +76,7 @@ public class GeneratedTestCase0 {
 	 */
 	 
 	@Test
-	public void method0(){
+	public void method0() throws InterruptedException{
 		driver.get(url);
 		//From state 0 to state 1
 		//Eventable{eventType=click, identification=xpath //button[@type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Sign in, attributes={class=btn btn-large pull-right, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
@@ -123,6 +124,7 @@ public class GeneratedTestCase0 {
 		checkState2_RandAssertions4();
 		checkState2_RandAssertions5();
 		driver.findElement(By.cssSelector("#assets-container a")).click();
+		driver.findElement(By.id("btn-add-gadget")).click();
 		//From state 3 to state 5
 		//Eventable{eventType=click, identification=cssSelector .nav-separator > a:nth-child(1), element=Element{node=[A: null], tag=A, text=My Items, attributes={href=/store/dashboard}}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=5, name=state5}}
 		mutateDOMTree(3);
@@ -137,6 +139,7 @@ public class GeneratedTestCase0 {
 		checkState3_RandAssertions4();
 		checkState3_RandAssertions5();
 		driver.findElement(By.cssSelector(".nav-separator > a:nth-child(1)")).click();
+		driver.findElement(By.linkText("My Items")).click();
 		//From state 5 to state 7
 		//Eventable{eventType=click, identification=cssSelector a.btn:nth-child(3) > i:nth-child(1), element=Element{node=[I: null], tag=I, text=, attributes={class=icon-remove}}, source=StateVertexImpl{id=5, name=state5}, target=StateVertexImpl{id=7, name=state7}}
 		mutateDOMTree(5);
@@ -179,6 +182,7 @@ public class GeneratedTestCase0 {
 		checkState8_RandAssertions4();
 		checkState8_RandAssertions5();
 		driver.findElement(By.linkText("wso2")).click();
+		Thread.sleep(3000);
 		//From state 9 to state 10
 		//Eventable{eventType=click, identification=cssSelector .nav > li:nth-child(2) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=admin, attributes={class=dropdown-toggle, data-toggle=dropdown, href=#}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=10, name=state10}}
 		mutateDOMTree(9);
@@ -260,7 +264,7 @@ public class GeneratedTestCase0 {
 		driver.findElement(By.id("password")).clear();
 		driver.findElement(By.id("password")).sendKeys("admin");
 		driver.findElement(By.id("reg-username")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("reg-username")).sendKeys(RandValue);
 		driver.findElement(By.id("reg-password")).clear();
 		driver.findElement(By.id("reg-password")).sendKeys("supertenantuser");
@@ -297,7 +301,7 @@ public class GeneratedTestCase0 {
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1");
 		driver.findElement(By.id("overview_name")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("overview_name")).sendKeys(RandValue);
 		driver.findElement(By.id("overview_version")).clear();
 		driver.findElement(By.id("overview_version")).sendKeys("1.2.3");
@@ -356,7 +360,7 @@ public class GeneratedTestCase0 {
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
 		driver.findElement(By.id("overview_name")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("overview_name")).sendKeys(RandValue);
 		driver.findElement(By.id("overview_version")).clear();
 		driver.findElement(By.id("overview_version")).sendKeys("1.2.3");
@@ -381,7 +385,7 @@ public class GeneratedTestCase0 {
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
 		driver.findElement(By.id("overview_name")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("overview_name")).sendKeys(RandValue);
 		driver.findElement(By.id("overview_version")).clear();
 		driver.findElement(By.id("overview_version")).sendKeys("1.2.3");
@@ -406,7 +410,7 @@ public class GeneratedTestCase0 {
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
 		driver.findElement(By.id("overview_name")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("overview_name")).sendKeys(RandValue);
 		driver.findElement(By.id("overview_version")).clear();
 		driver.findElement(By.id("overview_version")).sendKeys("1.2.3");
