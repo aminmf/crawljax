@@ -38,8 +38,8 @@ public final class TestSuiteExtensionExample {
 	//private static final String URL = "http://localhost:8888/phormer331/";
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
 	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
-	private static final String URL = "https://localhost:9443/admin/carbon/admin/login.jsp"; // eshop 1
-	//private static final String URL = "https://localhost:9443/store/login"; // eshop2
+	// private static final String URL = "https://localhost:9443/admin/carbon/admin/login.jsp"; // eshop 1
+	private static final String URL = "https://localhost:9443/store/login"; // eshop2
 	
 	
 
