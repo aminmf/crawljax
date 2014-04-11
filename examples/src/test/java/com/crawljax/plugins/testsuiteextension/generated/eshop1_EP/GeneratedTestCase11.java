@@ -1025,7 +1025,7 @@ public class GeneratedTestCase11 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("action=\"view_tenants.jsp\"","id=\"rndqogw.com_form\"","method=\"post\""))));
 		childrenElements.add(new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
 	public void checkState4_RandAssertions4(){
@@ -1247,7 +1247,7 @@ public class GeneratedTestCase11 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("action=\"view_tenants.jsp\"","id=\"rndqogw.com_form\"","method=\"post\""))));
 		childrenElements.add(new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
 	public void checkState5_RandAssertions4(){
