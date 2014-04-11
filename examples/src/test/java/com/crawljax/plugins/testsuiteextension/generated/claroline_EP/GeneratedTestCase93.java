@@ -971,7 +971,7 @@ public class GeneratedTestCase93 {
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationDay\"","name=\"course_expirationDay\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"msadd\"","href=\"#\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"arrows\"")));
 		childrenElements.clear();
@@ -1184,7 +1184,7 @@ public class GeneratedTestCase93 {
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationDay\"","name=\"course_expirationDay\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"2014\"")));
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationYear\"","name=\"course_expirationYear\"")));
 		childrenElements.clear();
@@ -1489,7 +1489,7 @@ public class GeneratedTestCase93 {
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("id=\"navlist\"")));
 		childrenElements.clear();
