@@ -57,7 +57,7 @@ public final class TestSuiteExtensionExample {
 		//builder.setMaximumRunTime(1560, TimeUnit.SECONDS); // for claroline 1200 + 300
 		//builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for wolfcms 600 + 300
 		// builder.setMaximumRunTime(600, TimeUnit.SECONDS); // for eshop1 300 + 300
-		builder.setMaximumRunTime(450, TimeUnit.SECONDS); // for eshop2 150 + 300
+		builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for eshop2 150 + 300
 		builder.setMaximumDepth(0);
 
 		// Phormer
