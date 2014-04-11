@@ -137,7 +137,7 @@ public class GeneratedTestCase2 {
 		checkState3_RandAssertions4();
 		checkState3_RandAssertions5();
 		driver.findElement(By.id("domain")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4) + ".com";
 		driver.findElement(By.id("domain")).sendKeys(RandValue);
 		driver.findElement(By.id("admin-firstname")).clear();
 		driver.findElement(By.id("admin-firstname")).sendKeys("testAdminFirstName");
@@ -165,9 +165,6 @@ public class GeneratedTestCase2 {
 		checkState4_RandAssertions3();
 		checkState4_RandAssertions4();
 		checkState4_RandAssertions5();
-		driver.findElement(By.id("domain")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-		driver.findElement(By.id("domain")).sendKeys(RandValue);
 		driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
 		//Sink node at state 5
 		mutateDOMTree(5);

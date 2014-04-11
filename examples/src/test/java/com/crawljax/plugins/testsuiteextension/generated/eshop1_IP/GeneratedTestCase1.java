@@ -108,6 +108,7 @@ public class GeneratedTestCase1 {
 		checkState7_RandAssertions3();
 		checkState7_RandAssertions4();
 		checkState7_RandAssertions5();
+		driver.findElement(By.cssSelector("#menu-panel-button3")).click();
 		driver.findElement(By.linkText("Users and Roles")).click();
 		//From state 9 to state 16
 		//Eventable{eventType=click, identification=text Roles, element=Element{node=[A: null], tag=A, text=Roles, attributes={class=icon-link, href=../role/role-mgt.jsp, style=background-image:url(images/user-roles.gif);}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=16, name=state16}}
