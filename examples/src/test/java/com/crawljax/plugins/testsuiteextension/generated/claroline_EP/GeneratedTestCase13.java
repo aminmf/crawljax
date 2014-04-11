@@ -737,7 +737,7 @@ public class GeneratedTestCase13 {
 
 	public void checkState142_RandAssertions5(){
 //		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[2]/DIV/DIV/DIV/UL"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[3]/DIV/H1"))); // Random element assertion
+////		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[3]/DIV/H1"))); // Random element assertion
 		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"2015\"")));
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationYear\"","name=\"course_expirationYear\"")));
 		childrenElements.clear();
@@ -763,7 +763,7 @@ public class GeneratedTestCase13 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
 	public void checkState143_OriginalAssertions(){
@@ -971,7 +971,7 @@ public class GeneratedTestCase13 {
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationDay\"","name=\"course_expirationDay\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"msadd\"","href=\"#\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"arrows\"")));
 		childrenElements.clear();
@@ -1184,7 +1184,7 @@ public class GeneratedTestCase13 {
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationDay\"","name=\"course_expirationDay\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"2014\"")));
 		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("disabled=\"disabled\"","id=\"course_expirationYear\"","name=\"course_expirationYear\"")));
 		childrenElements.clear();
