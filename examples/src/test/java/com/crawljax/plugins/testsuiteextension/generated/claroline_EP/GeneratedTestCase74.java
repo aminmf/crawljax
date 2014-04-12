@@ -948,7 +948,7 @@ public class GeneratedTestCase74 {
 		childrenElements.clear();
 //		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"profile.php?display_profile=4\"")));
-		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
+//		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"Edit\"","src=\"/claroline-1.11.7/web/img/settings.png?1232379976\""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion

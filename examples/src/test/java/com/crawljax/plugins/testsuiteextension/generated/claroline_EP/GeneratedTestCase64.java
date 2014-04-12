@@ -996,7 +996,7 @@ public class GeneratedTestCase64 {
 		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
-
+//
 	}
 
 	public void checkState116_AllAssertions(){

@@ -1193,7 +1193,7 @@ public class GeneratedTestCase40 {
 	}
 
 	public void checkState109_AllAssertions(){
-		assertTrue(closeAlertAndGetItsText().matches("^ Are you sure you want to make this module visible in all courses [\\s\\S]$")); // original assertion
+//		assertTrue(closeAlertAndGetItsText().matches("^ Are you sure you want to make this module visible in all courses [\\s\\S]$")); // original assertion
 
 		assertTrue(isElementPresent(By.cssSelector("div.claroDialogBox.boxSuccess"))); // generated assertion in case of ElementTagAttMatch
 
@@ -1997,7 +1997,7 @@ public class GeneratedTestCase40 {
 
 	private String closeAlertAndGetItsText() {
 		try {
-//			Alert alert = driver.switchTo().alert();
+			Alert alert = driver.switchTo().alert();
 			String alertText = alert.getText();
 			if (acceptNextAlert) {
 				alert.accept();

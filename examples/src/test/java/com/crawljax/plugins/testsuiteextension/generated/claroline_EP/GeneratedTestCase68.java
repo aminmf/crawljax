@@ -983,7 +983,7 @@ public class GeneratedTestCase68 {
 
 	public void checkState18_LearnedAssertions(){
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"notice\"")));
-		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
+//		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"required\""))));
 		childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList(""))));

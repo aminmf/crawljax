@@ -999,7 +999,7 @@ public class GeneratedTestCase65 {
 
 	}
 
-	public void checkState116_AllAssertions(){
+//	public void checkState116_AllAssertions(){
 		assertTrue(driver.findElement(By.cssSelector("div.claroDialogBox.boxWarning")).getText().matches("^[\\s\\S]*Message sent[\\s\\S]*$")); // original assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"claroDialogBox boxWarning\"")));

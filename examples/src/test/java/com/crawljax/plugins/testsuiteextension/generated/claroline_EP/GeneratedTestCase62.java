@@ -1112,7 +1112,7 @@ public class GeneratedTestCase62 {
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/admin/admin_class.php\"","method=\"post\"")));
 		childrenElements.clear();
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
-		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"http://www.claroline.net\"","rel=\"Copyright\"")));
+//		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"http://www.claroline.net\"","rel=\"Copyright\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
