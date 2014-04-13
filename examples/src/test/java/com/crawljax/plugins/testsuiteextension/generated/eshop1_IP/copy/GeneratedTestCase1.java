@@ -1,4 +1,4 @@
-package com.crawljax.plugins.testsuiteextension.generated.eshop1_IP;
+package com.crawljax.plugins.testsuiteextension.generated.eshop1_IP.copy;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ import com.crawljax.util.DomUtils;
  * Generated @ Thu Apr 10 15:02:07 PDT 2014
  */
 
-public class GeneratedTestCase2 {
+public class GeneratedTestCase1 {
 
 	private WebDriver driver;
 	private String url;
@@ -75,10 +75,10 @@ public class GeneratedTestCase2 {
 	 */
 	 
 	@Test
-	public void method2(){
+	public void method1(){
 		driver.get(url);
-		//From state 0 to state 1
-		//Eventable{eventType=click, identification=cssSelector input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, tabindex=3, type=submit, value=Sign-in}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+		//From state 0 to state 7
+		//Eventable{eventType=click, identification=cssSelector input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, tabindex=3, type=submit, value=Sign-in}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=7, name=state7}}
 		mutateDOMTree(0);
 		checkState0_OriginalAssertions();
 		checkState0_ReusedAssertions();
@@ -91,93 +91,96 @@ public class GeneratedTestCase2 {
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
 		driver.findElement(By.id("txtUserName")).clear();
-		driver.findElement(By.id("txtUserName")).sendKeys("admin");
+		driver.findElement(By.id("txtUserName")).sendKeys("tenantAdmin@mytestdomain.com");
 		driver.findElement(By.id("txtPassword")).clear();
-		driver.findElement(By.id("txtPassword")).sendKeys("admin");
+		driver.findElement(By.id("txtPassword")).sendKeys("admin1234");
 		driver.findElement(By.cssSelector("input.button")).click();
-		//From state 1 to state 2
-		//Eventable{eventType=click, identification=cssSelector #menu-panel-button3, element=Element{node=[DIV: null], tag=DIV, text=Configure, attributes={class=menu-panel-buttons, id=menu-panel-button3}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
-		mutateDOMTree(1);
-		checkState1_OriginalAssertions();
-		checkState1_ReusedAssertions();
-		checkState1_GeneratedAssertions();
-		checkState1_LearnedAssertions();
-		checkState1_AllAssertions();
-		checkState1_RandAssertions1();
-		checkState1_RandAssertions2();
-		checkState1_RandAssertions3();
-		checkState1_RandAssertions4();
-		checkState1_RandAssertions5();
+		//From state 7 to state 9
+		//Eventable{eventType=click, identification=text Users and Roles, element=Element{node=[A: null], tag=A, text=Users and Roles, attributes={class=menu-default, href=../userstore/index.jsp?region=region1&item=userstores_menu, style=background-image: url(../userstore/images/user-store.gif);}}, source=StateVertexImpl{id=7, name=state7}, target=StateVertexImpl{id=9, name=state9}}
+		mutateDOMTree(7);
+		checkState7_OriginalAssertions();
+		checkState7_ReusedAssertions();
+		checkState7_GeneratedAssertions();
+		checkState7_LearnedAssertions();
+		checkState7_AllAssertions();
+		checkState7_RandAssertions1();
+		checkState7_RandAssertions2();
+		checkState7_RandAssertions3();
+		checkState7_RandAssertions4();
+		checkState7_RandAssertions5();
 		driver.findElement(By.cssSelector("#menu-panel-button3")).click();
-		//From state 2 to state 3
-		//Eventable{eventType=click, identification=text Add New Tenant, element=Element{node=[A: null], tag=A, text=Add New Tenant, attributes={class=menu-default, href=../tenant-mgt/add_tenant.jsp?region=region1&item=govern_add_tenants_menu, style=background-image: url(../tenant-mgt/images/services.gif);}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=3, name=state3}}
-		mutateDOMTree(2);
-		checkState2_OriginalAssertions();
-		checkState2_ReusedAssertions();
-		checkState2_GeneratedAssertions();
-		checkState2_LearnedAssertions();
-		checkState2_AllAssertions();
-		checkState2_RandAssertions1();
-		checkState2_RandAssertions2();
-		checkState2_RandAssertions3();
-		checkState2_RandAssertions4();
-		checkState2_RandAssertions5();
-		driver.findElement(By.linkText("Add New Tenant")).click();
-		//From state 3 to state 4
-		//Eventable{eventType=click, identification=cssSelector input.button, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, onclick=addTenant(false, true,false), type=button, value=Save}}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=4, name=state4}}
-		mutateDOMTree(3);
-		checkState3_OriginalAssertions();
-		checkState3_ReusedAssertions();
-		checkState3_GeneratedAssertions();
-		checkState3_LearnedAssertions();
-		checkState3_AllAssertions();
-		checkState3_RandAssertions1();
-		checkState3_RandAssertions2();
-		checkState3_RandAssertions3();
-		checkState3_RandAssertions4();
-		checkState3_RandAssertions5();
-		driver.findElement(By.id("domain")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4) + ".com";
-		driver.findElement(By.id("domain")).sendKeys(RandValue);
-		driver.findElement(By.id("admin-firstname")).clear();
-		driver.findElement(By.id("admin-firstname")).sendKeys("testAdminFirstName");
-		driver.findElement(By.id("admin-lastname")).clear();
-		driver.findElement(By.id("admin-lastname")).sendKeys("testAdminLastName");
-		driver.findElement(By.id("admin")).clear();
-		driver.findElement(By.id("admin")).sendKeys("tenantAdmin");
-		driver.findElement(By.id("admin-password")).clear();
-		driver.findElement(By.id("admin-password")).sendKeys("admin1234");
-		driver.findElement(By.id("admin-password-repeat")).clear();
-		driver.findElement(By.id("admin-password-repeat")).sendKeys("admin1234");
-		driver.findElement(By.id("admin-email")).clear();
-		driver.findElement(By.id("admin-email")).sendKeys("tenantadminmail@mytestdomain.com");
-		driver.findElement(By.cssSelector("input.button")).click();
-		//From state 4 to state 5
-		//Eventable{eventType=click, identification=cssSelector button[type="button"], element=Element{node=[BUTTON: null], tag=BUTTON, text=OK, attributes={type=button}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=5, name=state5}}
-		mutateDOMTree(4);
-		checkState4_OriginalAssertions();
-		checkState4_ReusedAssertions();
-		checkState4_GeneratedAssertions();
-		checkState4_LearnedAssertions();
-		checkState4_AllAssertions();
-		checkState4_RandAssertions1();
-		checkState4_RandAssertions2();
-		checkState4_RandAssertions3();
-		checkState4_RandAssertions4();
-		checkState4_RandAssertions5();
-		driver.findElement(By.cssSelector("button[type=\"button\"]")).click();
-		//Sink node at state 5
-		mutateDOMTree(5);
-		checkState5_OriginalAssertions();
-		checkState5_ReusedAssertions();
-		checkState5_GeneratedAssertions();
-		checkState5_LearnedAssertions();
-		checkState5_AllAssertions();
-		checkState5_RandAssertions1();
-		checkState5_RandAssertions2();
-		checkState5_RandAssertions3();
-		checkState5_RandAssertions4();
-		checkState5_RandAssertions5();
+		driver.findElement(By.linkText("Users and Roles")).click();
+		//From state 9 to state 16
+		//Eventable{eventType=click, identification=text Roles, element=Element{node=[A: null], tag=A, text=Roles, attributes={class=icon-link, href=../role/role-mgt.jsp, style=background-image:url(images/user-roles.gif);}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=16, name=state16}}
+		mutateDOMTree(9);
+		checkState9_OriginalAssertions();
+		checkState9_ReusedAssertions();
+		checkState9_GeneratedAssertions();
+		checkState9_LearnedAssertions();
+		checkState9_AllAssertions();
+		checkState9_RandAssertions1();
+		checkState9_RandAssertions2();
+		checkState9_RandAssertions3();
+		checkState9_RandAssertions4();
+		checkState9_RandAssertions5();
+		driver.findElement(By.linkText("Roles")).click();
+		//From state 16 to state 17
+		//Eventable{eventType=click, identification=text Add New Internal Role, element=Element{node=[A: null], tag=A, text=Add New Internal Role, attributes={class=icon-link, href=add-step1.jsp?roleType=Internal, style=background-image:url(images/add.gif);}}, source=StateVertexImpl{id=16, name=state16}, target=StateVertexImpl{id=17, name=state17}}
+		mutateDOMTree(16);
+		checkState16_OriginalAssertions();
+		checkState16_ReusedAssertions();
+		checkState16_GeneratedAssertions();
+		checkState16_LearnedAssertions();
+		checkState16_AllAssertions();
+		checkState16_RandAssertions1();
+		checkState16_RandAssertions2();
+		checkState16_RandAssertions3();
+		checkState16_RandAssertions4();
+		checkState16_RandAssertions5();
+		driver.findElement(By.linkText("Add New Internal Role")).click();
+		//From state 17 to state 18
+		//Eventable{eventType=click, identification=xpath //input[@value="Finish"], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=button, type=submit, value=Finish}}, source=StateVertexImpl{id=17, name=state17}, target=StateVertexImpl{id=18, name=state18}}
+		mutateDOMTree(17);
+		checkState17_OriginalAssertions();
+		checkState17_ReusedAssertions();
+		checkState17_GeneratedAssertions();
+		checkState17_LearnedAssertions();
+		checkState17_AllAssertions();
+		checkState17_RandAssertions1();
+		checkState17_RandAssertions2();
+		checkState17_RandAssertions3();
+		checkState17_RandAssertions4();
+		checkState17_RandAssertions5();
+		driver.findElement(By.name("roleName")).clear();
+		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		driver.findElement(By.name("roleName")).sendKeys(RandValue);
+		driver.findElement(By.xpath("//input[@value=\"Finish\"]")).click();
+		//From state 18 to state 19
+		//Eventable{eventType=click, identification=xpath //button[text()="OK"], element=Element{node=[BUTTON: null], tag=BUTTON, text=OK, attributes={type=button}}, source=StateVertexImpl{id=18, name=state18}, target=StateVertexImpl{id=19, name=state19}}
+		mutateDOMTree(18);
+		checkState18_OriginalAssertions();
+		checkState18_ReusedAssertions();
+		checkState18_GeneratedAssertions();
+		checkState18_LearnedAssertions();
+		checkState18_AllAssertions();
+		checkState18_RandAssertions1();
+		checkState18_RandAssertions2();
+		checkState18_RandAssertions3();
+		checkState18_RandAssertions4();
+		checkState18_RandAssertions5();
+		driver.findElement(By.xpath("//button[text()=\"OK\"]")).click();
+		//Sink node at state 19
+		mutateDOMTree(19);
+		checkState19_OriginalAssertions();
+		checkState19_ReusedAssertions();
+		checkState19_GeneratedAssertions();
+		checkState19_LearnedAssertions();
+		checkState19_AllAssertions();
+		checkState19_RandAssertions1();
+		checkState19_RandAssertions2();
+		checkState19_RandAssertions3();
+		checkState19_RandAssertions4();
+		checkState19_RandAssertions5();
 	}
 
 
@@ -212,162 +215,192 @@ public class GeneratedTestCase2 {
 	public void checkState0_RandAssertions5(){
 	}
 
-	public void checkState1_OriginalAssertions(){
-		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
+	public void checkState7_OriginalAssertions(){
+		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
 
 	}
 
-	public void checkState1_ReusedAssertions(){
+	public void checkState7_ReusedAssertions(){
 	}
 
-	public void checkState1_GeneratedAssertions(){
+	public void checkState7_GeneratedAssertions(){
 	}
 
-	public void checkState1_LearnedAssertions(){
+	public void checkState7_LearnedAssertions(){
 	}
 
-	public void checkState1_AllAssertions(){
-		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
-
-	}
-
-	public void checkState1_RandAssertions1(){
-	}
-
-	public void checkState1_RandAssertions2(){
-	}
-
-	public void checkState1_RandAssertions3(){
-	}
-
-	public void checkState1_RandAssertions4(){
-	}
-
-	public void checkState1_RandAssertions5(){
-	}
-
-	public void checkState2_OriginalAssertions(){
-	}
-
-	public void checkState2_ReusedAssertions(){
-	}
-
-	public void checkState2_GeneratedAssertions(){
-	}
-
-	public void checkState2_LearnedAssertions(){
-	}
-
-	public void checkState2_AllAssertions(){
-	}
-
-	public void checkState2_RandAssertions1(){
-	}
-
-	public void checkState2_RandAssertions2(){
-	}
-
-	public void checkState2_RandAssertions3(){
-	}
-
-	public void checkState2_RandAssertions4(){
-	}
-
-	public void checkState2_RandAssertions5(){
-	}
-
-	public void checkState3_OriginalAssertions(){
-	}
-
-	public void checkState3_ReusedAssertions(){
-	}
-
-	public void checkState3_GeneratedAssertions(){
-	}
-
-	public void checkState3_LearnedAssertions(){
-	}
-
-	public void checkState3_AllAssertions(){
-	}
-
-	public void checkState3_RandAssertions1(){
-	}
-
-	public void checkState3_RandAssertions2(){
-	}
-
-	public void checkState3_RandAssertions3(){
-	}
-
-	public void checkState3_RandAssertions4(){
-	}
-
-	public void checkState3_RandAssertions5(){
-	}
-
-	public void checkState4_OriginalAssertions(){
-		if(!helper.equals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
+	public void checkState7_AllAssertions(){
+		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
 
 	}
 
-	public void checkState4_ReusedAssertions(){
+	public void checkState7_RandAssertions1(){
 	}
 
-	public void checkState4_GeneratedAssertions(){
+	public void checkState7_RandAssertions2(){
 	}
 
-	public void checkState4_LearnedAssertions(){
+	public void checkState7_RandAssertions3(){
 	}
 
-	public void checkState4_AllAssertions(){
-		if(!helper.equals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
+	public void checkState7_RandAssertions4(){
+	}
+
+	public void checkState7_RandAssertions5(){
+	}
+
+	public void checkState9_OriginalAssertions(){
+	}
+
+	public void checkState9_ReusedAssertions(){
+	}
+
+	public void checkState9_GeneratedAssertions(){
+	}
+
+	public void checkState9_LearnedAssertions(){
+	}
+
+	public void checkState9_AllAssertions(){
+	}
+
+	public void checkState9_RandAssertions1(){
+	}
+
+	public void checkState9_RandAssertions2(){
+	}
+
+	public void checkState9_RandAssertions3(){
+	}
+
+	public void checkState9_RandAssertions4(){
+	}
+
+	public void checkState9_RandAssertions5(){
+	}
+
+	public void checkState16_OriginalAssertions(){
+	}
+
+	public void checkState16_ReusedAssertions(){
+	}
+
+	public void checkState16_GeneratedAssertions(){
+	}
+
+	public void checkState16_LearnedAssertions(){
+	}
+
+	public void checkState16_AllAssertions(){
+	}
+
+	public void checkState16_RandAssertions1(){
+	}
+
+	public void checkState16_RandAssertions2(){
+	}
+
+	public void checkState16_RandAssertions3(){
+	}
+
+	public void checkState16_RandAssertions4(){
+	}
+
+	public void checkState16_RandAssertions5(){
+	}
+
+	public void checkState17_OriginalAssertions(){
+	}
+
+	public void checkState17_ReusedAssertions(){
+	}
+
+	public void checkState17_GeneratedAssertions(){
+	}
+
+	public void checkState17_LearnedAssertions(){
+	}
+
+	public void checkState17_AllAssertions(){
+	}
+
+	public void checkState17_RandAssertions1(){
+	}
+
+	public void checkState17_RandAssertions2(){
+	}
+
+	public void checkState17_RandAssertions3(){
+	}
+
+	public void checkState17_RandAssertions4(){
+	}
+
+	public void checkState17_RandAssertions5(){
+	}
+
+	public void checkState18_OriginalAssertions(){
+		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully.")); // original assertion
 
 	}
 
-	public void checkState4_RandAssertions1(){
+	public void checkState18_ReusedAssertions(){
 	}
 
-	public void checkState4_RandAssertions2(){
+	public void checkState18_GeneratedAssertions(){
 	}
 
-	public void checkState4_RandAssertions3(){
+	public void checkState18_LearnedAssertions(){
 	}
 
-	public void checkState4_RandAssertions4(){
+	public void checkState18_AllAssertions(){
+		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully.")); // original assertion
+
 	}
 
-	public void checkState4_RandAssertions5(){
+	public void checkState18_RandAssertions1(){
 	}
 
-	public void checkState5_OriginalAssertions(){
+	public void checkState18_RandAssertions2(){
 	}
 
-	public void checkState5_ReusedAssertions(){
+	public void checkState18_RandAssertions3(){
 	}
 
-	public void checkState5_GeneratedAssertions(){
+	public void checkState18_RandAssertions4(){
 	}
 
-	public void checkState5_LearnedAssertions(){
+	public void checkState18_RandAssertions5(){
 	}
 
-	public void checkState5_AllAssertions(){
+	public void checkState19_OriginalAssertions(){
 	}
 
-	public void checkState5_RandAssertions1(){
+	public void checkState19_ReusedAssertions(){
 	}
 
-	public void checkState5_RandAssertions2(){
+	public void checkState19_GeneratedAssertions(){
 	}
 
-	public void checkState5_RandAssertions3(){
+	public void checkState19_LearnedAssertions(){
 	}
 
-	public void checkState5_RandAssertions4(){
+	public void checkState19_AllAssertions(){
 	}
 
-	public void checkState5_RandAssertions5(){
+	public void checkState19_RandAssertions1(){
+	}
+
+	public void checkState19_RandAssertions2(){
+	}
+
+	public void checkState19_RandAssertions3(){
+	}
+
+	public void checkState19_RandAssertions4(){
+	}
+
+	public void checkState19_RandAssertions5(){
 	}
 
 

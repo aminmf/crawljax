@@ -1,4 +1,4 @@
-package com.crawljax.plugins.testsuiteextension.generated.eshop1_IP;
+package com.crawljax.plugins.testsuiteextension.generated.eshop1_IP.copy;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -213,7 +213,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState1_OriginalAssertions(){
-		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
+		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
 
 	}
 
@@ -227,7 +227,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState1_AllAssertions(){
-		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
+		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
 
 	}
 
@@ -307,7 +307,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState4_OriginalAssertions(){
-		if(!helper.equals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
+		assertEquals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText()); // original assertion
 
 	}
 
@@ -321,7 +321,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState4_AllAssertions(){
-		if(!helper.equals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
+		assertEquals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText()); // original assertion
 
 	}
 
