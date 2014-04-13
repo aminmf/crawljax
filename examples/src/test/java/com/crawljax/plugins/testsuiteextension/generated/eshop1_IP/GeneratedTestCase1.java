@@ -216,7 +216,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState7_OriginalAssertions(){
-		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
+		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
 
 	}
 
@@ -230,7 +230,6 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState7_AllAssertions(){
-		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
 
 	}
 
@@ -340,7 +339,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState18_OriginalAssertions(){
-		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully.")); // original assertion
+		if(!(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully."))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -354,7 +353,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState18_AllAssertions(){
-		assertTrue(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully.")); // original assertion
+		if(!(driver.findElement(By.cssSelector("#messagebox-info")).getText().contains("is added successfully."))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 

@@ -213,7 +213,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState1_OriginalAssertions(){
-		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
+		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
 
 	}
 
@@ -227,7 +227,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState1_AllAssertions(){
-		assertEquals("WSO2 Management Console", driver.getTitle());; // original assertion
+		if(!helper.equals("WSO2 Management Console", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;}; // original assertion
 
 	}
 
@@ -307,7 +307,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState4_OriginalAssertions(){
-		assertEquals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText()); // original assertion
+		if(!helper.equals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -321,7 +321,7 @@ public class GeneratedTestCase2 {
 	}
 
 	public void checkState4_AllAssertions(){
-		assertEquals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText()); // original assertion
+		if(!helper.equals("You have registered the Organization Successfully", driver.findElement(By.cssSelector("#messagebox-info")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
