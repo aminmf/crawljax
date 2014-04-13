@@ -31,8 +31,8 @@ public class CrawlTaskConsumer implements Callable<Void> {
 	private ArrayList<Integer> manualTestStateIDs = new ArrayList<Integer>(); 
 
 	//Amin: One should only be true
-	private boolean alternativePathStrategy = false;  // highest priority to manual-test staes
-	private boolean randomStrategy = true;
+	private boolean alternativePathStrategy = true;  // highest priority to manual-test staes
+	private boolean randomStrategy = false;
 	private boolean codeCoverageStrategy = false;
 	
 

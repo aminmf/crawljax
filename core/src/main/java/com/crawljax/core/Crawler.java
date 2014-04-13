@@ -74,11 +74,11 @@ public class Crawler {
 	private StateMachine stateMachine;
 
 	//Amin
-	private boolean useTestExtToHandleForms = false;
-	private boolean crawlPhormerApplication = true;
+	private boolean useTestExtToHandleForms = true;
+	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
 	private boolean crawlEshop1Application = false;
-	private boolean crawlEshop2Application = false;
+	private boolean crawlEshop2Application = true;
 
 
 	@Inject
