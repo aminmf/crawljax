@@ -76,9 +76,9 @@ public class Crawler {
 	//Amin
 	private boolean useTestExtToHandleForms = false; // this is for RND method (pure random)
 	private boolean crawlPhormerApplication = false;
-	private boolean crawlWolfCMSApplication = false;
+	private boolean crawlWolfCMSApplication = true;
 	private boolean crawlEshop1Application = false;
-	private boolean crawlEshop2Application = true;
+	private boolean crawlEshop2Application = false;
 
 
 	@Inject
