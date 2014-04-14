@@ -32,7 +32,7 @@ public class DeletingCategory {
 		driver.findElement(By.cssSelector("button[type=\"submit\"]")).click();
 		driver.findElement(By.linkText("Platform administration")).click();
 		driver.findElement(By.linkText("Manage course categories")).click();
-		for (int i=0; i<100; i++){
+		for (int i=0; i<50; i++){
 		driver.findElement(By.xpath("(//img[@alt='Delete category'])[5]")).click();
 		assertTrue(closeAlertAndGetItsText().matches("^[\\s\\S]*Are you sure to delete[\\s\\S]*$"));
 		}
