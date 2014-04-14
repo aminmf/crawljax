@@ -965,8 +965,8 @@ element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 	}
 
 	public void checkState21_RandAssertions3(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/P[835]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/UL/LI[439]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/P[835]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/UL/LI[439]"))); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"unreadMessage\"")));
 		childrenElements.clear();

@@ -805,7 +805,7 @@ element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 
 	public void checkState13_RandAssertions5(){
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV/DIV/DIV"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[2]/FORM/BR"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/DIV[2]/FORM/BR"))); // Random element assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroBody\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"claroPage\"")));
 		childrenElements.clear();
@@ -824,7 +824,7 @@ element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"/claroline-1.11.7/claroline/auth/lostPassword.php\"","method=\"post\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("onclick=\"document.location='/claroline-1.11.7/index.php';return false\"","type=\"button\"","value=\"Cancel\""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // Random pattern assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"campusBannerRight\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"platformBanner\"")));
 		childrenElements.clear();
@@ -859,7 +859,7 @@ element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 	}
 
 	public void checkState39_RandAssertions1(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV/DIV[3]/DIV/UL/LI[2]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV/DIV[3]/DIV/UL/LI[2]"))); // Random element assertion
 		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV/FORM/FIELDSET/A"))); // Random element assertion
 		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"adminPanel\"")));

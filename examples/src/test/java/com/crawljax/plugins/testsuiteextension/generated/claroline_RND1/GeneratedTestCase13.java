@@ -352,12 +352,12 @@ element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"inputPassword\"","id=\"password\"","name=\"password\"","size=\"12\"","tabindex=\"2\"","type=\"password\"")));
 		parentElement = new DOMElement("FIELDSET", "", new ArrayList<String>(Arrays.asList("style=\"border: 0; margin: 10px 0 15px 0; padding: 5px;\"")));
 		childrenElements.clear();
-		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
+//		assertTrue(isElementPatternFullPresent(parentElement , element, childrenElements)); // Random pattern assertion
 	}
 
 	public void checkState25_RandAssertions4(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/UL/LI[271]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/P[929]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/UL/LI[271]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/DIV[2]/DIV[2]/P[929]"))); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"item currentTool\"","href=\"/claroline-1.11.7/claroline/course/index.php?cid=NEWCODE_001&cidReset=true&cidReq=NEWCODE_001\"","id=\"courseHomePage\"")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
