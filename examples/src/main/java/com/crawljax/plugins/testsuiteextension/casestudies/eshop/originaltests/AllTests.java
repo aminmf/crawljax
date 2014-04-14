@@ -171,7 +171,7 @@ public class AllTests {
 		driver.findElement(By.id("reg-password2")).clear();
 		driver.findElement(By.id("reg-password2")).sendKeys("supertenantuser");
 		driver.findElement(By.id("registrationSubmit")).click();
-		assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND-"));
+		assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND"));
 
 		driver.findElement(By.cssSelector(".nav > li:nth-child(2) > a:nth-child(1)")).click();
 		driver.findElement(By.linkText("Sign out")).click();
