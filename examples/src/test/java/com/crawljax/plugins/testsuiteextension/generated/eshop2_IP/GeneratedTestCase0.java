@@ -337,8 +337,6 @@ public class GeneratedTestCase0 {
 		checkState21_RandAssertions3();
 		checkState21_RandAssertions4();
 		checkState21_RandAssertions5();
-		driver.findElement(By.id("overview_description")).clear();
-		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1");
 		driver.findElement(By.linkText("Edit")).click();
 		//From state 22 to state 23
 		//Eventable{eventType=click, identification=id editAssetButton, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={class=btn btn-primary, id=editAssetButton, name=editAssetButton, type=button, value=Update}}, source=StateVertexImpl{id=22, name=state22}, target=StateVertexImpl{id=23, name=state23}}
@@ -355,13 +353,6 @@ public class GeneratedTestCase0 {
 		checkState22_RandAssertions5();
 		driver.findElement(By.id("overview_description")).clear();
 		driver.findElement(By.id("overview_description")).sendKeys("this is my user added asset 1 + added description");
-		driver.findElement(By.id("overview_name")).clear();
-		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
-		driver.findElement(By.id("overview_name")).sendKeys(RandValue);
-		driver.findElement(By.id("overview_version")).clear();
-		driver.findElement(By.id("overview_version")).sendKeys("1.2.3");
-		driver.findElement(By.id("overview_url")).clear();
-		driver.findElement(By.id("overview_url")).sendKeys("http://example.com/gadget.xml");
 		driver.findElement(By.id("editAssetButton")).click();
 		//From state 23 to state 24
 		//Eventable{eventType=click, identification=cssSelector a.dropdown-toggle, element=Element{node=[A: null], tag=A, text=admin, attributes={class=dropdown-toggle, data-toggle=dropdown, href=#}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=24, name=state24}}

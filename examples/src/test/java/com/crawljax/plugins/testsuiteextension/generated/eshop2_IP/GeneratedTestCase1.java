@@ -124,6 +124,7 @@ public class GeneratedTestCase1 {
 		checkState2_RandAssertions4();
 		checkState2_RandAssertions5();
 		driver.findElement(By.cssSelector("#assets-container a")).click();
+		driver.findElement(By.id("btn-add-gadget")).click();
 		//From state 3 to state 5
 		//Eventable{eventType=click, identification=cssSelector .nav-separator > a:nth-child(1), element=Element{node=[A: null], tag=A, text=My Items, attributes={href=/store/dashboard}}, source=StateVertexImpl{id=3, name=state3}, target=StateVertexImpl{id=5, name=state5}}
 		mutateDOMTree(3);
@@ -138,6 +139,7 @@ public class GeneratedTestCase1 {
 		checkState3_RandAssertions4();
 		checkState3_RandAssertions5();
 		driver.findElement(By.cssSelector(".nav-separator > a:nth-child(1)")).click();
+		driver.findElement(By.linkText("My Items")).click();
 		//From state 5 to state 7
 		//Eventable{eventType=click, identification=cssSelector a.btn:nth-child(3) > i:nth-child(1), element=Element{node=[I: null], tag=I, text=, attributes={class=icon-remove}}, source=StateVertexImpl{id=5, name=state5}, target=StateVertexImpl{id=7, name=state7}}
 		mutateDOMTree(5);
