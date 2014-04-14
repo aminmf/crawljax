@@ -76,7 +76,7 @@ public class GeneratedTestCase1 {
 	 */
 	 
 	@Test
-	public void method1(){
+	public void method1() throws InterruptedException{
 		driver.get(url);
 		//From state 0 to state 1
 		//Eventable{eventType=click, identification=xpath //button[@type="submit"], element=Element{node=[BUTTON: null], tag=BUTTON, text=Sign in, attributes={class=btn btn-large pull-right, type=submit}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
@@ -182,6 +182,7 @@ public class GeneratedTestCase1 {
 		checkState8_RandAssertions4();
 		checkState8_RandAssertions5();
 		driver.findElement(By.linkText("wso2")).click();
+		Thread.sleep(3000);
 		//From state 9 to state 10
 		//Eventable{eventType=click, identification=cssSelector .nav > li:nth-child(2) > a:nth-child(1), element=Element{node=[A: null], tag=A, text=admin, attributes={class=dropdown-toggle, data-toggle=dropdown, href=#}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=10, name=state10}}
 		mutateDOMTree(9);
@@ -634,7 +635,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState13_OriginalAssertions(){
-		assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND-")); // original assertion
+			assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND")); // original assertion
 
 	}
 
@@ -648,7 +649,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState13_AllAssertions(){
-		assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND-")); // original assertion
+		assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND")); // original assertion
 
 	}
 
