@@ -28,7 +28,7 @@ public class CrawlController implements Callable<CrawlSession> {
 	// this should also false to generate and sfg
 	// this should also be true when generating test suite using saved sfg
 	boolean bypassCrawling = false;
-	boolean applyRandomCrawlingOnly = false; //******** RND
+	boolean applyRandomCrawlingOnly = true; //******** RND
 	
 
 	

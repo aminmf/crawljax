@@ -74,7 +74,7 @@ public class Crawler {
 	private StateMachine stateMachine;
 
 	//Amin
-	private boolean useTestExtToHandleForms = true;
+	private boolean useTestExtToHandleForms = false; // this is for RND method (pure random)
 	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
 	private boolean crawlEshop1Application = false;
