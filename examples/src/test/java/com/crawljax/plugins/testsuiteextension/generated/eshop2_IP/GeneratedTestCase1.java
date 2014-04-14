@@ -307,7 +307,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState1_OriginalAssertions(){
-		assertEquals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText()); // original assertion
+		if(!helper.equals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -321,7 +321,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState1_AllAssertions(){
-		assertEquals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText()); // original assertion
+		if(!helper.equals("admin", driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -371,7 +371,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState3_OriginalAssertions(){
-		//assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText()); // original assertion
+		//if(!helper.equals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -385,7 +385,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState3_AllAssertions(){
-		//assertEquals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText()); // original assertion
+		//if(!helper.equals("Bookmarked", driver.findElement(By.id("btn-add-gadget")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -405,7 +405,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState5_OriginalAssertions(){
-		assertEquals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText()); // original assertion
+		if(!helper.equals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -419,7 +419,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState5_AllAssertions(){
-		assertEquals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText()); // original assertion
+		if(!helper.equals("by admin", driver.findElement(By.cssSelector("div.store-my-item .bookmark-assert-provider")).getText())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -439,7 +439,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState7_OriginalAssertions(){
-		assertTrue(driver.findElement(By.id("no-data-my-items")).getText().contains("You still haven't any bookmarks from the Store.")); // original assertion
+		if(!(driver.findElement(By.id("no-data-my-items")).getText().contains("You still haven't any bookmarks from the Store."))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -453,7 +453,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState7_AllAssertions(){
-		assertTrue(driver.findElement(By.id("no-data-my-items")).getText().contains("You still haven't any bookmarks from the Store.")); // original assertion
+		if(!(driver.findElement(By.id("no-data-my-items")).getText().contains("You still haven't any bookmarks from the Store."))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -503,7 +503,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState9_OriginalAssertions(){
-		assertEquals(4, ((List<WebElement>) driver.findElements(By.xpath("//div[@class='span3 asset']"))).size()); // original assertion
+		if(!helper.equals(4, ((List<WebElement>) driver.findElements(By.xpath("//div[@class='span3 asset']"))).size())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -517,7 +517,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState9_AllAssertions(){
-		assertEquals(4, ((List<WebElement>) driver.findElements(By.xpath("//div[@class='span3 asset']"))).size()); // original assertion
+		if(!helper.equals(4, ((List<WebElement>) driver.findElements(By.xpath("//div[@class='span3 asset']"))).size())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -567,9 +567,9 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState11_OriginalAssertions(){
-		assertTrue(driver.findElement(By.linkText("Sign in")).isDisplayed()); // original assertion
+		if(!(driver.findElement(By.linkText("Sign in")).isDisplayed())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(driver.findElement(By.linkText("Register")).isDisplayed()); // original assertion
+		if(!(driver.findElement(By.linkText("Register")).isDisplayed())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -583,9 +583,9 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState11_AllAssertions(){
-		assertTrue(driver.findElement(By.linkText("Sign in")).isDisplayed()); // original assertion
+		if(!(driver.findElement(By.linkText("Sign in")).isDisplayed())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(driver.findElement(By.linkText("Register")).isDisplayed()); // original assertion
+		if(!(driver.findElement(By.linkText("Register")).isDisplayed())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -635,7 +635,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState13_OriginalAssertions(){
-			assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND")); // original assertion
+			if(!(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND"))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -649,7 +649,7 @@ public class GeneratedTestCase1 {
 	}
 
 	public void checkState13_AllAssertions(){
-		assertTrue(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND")); // original assertion
+		if(!(driver.findElement(By.cssSelector("ul.nav li a.dropdown-toggle")).getText().contains("RND"))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
