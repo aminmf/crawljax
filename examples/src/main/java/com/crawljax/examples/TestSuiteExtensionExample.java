@@ -55,7 +55,7 @@ public final class TestSuiteExtensionExample {
 		builder.crawlRules().insertRandomDataInInputForms(false);
 		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for phormer 200 + 300
 		//builder.setMaximumRunTime(1560, TimeUnit.SECONDS); // for claroline 1200 + 300
-		builder.setMaximumRunTime(1000, TimeUnit.SECONDS); // for claroline 1200 + 300
+		builder.setMaximumRunTime(1500, TimeUnit.SECONDS); // for claroline 1200 + 300
 		//builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for wolfcms 600 + 300
 		// builder.setMaximumRunTime(600, TimeUnit.SECONDS); // for eshop1 300 + 300
 		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for eshop2 150 + 300
