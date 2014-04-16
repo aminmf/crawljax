@@ -140,9 +140,9 @@ public class GeneratedTestCase3 {
 
 
 	public void checkState0_OriginalAssertions(){
-		assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -158,7 +158,7 @@ public class GeneratedTestCase3 {
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\""))));
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
@@ -166,12 +166,12 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"clean\"")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
 		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 	}
 
@@ -194,7 +194,7 @@ public class GeneratedTestCase3 {
 	}
 
 	public void checkState12_OriginalAssertions(){
-		assertEquals("Pages | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -217,13 +217,13 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/12\"","title=\"12 | rnd-xfob\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
@@ -237,13 +237,13 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/13\"","title=\"13 | rnd-wjen\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_7\"")));
@@ -257,7 +257,7 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 	}
 
@@ -280,7 +280,7 @@ public class GeneratedTestCase3 {
 	}
 
 	public void checkState13_OriginalAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // original assertion
 
 	}
 
@@ -297,13 +297,13 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"separator\"")));
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -315,7 +315,7 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -325,13 +325,13 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"button\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"sidebar\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/add\""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 	}
 
@@ -369,13 +369,13 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"separator\"")));
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		childrenElements.clear();
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -385,7 +385,7 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -397,12 +397,12 @@ public class GeneratedTestCase3 {
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"mask\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
 		childrenElements.clear();
-		assertTrue(isElementPatternTagPresent(parentElement , element, childrenElements)); // predicted pattern assertion
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))){System.out.println(Thread.currentThread().getStackTrace()[1].getMethodName());  return;} // predicted pattern assertion
 
 	}
 
