@@ -45,6 +45,11 @@ class StateVertexImpl implements StateVertex {
 		return regionTagAssertions;
 	}
 
+	private HashSet<String> regionTagAttAssertions = new HashSet<String>();
+	public HashSet<String> getRegionTagAttAssertions() {
+		return regionTagAttAssertions;
+	}
+	
 	private HashSet<String> regionFullAssertions = new HashSet<String>();
 	public HashSet<String> getRegionFullAssertions() {
 		return regionFullAssertions;
@@ -212,6 +217,11 @@ class StateVertexImpl implements StateVertex {
 	}
 
 	@Override
+	public void addRegionTagAttAssertion(String assertion) {
+		regionTagAttAssertions.add(assertion);
+	}
+
+	@Override
 	public void addRegionFullAssertion(String assertion) {
 		regionFullAssertions.add(assertion);
 	}
@@ -224,6 +234,11 @@ class StateVertexImpl implements StateVertex {
 	@Override
 	public void clearRegionTagAssertions() {
 		regionTagAssertions.clear();
+	}
+
+	@Override
+	public void clearRegionTagAttAssertions() {
+		regionTagAttAssertions.clear();
 	}
 
 	@Override
