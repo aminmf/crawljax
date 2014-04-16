@@ -418,8 +418,10 @@ public class GeneratedTestCase0 {
 			org.w3c.dom.Element sourceElement = null;
 
 			for (int i = 0; i < nodeList.getLength(); i++){
-				// check node's attributes
+				// check node's text and attributes
 				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
+				if (!element.getTextContent().equals(sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "")))
+					continue;
 				NamedNodeMap elementAttList = sourceElement.getAttributes();
 				HashSet<String> elemetAtts = new HashSet<String>();
 				for (int j = 0; j < elementAttList.getLength(); j++)
@@ -427,8 +429,10 @@ public class GeneratedTestCase0 {
 				if (!element.getAttributes().equals(elemetAtts))
 					continue;
 				
-				// check parent node's tag and attributes
+				// check parent node's text, tag and attributes
 				String parentTagName = sourceElement.getParentNode().getNodeName();
+				if (!parent.getTextContent().equals(sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "")))
+					continue;
 				if (!parentTagName.equals(parent.getTagName()))
 					continue;
 				NamedNodeMap parentAttList = sourceElement.getParentNode().getAttributes();
@@ -437,7 +441,18 @@ public class GeneratedTestCase0 {
 					parentAtts.add(parentAttList.item(j).getNodeName() + "=\"" + parentAttList.item(j).getNodeValue() + "\"");
 				if (!parent.getAttributes().equals(parentAtts))
 					continue;
-		
+
+	
+				// check children nodes' text
+				HashSet<String> childrenTextFromDOM = new HashSet<String>();				
+				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
+					childrenTextFromDOM.add(sourceElement.getChildNodes().item(j).getTextContent().replace("\n", "").replace("\r", "").replace(" ", ""));
+				HashSet<String> childrenTextToTest = new HashSet<String>();				
+				for (int k=0; k<children.size();k++)
+					childrenTextToTest.add(children.get(k).getTextContent());
+				if (!childrenTextToTest.equals(childrenTextFromDOM))
+					continue;
+				
 				// check children nodes' tags
 				HashSet<String> childrenTagNameFromDOM = new HashSet<String>();				
 				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
