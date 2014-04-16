@@ -74,11 +74,11 @@ public class Crawler {
 	private StateMachine stateMachine;
 
 	//Amin
-	private boolean useTestExtToHandleForms = false; // this is for RND method (pure random)
+	private boolean useTestExtToHandleForms = true; // For the RND method (pure random) should be false -> random form filling + the initial data
 	private boolean crawlPhormerApplication = false;
-	private boolean crawlWolfCMSApplication = false;
+	private boolean crawlWolfCMSApplication = true;
 	private boolean crawlEshop1Application = false;
-	private boolean crawlEshop2Application = true;
+	private boolean crawlEshop2Application = false;
 
 
 	@Inject

@@ -27,8 +27,8 @@ public class CrawlController implements Callable<CrawlSession> {
 	// Setting for experiments on bypassing crawling for testing TesExt on creating happy paths (default should be false)
 	// this should also false to generate and sfg
 	// this should also be true when generating test suite using saved sfg
-	boolean bypassCrawling = false;
-	boolean applyRandomCrawlingOnly = true; //******** RND
+	boolean bypassCrawling = true;
+	boolean applyRandomCrawlingOnly = false; //******** RND
 	
 
 	
