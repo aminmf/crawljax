@@ -20,7 +20,7 @@ public class ElementFeatures implements Serializable{
 
 	private int count = 0; // this is to keep the frequency (count of appearance of the element)
 
-	private String elementPatternAssertion = null;
+	private String elementRegionAssertion = null;
 
 
 	public int getCount() {
@@ -202,7 +202,7 @@ public class ElementFeatures implements Serializable{
 			return false;
 		//if (classLabel != other.classLabel)
 		//	return false;
-		//if (!elementPatternAssertion.equals(other.elementPatternAssertion))
+		//if (!elementRegionAssertion.equals(other.elementRegionAssertion))
 		//	return false;
 		if (Double.doubleToLongBits(innerHtmlDensity) != Double
 				.doubleToLongBits(other.innerHtmlDensity))
@@ -291,13 +291,13 @@ public class ElementFeatures implements Serializable{
 	}
 
 
-	// Adding elementPatternAssertion for a block DOM element
-	public void addElementPatternAssertion(String elementPatternAssertion) {
-		this.elementPatternAssertion = elementPatternAssertion;
+	// Adding elementRegionAssertion for a block DOM element
+	public void addElementRegionAssertion(String elementRegionAssertion) {
+		this.elementRegionAssertion = elementRegionAssertion;
 	}
 
-	public String getElementPatternAssertion() {
-		return elementPatternAssertion;
+	public String getElementRegionAssertion() {
+		return elementRegionAssertion;
 	}
 
 }

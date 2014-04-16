@@ -13,12 +13,12 @@ import com.crawljax.util.DomUtils;
 import com.crawljax.util.XPathHelper;
 
 /**
- * AssertedElementPattern is used to store informations about a DOM element accessed pattern in a Selenium assertion.
- * This pattern contains: The asserted element node, its parent node, its children nodes, its previous state id, and its associated assertion
+ * AssertedElementRegion is used to store informations about a DOM element accessed region in a Selenium assertion.
+ * This region contains: The asserted element node, its parent node, its children nodes, its previous state id, and its associated assertion
  * 
  * @author Amin Milani Fard
  */
-public class AssertedElementPattern implements Serializable{
+public class AssertedElementRegion implements Serializable{
 	
 	private static final long serialVersionUID = -6419315357887813412L;
 	
@@ -85,7 +85,7 @@ public class AssertedElementPattern implements Serializable{
 	}
 
 
-	public AssertedElementPattern(org.w3c.dom.Element sourceElement, String assertion, String assertedElementLocator){
+	public AssertedElementRegion(org.w3c.dom.Element sourceElement, String assertion, String assertedElementLocator){
 		// assertion info
 		this.assertedElementLocator = assertedElementLocator;
 		this.assertion = assertion;
@@ -158,9 +158,9 @@ public class AssertedElementPattern implements Serializable{
 	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof AssertedElementPattern)) return false;
+        if (!(o instanceof AssertedElementRegion)) return false;
 
-        AssertedElementPattern aep = (AssertedElementPattern) o;
+        AssertedElementRegion aep = (AssertedElementRegion) o;
 
         if (!aep.tagName.equals(this.tagName) || !aep.parentTagName.equals(this.parentTagName) || !aep.childrenTagName.equals(this.childrenTagName)
         		|| !aep.assertion.equals(this.assertion)) {  
@@ -177,7 +177,7 @@ public class AssertedElementPattern implements Serializable{
 
 	@Override
 	public String toString() {
-		return "AssertedElementPattern [tagName=" + tagName + ", textContent=" + textContent
+		return "AssertedElementRegion [tagName=" + tagName + ", textContent=" + textContent
 				+ ", attributes=" + attributes + ", parentTagName="
 				+ parentTagName //+ ", parentTextContent=" + parentTextContent
 				+ ", parentAttributes=" + parentAttributes
@@ -187,19 +187,19 @@ public class AssertedElementPattern implements Serializable{
 	}
 	
 	
-	public String getHowPatternMatch(AssertedElementPattern aep){
+	public String getHowRegionMatch(AssertedElementRegion aep){
 		if (aep.tagName.equals(this.tagName) && aep.parentTagName.equals(this.parentTagName) && aep.childrenTagName.equals(this.childrenTagName)) {  
 			if (aep.attributes.equals(this.attributes) && aep.parentAttributes.equals(this.parentAttributes) && aep.childrenAttributes.equals(this.childrenAttributes))
 				if (aep.textContent.equals(this.textContent) && aep.parentTextContent.equals(this.parentTextContent) && aep.childrenTextContent.equals(this.childrenTextContent))
-					return "PatternFullMatch";
+					return "RegionFullMatch";
 				else
-					return "PatternTagAttMatch";
-			return "PatternTagMatch";
+					return "RegionTagAttMatch";
+			return "RegionTagMatch";
 		}
         return "NoMatch";
 	}
 
-	public String getHowElementMatch(AssertedElementPattern aep){
+	public String getHowElementMatch(AssertedElementRegion aep){
 		if (aep.tagName.equals(this.tagName)){
         	if (aep.attributes.equals(this.attributes))
 				if (aep.textContent.equals(this.textContent))

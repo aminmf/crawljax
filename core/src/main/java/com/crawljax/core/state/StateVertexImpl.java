@@ -7,7 +7,7 @@ import java.util.HashSet;
 
 import org.w3c.dom.Document;
 
-import com.crawljax.util.AssertedElementPattern;
+import com.crawljax.util.AssertedElementRegion;
 import com.crawljax.util.DomUtils;
 import com.crawljax.util.ElementFeatures;
 import com.google.common.annotations.VisibleForTesting;
@@ -32,7 +32,7 @@ class StateVertexImpl implements StateVertex {
 	private String name;
 	
 	//Amin: Assertions on DOM state
-	private ArrayList<AssertedElementPattern> assertedElementPatterns = new ArrayList<AssertedElementPattern>();
+	private ArrayList<AssertedElementRegion> assertedElementRegions = new ArrayList<AssertedElementRegion>();
 	private HashSet<ElementFeatures> elementFeatures = new HashSet<ElementFeatures>();
 
 	private HashSet<String> elementTagAttAssertions = new HashSet<String>();
@@ -40,14 +40,14 @@ class StateVertexImpl implements StateVertex {
 		return elementTagAttAssertions;
 	}
 
-	private HashSet<String> patternTagAssertions = new HashSet<String>();
-	public HashSet<String> getPatternTagAssertions() {
-		return patternTagAssertions;
+	private HashSet<String> regionTagAssertions = new HashSet<String>();
+	public HashSet<String> getRegionTagAssertions() {
+		return regionTagAssertions;
 	}
 
-	private HashSet<String> patternFullAssertions = new HashSet<String>();
-	public HashSet<String> getPatternFullAssertions() {
-		return patternFullAssertions;
+	private HashSet<String> regionFullAssertions = new HashSet<String>();
+	public HashSet<String> getRegionFullAssertions() {
+		return regionFullAssertions;
 	}
 
 	/**
@@ -157,7 +157,7 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	//Amin: adding assertion on DOM state
-	public boolean addAssertedElementPattern(AssertedElementPattern aep) {
+	public boolean addAssertedElementRegion(AssertedElementRegion aep) {
 		if(aep==null){
 			//System.out.println("Assertion is not usefull to be added to state " + this.name);
 			return false;
@@ -167,20 +167,20 @@ class StateVertexImpl implements StateVertex {
 			return false;
 		}
 		//System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
-		assertedElementPatterns.add(aep);
+		assertedElementRegions.add(aep);
 		return true;
 	}
 
 	@Override
-	public ArrayList<AssertedElementPattern> getAssertedElementPatters() {
-		return assertedElementPatterns;
+	public ArrayList<AssertedElementRegion> getAssertedElementRegions() {
+		return assertedElementRegions;
 	}
 	
 	@Override
 	//Amin
 	public ArrayList<String> getAssertions() {
 		ArrayList<String> assertions = new ArrayList<String>();
-		for (AssertedElementPattern aep: assertedElementPatterns)
+		for (AssertedElementRegion aep: assertedElementRegions)
 			assertions.add(aep.getAssertion());
 		return assertions;
 	}
@@ -207,13 +207,13 @@ class StateVertexImpl implements StateVertex {
 	}
 
 	@Override
-	public void addPatternTagAssertion(String assertion) {
-		patternTagAssertions.add(assertion);
+	public void addRegionTagAssertion(String assertion) {
+		regionTagAssertions.add(assertion);
 	}
 
 	@Override
-	public void addPatternFullAssertion(String assertion) {
-		patternFullAssertions.add(assertion);
+	public void addRegionFullAssertion(String assertion) {
+		regionFullAssertions.add(assertion);
 	}
 
 	@Override
@@ -222,13 +222,13 @@ class StateVertexImpl implements StateVertex {
 	}
 
 	@Override
-	public void clearPatternTagAssertions() {
-		patternTagAssertions.clear();
+	public void clearRegionTagAssertions() {
+		regionTagAssertions.clear();
 	}
 
 	@Override
-	public void clearPatternFullAssertions() {
-		patternFullAssertions.clear();
+	public void clearRegionFullAssertions() {
+		regionFullAssertions.clear();
 	}
 		
 }

@@ -8,7 +8,7 @@ import java.util.HashSet;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import com.crawljax.util.AssertedElementPattern;
+import com.crawljax.util.AssertedElementRegion;
 import com.crawljax.util.ElementFeatures;
 import com.google.common.collect.ImmutableList;
 
@@ -61,22 +61,22 @@ public interface StateVertex extends Serializable {
 	ImmutableList<Eventable> getUsedEventables();
 	
 	//Amin: Assertions on DOM state
-	boolean addAssertedElementPattern(AssertedElementPattern aep);
+	boolean addAssertedElementRegion(AssertedElementRegion aep);
 	void addElementFeatures(ElementFeatures ef);
 	ArrayList<String> getAssertions();
-	ArrayList<AssertedElementPattern> getAssertedElementPatters();
+	ArrayList<AssertedElementRegion> getAssertedElementRegions();
 	HashSet<ElementFeatures> getElementFeatures();
 
 	void addElementTagAttAssertion(String assertion);
-	void addPatternTagAssertion(String assertion);
-	void addPatternFullAssertion(String assertion);
+	void addRegionTagAssertion(String assertion);
+	void addRegionFullAssertion(String assertion);
 	
 	public HashSet<String> getElementTagAttAssertions();
-	public HashSet<String> getPatternTagAssertions();
-	public HashSet<String> getPatternFullAssertions();
+	public HashSet<String> getRegionTagAssertions();
+	public HashSet<String> getRegionFullAssertions();
 
 	void clearElementTagAttAssertions();
-	void clearPatternTagAssertions();
-	void clearPatternFullAssertions();
+	void clearRegionTagAssertions();
+	void clearRegionFullAssertions();
 
 }

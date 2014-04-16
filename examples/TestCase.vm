@@ -110,7 +110,7 @@ public class ${classname} {
 	}
 
 
-	private boolean isElementPatternTagPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
+	private boolean isElementRegionTagPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
 		try {
 			String source = driver.getPageSource();
 			Document dom = DomUtils.asDocument(source);
@@ -145,7 +145,7 @@ public class ${classname} {
 	}
 
 
-	private boolean isElementPatternFullPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
+	private boolean isElementRegionFullPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
 		try {
 			String source = driver.getPageSource();
 			Document dom = DomUtils.asDocument(source);

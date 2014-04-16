@@ -1,0 +1,2013 @@
+package com.crawljax.plugins.testsuiteextension.generated.wolfcms_EP_temp;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+
+import static org.junit.Assert.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.NodeList;
+
+import com.crawljax.forms.RandomInputValueGenerator;
+import com.crawljax.util.DomUtils;
+
+/*
+ * Generated @ Wed Apr 16 05:41:28 PDT 2014
+ */
+
+public class GeneratedTestCase6 {
+
+	private WebDriver driver;
+	private String url;
+	private boolean acceptNextAlert = true;
+	private StringBuffer verificationErrors = new StringBuffer();
+
+	private DOMElement element;
+	private DOMElement parentElement;
+	private ArrayList<DOMElement> childrenElements = new ArrayList<DOMElement>();
+	private String DOM = null;
+
+	boolean getCoverageReport = false;
+
+	@Before
+	public void setUp() throws Exception {
+		// Setting the JavaScript code coverage switch
+		getCoverageReport = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.getCoverageReport();
+	    if (getCoverageReport)
+	    	driver = new FirefoxDriver(getProfile());
+	    else
+			driver = new FirefoxDriver();
+		url = "http://localhost:8888/wolfcms/?/admin/";
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+	
+	public static FirefoxProfile getProfile() {
+		FirefoxProfile profile = new FirefoxProfile();
+		profile.setPreference("network.proxy.http", "localhost");
+		profile.setPreference("network.proxy.http_port", 3128);
+		profile.setPreference("network.proxy.type", 1);
+		/* use proxy for everything, including localhost */
+		profile.setPreference("network.proxy.no_proxies_on", "");
+		return profile;
+	}	
+
+	@After
+	public void tearDown() throws Exception {
+	    if (getCoverageReport)
+	    	((JavascriptExecutor) driver).executeScript(" if (window.jscoverage_report) {return jscoverage_report('CodeCoverageReport');}");
+		driver.quit();
+		String verificationErrorString = verificationErrors.toString();
+		if (!"".equals(verificationErrorString)) {
+			fail(verificationErrorString);
+		}
+	}
+
+
+	/*
+	 * Test Cases
+	 */
+	 
+	@Test
+	public void method6(){
+		driver.get(url);
+		//From state 0 to state 1
+		//Eventable{eventType=click, identification=xpath //input[@value='Login'], element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={accesskey=s, class=submit, type=submit, value=Login}}, source=StateVertexImpl{id=0, name=index}, target=StateVertexImpl{id=1, name=state1}}
+		mutateDOMTree(0);
+		checkState0_OriginalAssertions();
+		checkState0_ReusedAssertions();
+		checkState0_GeneratedAssertions();
+		checkState0_LearnedAssertions();
+		checkState0_AllAssertions();
+		checkState0_RandAssertions1();
+		checkState0_RandAssertions2();
+		checkState0_RandAssertions3();
+		checkState0_RandAssertions4();
+		checkState0_RandAssertions5();
+		driver.findElement(By.id("login-username")).clear();
+		driver.findElement(By.id("login-username")).sendKeys("admin");
+		driver.findElement(By.id("login-password")).clear();
+		driver.findElement(By.id("login-password")).sendKeys("admin");
+		driver.findElement(By.xpath("//input[@value='Login']")).click();
+		//From state 1 to state 2
+		//Eventable{eventType=click, identification=xpath //div[@class='page']/span/a/span[text()='Home Page']/../../../../div[@class="modify"]/a/img[@title='Add child'], element=Element{node=[IMG: null], tag=IMG, text=, attributes={align=middle, alt=Add child, src=/wolfcms/wolf/admin/images/plus.png, title=Add child}}, source=StateVertexImpl{id=1, name=state1}, target=StateVertexImpl{id=2, name=state2}}
+		mutateDOMTree(1);
+		checkState1_OriginalAssertions();
+		checkState1_ReusedAssertions();
+		checkState1_GeneratedAssertions();
+		checkState1_LearnedAssertions();
+		checkState1_AllAssertions();
+		checkState1_RandAssertions1();
+		checkState1_RandAssertions2();
+		checkState1_RandAssertions3();
+		checkState1_RandAssertions4();
+		checkState1_RandAssertions5();
+		driver.findElement(By.xpath("//div[@class='page']/span/a/span[text()='Home Page']/../../../../div[@class=\"modify\"]/a/img[@title='Add child']")).click();
+		//From state 2 to state 4
+		//Eventable{eventType=click, identification=text Metadata, element=Element{node=[A: null], tag=A, text=Metadata, attributes={href=#metadata}}, source=StateVertexImpl{id=2, name=state2}, target=StateVertexImpl{id=4, name=state4}}
+		mutateDOMTree(2);
+		checkState2_OriginalAssertions();
+		checkState2_ReusedAssertions();
+		checkState2_GeneratedAssertions();
+		checkState2_LearnedAssertions();
+		checkState2_AllAssertions();
+		checkState2_RandAssertions1();
+		checkState2_RandAssertions2();
+		checkState2_RandAssertions3();
+		checkState2_RandAssertions4();
+		checkState2_RandAssertions5();
+		driver.findElement(By.id("part_0_content")).clear();
+		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
+		driver.findElement(By.id("page_title")).clear();
+		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		driver.findElement(By.id("page_title")).sendKeys(RandValue);
+		driver.findElement(By.linkText("Metadata")).click();
+		//From state 4 to state 5
+		//Eventable{eventType=click, identification=name commit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={accesskey=s, class=button, name=commit, type=submit, value=Save and Close}}, source=StateVertexImpl{id=4, name=state4}, target=StateVertexImpl{id=5, name=state5}}
+		mutateDOMTree(4);
+		checkState4_OriginalAssertions();
+		checkState4_ReusedAssertions();
+		checkState4_GeneratedAssertions();
+		checkState4_LearnedAssertions();
+		checkState4_AllAssertions();
+		checkState4_RandAssertions1();
+		checkState4_RandAssertions2();
+		checkState4_RandAssertions3();
+		checkState4_RandAssertions4();
+		checkState4_RandAssertions5();
+		driver.findElement(By.name("commit")).click();
+		//From state 5 to state 71
+		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=reorder, attributes={href=#, id=toggle_reorder}}, source=StateVertexImpl{id=5, name=state5}, target=StateVertexImpl{id=71, name=state71}}
+		mutateDOMTree(5);
+		checkState5_OriginalAssertions();
+		checkState5_ReusedAssertions();
+		checkState5_GeneratedAssertions();
+		checkState5_LearnedAssertions();
+		checkState5_AllAssertions();
+		checkState5_RandAssertions1();
+		checkState5_RandAssertions2();
+		checkState5_RandAssertions3();
+		checkState5_RandAssertions4();
+		checkState5_RandAssertions5();
+		driver.findElement(By.xpath("/HTML[1]/BODY[1]/DIV[4]/DIV[1]/DIV[1]/DIV[1]/DIV[1]/A[1]")).click();
+		//Sink node at state 71
+		mutateDOMTree(71);
+		checkState71_OriginalAssertions();
+		checkState71_ReusedAssertions();
+		checkState71_GeneratedAssertions();
+		checkState71_LearnedAssertions();
+		checkState71_AllAssertions();
+		checkState71_RandAssertions1();
+		checkState71_RandAssertions2();
+		checkState71_RandAssertions3();
+		checkState71_RandAssertions4();
+		checkState71_RandAssertions5();
+	}
+
+
+
+	public void checkState0_OriginalAssertions(){
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())) System.out.println("177"); // original assertion
+
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))) System.out.println("179"); // original assertion
+
+	}
+
+	public void checkState0_ReusedAssertions(){
+	}
+
+	public void checkState0_GeneratedAssertions(){
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("191"); // generated assertion in case of AEP for Original
+
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("197"); // generated assertion in case of AEP for Original
+
+//		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("199"); // generated assertion in case of ElementTagAttMatch
+
+	}
+
+	public void checkState0_LearnedAssertions(){
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("209"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("217"); // predicted pattern assertion
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"clean\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("222"); // predicted pattern assertion
+
+	}
+
+	public void checkState0_AllAssertions(){
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())) System.out.println("227"); // original assertion
+
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))) System.out.println("229"); // original assertion
+
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("235"); // generated assertion in case of AEP for Original
+
+//		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("237"); // generated assertion in case of ElementTagAttMatch
+
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("243"); // generated assertion in case of AEP for Original
+
+	}
+
+	public void checkState0_RandAssertions1(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[2]")))) System.out.println("248"); // Random element assertion
+if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[5]/INPUT")))) System.out.println("249"); // Random element assertion
+element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"login-username\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("254"); // Random pattern assertion
+element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("260"); // Random pattern assertion
+element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("id=\"login-redirect\"","name=\"login[redirect]\"","type=\"hidden\"","value=\"/wolfcms/?/admin/\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("264"); // Random pattern assertion
+
+	}
+
+	public void checkState0_RandAssertions2(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/H1")))) System.out.println("269"); // Random element assertion
+if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[2]/INPUT")))) System.out.println("270"); // Random element assertion
+element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\"")));
+		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("275"); // Random pattern assertion
+element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","id=\"login-remember-me\"","name=\"login[remember]\"","type=\"checkbox\"","value=\"checked\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("id=\"login-redirect\"","name=\"login[redirect]\"","type=\"hidden\"","value=\"/wolfcms/?/admin/\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("286"); // Random pattern assertion
+element = new DOMElement("TITLE", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("291"); // Random pattern assertion
+
+	}
+
+	public void checkState0_RandAssertions3(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV/INPUT")))) System.out.println("296"); // Random element assertion
+if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT")))) System.out.println("297"); // Random element assertion
+element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("for=\"login-username\""))));
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"medium\"","id=\"login-username\"","name=\"login[username]\"","type=\"text\"","value=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("306"); // Random pattern assertion
+element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"medium\"","id=\"login-username\"","name=\"login[username]\"","type=\"text\"","value=\"\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("310"); // Random pattern assertion
+element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dialog\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("H1", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("319"); // Random pattern assertion
+
+	}
+
+	public void checkState0_RandAssertions4(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV")))) System.out.println("324"); // Random element assertion
+if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[4]/INPUT[2]")))) System.out.println("325"); // Random element assertion
+element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","type=\"text/javascript\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("330"); // Random pattern assertion
+element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("accesskey=\"s\"","class=\"submit\"","type=\"submit\"","value=\"Login\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("339"); // Random pattern assertion
+element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("for=\"login-username\""))));
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"medium\"","id=\"login-username\"","name=\"login[username]\"","type=\"text\"","value=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("348"); // Random pattern assertion
+
+	}
+
+	public void checkState0_RandAssertions5(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/P/A")))) System.out.println("353"); // Random element assertion
+if(!(isElementPresent(By.xpath("/HTML/BODY/DIV")))) System.out.println("354"); // Random element assertion
+element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("359"); // Random pattern assertion
+element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","src=\"/wolfcms/wolf/admin/javascripts/jquery-1.6.2.min.js\"","type=\"text/javascript\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("363"); // Random pattern assertion
+element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("370"); // Random pattern assertion
+
+	}
+
+	public void checkState1_OriginalAssertions(){
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())) System.out.println("375"); // original assertion
+
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("377"); // original assertion
+
+	}
+
+	public void checkState1_ReusedAssertions(){
+	}
+
+	public void checkState1_GeneratedAssertions(){
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("395"); // generated assertion in case of AEP for Original
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("407"); // generated assertion in case of AEP for Original
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("415"); // generated assertion in case of PatternTagMatch
+
+		if(!(isElementPresent(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")))) System.out.println("417"); // generated assertion in case of ElementTagAttMatch
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/15\"","title=\"15 | \"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("423"); // generated assertion in case of PatternTagMatch
+
+	}
+
+	public void checkState1_LearnedAssertions(){
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_9\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("440"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/12\"","title=\"12 | rnd-xfob\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("446"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/11\"","title=\"11 | rnd-fpya\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-11\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("460"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/13\"","title=\"13 | rnd-wjen\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("466"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_7\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("480"); // predicted pattern assertion
+
+	}
+
+	public void checkState1_AllAssertions(){
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())) System.out.println("485"); // original assertion
+
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("487"); // original assertion
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("499"); // generated assertion in case of AEP for Original
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("507"); // generated assertion in case of PatternTagMatch
+
+		if(!(isElementPresent(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")))) System.out.println("509"); // generated assertion in case of ElementTagAttMatch
+
+	}
+
+	public void checkState1_RandAssertions1(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/DIV[4]/A")))) System.out.println("514"); // Random element assertion
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[13]/SPAN/DIV/SPAN/A/IMG")))) System.out.println("515"); // Random element assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/markdown/markdown.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("519"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/12\"","title=\"12 | rnd-xfob\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("524"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-4\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("528"); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-password-div\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("for=\"login-password\""))));
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("class=\"medium\"","id=\"login-password\"","name=\"login[password]\"","type=\"password\"","value=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("537"); // Random pattern assertion
+	}
+
+	public void checkState1_RandAssertions2(){
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[8]/SPAN/DIV[3]")))) System.out.println("541"); // Random element assertion
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[12]")))) System.out.println("542"); // Random element assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/4\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Add child\"","src=\"/wolfcms/wolf/admin/images/plus.png\"","title=\"Add child\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("547"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"snippet-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/snippet\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("552"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/14\"","title=\"14 | rnd-wctn\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("557"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/14\"","title=\"14 | rnd-wctn\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-14\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("570"); // Random pattern assertion
+	}
+
+	public void checkState1_RandAssertions3(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[3]/SPAN")))) System.out.println("574"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV/SPAN")))) System.out.println("575"); // Random element assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Remove page\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Remove page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/13?csrf_token=a1d873af4f2dd32363aea4066e8af9f5225a7069171ec8628e5141d1ed13b30b\"","onclick=\"return confirm('Are you sure you wish to delete RND-wjEn and its underlying pages?');\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("579"); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\"")));
+		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("584"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-12\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("588"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"layout-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("593"); // Random pattern assertion
+	}
+
+	public void checkState1_RandAssertions4(){
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[8]/SPAN/DIV/SPAN/A/IMG")))) System.out.println("597"); // Random element assertion
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[10]/SPAN/DIV/SPAN/A")))) System.out.println("598"); // Random element assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/11?csrf_token=aecdfcb581142f4808b483360917d2a39ba7fb5dc47724ec4baf820898c7bc43\"","onclick=\"return confirm('Are you sure you wish to delete RND-FPYA and its underlying pages?');\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Remove page\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Remove page\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("603"); // Random pattern assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/markitup/skins/simple/style.css\"","rel=\"stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("607"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("614"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_5\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("627"); // Random pattern assertion
+	}
+
+	public void checkState1_RandAssertions5(){
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[10]/SPAN/DIV[4]/A[2]/IMG")))) System.out.println("631"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]")))) System.out.println("632"); // Random element assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"view-page\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?rnd-arfe.html\"","target=\"_blank\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("637"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-2\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("641"); // Random pattern assertion
+		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("accesskey=\"s\"","class=\"submit\"","type=\"submit\"","value=\"Login\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("645"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"View Page\"","src=\"/wolfcms/wolf/admin/images/magnify.png\"","title=\"View Page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?test.html\"","target=\"_blank\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("649"); // Random pattern assertion
+	}
+
+	public void checkState2_OriginalAssertions(){
+		if(!helper.equals("Pages - Add | Wolf CMS", driver.getTitle())) System.out.println("653"); // original assertion
+
+	}
+
+	public void checkState2_ReusedAssertions(){
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("658"); // reused assertion in case of ElementFullMatch
+	}
+
+	public void checkState2_GeneratedAssertions(){
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("672"); // generated assertion in case of PatternFullMatch
+
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("674"); // generated assertion in case of ElementTagAttMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("686"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("694"); // generated assertion in case of PatternTagMatch
+
+	}
+
+	public void checkState2_LearnedAssertions(){
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"mainTabs\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("705"); // predicted pattern assertion
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("717"); // predicted pattern assertion
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"buttons\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/page/add\"","id=\"page_edit_form\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("accesskey=\"s\"","class=\"button\"","name=\"commit\"","type=\"submit\"","value=\"Save and Close\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("accesskey=\"e\"","class=\"button\"","name=\"continue\"","type=\"submit\"","value=\"Save and Continue Editing\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/page\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("729"); // predicted pattern assertion
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"row\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_status_id\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\""))));
+		childrenElements.add(new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("738"); // predicted pattern assertion
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_page_add\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"site-title\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"mainTabs\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("748"); // predicted pattern assertion
+
+	}
+
+	public void checkState2_AllAssertions(){
+		if(!helper.equals("Pages - Add | Wolf CMS", driver.getTitle())) System.out.println("753"); // original assertion
+
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("755"); // reused assertion in case of ElementFullMatch
+
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("757"); // generated assertion in case of ElementTagAttMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("769"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("777"); // generated assertion in case of PatternTagMatch
+
+	}
+
+	public void checkState2_RandAssertions1(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV/UL/LI")))) System.out.println("782"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV[5]/P/SELECT/OPTION[4]")))) System.out.println("783"); // Random element assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"content tabs\"","id=\"metainfo-tabs\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"form-area\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"tabNavigation\""))));
+		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("790"); // Random pattern assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("804"); // Random pattern assertion
+		element = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_behavior_id\"","name=\"page[behavior_id]\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"field\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"page_not_found\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("813"); // Random pattern assertion
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"row\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_status_id\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\""))));
+		childrenElements.add(new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("821"); // Random pattern assertion
+	}
+
+	public void checkState2_RandAssertions2(){
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[6]")))) System.out.println("825"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/P/INPUT")))) System.out.println("826"); // Random element assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/markdown/markdown.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("830"); // Random pattern assertion
+		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"textbox\"","id=\"page_slug\"","maxlength=\"100\"","name=\"page[slug]\"","size=\"100\"","type=\"text\"","value=\"\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"field\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("834"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"layout-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("839"); // Random pattern assertion
+		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"textbox\"","id=\"page_keywords\"","maxlength=\"255\"","name=\"page[keywords]\"","size=\"255\"","type=\"text\"","value=\"\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"field\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("843"); // Random pattern assertion
+	}
+
+	public void checkState2_RandAssertions3(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV[2]/DIV")))) System.out.println("847"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV/UL")))) System.out.println("848"); // Random element assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"delete-part\"","title=\"Remove Tab\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"tab_toolbar\"","id=\"tab-toolbar\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"Remove Tab icon\"","src=\"/wolfcms/wolf/admin/images/minus.png\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("853"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"textile\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("class=\"filter-selector\"","id=\"part_0_filter_id\"","name=\"part[0][filter_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("858"); // Random pattern assertion
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_layout_id\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"label\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("863"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"page_not_found\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_behavior_id\"","name=\"page[behavior_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("868"); // Random pattern assertion
+	}
+
+	public void checkState2_RandAssertions4(){
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]")))) System.out.println("872"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]")))) System.out.println("873"); // Random element assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"tab\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"tabNavigation\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"#settings\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("878"); // Random pattern assertion
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_tags\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"label optional\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("883"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"0\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_layout_id\"","name=\"page[layout_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("888"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"2\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_layout_id\"","name=\"page[layout_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("893"); // Random pattern assertion
+	}
+
+	public void checkState2_RandAssertions5(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV[2]/DIV[3]/DIV/TABLE/TBODY/TR/TD[2]")))) System.out.println("897"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[4]")))) System.out.println("898"); // Random element assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"add-part\"","title=\"Add Tab\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"tab_toolbar\"","id=\"tab-toolbar\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"Add Tab icon\"","src=\"/wolfcms/wolf/admin/images/plus.png\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("903"); // Random pattern assertion
+		element = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\"")));
+		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"1\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"10\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("value=\"100\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"101\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("value=\"200\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("918"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"200\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("923"); // Random pattern assertion
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("934"); // Random pattern assertion
+	}
+
+	public void checkState4_OriginalAssertions(){
+	}
+
+	public void checkState4_ReusedAssertions(){
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("941"); // reused assertion in case of ElementFullMatch
+	}
+
+	public void checkState4_GeneratedAssertions(){
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("955"); // generated assertion in case of PatternFullMatch
+
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("957"); // generated assertion in case of ElementTagAttMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("969"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("977"); // generated assertion in case of PatternTagMatch
+
+	}
+
+	public void checkState4_LearnedAssertions(){
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"mainTabs\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("988"); // predicted pattern assertion
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1000"); // predicted pattern assertion
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("class=\"buttons\"")));
+		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/page/add\"","id=\"page_edit_form\"","method=\"post\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("accesskey=\"s\"","class=\"button\"","name=\"commit\"","type=\"submit\"","value=\"Save and Close\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("accesskey=\"e\"","class=\"button\"","name=\"continue\"","type=\"submit\"","value=\"Save and Continue Editing\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/page\""))));
+		childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1012"); // predicted pattern assertion
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_page_add\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"site-title\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"mainTabs\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1022"); // predicted pattern assertion
+
+		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"div-metadata\"","title=\"Metadata\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1029"); // predicted pattern assertion
+
+	}
+
+	public void checkState4_AllAssertions(){
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1034"); // reused assertion in case of ElementFullMatch
+
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("1036"); // generated assertion in case of ElementTagAttMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1048"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1056"); // generated assertion in case of PatternTagMatch
+
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p")))) System.out.println("1058"); // generated assertion in case of ElementTagAttMatch
+
+	}
+
+	public void checkState4_RandAssertions1(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV/UL/LI")))) System.out.println("1063"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV[5]/P/SELECT/OPTION[4]")))) System.out.println("1064"); // Random element assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"content tabs\"","id=\"metainfo-tabs\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"form-area\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"tabNavigation\""))));
+		childrenElements.add(new DOMElement("UL", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1071"); // Random pattern assertion
+		element = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("TR", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1085"); // Random pattern assertion
+		element = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_behavior_id\"","name=\"page[behavior_id]\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"field\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"page_not_found\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1094"); // Random pattern assertion
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"row\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_status_id\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\""))));
+		childrenElements.add(new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1102"); // Random pattern assertion
+	}
+
+	public void checkState4_RandAssertions2(){
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[6]")))) System.out.println("1106"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/P/INPUT")))) System.out.println("1107"); // Random element assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/markdown/markdown.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1111"); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"delete-part\"","title=\"Remove Tab\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"tab_toolbar\"","id=\"tab-toolbar\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"Remove Tab icon\"","src=\"/wolfcms/wolf/admin/images/minus.png\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1116"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"layout-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1121"); // Random pattern assertion
+		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"textbox\"","id=\"page_keywords\"","maxlength=\"255\"","name=\"page[keywords]\"","size=\"255\"","type=\"text\"","value=\"\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"field\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1125"); // Random pattern assertion
+	}
+
+	public void checkState4_RandAssertions3(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV[2]/DIV")))) System.out.println("1129"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]")))) System.out.println("1130"); // Random element assertion
+		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"textbox\"","id=\"page_slug\"","maxlength=\"100\"","name=\"page[slug]\"","size=\"100\"","type=\"text\"","value=\"\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"field\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1134"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"textile\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("class=\"filter-selector\"","id=\"part_0_filter_id\"","name=\"part[0][filter_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1139"); // Random pattern assertion
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_layout_id\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"label\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1144"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"page_not_found\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_behavior_id\"","name=\"page[behavior_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1149"); // Random pattern assertion
+	}
+
+	public void checkState4_RandAssertions4(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV/UL")))) System.out.println("1153"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]")))) System.out.println("1154"); // Random element assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"tab\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("class=\"tabNavigation\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"#settings\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1159"); // Random pattern assertion
+		element = new DOMElement("LABEL", "", new ArrayList<String>(Arrays.asList("for=\"page_tags\"")));
+		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"label optional\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1164"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"0\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_layout_id\"","name=\"page[layout_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1169"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"2\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_layout_id\"","name=\"page[layout_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1174"); // Random pattern assertion
+	}
+
+	public void checkState4_RandAssertions5(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/FORM/DIV/DIV[2]/DIV[3]/DIV/TABLE/TBODY/TR/TD[2]")))) System.out.println("1178"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[4]")))) System.out.println("1179"); // Random element assertion
+		element = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\"")));
+		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("selected=\"selected\"","value=\"1\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"10\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("value=\"100\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"101\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("value=\"200\""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1194"); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"add-part\"","title=\"Add Tab\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"tab_toolbar\"","id=\"tab-toolbar\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"Add Tab icon\"","src=\"/wolfcms/wolf/admin/images/plus.png\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1199"); // Random pattern assertion
+		element = new DOMElement("OPTION", "", new ArrayList<String>(Arrays.asList("value=\"200\"")));
+		parentElement = new DOMElement("SELECT", "", new ArrayList<String>(Arrays.asList("id=\"page_status_id\"","name=\"page[status_id]\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1204"); // Random pattern assertion
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1215"); // Random pattern assertion
+	}
+
+	public void checkState5_OriginalAssertions(){
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())) System.out.println("1219"); // original assertion
+
+	}
+
+	public void checkState5_ReusedAssertions(){
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1224"); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != "")) System.out.println("1225"); // reused assertion in case of ElementFullMatch
+		if(!helper.equals("Page has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())) System.out.println("1226"); // reused assertion in case of ElementFullMatch
+		if(!(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!']")))) System.out.println("1227"); // reused assertion in case of ElementFullMatch
+	}
+
+	public void checkState5_GeneratedAssertions(){
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1241"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/15\"","title=\"15 | \"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1247"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"message\"","id=\"success\"","style=\"display: none\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_page_index\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1253"); // generated assertion in case of PatternTagAttMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1265"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1273"); // generated assertion in case of PatternTagMatch
+
+	}
+
+	public void checkState5_LearnedAssertions(){
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_9\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1290"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/12\"","title=\"12 | rnd-xfob\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1296"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/11\"","title=\"11 | rnd-fpya\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-11\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1310"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/13\"","title=\"13 | rnd-wjen\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1316"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_7\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1330"); // predicted pattern assertion
+
+	}
+
+	public void checkState5_AllAssertions(){
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())) System.out.println("1335"); // original assertion
+
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1337"); // reused assertion in case of ElementFullMatch
+
+		if(!(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != "")) System.out.println("1339"); // reused assertion in case of ElementFullMatch
+
+		if(!helper.equals("Page has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())) System.out.println("1341"); // reused assertion in case of ElementFullMatch
+
+		if(!(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!']")))) System.out.println("1343"); // reused assertion in case of ElementFullMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1355"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/15\"","title=\"15 | \"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1361"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"message\"","id=\"success\"","style=\"display: none\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_page_index\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1367"); // generated assertion in case of PatternTagAttMatch
+
+	}
+
+	public void checkState5_RandAssertions1(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV[4]/A/IMG")))) System.out.println("1372"); // Random element assertion
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[7]/SPAN/DIV[3]/A/IMG")))) System.out.println("1373"); // Random element assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/markdown/markdown.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1377"); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/13\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/13?csrf_token=8fa5a6389497f1aa7f4047702b011c732f564e1758bef60eaba8097349c93df1\"","onclick=\"return confirm('Are you sure you wish to delete RND-wjEn and its underlying pages?');\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-13\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1388"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-4\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1392"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/14\"","title=\"14 | rnd-wctn\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1397"); // Random pattern assertion
+	}
+
+	public void checkState5_RandAssertions2(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[4]/SPAN/DIV/SPAN/IMG")))) System.out.println("1401"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV/SPAN/IMG[2]")))) System.out.println("1402"); // Random element assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"title\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/12\"","title=\"12 | rnd-xfob\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1407"); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/11\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/11?csrf_token=466893d0dff39ae2b939be99b5e34fe990bb5ca666797a9517a484f1a959de5e\"","onclick=\"return confirm('Are you sure you wish to delete RND-FPYA and its underlying pages?');\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-11\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1418"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/14\"","title=\"14 | rnd-wctn\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-14\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1431"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-12\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1435"); // Random pattern assertion
+	}
+
+	public void checkState5_RandAssertions3(){
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]")))) System.out.println("1439"); // Random element assertion
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[8]/SPAN/DIV/SPAN/IMG[3]")))) System.out.println("1440"); // Random element assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Remove page\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Remove page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/4?csrf_token=0f46839186f94b5add5e7b243a1d10024975d67ca39de0fbac05793a0801b605\"","onclick=\"return confirm('Are you sure you wish to delete RND-macI and its underlying pages?');\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1444"); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/4\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Add child\"","src=\"/wolfcms/wolf/admin/images/plus.png\"","title=\"Add child\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1449"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"layout-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1454"); // Random pattern assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/9\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/9?csrf_token=0a2f4962b5171410ad5ff8e4495e3894ce68c2d7120425515055feda45c81da9\"","onclick=\"return confirm('Are you sure you wish to delete RND-NGny and its underlying pages?');\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-9\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1465"); // Random pattern assertion
+	}
+
+	public void checkState5_RandAssertions4(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[5]/SPAN/DIV/SPAN/A/SPAN")))) System.out.println("1469"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[5]/P[2]/A[3]")))) System.out.println("1470"); // Random element assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"snippet-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/snippet\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1475"); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\"")));
+		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1480"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_5\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1493"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"View Page\"","src=\"/wolfcms/wolf/admin/images/magnify.png\"","title=\"View Page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?test.html\"","target=\"_blank\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1497"); // Random pattern assertion
+	}
+
+	public void checkState5_RandAssertions5(){
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[11]/SPAN/DIV[3]")))) System.out.println("1501"); // Random element assertion
+//		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[9]/SPAN/DIV/SPAN/A")))) System.out.println("1502"); // Random element assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/markitup/skins/simple/style.css\"","rel=\"stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1506"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-2\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1510"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"page-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"current\"","href=\"http://localhost:8888/wolfcms/?/admin/page\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1515"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Copy Page\"","src=\"/wolfcms/wolf/admin/images/copy.png\"","title=\"Copy Page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-5\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1519"); // Random pattern assertion
+	}
+
+	public void checkState71_OriginalAssertions(){
+	}
+
+	public void checkState71_ReusedAssertions(){
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1526"); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != "")) System.out.println("1527"); // reused assertion in case of ElementFullMatch
+		if(!helper.equals("Page has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())) System.out.println("1528"); // reused assertion in case of ElementFullMatch
+		if(!(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!']")))) System.out.println("1529"); // reused assertion in case of ElementFullMatch
+	}
+
+	public void checkState71_GeneratedAssertions(){
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1543"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"message\"","id=\"success\"","style=\"display: none\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_page_index\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1549"); // generated assertion in case of PatternTagAttMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1561"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1569"); // generated assertion in case of PatternTagMatch
+
+//		if(!(isElementPresent(By.xpath("//div[text()='User has been added!']")))) System.out.println("1571"); // generated assertion in case of ElementTagAttMatch
+
+	}
+
+	public void checkState71_LearnedAssertions(){
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_9\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1588"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_10\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status draft-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1602"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/9\"","title=\"9 | \""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\"","style=\"display: inline;\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-9\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1616"); // predicted pattern assertion
+
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_7\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1630"); // predicted pattern assertion
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1636"); // predicted pattern assertion
+
+	}
+
+	public void checkState71_AllAssertions(){
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1641"); // reused assertion in case of ElementFullMatch
+
+		if(!(driver.findElement(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span")).getText() != "")) System.out.println("1643"); // reused assertion in case of ElementFullMatch
+
+		if(!helper.equals("Page has been saved!", driver.findElement(By.xpath("//div[@class='message']")).getText())) System.out.println("1645"); // reused assertion in case of ElementFullMatch
+
+		if(!(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!']")))) System.out.println("1647"); // reused assertion in case of ElementFullMatch
+
+		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://forum.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1659"); // generated assertion in case of PatternFullMatch
+
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"message\"","id=\"success\"","style=\"display: none\"")));
+		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_page_index\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1665"); // generated assertion in case of PatternTagAttMatch
+
+	}
+
+	public void checkState71_RandAssertions1(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV[4]/A/IMG")))) System.out.println("1670"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[7]/SPAN/DIV[3]/A/IMG")))) System.out.println("1671"); // Random element assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/markdown/markdown.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1675"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Remove page\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Remove page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/8?csrf_token=c0cc8ebf4dda8b58ebfecb6f9759ff99c9a542fd1e0a021c9eb4bc4a3132dde1\"","onclick=\"return confirm('Are you sure you wish to delete RND-intG and its underlying pages?');\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1679"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-4\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1683"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/6\"","title=\"6 | rnd-mdkp\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\"","style=\"display: inline;\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-6\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1696"); // Random pattern assertion
+	}
+
+	public void checkState71_RandAssertions2(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[4]/SPAN/DIV/SPAN/IMG")))) System.out.println("1700"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV/SPAN/IMG[2]")))) System.out.println("1701"); // Random element assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/4\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Add child\"","src=\"/wolfcms/wolf/admin/images/plus.png\"","title=\"Add child\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1706"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/7\"","title=\"7 | rnd-nmmw\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\"","style=\"display: inline;\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-7\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1719"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"layout-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1724"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_5\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"status published-status\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"view-page\""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1737"); // Random pattern assertion
+	}
+
+	public void checkState71_RandAssertions3(){
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[10]")))) System.out.println("1741"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[8]/SPAN/DIV/SPAN/IMG[3]")))) System.out.println("1742"); // Random element assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"snippet-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/snippet\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1747"); // Random pattern assertion
+		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\"")));
+		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1752"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/9\"","title=\"9 | \""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\"","style=\"display: inline;\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-9\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1765"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"View Page\"","src=\"/wolfcms/wolf/admin/images/magnify.png\"","title=\"View Page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?test.html\"","target=\"_blank\"")));
+		childrenElements.clear();
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1769"); // Random pattern assertion
+	}
+
+	public void checkState71_RandAssertions4(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[5]/P[2]/A[3]")))) System.out.println("1773"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[5]/SPAN/DIV/SPAN/A/SPAN")))) System.out.println("1774"); // Random element assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/6\"","title=\"6 | rnd-mdkp\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\"","style=\"display: inline;\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-6\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1787"); // Random pattern assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/markitup/skins/simple/style.css\"","rel=\"stylesheet\"","type=\"text/css\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1791"); // Random pattern assertion
+		element = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"page-plugin\"")));
+		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"current\"","href=\"http://localhost:8888/wolfcms/?/admin/page\""))));
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1796"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Copy Page\"","src=\"/wolfcms/wolf/admin/images/copy.png\"","title=\"Copy Page\"")));
+		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-5\"")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1800"); // Random pattern assertion
+	}
+
+	public void checkState71_RandAssertions5(){
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI[9]/SPAN/DIV/SPAN/A")))) System.out.println("1804"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV[2]")))) System.out.println("1805"); // Random element assertion
+		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"view-page\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?rnd-arfe.html\"","target=\"_blank\""))));
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1810"); // Random pattern assertion
+		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-2\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
+		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		childrenElements.clear();
+		if(!(isElementPatternTagPresent(parentElement , element, childrenElements))) System.out.println("1814"); // Random pattern assertion
+		element = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
+		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"page\"")));
+		childrenElements.clear();
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/2\"","title=\"2 | test\""))));
+		childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag and Drop\"","class=\"handle_reorder\"","src=\"/wolfcms/wolf/admin/images/drag_to_sort.gif\"","style=\"display: inline;\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Drag to Copy\"","class=\"handle_copy\"","src=\"/wolfcms/wolf/admin/images/drag_to_copy.gif\""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-2\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
+		childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
+//		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1827"); // Random pattern assertion
+		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/images/favicon.ico\"","rel=\"favourites icon\"")));
+		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
+		childrenElements.clear();
+		if(!(isElementPatternFullPresent(parentElement , element, childrenElements))) System.out.println("1831"); // Random pattern assertion
+	}
+
+
+
+	/*
+	 * Auxiliary methods 
+	 */
+
+	private boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+	}
+
+
+	private boolean isElementPatternTagPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
+		try {
+			String source = driver.getPageSource();
+			Document dom = DomUtils.asDocument(source);
+
+			NodeList nodeList = dom.getElementsByTagName(element.getTagName());
+			org.w3c.dom.Element sourceElement = null;
+
+			for (int i = 0; i < nodeList.getLength(); i++){
+				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
+
+				// check parent node's tag and attributes
+				String parentTagName = sourceElement.getParentNode().getNodeName();
+				if (!parentTagName.equals(parent.getTagName()))
+					continue;
+		
+				// check children nodes' tags
+				HashSet<String> childrenTagNameFromDOM = new HashSet<String>();				
+				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
+					childrenTagNameFromDOM.add(sourceElement.getChildNodes().item(j).getNodeName());
+				HashSet<String> childrenTagNameToTest = new HashSet<String>();				
+				for (int k=0; k<children.size();k++)
+					childrenTagNameToTest.add(children.get(k).getTagName());
+				if (!childrenTagNameToTest.equals(childrenTagNameFromDOM))
+					continue;
+
+				return true;		
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+
+	private boolean isElementPatternFullPresent(DOMElement parent, DOMElement element, ArrayList<DOMElement> children) {
+		try {
+			String source = driver.getPageSource();
+			Document dom = DomUtils.asDocument(source);
+
+			NodeList nodeList = dom.getElementsByTagName(element.getTagName());
+			org.w3c.dom.Element sourceElement = null;
+
+			for (int i = 0; i < nodeList.getLength(); i++){
+				// check node's attributes
+				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
+				NamedNodeMap elementAttList = sourceElement.getAttributes();
+				HashSet<String> elemetAtts = new HashSet<String>();
+				for (int j = 0; j < elementAttList.getLength(); j++)
+					elemetAtts.add(elementAttList.item(j).getNodeName() + "=\"" + elementAttList.item(j).getNodeValue() + "\"");
+				if (!element.getAttributes().equals(elemetAtts))
+					continue;
+				
+				// check parent node's tag and attributes
+				String parentTagName = sourceElement.getParentNode().getNodeName();
+				if (!parentTagName.equals(parent.getTagName()))
+					continue;
+				NamedNodeMap parentAttList = sourceElement.getParentNode().getAttributes();
+				HashSet<String> parentAtts = new HashSet<String>();
+				for (int j = 0; j < parentAttList.getLength(); j++)
+					parentAtts.add(parentAttList.item(j).getNodeName() + "=\"" + parentAttList.item(j).getNodeValue() + "\"");
+				if (!parent.getAttributes().equals(parentAtts))
+					continue;
+		
+				// check children nodes' tags
+				HashSet<String> childrenTagNameFromDOM = new HashSet<String>();				
+				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
+					childrenTagNameFromDOM.add(sourceElement.getChildNodes().item(j).getNodeName());
+				HashSet<String> childrenTagNameToTest = new HashSet<String>();				
+				for (int k=0; k<children.size();k++)
+					childrenTagNameToTest.add(children.get(k).getTagName());
+				if (!childrenTagNameToTest.equals(childrenTagNameFromDOM))
+					continue;
+				
+				// check children nodes' attributes
+				HashSet<HashSet<String>> childrenAttsFromDOM = new HashSet<HashSet<String>>();				
+				for (int j=0; j<sourceElement.getChildNodes().getLength();j++){
+					NamedNodeMap childAttListFromDOM = sourceElement.getChildNodes().item(j).getAttributes();
+					HashSet<String> childAtts = new HashSet<String>();
+					if (childAttListFromDOM!=null)
+						for (int k = 0; k < childAttListFromDOM.getLength(); k++)
+							childAtts.add(childAttListFromDOM.item(k).getNodeName() + "=\"" + childAttListFromDOM.item(k).getNodeValue() + "\"");
+					childrenAttsFromDOM.add(childAtts);
+				}
+				HashSet<HashSet<String>> childrenAttsToTest = new HashSet<HashSet<String>>();				
+				for (int k=0; k<children.size();k++)
+					childrenAttsToTest.add(children.get(k).getAttributes());
+				
+				if (!childrenAttsToTest.equals(childrenAttsFromDOM))
+					continue;
+				
+				return true;		
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return false;
+	}
+
+	private boolean isAlertPresent() {
+		try {
+			driver.switchTo().alert();
+			return true;
+		} catch (NoAlertPresentException e) {
+			return false;
+		}
+	}
+
+	private String closeAlertAndGetItsText() {
+		try {
+			Alert alert = driver.switchTo().alert();
+			String alertText = alert.getText();
+			if (acceptNextAlert) {
+				alert.accept();
+			} else {
+				alert.dismiss();
+			}
+			return alertText;
+		} finally {
+			acceptNextAlert = true;
+		}
+	}
+
+	public class DOMElement {
+		private String tagName;
+		private String textContent;
+		private HashSet<String> attributes = new HashSet<String>();
+
+		public DOMElement(String tagName, String textContent, ArrayList<String> attributes){
+			this.tagName = tagName;
+			this.textContent = textContent;
+			
+			if (attributes.get(0)!="")
+				for (int i=0; i<attributes.size();i++)
+					this.attributes.add(attributes.get(i));
+		}
+
+		public String getTagName() {
+			return tagName;
+		}
+
+		public String getTextContent() {
+			return textContent;
+		}
+
+		public HashSet<String> getAttributes() {
+			return attributes;
+		}
+	}
+	
+	private void mutateDOMTree(int stateID){
+	// execute JavaScript code to mutate DOM
+	String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode(stateID);
+		if (code!= null){
+			long RandomlySelectedDOMElementID = (long) ((JavascriptExecutor)driver).executeScript(code);
+			int MutationOperatorCode = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.MutationOperatorCode;
+			int StateToBeMutated = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.StateToBeMutated;	
+			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.SelectedRandomElementInDOM[MutationOperatorCode][StateToBeMutated]
+					= (int) RandomlySelectedDOMElementID;
+		}
+	}
+ 
+
+}
