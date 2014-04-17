@@ -221,7 +221,7 @@ public class ${classname} {
 			for (int i = 0; i < nodeList.getLength(); i++){
 				// check node's text and attributes
 				sourceElement = (org.w3c.dom.Element) nodeList.item(i);
-				if (!element.getTextContent().equals(sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "")))
+				if (!element.getTextContent().equals(sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "").replaceAll("[^\\x00-\\x7F]", "")))
 					continue;
 				NamedNodeMap elementAttList = sourceElement.getAttributes();
 				HashSet<String> elemetAtts = new HashSet<String>();
@@ -232,7 +232,7 @@ public class ${classname} {
 				
 				// check parent node's text, tag and attributes
 				String parentTagName = sourceElement.getParentNode().getNodeName();
-				if (!parent.getTextContent().equals(sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "")))
+				if (!parent.getTextContent().equals(sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "").replaceAll("[^\\x00-\\x7F]", "")))
 					continue;
 				if (!parentTagName.equals(parent.getTagName()))
 					continue;
@@ -247,7 +247,7 @@ public class ${classname} {
 				// check children nodes' text
 				HashSet<String> childrenTextFromDOM = new HashSet<String>();				
 				for (int j=0; j<sourceElement.getChildNodes().getLength();j++)
-					childrenTextFromDOM.add(sourceElement.getChildNodes().item(j).getTextContent().replace("\n", "").replace("\r", "").replace(" ", ""));
+					childrenTextFromDOM.add(sourceElement.getChildNodes().item(j).getTextContent().replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "").replaceAll("[^\\x00-\\x7F]", ""));
 				HashSet<String> childrenTextToTest = new HashSet<String>();				
 				for (int k=0; k<children.size();k++)
 					childrenTextToTest.add(children.get(k).getTextContent());

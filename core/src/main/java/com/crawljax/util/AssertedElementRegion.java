@@ -104,13 +104,13 @@ public class AssertedElementRegion implements Serializable{
 		
 		// node info
 		this.tagName = sourceElement.getTagName();
-		this.textContent = sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
+		this.textContent = sourceElement.getTextContent().replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "").replaceAll("[^\\x00-\\x7F]", "");
 		for (int i=0; i<sourceElement.getAttributes().getLength();i++)
 			this.attributes.add(sourceElement.getAttributes().item(i).toString());
 		
 		// parent node info
 		this.parentTagName = sourceElement.getParentNode().getNodeName();
-		this.parentTextContent = sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "");
+		this.parentTextContent = sourceElement.getParentNode().getTextContent().replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "").replaceAll("[^\\x00-\\x7F]", "");
 		for (int i=0; i<sourceElement.getParentNode().getAttributes().getLength();i++)
 			this.parentAttributes.add(sourceElement.getParentNode().getAttributes().item(i).toString());
 
@@ -118,7 +118,7 @@ public class AssertedElementRegion implements Serializable{
 		ArrayList<String> childAttributes = new ArrayList<String>();
 		for (int i=0; i<sourceElement.getChildNodes().getLength();i++){
 			this.childrenTagName.add(sourceElement.getChildNodes().item(i).getNodeName());
-			this.childrenTextContent.add(sourceElement.getChildNodes().item(i).getTextContent().replace("\n", "").replace("\r", "").replace(" ", ""));
+			this.childrenTextContent.add(sourceElement.getChildNodes().item(i).getTextContent().replace("\n", "").replace("\r", "").replace(" ", "").replace("\t", "").replaceAll("[^\\x00-\\x7F]", ""));
 			if (sourceElement.getChildNodes().item(i).getAttributes()!=null){
 				for (int j=0; j<sourceElement.getChildNodes().item(i).getAttributes().getLength();j++)
 					childAttributes.add(sourceElement.getChildNodes().item(i).getAttributes().item(j).toString());
