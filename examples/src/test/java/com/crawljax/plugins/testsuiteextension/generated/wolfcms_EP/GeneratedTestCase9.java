@@ -182,9 +182,9 @@ public class GeneratedTestCase9 {
 
 
 	public void checkState0_OriginalAssertions(){
-		assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())) System.out.println("185"); // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))) System.out.println("187"); // original assertion
 
 	}
 
@@ -196,9 +196,9 @@ public class GeneratedTestCase9 {
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of AEP for Original
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("199"); // generated assertion in case of AEP for Original
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p[]")))) System.out.println("201"); // generated assertion in case of ElementTagAttMatch
 
 	}
 
@@ -209,32 +209,32 @@ childrenElements.add(new DOMElement("#text", "Remembermefor30minutes.", new Arra
 childrenElements.add(new DOMElement("#text", "(", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
 childrenElements.add(new DOMElement("A", "Forgotpassword?", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("212"); // predicted region assertion
 
 		element = new DOMElement("P", "website:WolfCMS", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "website:", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\""))));
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("219"); // predicted region assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"clean\"")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("224"); // predicted region assertion
 
 	}
 
 	public void checkState0_AllAssertions(){
-		assertEquals("Login - Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Login - Wolf CMS", driver.getTitle())) System.out.println("229"); // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$")); // original assertion
+		if(!(driver.findElement(By.xpath("//div[@id='dialog']/form/div/label[@class='checkbox']")).getText().matches("^Remember me for [\\s\\S][\\s\\S] minutes\\.$"))) System.out.println("231"); // original assertion
 
 		element = new DOMElement("LABEL", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of AEP for Original
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("237"); // generated assertion in case of AEP for Original
 
 		element = new DOMElement("SPAN", "(Forgotpassword?)", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
@@ -242,72 +242,72 @@ childrenElements.add(new DOMElement("#text", "Remembermefor30minutes.", new Arra
 childrenElements.add(new DOMElement("#text", "(", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
 childrenElements.add(new DOMElement("A", "Forgotpassword?", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("245"); // predicted region assertion
 
 		element = new DOMElement("P", "website:WolfCMS", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "website:", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\""))));
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("252"); // predicted region assertion
 
 	}
 
 	public void checkState0_RandAssertions1(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[4]/INPUT[[@id=\"login-redirect\" and @@name=\"login[redirect]\" and @@type=\"hidden\" and @value=\"/wolfcms/?/admin/\"]"))); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[4]/INPUT[[@id=\"login-redirect\" and @@name=\"login[redirect]\" and @@type=\"hidden\" and @value=\"/wolfcms/?/admin/\"]")))) System.out.println("257"); // Random element assertion
 		element = new DOMElement("LABEL", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","for=\"login-remember-me\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("262"); // Random element assertion
 		element = new DOMElement("LABEL", "Password:", new ArrayList<String>(Arrays.asList("for=\"login-password\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-password-div\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Password:", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("267"); // Random element assertion
 		element = new DOMElement("H1", "Login-WolfCMS", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dialog\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Login-WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("272"); // Random element assertion
 		element = new DOMElement("LABEL", "Password:", new ArrayList<String>(Arrays.asList("for=\"login-password\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login-password-div\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Password:", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("277"); // Random element assertion
 	}
 
 	public void checkState0_RandAssertions2(){
 		element = new DOMElement("INPUT", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList("id=\"login-redirect\"","name=\"login[redirect]\"","type=\"hidden\"","value=\"/wolfcms/?/admin/\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/TITLE[]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("284"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/TITLE[]")))) System.out.println("285"); // Random element assertion
 		element = new DOMElement("A", "(Forgotpassword?)", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Forgotpassword?", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV/LABEL[for=\"login-username\"]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("290"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV/LABEL[for=\"login-username\"]")))) System.out.println("291"); // Random element assertion
 		element = new DOMElement("SPAN", "(Forgotpassword?)", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"login_submit\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "(", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\""))));
 childrenElements.add(new DOMElement("A", "Forgotpassword?", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("298"); // Random element assertion
 	}
 
 	public void checkState0_RandAssertions3(){
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/themes/brown_and_green/login.css\"","id=\"css_theme\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("305"); // Random element assertion
 		element = new DOMElement("A", "(Forgotpassword?)", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/login/forgot\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Forgotpassword?", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("310"); // Random element assertion
 		element = new DOMElement("DIV", "Username:", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
 		childrenElements.clear();
@@ -316,7 +316,7 @@ childrenElements.add(new DOMElement("LABEL", "Username:", new ArrayList<String>(
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("319"); // Random element assertion
 		element = new DOMElement("DIV", "Username:", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
 		childrenElements.clear();
@@ -325,7 +325,7 @@ childrenElements.add(new DOMElement("LABEL", "Username:", new ArrayList<String>(
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("328"); // Random element assertion
 		element = new DOMElement("DIV", "Username:", new ArrayList<String>(Arrays.asList("id=\"login-username-div\"")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
 		childrenElements.clear();
@@ -334,7 +334,7 @@ childrenElements.add(new DOMElement("LABEL", "Username:", new ArrayList<String>(
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("337"); // Random element assertion
 	}
 
 	public void checkState0_RandAssertions4(){
@@ -346,34 +346,34 @@ childrenElements.add(new DOMElement("LABEL", "Username:", new ArrayList<String>(
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("349"); // Random element assertion
 		element = new DOMElement("INPUT", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList("class=\"checkbox\"","id=\"login-remember-me\"","name=\"login[remember]\"","type=\"checkbox\"","value=\"checked\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("353"); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("358"); // Random element assertion
 		element = new DOMElement("A", "website:WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/\"")));
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[4]/INPUT[@class=\"checkbox\" and @@id=\"login-remember-me\" and @@name=\"login[remember]\" and @@type=\"checkbox\" and @value=\"checked\"]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("363"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV[4]/INPUT[@class=\"checkbox\" and @@id=\"login-remember-me\" and @@name=\"login[remember]\" and @@type=\"checkbox\" and @value=\"checked\"]")))) System.out.println("364"); // Random element assertion
 	}
 
 	public void checkState0_RandAssertions5(){
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","src=\"/wolfcms/wolf/admin/javascripts/jquery-1.6.2.min.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV/LABEL[for=\"login-username\"]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("371"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV/FORM/DIV/LABEL[for=\"login-username\"]")))) System.out.println("372"); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","src=\"/wolfcms/wolf/admin/javascripts/jquery-1.6.2.min.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("376"); // Random element assertion
 		element = new DOMElement("DIV", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList("style=\"margin-top: 6px\"")));
 		parentElement = new DOMElement("FORM", "", new ArrayList<String>(Arrays.asList("action=\"http://localhost:8888/wolfcms/?/admin/login/login\"","method=\"post\"")));
 		childrenElements.clear();
@@ -384,21 +384,21 @@ childrenElements.add(new DOMElement("INPUT", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("LABEL", "Remembermefor30minutes.", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("387"); // Random element assertion
 		element = new DOMElement("TITLE", "Login-WolfCMS", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Login-WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("392"); // Random element assertion
 	}
 
 	public void checkState26_OriginalAssertions(){
-		assertEquals("Pages | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())) System.out.println("396"); // original assertion
 
 	}
 
 	public void checkState26_ReusedAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("401"); // reused assertion in case of ElementFullMatch
 	}
 
 	public void checkState26_GeneratedAssertions(){
@@ -412,9 +412,9 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("415"); // generated assertion in case of RegionFullMatch
 
-		assertTrue(isElementPresent(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span[class=\"title\"]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//ul[@id='site-map']/li/span/div/span/a/span[class=\"title\"]")))) System.out.println("417"); // generated assertion in case of ElementTagAttMatch
 
 		element = new DOMElement("DIV", "Snippet(reorder)Modify", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
@@ -422,13 +422,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Snippet(", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
 childrenElements.add(new DOMElement("A", "reorder", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("425"); // generated assertion in case of RegionTagMatch
 
 		element = new DOMElement("SPAN", "RNDDZRW", new ArrayList<String>(Arrays.asList("class=\"title\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/16\"","title=\"16 | \"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDDZRW", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("431"); // generated assertion in case of RegionTagMatch
 
 	}
 
@@ -443,38 +443,38 @@ childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("446"); // predicted region assertion
 
 		element = new DOMElement("SPAN", "RND-ysXV", new ArrayList<String>(Arrays.asList("class=\"title\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/6\"","title=\"6 | \"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RND-ysXV", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("452"); // predicted region assertion
 
 		element = new DOMElement("DIV", "RND-ExEx11Draft", new ArrayList<String>(Arrays.asList("class=\"view-page\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?rnd-exex11.html\"","target=\"_blank\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("458"); // predicted region assertion
 
 		element = new DOMElement("DIV", "RND-ZsxvPublished", new ArrayList<String>(Arrays.asList("class=\"view-page\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?rnd-zsxv.html\"","target=\"_blank\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("464"); // predicted region assertion
 
 		element = new DOMElement("SPAN", "RND-MlYU", new ArrayList<String>(Arrays.asList("class=\"title\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/12\"","title=\"12 | \"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RND-MlYU", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("470"); // predicted region assertion
 
 	}
 
 	public void checkState26_AllAssertions(){
-		assertEquals("Pages | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Pages | Wolf CMS", driver.getTitle())) System.out.println("475"); // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("477"); // reused assertion in case of ElementFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -486,7 +486,7 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("489"); // generated assertion in case of RegionFullMatch
 
 		element = new DOMElement("DIV", "RNDEKTmDraft", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
@@ -498,13 +498,13 @@ childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("501"); // predicted region assertion
 
 		element = new DOMElement("SPAN", "RND-ysXV", new ArrayList<String>(Arrays.asList("class=\"title\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/6\"","title=\"6 | \"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RND-ysXV", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("507"); // predicted region assertion
 
 	}
 
@@ -512,41 +512,41 @@ childrenElements.add(new DOMElement("#text", "RND-ysXV", new ArrayList<String>(A
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/markdown/markdown.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("515"); // Random element assertion
 		element = new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[11]/SPAN/DIV[[class=\"modify\"]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("520"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[11]/SPAN/DIV[[class=\"modify\"]")))) System.out.println("521"); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"remove\"","href=\"http://localhost:8888/wolfcms/?/admin/page/delete/11?csrf_token=a461f6d8a5bd4b37a5c0c916a871504ad84ab0ac5564f1dce70c7aa948615e84\"","onclick=\"return confirm('Are you sure you wish to delete RND-jNtz and its underlying pages?');\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Remove page\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Remove page\""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("526"); // Random element assertion
 		element = new DOMElement("H1", "Login-WolfCMS", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"dialog\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Login-WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("531"); // Random element assertion
 	}
 
 	public void checkState26_RandAssertions2(){
 		element = new DOMElement("IMG", "RND-lSps", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-15\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("538"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Add child\"","src=\"/wolfcms/wolf/admin/images/plus.png\"","title=\"Add child\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/6\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("542"); // Random element assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"content-wrapper\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"main\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"content\""))));
 childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("549"); // Random element assertion
 		element = new DOMElement("SPAN", "RNDEKTmDraft", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"node level-1 no-children\"","id=\"page_2\"")));
 		childrenElements.clear();
@@ -559,34 +559,34 @@ childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asLi
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("562"); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/10\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Add child\"","src=\"/wolfcms/wolf/admin/images/plus.png\"","title=\"Add child\""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("567"); // Random element assertion
 	}
 
 	public void checkState26_RandAssertions3(){
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("src=\"/wolfcms/wolf/admin/markitup/jquery.markitup.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("574"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Copy Page\"","src=\"/wolfcms/wolf/admin/images/copy.png\"","title=\"Copy Page\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-12\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("578"); // Random element assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"content-wrapper\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"main\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("id=\"content\""))));
 childrenElements.add(new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("585"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Add child\"","src=\"/wolfcms/wolf/admin/images/plus.png\"","title=\"Add child\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"add-child-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/add/7\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("589"); // Random element assertion
 		element = new DOMElement("DIV", "RND-MlYUPublished", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -597,7 +597,7 @@ childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("600"); // Random element assertion
 	}
 
 	public void checkState26_RandAssertions4(){
@@ -607,11 +607,11 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"page icon\"","class=\"icon\"","src=\"/wolfcms/wolf/admin/images/page.png\""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"title\""))));
 childrenElements.add(new DOMElement("SPAN", "RND-lSps", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("610"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"View Page\"","src=\"/wolfcms/wolf/admin/images/magnify.png\"","title=\"View Page\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?rnd-zsxv.html\"","target=\"_blank\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("614"); // Random element assertion
 		element = new DOMElement("DIV", "RND-MlYUPublished", new ArrayList<String>(Arrays.asList("class=\"modify\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -622,44 +622,44 @@ childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV/SPAN/A/IMG[@align=\"middle\" and @@alt=\"page icon\" and @@class=\"icon\" and @src=\"/wolfcms/wolf/admin/images/page.png\"]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[1[@class=\"node level-1 no-children\" and @id=\"page_6\"]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("625"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI/SPAN/DIV/SPAN/A/IMG[@align=\"middle\" and @@alt=\"page icon\" and @@class=\"icon\" and @src=\"/wolfcms/wolf/admin/images/page.png\"]")))) System.out.println("626"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/UL/LI/UL/LI[1[@class=\"node level-1 no-children\" and @id=\"page_6\"]")))) System.out.println("627"); // Random element assertion
 	}
 
 	public void checkState26_RandAssertions5(){
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"Copy Page\"","src=\"/wolfcms/wolf/admin/images/copy.png\"","title=\"Copy Page\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"copy-page\"","href=\"#\"","id=\"copy-14\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("634"); // Random element assertion
 		element = new DOMElement("DIV", "RND-lYxCPublished", new ArrayList<String>(Arrays.asList("class=\"view-page\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList("class=\"view-link\"","href=\"http://localhost:8888/wolfcms/?\"","target=\"_blank\""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("639"); // Random element assertion
 		element = new DOMElement("IMG", "RNDEKTm", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"\"","class=\"busy\"","id=\"busy-2\"","src=\"/wolfcms/wolf/admin/images/spinner.gif\"","style=\"display: none;\"","title=\"\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("643"); // Random element assertion
 		element = new DOMElement("A", "RND-jNtz", new ArrayList<String>(Arrays.asList("class=\"edit-link\"","href=\"http://localhost:8888/wolfcms/?/admin/page/edit/11\"","title=\"11 | \"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("class=\"w1\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"page icon\"","class=\"icon\"","src=\"/wolfcms/wolf/admin/images/page.png\""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("class=\"title\""))));
 childrenElements.add(new DOMElement("SPAN", "RND-jNtz", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("650"); // Random element assertion
 		element = new DOMElement("DIV", "RND-cvyHPublished", new ArrayList<String>(Arrays.asList("class=\"status published-status\"")));
 		parentElement = new DOMElement("SPAN", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Published", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("655"); // Random element assertion
 	}
 
 	public void checkState27_OriginalAssertions(){
 	}
 
 	public void checkState27_ReusedAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("662"); // reused assertion in case of ElementFullMatch
 	}
 
 	public void checkState27_GeneratedAssertions(){
@@ -673,11 +673,11 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("676"); // generated assertion in case of RegionFullMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p[]")))) System.out.println("678"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]")))) System.out.println("680"); // generated assertion in case of ElementTagAttMatch
 
 		element = new DOMElement("DIV", "Snippet(reorder)Modify", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
@@ -685,13 +685,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Snippet(", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
 childrenElements.add(new DOMElement("A", "reorder", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("688"); // generated assertion in case of RegionTagMatch
 
 		element = new DOMElement("H2", "HomePageJustaseleniumtestpage.", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"col1\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "HomePage", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("694"); // generated assertion in case of RegionTagMatch
 
 	}
 
@@ -704,7 +704,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("707"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -720,7 +720,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("723"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -728,13 +728,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("731"); // predicted region assertion
 
 		element = new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("737"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -746,12 +746,12 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("749"); // predicted region assertion
 
 	}
 
 	public void checkState27_AllAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("754"); // reused assertion in case of ElementFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -763,7 +763,7 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("766"); // generated assertion in case of RegionFullMatch
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -773,7 +773,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("776"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -789,7 +789,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("792"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -797,7 +797,7 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("800"); // predicted region assertion
 
 	}
 
@@ -805,25 +805,25 @@ childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new Array
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/markitup/skins/simple/style.css\"","rel=\"stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("808"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/9?csrf_token=bffea33f7c5a12e2221ec3be5532b71c4e302182e1a0972f803f2433d589ba44\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserLawL?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("812"); // Random element assertion
 		element = new DOMElement("A", "RNDUserHxZWRNDUserHxZW", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/3\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserHxZW", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("817"); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","src=\"/wolfcms/wolf/admin/javascripts/jquery-1.6.2.min.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("821"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUserENksRNDUserENks", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserENks", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("826"); // Random element assertion
 	}
 
 	public void checkState27_RandAssertions2(){
@@ -833,22 +833,22 @@ childrenElements.add(new DOMElement("#text", "RNDUserENks", new ArrayList<String
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/7?csrf_token=d142f7f542590df1ba20c4d13e33487f934130469f6f8f8a7d15ed6feee219a6\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserENks?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("836"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUserqbJiRNDUserqbJi", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserqbJi", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[8]/TD/IMG[@align=\"middle\" and @@alt=\"user icon\" and @src=\"http://www.gravatar.com/avatar/b951bb21957bcc91aeb1b4b406e7b222.jpg?s=32&d=http%3A%2F%2Flocalhost%3A8888%2Fwolfcms%2Fwolf%2Fadmin%2Fimages%2Fuser.png&r=g\"]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("841"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[8]/TD/IMG[@align=\"middle\" and @@alt=\"user icon\" and @src=\"http://www.gravatar.com/avatar/b951bb21957bcc91aeb1b4b406e7b222.jpg?s=32&d=http%3A%2F%2Flocalhost%3A8888%2Fwolfcms%2Fwolf%2Fadmin%2Fimages%2Fuser.png&r=g\"]")))) System.out.println("842"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserLawL@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserLawL@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("847"); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","src=\"/wolfcms/wolf/admin/javascripts/cp-datepicker.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("851"); // Random element assertion
 	}
 
 	public void checkState27_RandAssertions3(){
@@ -864,12 +864,12 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("867"); // Random element assertion
 		element = new DOMElement("A", "RNDUserNUAKRNDUserNUAK", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/6\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserNUAK", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("872"); // Random element assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
 		childrenElements.clear();
@@ -878,12 +878,12 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("881"); // Random element assertion
 		element = new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://www.wolfcms.org/\"","target=\"_blank\"")));
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "WolfCMS", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("886"); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -896,7 +896,7 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("899"); // Random element assertion
 	}
 
 	public void checkState27_RandAssertions4(){
@@ -908,12 +908,12 @@ childrenElements.add(new DOMElement("H2", "Wheredotheavatarscomefrom?", new Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("911"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUserozLXRNDUserozLX", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserozLX", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("916"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserCGgbRNDUserCGgb", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
@@ -924,12 +924,12 @@ childrenElements.add(new DOMElement("A", "RNDUserCGgb", new ArrayList<String>(Ar
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SMALL", "RNDUserCGgb", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("927"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/8?csrf_token=bbf3d6ee209063a59ad444f9fa1a293ef09af41e1231f92ee8236d4634d1c9b4\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserqbJi?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[5]/A[href=\"http://localhost:8888/wolfcms/?/admin/setting\"]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("931"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[5]/A[href=\"http://localhost:8888/wolfcms/?/admin/setting\"]")))) System.out.println("932"); // Random element assertion
 	}
 
 	public void checkState27_RandAssertions5(){
@@ -945,14 +945,14 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[[@charset=\"utf-8\" and @@src=\"/wolfcms/wolf/admin/javascripts/jquery-1.6.2.min.js\" and @type=\"text/javascript\"]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("948"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[[@charset=\"utf-8\" and @@src=\"/wolfcms/wolf/admin/javascripts/jquery-1.6.2.min.js\" and @type=\"text/javascript\"]")))) System.out.println("949"); // Random element assertion
 		element = new DOMElement("TH", "Name/UsernameEmailRolesModify", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Name/Username", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/H1[]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("954"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/H1[]")))) System.out.println("955"); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -965,16 +965,16 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("968"); // Random element assertion
 	}
 
 	public void checkState28_OriginalAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())) System.out.println("972"); // original assertion
 
 	}
 
 	public void checkState28_ReusedAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("977"); // reused assertion in case of ElementFullMatch
 	}
 
 	public void checkState28_GeneratedAssertions(){
@@ -988,11 +988,11 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("991"); // generated assertion in case of RegionFullMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p[]")))) System.out.println("993"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]")))) System.out.println("995"); // generated assertion in case of ElementTagAttMatch
 
 		element = new DOMElement("DIV", "Snippet(reorder)Modify", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
@@ -1000,13 +1000,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Snippet(", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
 childrenElements.add(new DOMElement("A", "reorder", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1003"); // generated assertion in case of RegionTagMatch
 
 		element = new DOMElement("H2", "HomePageJustaseleniumtestpage.", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"col1\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "HomePage", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1009"); // generated assertion in case of RegionTagMatch
 
 	}
 
@@ -1025,7 +1025,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1028"); // predicted region assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -1035,7 +1035,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1038"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -1043,13 +1043,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1046"); // predicted region assertion
 
 		element = new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1052"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1061,14 +1061,14 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1064"); // predicted region assertion
 
 	}
 
 	public void checkState28_AllAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())) System.out.println("1069"); // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1071"); // reused assertion in case of ElementFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1080,7 +1080,7 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1083"); // generated assertion in case of RegionFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1096,7 +1096,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1099"); // predicted region assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -1106,7 +1106,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1109"); // predicted region assertion
 
 	}
 
@@ -1115,26 +1115,26 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"right\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Users", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1118"); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/12?csrf_token=07e00ffe7a69b998e1d76b0e48e71c55698f740f0ad466f4fd9cc542d6c758c7\"","onclick=\"return confirm('Are you sure you wish to delete RNDVNzA?');\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1123"); // Random element assertion
 		element = new DOMElement("A", "RNDUserLawLRNDUserLawL", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/9\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserLawL", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1128"); // Random element assertion
 		element = new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1133"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/3?csrf_token=8242e473d1b0ab6d94b95e3a43c5b0c71076bc8eb8c27b35acd5186474d71810\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserHxZW?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1137"); // Random element assertion
 	}
 
 	public void checkState28_RandAssertions2(){
@@ -1142,22 +1142,22 @@ childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserAfyQ@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1145"); // Random element assertion
 		element = new DOMElement("A", "Pages", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/page\"")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"page-plugin\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Pages", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1150"); // Random element assertion
 		element = new DOMElement("TD", "RNDUseroKcT@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUseroKcT@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1155"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUserqbJiRNDUserqbJi", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserqbJi", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1160"); // Random element assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
 		childrenElements.clear();
@@ -1166,7 +1166,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1169"); // Random element assertion
 	}
 
 	public void checkState28_RandAssertions3(){
@@ -1174,24 +1174,24 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 		parentElement = new DOMElement("UL", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "Layouts", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1177"); // Random element assertion
 		element = new DOMElement("IMG", "RNDUserNUAKRNDUserNUAK", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"user icon\"","src=\"http://www.gravatar.com/avatar/7ee124eb0f6ab36491d826c2f14dff08.jpg?s=32&d=http%3A%2F%2Flocalhost%3A8888%2Fwolfcms%2Fwolf%2Fadmin%2Fimages%2Fuser.png&r=g\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1181"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUseroKcTRNDUseroKcT", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUseroKcT", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1186"); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/5?csrf_token=e3ae0e43c2742eacb4553ac7b0070b94dd3da9f609f8448f38351ac86651c547\"","onclick=\"return confirm('Are you sure you wish to delete RNDUsermkTO?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY[]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1193"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY[]")))) System.out.println("1194"); // Random element assertion
 	}
 
 	public void checkState28_RandAssertions4(){
@@ -1207,7 +1207,7 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1210"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserENksRNDUserENks", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
@@ -1218,13 +1218,13 @@ childrenElements.add(new DOMElement("A", "RNDUserENks", new ArrayList<String>(Ar
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SMALL", "RNDUserENks", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1221"); // Random element assertion
 		element = new DOMElement("A", "Administration", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/setting\"")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"right\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Administration", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/THEAD/TR/TH[[]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1226"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/THEAD/TR/TH[[]")))) System.out.println("1227"); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1237,7 +1237,7 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1240"); // Random element assertion
 	}
 
 	public void checkState28_RandAssertions5(){
@@ -1247,8 +1247,8 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/7?csrf_token=a5203279b35ab01b641b92f5d63ff7508ad94e3e71f188865c68846aafd194ad\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserENks?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[12]/TD[[]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1250"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[12]/TD[[]")))) System.out.println("1251"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserCGgbRNDUserCGgb", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
@@ -1259,26 +1259,26 @@ childrenElements.add(new DOMElement("A", "RNDUserCGgb", new ArrayList<String>(Ar
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SMALL", "RNDUserCGgb", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1262"); // Random element assertion
 		element = new DOMElement("TD", "Administratoradminadmin@yoursite.comadministrator", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon disabled\"","src=\"/wolfcms/wolf/admin/images/icon-remove-disabled.gif\"","title=\"Delete user unavailable\""))));
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1269"); // Random element assertion
 		element = new DOMElement("A", "Pages", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/page\"")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"page-plugin\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Pages", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1274"); // Random element assertion
 	}
 
 	public void checkState29_OriginalAssertions(){
 	}
 
 	public void checkState29_ReusedAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1281"); // reused assertion in case of ElementFullMatch
 	}
 
 	public void checkState29_GeneratedAssertions(){
@@ -1292,11 +1292,11 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1295"); // generated assertion in case of RegionFullMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p[]")))) System.out.println("1297"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]")))) System.out.println("1299"); // generated assertion in case of ElementTagAttMatch
 
 		element = new DOMElement("DIV", "Snippet(reorder)Modify", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
@@ -1304,13 +1304,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Snippet(", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
 childrenElements.add(new DOMElement("A", "reorder", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1307"); // generated assertion in case of RegionTagMatch
 
 		element = new DOMElement("H2", "HomePageJustaseleniumtestpage.", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"col1\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "HomePage", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1313"); // generated assertion in case of RegionTagMatch
 
 	}
 
@@ -1329,7 +1329,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1332"); // predicted region assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -1339,7 +1339,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1342"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -1347,13 +1347,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1350"); // predicted region assertion
 
 		element = new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1356"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1365,12 +1365,12 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1368"); // predicted region assertion
 
 	}
 
 	public void checkState29_AllAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1373"); // reused assertion in case of ElementFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1382,7 +1382,7 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1385"); // generated assertion in case of RegionFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1398,7 +1398,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1401"); // predicted region assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -1408,7 +1408,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1411"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -1416,7 +1416,7 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1419"); // predicted region assertion
 
 	}
 
@@ -1425,12 +1425,12 @@ childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new Array
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1428"); // Random element assertion
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/markitup/skins/simple/style.css\"","rel=\"stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[6]/TD/SMALL[]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1432"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[6]/TD/SMALL[]")))) System.out.println("1433"); // Random element assertion
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
 		childrenElements.clear();
@@ -1439,12 +1439,12 @@ childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("P", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1442"); // Random element assertion
 		element = new DOMElement("A", "Snippets", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/snippet\"")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"snippet-plugin\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Snippets", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1447"); // Random element assertion
 	}
 
 	public void checkState29_RandAssertions2(){
@@ -1452,24 +1452,24 @@ childrenElements.add(new DOMElement("#text", "Snippets", new ArrayList<String>(A
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "admin@yoursite.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1455"); // Random element assertion
 		element = new DOMElement("A", "RNDUserqbJiRNDUserqbJi", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/8\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserqbJi", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1460"); // Random element assertion
 		element = new DOMElement("IMG", "RNDUserAfyQRNDUserAfyQ", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"user icon\"","src=\"http://www.gravatar.com/avatar/5a08d4fecacd7627f9bdae2efa3de79a.jpg?s=32&d=http%3A%2F%2Flocalhost%3A8888%2Fwolfcms%2Fwolf%2Fadmin%2Fimages%2Fuser.png&r=g\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1464"); // Random element assertion
 		element = new DOMElement("IMG", "RNDUsermkTORNDUsermkTO", new ArrayList<String>(Arrays.asList("align=\"middle\"","alt=\"user icon\"","src=\"http://www.gravatar.com/avatar/d18383d860b8b2215882072145cd7dd1.jpg?s=32&d=http%3A%2F%2Flocalhost%3A8888%2Fwolfcms%2Fwolf%2Fadmin%2Fimages%2Fuser.png&r=g\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1468"); // Random element assertion
 		element = new DOMElement("SCRIPT", "", new ArrayList<String>(Arrays.asList("charset=\"utf-8\"","src=\"/wolfcms/wolf/plugins/file_manager/file_manager.js\"","type=\"text/javascript\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1472"); // Random element assertion
 	}
 
 	public void checkState29_RandAssertions3(){
@@ -1481,7 +1481,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1484"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserNUAKRNDUserNUAK", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
@@ -1492,11 +1492,11 @@ childrenElements.add(new DOMElement("A", "RNDUserNUAK", new ArrayList<String>(Ar
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SMALL", "RNDUserNUAK", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1495"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/10?csrf_token=4043be3e8404beb552766ca5bb5e0d120d69b61e273f9f00ed9e72c75dd90f95\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserCGgb?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1499"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserENksRNDUserENks", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
@@ -1507,20 +1507,20 @@ childrenElements.add(new DOMElement("A", "RNDUserENks", new ArrayList<String>(Ar
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SMALL", "RNDUserENks", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1510"); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/7?csrf_token=9eef56ff4202f6340c9d2848e0b73d3bcc283304267b28de54b595a1453f6a72\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserENks?');\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1515"); // Random element assertion
 	}
 
 	public void checkState29_RandAssertions4(){
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/plugins/file_manager/file_manager.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[[id=\"footer\"]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1522"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[[id=\"footer\"]")))) System.out.println("1523"); // Random element assertion
 		element = new DOMElement("UL", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"mainTabs\"")));
 		childrenElements.clear();
@@ -1537,22 +1537,22 @@ childrenElements.add(new DOMElement("LI", "Administration", new ArrayList<String
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("LI", "Users", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1540"); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/2?csrf_token=de07ecb2872ceb0cfc378ca40a9c91da5b628a05fbee7f9efa2118fe2b9b8a4d\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserAfyQ?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[1[class=\"node odd\"]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1547"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[1[class=\"node odd\"]")))) System.out.println("1548"); // Random element assertion
 	}
 
 	public void checkState29_RandAssertions5(){
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/4?csrf_token=cd28e05511038d6db3383e867cfe9b60a116fea3167de4669840af1459be038e\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserozLX?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1555"); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1565,12 +1565,12 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1568"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/12?csrf_token=db89f01ed70426bf17a31b354847786b53cdb04612daa40cec57cac60bb70ab7\"","onclick=\"return confirm('Are you sure you wish to delete RNDVNzA?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[3]/TD/SMALL[]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1572"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[3]/TD/SMALL[]")))) System.out.println("1573"); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1583,16 +1583,16 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1586"); // Random element assertion
 	}
 
 	public void checkState30_OriginalAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())) System.out.println("1590"); // original assertion
 
 	}
 
 	public void checkState30_ReusedAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1595"); // reused assertion in case of ElementFullMatch
 	}
 
 	public void checkState30_GeneratedAssertions(){
@@ -1606,11 +1606,11 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1609"); // generated assertion in case of RegionFullMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p[]")))) System.out.println("1611"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='colmask']//div[@id='col1']/h2[]")))) System.out.println("1613"); // generated assertion in case of ElementTagAttMatch
 
 		element = new DOMElement("DIV", "Snippet(reorder)Modify", new ArrayList<String>(Arrays.asList("class=\"snippet\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"index-def\"","id=\"site-map-def\"")));
@@ -1618,13 +1618,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Snippet(", new ArrayList<String>(Arrays.asList("href=\"#\"","id=\"reorder-toggle\""))));
 childrenElements.add(new DOMElement("A", "reorder", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", ")", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1621"); // generated assertion in case of RegionTagMatch
 
 		element = new DOMElement("H2", "HomePageJustaseleniumtestpage.", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"col1\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "HomePage", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionTagMatch
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1627"); // generated assertion in case of RegionTagMatch
 
 	}
 
@@ -1637,7 +1637,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1640"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1653,7 +1653,7 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1656"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -1661,13 +1661,13 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1664"); // predicted region assertion
 
 		element = new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1670"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1679,14 +1679,14 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1682"); // predicted region assertion
 
 	}
 
 	public void checkState30_AllAssertions(){
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())) System.out.println("1687"); // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1689"); // reused assertion in case of ElementFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1698,7 +1698,7 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1701"); // generated assertion in case of RegionFullMatch
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -1708,7 +1708,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1711"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1724,64 +1724,64 @@ childrenElements.add(new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "ViewSite", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1727"); // predicted region assertion
 
 	}
 
 	public void checkState30_RandAssertions1(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV/A[href=\"http://localhost:8888/wolfcms/?/admin/\"]"))); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV/A[href=\"http://localhost:8888/wolfcms/?/admin/\"]")))) System.out.println("1732"); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/5?csrf_token=108828d4a4fcd2218e9e5cae746e675aec614af2f51d6d598f1866c699741a67\"","onclick=\"return confirm('Are you sure you wish to delete RNDUsermkTO?');\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1737"); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/6?csrf_token=afe52018baf5b3fb37a1842bb551488311b1eaa3fdd76093a3bd215c80941f25\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserNUAK?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[8]/TD/A[href=\"http://localhost:8888/wolfcms/?/admin/user/edit/8\"]"))); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[9]/TD[class=\"user\"]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1744"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[8]/TD/A[href=\"http://localhost:8888/wolfcms/?/admin/user/edit/8\"]")))) System.out.println("1745"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[9]/TD[class=\"user\"]")))) System.out.println("1746"); // Random element assertion
 	}
 
 	public void checkState30_RandAssertions2(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[2]/A[href=\"http://localhost:8888/wolfcms/?/admin/snippet\"]"))); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[2]/A[href=\"http://localhost:8888/wolfcms/?/admin/snippet\"]")))) System.out.println("1750"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserLawL@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserLawL@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1755"); // Random element assertion
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/stylesheets/admin.css\"","media=\"screen\"","rel=\"Stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/THEAD/TR[]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1759"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/THEAD/TR[]")))) System.out.println("1760"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUseroKcTRNDUseroKcT", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUseroKcT", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1765"); // Random element assertion
 	}
 
 	public void checkState30_RandAssertions3(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[5]/TD[[]"))); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/TBODY/TR[5]/TD[[]")))) System.out.println("1769"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/5?csrf_token=108828d4a4fcd2218e9e5cae746e675aec614af2f51d6d598f1866c699741a67\"","onclick=\"return confirm('Are you sure you wish to delete RNDUsermkTO?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1773"); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/8?csrf_token=a5073cc9e99f124c8a7704b06d17611f4bcaea964152b590296de011a5699766\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserqbJi?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1780"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/3?csrf_token=f85b8d99ac1f8c56d5299b03ef851ebffa6ca4d6702cf3f47ddcf6ed5349cccc\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserHxZW?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1784"); // Random element assertion
 		element = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1794,7 +1794,7 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1797"); // Random element assertion
 	}
 
 	public void checkState30_RandAssertions4(){
@@ -1808,7 +1808,7 @@ childrenElements.add(new DOMElement("A", "RNDUserNUAK", new ArrayList<String>(Ar
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("SMALL", "RNDUserNUAK", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1811"); // Random element assertion
 		element = new DOMElement("TR", "Name/UsernameEmailRolesModify", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1821,30 +1821,30 @@ childrenElements.add(new DOMElement("TH", "Roles", new ArrayList<String>(Arrays.
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TH", "Modify", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1824"); // Random element assertion
 		element = new DOMElement("A", "RNDUserHxZWRNDUserHxZW", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/3\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserHxZW", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/THEAD/TR[]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1829"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[3]/DIV/DIV/TABLE/THEAD/TR[]")))) System.out.println("1830"); // Random element assertion
 		element = new DOMElement("A", "RNDUserqbJiRNDUserqbJi", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/8\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserqbJi", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1835"); // Random element assertion
 	}
 
 	public void checkState30_RandAssertions5(){
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/7?csrf_token=063655ca2c417970bf5a979eb2d0a2be1d0ecce549efa15fae50cd9b48b5591c\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserENks?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1842"); // Random element assertion
 		element = new DOMElement("SMALL", "RNDUseroKcTRNDUseroKcT", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUseroKcT", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1847"); // Random element assertion
 		element = new DOMElement("TR", "Name/UsernameEmailRolesModify", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("THEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -1857,30 +1857,30 @@ childrenElements.add(new DOMElement("TH", "Roles", new ArrayList<String>(Arrays.
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TH", "Modify", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1860"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserNUAK@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserNUAK@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("1865"); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/5?csrf_token=108828d4a4fcd2218e9e5cae746e675aec614af2f51d6d598f1866c699741a67\"","onclick=\"return confirm('Are you sure you wish to delete RNDUsermkTO?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1872"); // Random element assertion
 	}
 
 	public void checkState31_OriginalAssertions(){
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$")); // original assertion
+		if(!(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$"))) System.out.println("1876"); // original assertion
 
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())) System.out.println("1878"); // original assertion
 
 	}
 
 	public void checkState31_ReusedAssertions(){
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1883"); // reused assertion in case of ElementFullMatch
 	}
 
 	public void checkState31_GeneratedAssertions(){
@@ -1894,15 +1894,15 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1897"); // generated assertion in case of RegionFullMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@id='footer']/p[]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@id='footer']/p[]")))) System.out.println("1899"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[text()='User has been added!' @class=\"message\" and  @id=\"success\" and style=\"opacity: 1;\"]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[text()='User has been added!' @class=\"message\" and  @id=\"success\" and style=\"opacity: 1;\"]")))) System.out.println("1901"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@class='message' @class=\"message\" and  @id=\"success\" and style=\"opacity: 1;\"]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@class='message' @class=\"message\" and  @id=\"success\" and style=\"opacity: 1;\"]")))) System.out.println("1903"); // generated assertion in case of ElementTagAttMatch
 
-		assertTrue(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!' @class=\"message\" and  @id=\"success\" and style=\"opacity: 1;\"]"))); // generated assertion in case of ElementTagAttMatch
+		if(!(isElementPresent(By.xpath("//div[@class='message' and text()='Page has been saved!' @class=\"message\" and  @id=\"success\" and style=\"opacity: 1;\"]")))) System.out.println("1905"); // generated assertion in case of ElementTagAttMatch
 
 	}
 
@@ -1915,7 +1915,7 @@ childrenElements.add(new DOMElement("THEAD", "Name/UsernameEmailRolesModify", ne
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1918"); // predicted region assertion
 
 		element = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		parentElement = new DOMElement("BODY", "", new ArrayList<String>(Arrays.asList("id=\"body_user_index\"")));
@@ -1925,7 +1925,7 @@ childrenElements.add(new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arra
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("DIV", "PagesSnippetsLayoutsFilesAdministrationUsers", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1928"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1937,13 +1937,13 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1940"); // predicted region assertion
 
 		element = new DOMElement("DIV", "WolfCMS", new ArrayList<String>(Arrays.asList("id=\"site-title\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"header\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/\""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1946"); // predicted region assertion
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
@@ -1951,16 +1951,16 @@ childrenElements.add(new DOMElement("A", "WolfCMS", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "Theavatarsareautomaticallylinkedforthosewitha", new ArrayList<String>(Arrays.asList("href=\"http://www.gravatar.com/\"","target=\"_blank\""))));
 childrenElements.add(new DOMElement("A", "Gravatar", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "(afreeservice)account.", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1954"); // predicted region assertion
 
 	}
 
 	public void checkState31_AllAssertions(){
-		assertTrue(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$")); // original assertion
+		if(!(closeAlertAndGetItsText().matches("^Are you sure you wish to delete [\\s\\S]*$"))) System.out.println("1959"); // original assertion
 
-		assertEquals("Users | Wolf CMS", driver.getTitle()); // original assertion
+		if(!helper.equals("Users | Wolf CMS", driver.getTitle())) System.out.println("1961"); // original assertion
 
-		assertTrue(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$")); // reused assertion in case of ElementFullMatch
+		if(!(driver.findElement(By.xpath("//div[@id='footer']/p")).getText().matches("^Thank you for using Wolf CMS [\\s\\S]\\.[\\s\\S]\\.[\\s\\S] [\\s\\S] Feedback [\\s\\S] Documentation$"))) System.out.println("1963"); // reused assertion in case of ElementFullMatch
 
 		element = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"footer\"")));
@@ -1972,7 +1972,7 @@ childrenElements.add(new DOMElement("A", "Feedback", new ArrayList<String>(Array
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // generated assertion in case of RegionFullMatch
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("1975"); // generated assertion in case of RegionFullMatch
 
 		element = new DOMElement("TABLE", "", new ArrayList<String>(Arrays.asList("border=\"0\"","cellpadding=\"0\"","cellspacing=\"0\"","class=\"index\"","id=\"users\"")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"content\"")));
@@ -1982,7 +1982,7 @@ childrenElements.add(new DOMElement("THEAD", "Name/UsernameEmailRolesModify", ne
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // predicted region assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("1985"); // predicted region assertion
 
 	}
 
@@ -1999,23 +1999,23 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[@charset=\"utf-8\" and @@src=\"/wolfcms/wolf/admin/javascripts/cp-datepicker.js\" and @type=\"text/javascript\"]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("2002"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/SCRIPT[@charset=\"utf-8\" and @@src=\"/wolfcms/wolf/admin/javascripts/cp-datepicker.js\" and @type=\"text/javascript\"]")))) System.out.println("2003"); // Random element assertion
 		element = new DOMElement("A", "RNDUserNUAKRNDUserNUAK", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/edit/6\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("class=\"user\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserNUAK", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2008"); // Random element assertion
 		element = new DOMElement("TD", "Administratoradminadmin@yoursite.comadministrator", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "administrator", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2013"); // Random element assertion
 		element = new DOMElement("A", "Layouts", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/layout\"")));
 		parentElement = new DOMElement("LI", "", new ArrayList<String>(Arrays.asList("class=\"plugin\"","id=\"layout-plugin\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Layouts", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2018"); // Random element assertion
 	}
 
 	public void checkState31_RandAssertions2(){
@@ -2023,26 +2023,26 @@ childrenElements.add(new DOMElement("#text", "Layouts", new ArrayList<String>(Ar
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"content\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Users", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2026"); // Random element assertion
 		element = new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\"")));
 		parentElement = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/8?csrf_token=b3fde43d23b8faa3aa4b9285eaeaa586cea122c370e3bdad1e9973b6216c147a\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserqbJi?');\"")));
 		childrenElements.clear();
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2030"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserNUAK@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserNUAK@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2035"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserNUAK@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserNUAK@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2040"); // Random element assertion
 		element = new DOMElement("H2", "Wheredotheavatarscomefrom?", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("class=\"box\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Wheredotheavatarscomefrom?", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2045"); // Random element assertion
 	}
 
 	public void checkState31_RandAssertions3(){
@@ -2050,17 +2050,17 @@ childrenElements.add(new DOMElement("#text", "Wheredotheavatarscomefrom?", new A
 		parentElement = new DOMElement("DIV", "", new ArrayList<String>(Arrays.asList("id=\"sidebar\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("A", "NewUser", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/add\""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[2]/A[href=\"http://localhost:8888/wolfcms/?/admin/snippet\"]"))); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("2053"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[2]/DIV[2]/UL/LI[2]/A[href=\"http://localhost:8888/wolfcms/?/admin/snippet\"]")))) System.out.println("2054"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserCGgb@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserCGgb@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2059"); // Random element assertion
 		element = new DOMElement("LINK", "", new ArrayList<String>(Arrays.asList("href=\"/wolfcms/wolf/admin/markitup/skins/simple/style.css\"","rel=\"stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("2063"); // Random element assertion
 		element = new DOMElement("TR", "RNDVNzARNDCdWfRNDTbcy@example.comeditor", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -2073,7 +2073,7 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2076"); // Random element assertion
 	}
 
 	public void checkState31_RandAssertions4(){
@@ -2081,20 +2081,20 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "administrator", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2084"); // Random element assertion
 		element = new DOMElement("SPAN", "|", new ArrayList<String>(Arrays.asList("class=\"separator\"")));
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("id=\"site-links\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "|", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/TABLE/TBODY/TR[7]/TD[4]/A[@href=\"http://localhost:8888/wolfcms/?/admin/user/delete/8?csrf_token=b3fde43d23b8faa3aa4b9285eaeaa586cea122c370e3bdad1e9973b6216c147a\" and @onclick=\"return confirm('Are you sure you wish to delete RNDUserqbJi?');\"]"))); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2089"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/BODY/DIV[4]/DIV/DIV/TABLE/TBODY/TR[7]/TD[4]/A[@href=\"http://localhost:8888/wolfcms/?/admin/user/delete/8?csrf_token=b3fde43d23b8faa3aa4b9285eaeaa586cea122c370e3bdad1e9973b6216c147a\" and @onclick=\"return confirm('Are you sure you wish to delete RNDUserqbJi?');\"]")))) System.out.println("2090"); // Random element assertion
 		element = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/10?csrf_token=f96ec19da04dcea627e5a7abb1ae639b5ab31ed337876bda3c1e407a5a7f0bc7\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserCGgb?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2097"); // Random element assertion
 		element = new DOMElement("TR", "RNDVNzARNDCdWfRNDTbcy@example.comeditor", new ArrayList<String>(Arrays.asList("class=\"node odd\"")));
 		parentElement = new DOMElement("TBODY", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
@@ -2107,7 +2107,7 @@ childrenElements.add(new DOMElement("TD", "editor", new ArrayList<String>(Arrays
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("TD", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionFullPresent(parentElement , element, childrenElements))) System.out.println("2110"); // Random element assertion
 	}
 
 	public void checkState31_RandAssertions5(){
@@ -2117,23 +2117,23 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/7?csrf_token=0a53091c59f291923694a492ed2a4075138ab15006cc52561a721669019ff842\"","onclick=\"return confirm('Are you sure you wish to delete RNDUserENks?');\""))));
 childrenElements.add(new DOMElement("A", "", new ArrayList<String>(Arrays.asList(""))));
 childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagAttPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagAttPresent(parentElement , element, childrenElements))) System.out.println("2120"); // Random element assertion
 		element = new DOMElement("A", "Documentation", new ArrayList<String>(Arrays.asList("href=\"http://wiki.wolfcms.org/\"","target=\"_blank\"")));
 		parentElement = new DOMElement("P", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "Documentation", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
-		assertTrue(isElementPresent(By.xpath("/HTML/HEAD/LINK[[@href=\"/wolfcms/wolf/plugins/file_manager/file_manager.css\" and @@media=\"screen\" and @@rel=\"Stylesheet\" and @type=\"text/css\"]"))); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2125"); // Random element assertion
+		if(!(isElementPresent(By.xpath("/HTML/HEAD/LINK[[@href=\"/wolfcms/wolf/plugins/file_manager/file_manager.css\" and @@media=\"screen\" and @@rel=\"Stylesheet\" and @type=\"text/css\"]")))) System.out.println("2126"); // Random element assertion
 		element = new DOMElement("A", "", new ArrayList<String>(Arrays.asList("href=\"http://localhost:8888/wolfcms/?/admin/user/delete/11?csrf_token=240a0a2cd0183fefcbb94fe8cc8a1c806cc9f0cc77c6dc0801fd8b887e5fecfc\"","onclick=\"return confirm('Are you sure you wish to delete RNDUseroKcT?');\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("IMG", "", new ArrayList<String>(Arrays.asList("alt=\"delete user icon\"","src=\"/wolfcms/wolf/admin/images/icon-remove.gif\"","title=\"Delete user\""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2131"); // Random element assertion
 		element = new DOMElement("TD", "RNDUserHxZW@example.com", new ArrayList<String>(Arrays.asList("")));
 		parentElement = new DOMElement("TR", "", new ArrayList<String>(Arrays.asList("class=\"node even\"")));
 		childrenElements.clear();
 childrenElements.add(new DOMElement("#text", "RNDUserHxZW@example.com", new ArrayList<String>(Arrays.asList(""))));
-		assertTrue(isElementRegionTagPresent(parentElement , element, childrenElements)); // Random element assertion
+		if(!(isElementRegionTagPresent(parentElement , element, childrenElements))) System.out.println("2136"); // Random element assertion
 	}
 
 
