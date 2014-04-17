@@ -36,8 +36,8 @@ public final class TestSuiteExtensionExample {
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
 	//only for random crawling approach => private static final String URL = "http://localhost:8888/phormer331/admin.php";
-	private static final String URL = "http://localhost:8888/phormer331/";
-	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
+	//private static final String URL = "http://localhost:8888/phormer331/";
+	private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
 	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
 	//private static final String URL = "https://localhost:9443/admin/carbon/admin/login.jsp"; // eshop 1
 	//private static final String URL = "https://localhost:9443/store/login"; // eshop2
@@ -54,9 +54,9 @@ public final class TestSuiteExtensionExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
-		builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for phormer 200 + 300
+		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for phormer 200 + 300
 		//builder.setMaximumRunTime(1560, TimeUnit.SECONDS); // for claroline 1200 + 300
-		//builder.setMaximumRunTime(1500, TimeUnit.SECONDS); // for claroline 1200 + 300
+		builder.setMaximumRunTime(1500, TimeUnit.SECONDS); // for claroline 1200 + 300
 		//builder.setMaximumRunTime(900, TimeUnit.SECONDS); // for wolfcms 600 + 300
 		// builder.setMaximumRunTime(600, TimeUnit.SECONDS); // for eshop1 300 + 300
 		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for eshop2 150 + 300

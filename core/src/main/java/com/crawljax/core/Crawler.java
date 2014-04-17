@@ -75,7 +75,7 @@ public class Crawler {
 
 	//Amin
 	private boolean useTestExtToHandleForms = true; // For the RND method (pure random) should be false -> random form filling + the initial data
-	private boolean crawlPhormerApplication = true;
+	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
 	private boolean crawlEshop1Application = false;
 	private boolean crawlEshop2Application = false;
