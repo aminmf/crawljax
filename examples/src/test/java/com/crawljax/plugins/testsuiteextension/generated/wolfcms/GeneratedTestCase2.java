@@ -58,7 +58,7 @@ public class GeneratedTestCase2 {
 		driver.findElement(By.id("user_role-editor")).click();
 		driver.findElement(By.name("commit")).click();
 		assertEquals("Users | Wolf CMS", driver.getTitle());
-		Thread.sleep(500);
+		//Thread.sleep(500);
 		assertTrue(isElementPresent(By.xpath("//div[text()='User has been added!']")));
 		//assertEquals("testUser1", driver.findElement(By.xpath("//tbody/tr/td/a[text()='Test User One']/../small")).getText());
 

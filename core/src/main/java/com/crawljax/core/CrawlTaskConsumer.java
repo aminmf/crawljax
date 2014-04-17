@@ -162,7 +162,7 @@ public class CrawlTaskConsumer implements Callable<Void> {
 				// if all manual-test states were considered, randomly among candidates
 				Random randomGenerator = new Random();
 				selectedStateId = candidates.getStatesWithCandidates().get(randomGenerator.nextInt(numberOfStatesWithCandidates));		
-				LOG.info("Satet with id " + selectedStateId + " was randomly selected as the nextStateToCrawl");
+				LOG.info("Statew with id " + selectedStateId + " was randomly selected as the nextStateToCrawl");
 			}
 		}
 
