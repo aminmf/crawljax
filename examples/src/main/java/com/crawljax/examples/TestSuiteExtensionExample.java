@@ -86,20 +86,20 @@ public final class TestSuiteExtensionExample {
 		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//*[@class='unreadMessage']")));
 
 		builder.crawlRules().addOracleComparator(
-		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//dt")));
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//DT")));
 		
 		builder.crawlRules().addOracleComparator(
-		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//dd")));
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//DD")));
 		
 		builder.crawlRules().addOracleComparator(
-		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//tr")));
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//TR")));
 		
 
 		builder.crawlRules().addOracleComparator(
-		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//ul")));
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//UL")));
 
 		builder.crawlRules().addOracleComparator(
-		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//li")));
+		        new OracleComparator("XPathExpressionComparator", new XPathExpressionComparator("//LI")));
 
 		
 		
