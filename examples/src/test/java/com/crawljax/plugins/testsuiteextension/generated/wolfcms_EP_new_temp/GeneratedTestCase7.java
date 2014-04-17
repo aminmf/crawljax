@@ -1,4 +1,4 @@
-package com.crawljax.plugins.testsuiteextension.generated.wolfcms_EP_new;
+package com.crawljax.plugins.testsuiteextension.generated.wolfcms_EP_new_temp;
 
 import java.io.IOException;
 import java.util.ArrayList;

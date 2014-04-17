@@ -90,10 +90,6 @@ public class GeneratedTestCase10 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -112,10 +108,6 @@ public class GeneratedTestCase10 {
 		checkState12_RandAssertions3();
 		checkState12_RandAssertions4();
 		checkState12_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.linkText("Users")).click();
 		//From state 13 to state 14
 		//Eventable{eventType=click, identification=xpath //div[@id='sidebar']/p/a[text()=' New User'], element=Element{node=[A: null], tag=A, text=New User, attributes={href=http://localhost:8888/wolfcms/?/admin/user/add}}, source=StateVertexImpl{id=13, name=state13}, target=StateVertexImpl{id=14, name=state14}}
@@ -130,10 +122,6 @@ public class GeneratedTestCase10 {
 		checkState13_RandAssertions3();
 		checkState13_RandAssertions4();
 		checkState13_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.xpath("//div[@id='sidebar']/p/a[text()=' New User']")).click();
 		//From state 14 to state 16
 		//Eventable{eventType=click, identification=name commit, element=Element{node=[INPUT: null], tag=INPUT, text=, attributes={accesskey=s, class=button, name=commit, type=submit, value=Save}}, source=StateVertexImpl{id=14, name=state14}, target=StateVertexImpl{id=16, name=state16}}
@@ -148,20 +136,14 @@ public class GeneratedTestCase10 {
 		checkState14_RandAssertions3();
 		checkState14_RandAssertions4();
 		checkState14_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("user_name")).clear();
 		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("user_name")).sendKeys(RandValue);
 		driver.findElement(By.id("user_email")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4) + "@example.com";
-		driver.findElement(By.id("user_email")).sendKeys(RandValue);
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4) + "@example.com";
 		driver.findElement(By.id("user_email")).sendKeys(RandValue);
 		driver.findElement(By.id("user_username")).clear();
-		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
+		RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("user_username")).sendKeys(RandValue);
 		driver.findElement(By.id("user_password")).clear();
 		driver.findElement(By.id("user_password")).sendKeys("pswpsw");

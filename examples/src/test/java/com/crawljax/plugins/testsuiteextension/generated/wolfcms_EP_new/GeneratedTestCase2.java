@@ -90,12 +90,6 @@ public class GeneratedTestCase2 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -114,12 +108,6 @@ public class GeneratedTestCase2 {
 		checkState48_RandAssertions3();
 		checkState48_RandAssertions4();
 		checkState48_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 		driver.findElement(By.linkText("Users")).click();
 		//From state 49 to state 63
 		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[4]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=http://localhost:8888/wolfcms/?/admin/user/delete/459?csrf_token=25eb221135314dbfc14469ebd203a3afc7615da0762e40396d67644e4478f81e, onclick=return confirm('Are you sure you wish to delete RNDqhwG?');}}, source=StateVertexImpl{id=49, name=state49}, target=StateVertexImpl{id=63, name=state63}}

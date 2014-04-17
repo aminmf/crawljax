@@ -90,10 +90,6 @@ public class GeneratedTestCase18 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -112,10 +108,6 @@ public class GeneratedTestCase18 {
 		checkState18_RandAssertions3();
 		checkState18_RandAssertions4();
 		checkState18_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.linkText("Pages")).click();
 		//From state 19 to state 61
 		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/UL[1]/LI[1]/UL[1]/LI[1]/SPAN[1]/DIV[4]/A[2], element=Element{node=[A: null], tag=A, text=, attributes={class=remove, href=http://localhost:8888/wolfcms/?/admin/page/delete/13?csrf_token=4de29b81062d1ef244f187527ba6eb07bdcbe8c2bad187bbf047f42981031afe, onclick=return confirm('Are you sure you wish to delete RNDJknm and its underlying pages?');}}, source=StateVertexImpl{id=19, name=state19}, target=StateVertexImpl{id=61, name=state61}}

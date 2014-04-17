@@ -90,10 +90,6 @@ public class GeneratedTestCase6 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -112,10 +108,6 @@ public class GeneratedTestCase6 {
 		checkState26_RandAssertions3();
 		checkState26_RandAssertions4();
 		checkState26_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.linkText("Users")).click();
 		//From state 27 to state 28
 		//Eventable{eventType=click, identification=text Users, element=Element{node=[A: null], tag=A, text=Users, attributes={class=current, href=http://localhost:8888/wolfcms/?/admin/user}}, source=StateVertexImpl{id=27, name=state27}, target=StateVertexImpl{id=28, name=state28}}
@@ -130,10 +122,6 @@ public class GeneratedTestCase6 {
 		checkState27_RandAssertions3();
 		checkState27_RandAssertions4();
 		checkState27_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.linkText("Users")).click();
 		//From state 28 to state 29
 		//Eventable{eventType=click, identification=text Users, element=Element{node=[A: null], tag=A, text=Users, attributes={class=current, href=http://localhost:8888/wolfcms/?/admin/user}}, source=StateVertexImpl{id=28, name=state28}, target=StateVertexImpl{id=29, name=state29}}
@@ -148,10 +136,6 @@ public class GeneratedTestCase6 {
 		checkState28_RandAssertions3();
 		checkState28_RandAssertions4();
 		checkState28_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.linkText("Users")).click();
 		//From state 29 to state 64
 		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[4]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={href=http://localhost:8888/wolfcms/?/admin/user/delete/458?csrf_token=f43bfbc6411cb3c5aba9f33dd0702e69e4f52250adf18ef2838b80375534bc5f, onclick=return confirm('Are you sure you wish to delete RNDOOif?');}}, source=StateVertexImpl{id=29, name=state29}, target=StateVertexImpl{id=64, name=state64}}
