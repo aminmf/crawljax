@@ -90,8 +90,6 @@ public class GeneratedTestCase16 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -110,8 +108,6 @@ public class GeneratedTestCase16 {
 		checkState7_RandAssertions3();
 		checkState7_RandAssertions4();
 		checkState7_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 		driver.findElement(By.linkText("Snippets")).click();
 		//From state 8 to state 9
 		//Eventable{eventType=click, identification=xpath //div[@id='sidebar']/p/a[text()=' New Snippet'], element=Element{node=[A: null], tag=A, text=New Snippet, attributes={href=http://localhost:8888/wolfcms/?/admin/snippet/add}}, source=StateVertexImpl{id=8, name=state8}, target=StateVertexImpl{id=9, name=state9}}
@@ -126,8 +122,6 @@ public class GeneratedTestCase16 {
 		checkState8_RandAssertions3();
 		checkState8_RandAssertions4();
 		checkState8_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
 		driver.findElement(By.xpath("//div[@id='sidebar']/p/a[text()=' New Snippet']")).click();
 		//From state 9 to state 69
 		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/FORM[1]/P[1]/A[1], element=Element{node=[A: null], tag=A, text=Cancel, attributes={href=http://localhost:8888/wolfcms/?/admin/snippet}}, source=StateVertexImpl{id=9, name=state9}, target=StateVertexImpl{id=69, name=state69}}

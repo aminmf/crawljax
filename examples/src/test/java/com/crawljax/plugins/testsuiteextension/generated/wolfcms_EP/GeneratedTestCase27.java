@@ -90,10 +90,6 @@ public class GeneratedTestCase27 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -112,10 +108,6 @@ public class GeneratedTestCase27 {
 		checkState22_RandAssertions3();
 		checkState22_RandAssertions4();
 		checkState22_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.linkText("Snippets")).click();
 		//From state 23 to state 76
 		//Eventable{eventType=click, identification=xpath /HTML[1]/BODY[1]/DIV[3]/DIV[1]/DIV[1]/UL[1]/LI[33]/DIV[1]/A[1], element=Element{node=[A: null], tag=A, text=, attributes={class=remove, href=http://localhost:8888/wolfcms/?/admin/snippet/delete/564, onclick=return confirm('Are you sure you wish to delete? RNDJSTp?');}}, source=StateVertexImpl{id=23, name=state23}, target=StateVertexImpl{id=76, name=state76}}

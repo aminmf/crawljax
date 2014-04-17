@@ -90,10 +90,6 @@ public class GeneratedTestCase11 {
 		checkState0_RandAssertions3();
 		checkState0_RandAssertions4();
 		checkState0_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("login-username")).clear();
 		driver.findElement(By.id("login-username")).sendKeys("admin");
 		driver.findElement(By.id("login-password")).clear();
@@ -112,10 +108,6 @@ public class GeneratedTestCase11 {
 		checkState35_RandAssertions3();
 		checkState35_RandAssertions4();
 		checkState35_RandAssertions5();
-		driver.findElement(By.id("part_0_content")).clear();
-		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.partialLinkText("RND")).click();
 		//From state 36 to state 37
 		//Eventable{eventType=click, identification=text Settings, element=Element{node=[A: null], tag=A, text=Settings, attributes={href=#settings}}, source=StateVertexImpl{id=36, name=state36}, target=StateVertexImpl{id=37, name=state37}}
@@ -132,8 +124,6 @@ public class GeneratedTestCase11 {
 		checkState36_RandAssertions5();
 		driver.findElement(By.id("part_0_content")).clear();
 		driver.findElement(By.id("part_0_content")).sendKeys("Just a selenium test page.");
-		driver.findElement(By.id("snippet_content")).clear();
-		driver.findElement(By.id("snippet_content")).sendKeys("Just a Selenium test snippet.");
 		driver.findElement(By.id("page_title")).clear();
 		String RandValue = "RND" + new RandomInputValueGenerator().getRandomString(4);
 		driver.findElement(By.id("page_title")).sendKeys(RandValue);
