@@ -1079,7 +1079,7 @@ childrenElements.add(new DOMElement("#text", "Date:", new ArrayList<String>(Arra
 		element = new DOMElement("INPUT", "", new ArrayList<String>(Arrays.asList("class=\"text\"","id=\"date\"","name=\"date\"","size=\"32\"","type=\"text\"","value=\"2014/04/17\"")));
 		parentElement = new DOMElement("TD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();
-		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
+//		assertTrue(isElementRegionFullPresent(parentElement , element, childrenElements)); // Random element assertion
 //		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV/TABLE/TBODY/TR/TD/DIV/FIELDSET/LEGEND/A[onclick=\"HideHelp();\"]"))); // Random element assertion
 	}
 

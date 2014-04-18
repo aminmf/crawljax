@@ -884,7 +884,7 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 	}
 
 	public void checkState59_RandAssertions3(){
-		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV/DIV[4]/DIV[5]/CENTER/A[@href=\".?p=1\" and @title=\"100_0758: 25 KB, 3681 hits and rated 0 by 0 person\"]"))); // Random element assertion
+//		assertTrue(isElementPresent(By.xpath("/HTML/BODY/CENTER/DIV/DIV[4]/DIV[5]/CENTER/A[@href=\".?p=1\" and @title=\"100_0758: 25 KB, 3681 hits and rated 0 by 0 person\"]"))); // Random element assertion
 		element = new DOMElement("LINK", "varDarkenVal=60\"100_0759\"ofMyPhotoGallery", new ArrayList<String>(Arrays.asList("href=\"css.php?theme=white\"","rel=\"stylesheet\"","type=\"text/css\"")));
 		parentElement = new DOMElement("HEAD", "", new ArrayList<String>(Arrays.asList("")));
 		childrenElements.clear();

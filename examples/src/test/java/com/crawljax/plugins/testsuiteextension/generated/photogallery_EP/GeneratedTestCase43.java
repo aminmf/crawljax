@@ -118,7 +118,7 @@ public class GeneratedTestCase43 {
 		checkState30_RandAssertions3();
 		checkState30_RandAssertions4();
 		checkState30_RandAssertions5();
-		driver.findElement(By.linkText("Log Out")).click();
+//		driver.findElement(By.linkText("Log Out")).click();
 		//Sink node at state 31
 		mutateDOMTree(31);
 		checkState31_OriginalAssertions();
