@@ -31,7 +31,7 @@ import com.crawljax.plugins.testsuiteextension.jsinstrumentor.AstInstrumenter;
 /**
  * Example of running Crawljax with the TestSuiteExtension plugin on a single-page web app.
  */
-public final class TestSuiteExtensionExample {
+public final class TestilizerExample {
 
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
