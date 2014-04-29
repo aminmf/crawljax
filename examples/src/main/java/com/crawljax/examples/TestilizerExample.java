@@ -20,13 +20,8 @@ import com.crawljax.oraclecomparator.comparators.EditDistanceComparator;
 import com.crawljax.oraclecomparator.comparators.ScriptComparator;
 import com.crawljax.oraclecomparator.comparators.SimpleComparator;
 import com.crawljax.oraclecomparator.comparators.XPathExpressionComparator;
-import com.crawljax.plugins.crawloverview.CrawlOverview;
-import com.crawljax.plugins.proxy.JSInjectorProxyAddon;
-import com.crawljax.plugins.proxy.WebScarabProxyPlugin;
-import com.crawljax.plugins.testsuiteextension.TestSuiteExtension;
+import com.crawljax.plugins.testilizer.Testilizer;
 
-import com.crawljax.plugins.testsuiteextension.jsinstrumentor.JSModifyProxyPlugin;
-import com.crawljax.plugins.testsuiteextension.jsinstrumentor.AstInstrumenter;
 
 /**
  * Example of running Crawljax with the TestSuiteExtension plugin on a single-page web app.
@@ -140,7 +135,7 @@ public final class TestilizerExample {
 		builder.crawlRules().setInputSpec(getInputSpecification());
 
 		//builder.addPlugin(new CrawlOverview());
-		builder.addPlugin(new TestSuiteExtension());
+		builder.addPlugin(new Testilizer());
 		
 		
 		// Create a Proxy for the purpose of code instrumentation
