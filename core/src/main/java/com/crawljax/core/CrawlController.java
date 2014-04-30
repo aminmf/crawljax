@@ -28,8 +28,7 @@ public class CrawlController implements Callable<CrawlSession> {
 	// this should also false to generate and sfg
 	// this should also be true when generating test suite using saved sfg
 	boolean bypassCrawling = true;
-	boolean applyRandomCrawlingOnly = false; //******** RND
-	
+	public static boolean applyTestilizer = true;  // if set to "false" applies RAND (random exploration + random form filling except for the initial login data)
 
 	
 	private static final Logger LOG = LoggerFactory.getLogger(CrawlController.class);
@@ -77,8 +76,8 @@ public class CrawlController implements Callable<CrawlSession> {
 		crawlSessionProvider.setup(firstState);
 		plugins.runOnNewStatePlugins(firstConsumer.getContext(), firstState);
 		
-		// Amin: added for the TestEx plugin
-		if (!applyRandomCrawlingOnly)
+		// Amin: added for the Testilizer plugin
+		if (applyTestilizer)
 			plugins.executeInitialPathsPlugins(config, firstConsumer);
 		
 		executeConsumers(firstConsumer);

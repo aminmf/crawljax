@@ -74,7 +74,7 @@ public class Crawler {
 	private StateMachine stateMachine;
 
 	//Amin
-	private boolean useTestExtToHandleForms = true; // For the RND method (pure random) should be false -> random form filling + the initial data
+	private boolean useTestilizerToHandleForms = CrawlController.applyTestilizer;
 	private boolean crawlPhormerApplication = true;
 	private boolean crawlWolfCMSApplication = false;
 	private boolean crawlEshop1Application = false;
@@ -274,7 +274,7 @@ public class Crawler {
 		CopyOnWriteArrayList<FormInput> formInputs = eventable.getRelatedFormInputs();
 
 		// Amin: changed this part to fill the "formInput" values based on values in "formInputs" that came from test suites
-		if (!useTestExtToHandleForms ){
+		if (!useTestilizerToHandleForms ){
 			// Original
 			for (FormInput formInput : formHandler.getFormInputs()) {
 				if (!formInputs.contains(formInput)) {
@@ -282,7 +282,7 @@ public class Crawler {
 				}
 			}
 		}else{
-			// TestExt version
+			// Testilizer version
 			//System.out.println("formInputs Before: " + formInputs);
 			for (FormInput formInput : formHandler.getFormInputs()) {
 				for (FormInput formInputFromTestSuite : formInputs) {
