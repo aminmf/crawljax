@@ -29,11 +29,6 @@
 			<artifactId>testilizer</artifactId>
 			<version>3.3-SNAPSHOT</version>
 		</dependency>
-		<dependency>
-			<groupId>com.crawljax.plugins</groupId>
-			<artifactId>proxy-plugin</artifactId>
-			<version>1.6-SNAPSHOT</version>
-		</dependency>
 
 <dependency>
     <groupId>com.github.tntim96</groupId>
