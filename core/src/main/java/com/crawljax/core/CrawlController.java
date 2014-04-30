@@ -24,10 +24,8 @@ import com.crawljax.di.CrawlSessionProvider;
 @Singleton
 public class CrawlController implements Callable<CrawlSession> {
 
-	// Setting for experiments on bypassing crawling for testing TesExt on creating happy paths (default should be false)
-	// this should also false to generate and sfg
-	// this should also be true when generating test suite using saved sfg
-	boolean bypassCrawling = true;
+	// Setting for experiments 
+	boolean bypassCrawling = false; // Bypass/apply crawling: Default should be "false" to generate SFGs. When generating test suite using the saved SFGs, set it to "true"
 	public static boolean applyTestilizer = true;  // if set to "false" applies RAND (random exploration + random form filling except for the initial login data)
 
 	

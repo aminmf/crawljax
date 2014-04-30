@@ -75,10 +75,10 @@ public class Crawler {
 
 	//Amin
 	private boolean useTestilizerToHandleForms = CrawlController.applyTestilizer;
-	private boolean crawlPhormerApplication = true;
+	private boolean crawlPhormerApplication = false;
 	private boolean crawlWolfCMSApplication = false;
-	private boolean crawlEshop1Application = false;
-	private boolean crawlEshop2Application = false;
+	private boolean crawlEstore1Application = false;
+	private boolean crawlEstore2Application = false;
 
 
 	@Inject
@@ -127,16 +127,16 @@ public class Crawler {
 		context.setStateMachine(stateMachine);
 		crawlpath = new CrawlPath();
 
-		// Amin: For eshop app -> first perform a logout
-		if (crawlEshop1Application==true && crawlDepth.get() > 0){
+		// Amin: For estore app -> first perform a logout
+		if (crawlEstore1Application==true && crawlDepth.get() > 0){
 			//if (!browser.getCurrentUrl().equals("https://localhost:9443/admin/carbon/admin/login.jsp"))
 			//if (browser.getCurrentUrl().contains("admin"))
 			if (!browser.getCurrentUrl().contains("login"))
 				browser.getBrowser().findElement(By.linkText("Sign-out")).click();
 		}
 
-		// Amin: For eshop app -> first perform a logout
-		if (crawlEshop2Application==true && crawlDepth.get() > 0){
+		// Amin: For estore app -> first perform a logout
+		if (crawlEstore2Application==true && crawlDepth.get() > 0){
 			if (browser.getCurrentUrl().contains("publisher")){
 				if (browser.getCurrentUrl().contains("sso")){
 					browser.getBrowser().findElement(By.cssSelector("a[href*='store']")).click();
