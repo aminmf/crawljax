@@ -39,7 +39,7 @@ public class GeneratedTestCase25 {
 	@Before
 	public void setUp() throws Exception {
 		// Setting the JavaScript code coverage switch
-		getCoverageReport = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.getCoverageReport();
+		getCoverageReport = com.crawljax.plugins.testilizer.Testilizer.getCoverageReport();
 	    if (getCoverageReport)
 	    	driver = new FirefoxDriver(getProfile());
 	    else
@@ -2274,12 +2274,12 @@ childrenElements.add(new DOMElement("#text", "", new ArrayList<String>(Arrays.as
 	
 	private void mutateDOMTree(int stateID){
 	// execute JavaScript code to mutate DOM
-	String code = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.mutateDOMTreeCode(stateID);
+	String code = com.crawljax.plugins.testilizer.Testilizer.mutateDOMTreeCode(stateID);
 		if (code!= null){
 			long RandomlySelectedDOMElementID = (long) ((JavascriptExecutor)driver).executeScript(code);
-			int MutationOperatorCode = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.MutationOperatorCode;
-			int StateToBeMutated = com.crawljax.plugins.testsuiteextension.TestSuiteExtension.StateToBeMutated;	
-			com.crawljax.plugins.testsuiteextension.TestSuiteExtension.SelectedRandomElementInDOM[MutationOperatorCode][StateToBeMutated]
+			int MutationOperatorCode = com.crawljax.plugins.testilizer.Testilizer.MutationOperatorCode;
+			int StateToBeMutated = com.crawljax.plugins.testilizer.Testilizer.StateToBeMutated;	
+			com.crawljax.plugins.testilizer.Testilizer.SelectedRandomElementInDOM[MutationOperatorCode][StateToBeMutated]
 					= (int) RandomlySelectedDOMElementID;
 		}
 	}
