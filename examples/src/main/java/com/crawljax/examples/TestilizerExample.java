@@ -50,12 +50,12 @@ public final class TestilizerExample {
 	public static void main(String[] args) throws IOException {
 		CrawljaxConfigurationBuilder builder = CrawljaxConfiguration.builderFor(URL);
 		builder.crawlRules().insertRandomDataInInputForms(false);
+		// adding time required to build the intial SFG and the 300 sec exploration time.
 		builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for phormer 200 + 300
-		//builder.setMaximumRunTime(1600, TimeUnit.SECONDS); // for claroline 1200 + 300
 		//builder.setMaximumRunTime(1500, TimeUnit.SECONDS); // for claroline 1200 + 300
 		//builder.setMaximumRunTime(750, TimeUnit.SECONDS); // for wolfcms 450 + 300
 		// builder.setMaximumRunTime(600, TimeUnit.SECONDS); // for estore1 300 + 300
-		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for estore2 150 + 300
+		//builder.setMaximumRunTime(500, TimeUnit.SECONDS); // for estore2 200 + 300
 		builder.setMaximumDepth(0);
 
 		// Phormer

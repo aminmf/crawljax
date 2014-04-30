@@ -9,8 +9,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-import com.crawljax.plugins.testsuiteextension.generated.eshop_originaltests.Utils;
-
 public class ShowMyItems {
   private WebDriver driver;
   private String baseUrl;
