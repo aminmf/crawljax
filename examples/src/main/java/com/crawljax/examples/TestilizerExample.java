@@ -31,13 +31,12 @@ public final class TestilizerExample {
 	private static final long WAIT_TIME_AFTER_EVENT = 300;
 	private static final long WAIT_TIME_AFTER_RELOAD = 50;
 	//only for random crawling approach => 
-	private static final String URL = "http://localhost:8888/phormer331/admin.php";
-	//private static final String URL = "http://localhost:8888/phormer331/";
+	//private static final String URL = "http://localhost:8888/phormer331/admin.php"; // only for the RAND approach
+	private static final String URL = "http://localhost:8888/phormer331/";
 	//private static final String URL = "http://localhost:8888/claroline-1.11.7/index.php?logout=true";
 	//private static final String URL = "http://localhost:8888/wolfcms/?/admin/";
 	//private static final String URL = "https://localhost:9443/admin/carbon/admin/login.jsp"; // estore 1
 	//private static final String URL = "https://localhost:9443/store/login"; // estore2
-	
 	
 
 	
