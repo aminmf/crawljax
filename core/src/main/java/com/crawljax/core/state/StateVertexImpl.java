@@ -32,7 +32,7 @@ class StateVertexImpl implements StateVertex {
 	private String name;
 	
 	//Amin: Assertions on DOM state
-	private ArrayList<CheckedElementRegion> assertedElementRegions = new ArrayList<CheckedElementRegion>();
+	private ArrayList<CheckedElementRegion> checkedElementRegions = new ArrayList<CheckedElementRegion>();
 	private HashSet<ElementFeatures> elementFeatures = new HashSet<ElementFeatures>();
 
 	private HashSet<String> elementTagAttAssertions = new HashSet<String>();
@@ -162,31 +162,31 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	//Amin: adding assertion on DOM state
-	public boolean addCheckedElementRegion(CheckedElementRegion aep) {
-		if(aep==null){
+	public boolean addCheckedElementRegion(CheckedElementRegion cer) {
+		if(cer==null){
 			//System.out.println("Assertion is not usefull to be added to state " + this.name);
 			return false;
 		}
-		if(getAssertions().contains(aep.getAssertion())){
+		if(getAssertions().contains(cer.getAssertion())){
 			//System.out.println("Assertion already exists in state " + this.name);
 			return false;
 		}
-		//System.out.println("Assertion " + aep.getAssertion() + " is added to state " + this.name);
-		assertedElementRegions.add(aep);
+		//System.out.println("Assertion " + cer.getAssertion() + " is added to state " + this.name);
+		checkedElementRegions.add(cer);
 		return true;
 	}
 
 	@Override
-	public ArrayList<CheckedElementRegion> getAssertedElementRegions() {
-		return assertedElementRegions;
+	public ArrayList<CheckedElementRegion> getCheckedElementRegions() {
+		return checkedElementRegions;
 	}
 	
 	@Override
 	//Amin
 	public ArrayList<String> getAssertions() {
 		ArrayList<String> assertions = new ArrayList<String>();
-		for (CheckedElementRegion aep: assertedElementRegions)
-			assertions.add(aep.getAssertion());
+		for (CheckedElementRegion cer: checkedElementRegions)
+			assertions.add(cer.getAssertion());
 		return assertions;
 	}
 
