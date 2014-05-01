@@ -7,7 +7,7 @@ import java.util.HashSet;
 
 import org.w3c.dom.Document;
 
-import com.crawljax.util.AssertedElementRegion;
+import com.crawljax.util.CheckedElementRegion;
 import com.crawljax.util.DomUtils;
 import com.crawljax.util.ElementFeatures;
 import com.google.common.annotations.VisibleForTesting;
@@ -32,7 +32,7 @@ class StateVertexImpl implements StateVertex {
 	private String name;
 	
 	//Amin: Assertions on DOM state
-	private ArrayList<AssertedElementRegion> assertedElementRegions = new ArrayList<AssertedElementRegion>();
+	private ArrayList<CheckedElementRegion> assertedElementRegions = new ArrayList<CheckedElementRegion>();
 	private HashSet<ElementFeatures> elementFeatures = new HashSet<ElementFeatures>();
 
 	private HashSet<String> elementTagAttAssertions = new HashSet<String>();
@@ -162,7 +162,7 @@ class StateVertexImpl implements StateVertex {
 
 	@Override
 	//Amin: adding assertion on DOM state
-	public boolean addAssertedElementRegion(AssertedElementRegion aep) {
+	public boolean addCheckedElementRegion(CheckedElementRegion aep) {
 		if(aep==null){
 			//System.out.println("Assertion is not usefull to be added to state " + this.name);
 			return false;
@@ -177,7 +177,7 @@ class StateVertexImpl implements StateVertex {
 	}
 
 	@Override
-	public ArrayList<AssertedElementRegion> getAssertedElementRegions() {
+	public ArrayList<CheckedElementRegion> getAssertedElementRegions() {
 		return assertedElementRegions;
 	}
 	
@@ -185,7 +185,7 @@ class StateVertexImpl implements StateVertex {
 	//Amin
 	public ArrayList<String> getAssertions() {
 		ArrayList<String> assertions = new ArrayList<String>();
-		for (AssertedElementRegion aep: assertedElementRegions)
+		for (CheckedElementRegion aep: assertedElementRegions)
 			assertions.add(aep.getAssertion());
 		return assertions;
 	}

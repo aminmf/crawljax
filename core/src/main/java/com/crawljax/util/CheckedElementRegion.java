@@ -13,12 +13,12 @@ import com.crawljax.util.DomUtils;
 import com.crawljax.util.XPathHelper;
 
 /**
- * AssertedElementRegion is used to store informations about a DOM element accessed region in a Selenium assertion.
+ * CheckedElementRegion is used to store informations about a DOM element accessed region in a Selenium assertion.
  * This region contains: The asserted element node, its parent node, its children nodes, its previous state id, and its associated assertion
  * 
  * @author Amin Milani Fard
  */
-public class AssertedElementRegion implements Serializable{
+public class CheckedElementRegion implements Serializable{
 	
 	private static final long serialVersionUID = -6419315357887813412L;
 	
@@ -85,7 +85,7 @@ public class AssertedElementRegion implements Serializable{
 	}
 
 
-	public AssertedElementRegion(org.w3c.dom.Element sourceElement, String assertion, String assertedElementLocator){
+	public CheckedElementRegion(org.w3c.dom.Element sourceElement, String assertion, String assertedElementLocator){
 		// assertion info
 		this.assertedElementLocator = assertedElementLocator;
 		this.assertion = assertion;
@@ -130,7 +130,7 @@ public class AssertedElementRegion implements Serializable{
 	}
 	
 
-	public String getAssertedElementLocator() {
+	public String getCheckedElementLocator() {
 		return assertedElementLocator;
 	}
 
@@ -158,9 +158,9 @@ public class AssertedElementRegion implements Serializable{
 	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof AssertedElementRegion)) return false;
+        if (!(o instanceof CheckedElementRegion)) return false;
 
-        AssertedElementRegion aep = (AssertedElementRegion) o;
+        CheckedElementRegion aep = (CheckedElementRegion) o;
 
         if (!aep.tagName.equals(this.tagName) || !aep.parentTagName.equals(this.parentTagName) || !aep.childrenTagName.equals(this.childrenTagName)
         		|| !aep.assertion.equals(this.assertion)) {  
@@ -187,7 +187,7 @@ public class AssertedElementRegion implements Serializable{
 	}
 	
 	
-	public String getHowRegionMatch(AssertedElementRegion aep){
+	public String getHowRegionMatch(CheckedElementRegion aep){
 		if (aep.tagName.equals(this.tagName) && aep.parentTagName.equals(this.parentTagName) && aep.childrenTagName.equals(this.childrenTagName)) {  
 			if (aep.attributes.equals(this.attributes) && aep.parentAttributes.equals(this.parentAttributes) && aep.childrenAttributes.equals(this.childrenAttributes))
 				if (aep.textContent.equals(this.textContent) && aep.parentTextContent.equals(this.parentTextContent) && aep.childrenTextContent.equals(this.childrenTextContent))
@@ -199,7 +199,7 @@ public class AssertedElementRegion implements Serializable{
         return "NoMatch";
 	}
 
-	public String getHowElementMatch(AssertedElementRegion aep){
+	public String getHowElementMatch(CheckedElementRegion aep){
 		if (aep.tagName.equals(this.tagName)){
         	if (aep.attributes.equals(this.attributes))
 				if (aep.textContent.equals(this.textContent))

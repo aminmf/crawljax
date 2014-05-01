@@ -8,7 +8,7 @@ import java.util.HashSet;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import com.crawljax.util.AssertedElementRegion;
+import com.crawljax.util.CheckedElementRegion;
 import com.crawljax.util.ElementFeatures;
 import com.google.common.collect.ImmutableList;
 
@@ -61,10 +61,10 @@ public interface StateVertex extends Serializable {
 	ImmutableList<Eventable> getUsedEventables();
 	
 	//Amin: Assertions on DOM state
-	boolean addAssertedElementRegion(AssertedElementRegion aep);
+	boolean addCheckedElementRegion(CheckedElementRegion aep);
 	void addElementFeatures(ElementFeatures ef);
 	ArrayList<String> getAssertions();
-	ArrayList<AssertedElementRegion> getAssertedElementRegions();
+	ArrayList<CheckedElementRegion> getCheckedElementRegions();
 	HashSet<ElementFeatures> getElementFeatures();
 
 	void addElementTagAttAssertion(String assertion);
