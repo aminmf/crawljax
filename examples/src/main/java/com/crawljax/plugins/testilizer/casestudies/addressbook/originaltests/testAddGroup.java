@@ -29,7 +29,7 @@ public class testAddGroup {
         driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[1]")).sendKeys("Sample Group");
         driver.findElement(By.xpath("html/body/div[1]/div[4]/form/textarea[1]")).sendKeys("Sample Group Header");
         driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[2]")).click();
-        assertTrue(driver.findElement(By.xpath("//div[@id='content']/div")).getText().contains("Group record has been updated."));
+        assertTrue(driver.findElement(By.xpath("//div[@id='content']/div")).getText().contains("A new group has been entered into the address book."));
 	}
 	
 	@After

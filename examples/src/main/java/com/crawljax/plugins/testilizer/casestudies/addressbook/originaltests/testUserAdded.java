@@ -36,7 +36,7 @@ public class testUserAdded {
 		driver.findElement(By.xpath(".//*[@id='content']/form/select[1]")).sendKeys("1969");;
 		driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[21]")).click(); // insertButton
 
-		Thread.sleep(8000);
+		//Thread.sleep(8000);
 		assertTrue(driver.findElement(By.xpath("html/body/div[1]/div[4]/label/strong/span")).getText().contains("1"));
 	}
 

@@ -25,12 +25,15 @@ public class testModifyGroupName {
         driver.findElement(By.name("pass")).sendKeys("secret"); // password
         driver.findElement(By.cssSelector("input[type='submit']")).click(); // confirmLogin
         driver.findElement(By.xpath("html/body/div[1]/div[3]/ul/li[3]/a")).click();
-        
         driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[4]")).click();
-        driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[7]")).click();
-        driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[2]")).clear();
-        driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[2]")).sendKeys("New Sample Group");
-        driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[3]")).click();
+        //driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[7]")).click();
+        driver.findElement(By.xpath("//input[@name='edit']")).click();
+        //driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[2]")).clear();
+        //driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[2]")).sendKeys("New Sample Group");
+        driver.findElement(By.xpath("//input[@name='group_name']")).clear();
+        driver.findElement(By.xpath("//input[@name='group_name']")).sendKeys("New Sample Group");
+        //driver.findElement(By.xpath("html/body/div[1]/div[4]/form/input[3]")).click();
+        driver.findElement(By.xpath("//input[@name='update']")).click();
 
         assertTrue(driver.findElement(By.xpath("//div[@id='content']/div")).getText().contains("Group record has been updated."));
 	}
